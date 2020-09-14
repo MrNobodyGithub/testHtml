@@ -1,0 +1,284 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+// gray
+.white {
+    .bc( #fff );
+}
+.gray {
+    .bc( #f2f2f2 );
+}
+
+
+
+@moveing       :       move;
+@moveingColor  :       #f9d061;
+
+.@{moveing} {
+
+    .filter {
+
+        nav {
+            a {
+                color: @title-main;
+
+                &.active ,
+                &:active {
+                    color: @moveingColor;
+                }
+            }
+        }
+
+    }
+
+    .product-item {
+        position: relative;
+        .product-title{
+            padding-left: 0;
+        }
+        .raty{
+            .good{
+                font-size: px2rem(30);
+                color: #adadad;
+                
+                small{
+                    font-size: px2rem(30);
+                    color: #f3425f;
+                }
+            }
+        }
+        .label {
+            em {
+                .color( @moveingColor );
+            }
+        }
+        
+        .tag {
+            span {
+                color: #fd5200;
+                border-color: #fd5200;
+            }
+        }
+        .move-position-text{
+            color: @moveingColor;
+            position: absolute;
+            right:px2rem(28);
+            top: px2rem(50);
+            .fs(40,2);
+            background: url(../img/move/moveposition.png) no-repeat left center;
+            .height(70,2);
+            line-height: px2rem(70);
+            display: block;
+            .pl(60,2);
+        }
+
+        .control {
+            position: relative;
+//          border-top: 1px solid #ccc;
+            .mt(20,2);
+            
+            p{
+                .pl(40,2);
+                position: relative;
+                .fs(24,2);
+                span{
+                    position:absolute;
+                    right:0;
+                    top:px2rem(-20);
+                }
+                &:nth-of-type(1){
+                       background: url(../img/move/move-cu.png) no-repeat center left;
+                       background-size: px2rem(24);
+                } 
+                &:nth-of-type(2){
+                       background: url(../img/move/move-jian.png) no-repeat center left;
+                       background-size: px2rem(24);
+                }
+                &:nth-of-type(3){
+                       background: url(../img/move/move-time.png) no-repeat center left;
+                       background-size: px2rem(24);
+                }
+            }
+            a {
+                position: absolute;
+                right:px2rem(20);
+                top:px2rem(-150);
+                color: @moveingColor;
+                border-color: @moveingColor;
+            }
+        }
+    }
+
+    .grab-state {
+        button {
+            color: @moveingColor;
+            border-color: @moveingColor;
+            .bc( #fff );
+        }
+    }
+
+    .grab-remarks {
+        color: @moveingColor;
+    }
+
+    .detail-worktime ,
+    .detail-price {
+         overflow: hidden;
+        a{
+                display: block;
+                width: 4.59259259rem;
+                height: 1.11111111rem;
+                color: @moveingColor;
+                border: 1px solid @moveingColor;
+                border-radius: 5px;
+                text-align: center;
+                line-height: px2rem(80);
+                font-size: 0.5037037rem;
+                align-self: center;
+                margin: px2rem(40) auto;
+               
+                
+        }
+        .price-content{
+            p{
+                .lh(60,2);
+                text-align: initial;
+                padding:px2rem(50);
+            }
+        }
+        .active{
+            color: @moveingColor;
+            border:1px solid @moveingColor !important;
+        }  
+    }
+
+    .title {
+        span {
+            background-color: @moveingColor;
+        }
+    }
+
+    .detail-comment {
+        height: auto;
+        padding-bottom: px2rem(20);
+        .comment-content {
+            span {
+                color: @moveingColor;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+//第二个的css搬家
+.moveHouse{
+    ul{
+        li{
+            .height(130,2);
+            .fs(36,2);
+            .lh(130,2);
+            border-bottom: 1px solid #ccc;
+            padding-left: px2rem(120);
+            margin-left:px2rem(28);
+            padding-right: px2rem(38);
+            color: #333;
+            
+            p{
+                font-size:px2rem(40);
+                line-height: px2rem(130);
+                color: #333;
+                border-bottom: 1px solid #ccc;
+                margin-right:px2rem(28);
+            }
+        }
+       li:nth-of-type(1){
+            background: url(../images/move/move-time.png) no-repeat px2rem(20) center;
+            background-size:px2rem(70);
+            span{
+                color:#f39c11;
+                float: right;
+            }
+        }
+        li:nth-of-type(2){
+            border:none;
+            background: url(../images/Cleaning/Cleaning1.png) no-repeat px2rem(20) center;
+            background-size:px2rem(70);
+            span{
+                border-bottom:1px solid #ccc;
+            }
+        }
+        li:nth-of-type(3){
+                span{
+                    display: inline-block;
+                    float: right;
+                    .width(80,2);
+                    .height(40,2);
+                    .fs(30,2);
+                    padding-right:px2rem(40);
+                    img{
+                       .width(19,2);
+                       .height(34,2); 
+                    }
+                }
+        }
+        li:nth-of-type(4){
+            border:none;
+            background: url(../images/Cleaning/Cleaning1.png) no-repeat px2rem(20) center;
+            background-size:px2rem(70);
+            span{
+                border-bottom:1px solid #ccc;
+            }
+
+        }
+        li:nth-of-type(5){
+                span{
+                    display: inline-block;
+                    float: right;
+                    .width(80,2);
+                    .height(40,2);
+                    .fs(30,2);
+                    // background: url(../img/moveing-right.png) no-repeat center center;
+                    padding-right:px2rem(40);
+                    img{
+                       .width(19,2);
+                       .height(34,2); 
+                    }
+                }
+
+        }
+        li:nth-of-type(6){
+
+            background: url(../images/cleaning-contact.png) no-repeat px2rem(20) center;
+            background-size:px2rem(70);
+        }
+        li:nth-of-type(7){
+
+            background: url(../images/cleaning-tel.png) no-repeat px2rem(20) center;
+            background-size:px2rem(70);
+        }
+
+        .move-remark{
+            background: url(../img/Cleaning/Cleaning3.png) no-repeat px2rem(20) center;
+            background-size:px2rem(70);
+            margin: px2rem(75) 0 0 px2rem(30);
+            padding-left:px2rem(150);
+            background: #red;
+            font-size: px2rem(40);
+            border: none;
+            textarea{
+                width:px2rem(850);
+                height:px2rem(211);
+                text-align: left;
+                .fs(30,2);
+                padding-top: px2rem(30);
+            }
+        }
+    }
+
+}

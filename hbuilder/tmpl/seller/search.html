@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/stylesheet.css" />
+	</head>
+
+	<body>
+		<header class="search-header">
+				<div>
+					<a>
+						<input type="text" placeholder="阿姨" />
+						<span></span>
+					</a>					
+				</div>
+				
+				<a class="mui-action-back"><em>取消</em></a>
+		</header>
+		
+		<section class="mui-content search-icon">
+			<div class="hoticon">
+				<h4>大家都在搜</h4>
+				<div>
+					
+				</div>
+			</div>
+			<script type="text/html" id="index-hoticon">
+				<% if(code == 200){ %>
+					<% for(var i=0;i<datas.class_list.length;i++){ %>
+					<span><%= datas.class_list[i].gc_name %></span>
+					<% } %>
+				<% } %>
+			</script>
+			<div class="hisicon">
+				<h4>历史搜索</h4>
+				<strong></strong>
+				<div>
+					<span class="active">日常保洁</span>
+					<span class="active">月嫂服务</span>
+					<span>跑腿</span>
+					<span>快送</span>
+					<span>家教服务</span>
+					<span>日常保洁</span>
+					<span>快送</span>
+					<span>日常保洁</span>
+				</div>
+			</div>
+		</section>
+		
+		
+		
+		
+		<script type="text/javascript" src="../../js/hotcss.js" ></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/template.js" ></script>
+		<script type="text/javascript" src="../../js/config.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/tmpl/search.js" ></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

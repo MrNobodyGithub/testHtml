@@ -1,0 +1,628 @@
+<!doctype html>
+<html>
+	<!--
+    	作者：suiyi
+    	时间：2017-06-24
+    	描述：version 1.0
+    -->
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>全部订单 触屏版</title>
+		<link rel="stylesheet" type="text/css" href="../../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../../css/mui.css">
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet.css">
+
+		<style>
+			.content {
+				display: none;
+				padding-top: 1.85185185rem;
+			}
+			
+			.content.active {
+				display: block;
+			}
+			
+			.order-list {
+				display: none;
+				height: 100%;
+				overflow: scroll;
+			}
+			/*付尾款样式*/
+			
+			.page-pay {
+				display: none;
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				z-index: 99999;
+				background-color: #efeff4;
+			}
+			
+			.pay_end {
+				background: rgba(0, 0, 0, 0.5);
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				z-index: 100000;
+				display: none;
+			}
+			
+			.pay_end .pay_detail {
+				width: 80%;
+				height: 9rem;
+				background: #fff;
+				position: absolute;
+				top: 32%;
+				left: 10%;
+				padding: 0.7rem 1.3rem;
+				border-radius: 0.4rem;
+			}
+			
+			.pay_end .pay_detail h2 {
+				text-align: center;
+				line-height: 1.7rem;
+				font-size: 0.7rem;
+			}
+			
+			.pay_end .pay_detail p {
+				font-size: 0.6rem;
+				line-height: 1.3rem;
+			}
+			
+			.pay_end .pay_detail p span {
+				color: orangered;
+				font-size: 0.6rem;
+			}
+			
+			.pay_end .pay_detail textarea {
+				font-size: 0.5rem;
+				margin: 0 auto;
+				display: block;
+				padding: 0.3rem;
+			}
+			
+			.pay_end .pay_detail .paybtn {
+				text-align: center;
+				margin-top: 0.5rem;
+			}
+			
+			.pay_end .pay_detail .paybtn button {
+				color: #fff;
+				background: orange;
+				border: none;
+				border-radius: 0.2rem;
+				width: 3rem;
+				height: 1.5rem;
+				font-size: 0.6rem;
+			}
+			
+			.pay_end .pay_detail .paybtn button:last-child {
+				margin-left: 2rem;
+				background: #E4E4E4;
+				color: #000;
+			}
+			
+			.order .order-item .footers {
+				border-bottom: 1px solid #ccc;
+				border-top: 0;
+			}
+			/*去掉footer的上边框*/
+			
+			.order .order-item footer {
+				border: none;
+			}
+			/*遮罩层层级问题修复*/
+			
+			menu.tab {
+				z-index: 102;
+			}
+			
+			.common-header {
+				z-index: 101;
+			}
+			/* 自定义搜索框样式，mui-search会导致魅族键盘闪现 */
+			
+			.mui-content.order {
+				margin-top: 2rem;
+			}
+			
+			.search-box {
+				z-index: 101;
+				position: fixed;
+				margin-top: 3.42rem;
+				width: 100%;
+			}
+			
+			.own-search {
+				height: 2rem;
+				position: relative;
+				background: #fff !important;
+				border-bottom: 1px solid #ccc;
+				/* margin-bottom: 2rem; */
+			}
+			
+			.own-search input {
+				font-size: 0.6rem;
+				padding-left: 5em;
+				margin-top: 0.5rem;
+				height: 1.8em;
+				line-height: 1.2em;
+				text-align: left;
+				background: #fff !important;
+			}
+			
+			.own-search .search-img {
+				position: absolute;
+				left: 2.4em;
+				top: 30%;
+			}
+			
+			.own-search .search-img img {
+				width: 0.8rem;
+				height: 0.8rem;
+			}
+			
+			.own-search .search-type {
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			
+			.own-search .search-type select {
+				font-size: 0.5rem;
+				height: 2rem;
+				line-height: 2rem;
+				padding: 0 1em 0 1em;
+				background: url(../../images/icon-city-b.png) right center no-repeat;
+				background-size: 0.5037037rem 0.28148148rem;
+			}
+			
+			.own-search .search-type {
+				float: right;
+				min-width: 1.77777778rem;
+				color: #000000;
+				font-size: 0.47407407rem;
+				line-height: 1.95555556rem;
+				text-align: left;
+				padding-right: 0.77037037rem;
+				margin-right: 0.44444444rem;
+			}
+			
+			.mui-input-row .mui-input-clear~.mui-icon-clear,
+			.mui-input-row .mui-input-clear~.mui-icon-clear~.mui-icon-speech {
+				font-size: 0.8rem !important;
+				line-height: 2;
+				padding-right: 2em;
+			}
+		</style>
+	</head>
+
+	<body style="background-color: #FFFFFF;">
+		<!--loading-->
+		<div id="loading">
+			<div class="spinner">
+				<div class="rect1"></div>
+				<div class="rect2"></div>
+				<div class="rect3"></div>
+				<div class="rect4"></div>
+				<div class="rect5"></div>
+			</div>
+		</div>
+		<!--付尾款界面-->
+		<div class="pay_end">
+			<div class="pay_detail">
+				<h2>付尾款</h2>
+				<p>金额：<span class="price"></span>元</p>
+				<textarea cols="30" rows="5" placeholder="填写备注信息"></textarea>
+				<div class="paybtn">
+					<button class="confirm">确认</button>
+					<button class="cancle">取消</button>
+				</div>
+			</div>
+		</div>
+
+		<section class="mask" id="payMask">
+
+			<menu class="pay-menu">
+				<h4>支付方式</h4>
+				<a href="javascript:void(0);" class="alipay" data-type="alipay_native" style="font-size: 0.6rem;">&emsp;支付宝</a>
+				<a href="javascript:void(0);" class="wxpay" data-type="wxpay_native" style="font-size: 0.6rem;">&emsp;微信</a>
+				<input type="hidden" name="payCode" value="">
+				<button id="pay_btn">确认支付</button>
+			</menu>
+
+		</section>
+
+		<!--ucenter-->
+		<header class="common-header">
+			<h1>订单管理</h1>
+			<a class="mui-action-back icon-back"></a>
+		</header>
+
+		<menu class="tab first">
+			<a href="javascript:void(0);" class="active"><span>我选购的订单</span></a>
+			<a href="javascript:void(0);"><span>我发布的订单</span></a>
+		</menu>
+		<menu class="tab second second_0">
+			<a href="javascript:void(0);" data-index='0' data-status='0' class="active"><span>全部订单</span></a>
+			<a href="javascript:void(0);" data-index='1' data-status='1'><span>待付款</span></a>
+			<a href="javascript:void(0);" data-index='2' data-status='2'><span>服务中</span></a>
+			<a href="javascript:void(0);" data-index='3' data-status='3'><span>待评价</span></a>
+		</menu>
+		<menu class="tab second second_1" style="display: none;">
+			<a href="javascript:void(0);" data-index='0' data-status='0' class="active"><span>全部订单</span></a>
+			<a href="javascript:void(0);" data-index='1' data-status='20'><span>待选标</span></a>
+			<a href="javascript:void(0);" data-index='2' data-status='3'><span>待评价</span></a>
+		</menu>
+		<div class="search-box">
+			<div class="mui-input-row own-search">
+				<input type="search" id="suggestId" class="mui-input-speech mui-input-clear" placeholder="请选择订单号或商品名查询">
+				<!-- <span class="search-img"><img src="../../images/index-search.png" /></span> -->
+				<span class="search-type">
+					<select id="typeid">
+						<option value="1">商品名</option>
+						<option value="2">订单号</option>
+					</select>
+				</span>
+			</div>
+		</div>
+		<!--body-->
+		<section class="mui-content order white" style="padding-top: 4rem;">
+			<div class="content content-buy active">
+				<div class="order-list" style="display: block;"></div>
+				<div class="order-list"></div>
+				<div class="order-list"></div>
+				<div class="order-list"></div>
+				<div class="order-list"></div>
+				<div class="order-list"></div>
+				<div class="order-list"></div>
+			</div>
+		</section>
+
+		<!--
+            订单状态：	0(已取消) 
+                    10(未支付,等待服务商确认) 		取消订单 去付款
+                    20(已付款，等待服务)  			取消订单
+                    22(已确认，等待服务)			取消订单 付尾款  seller 确认等待服务  			
+                    24(开始服务=》服务中)  		申请退款 付尾款  seller 开始服务		
+                    26(服务商确认完成,等待用户确认)申请退款 确认完成  
+                    30(已确认,交易成功)			评价 => 追评
+                    40(交易成功)					评价 => 追加评价
+            支付状态，
+                    1 未支付，
+                    2 已支付
+            退款状态: 
+                    0是无退款,
+                    1是部分退款,
+                    2是全部退款
+        -->
+
+		<section class="page-pay">
+
+		</section>
+
+		<script type="text/html" id="section-pay">
+			<!--header-->
+			<header class="common-header">
+
+				<a href="javascript:void(0);" class="icon-back"></a>
+				<h1><%= datas.order_info.store_name %></h1>
+
+			</header>
+			<!--footer-->
+			<footer class="footer-btn">
+				<div class="cleaning-footer" data-orderId="<%= datas.order_info.order_id %>" data-paySn="<%= datas.order_info.pay_sn %>" data-type="order">
+					<div class="left">
+						<a href="" class="finish-footer refund" style="margin-top: 0;">
+							申请退款
+						</a>
+					</div>
+					<a href="" class="right pay">确认支付</a>
+				</div>
+			</footer>
+			<!---->
+			<div class="mui-content finish">
+				<div class="finish-swiper">
+					<img src="../../images/waiting/waiting-1.png" alt="" />
+				</div>
+			</div>
+		</script>
+		<!--订单dom-->
+		<!--dom-->
+		<script type="text/html" id="order-item">
+
+			<%
+                for( var i = 0; i < list.length; i++ ) {
+            %>
+			<div class="order-item order-item2" data-id="<%= list[i].order_id %>" data-storeId='<%= list[i].store_id %>' data-order-amount='<%= list[i].order_amount %>' data-gc-id="<%= list[i].extends_books.gc_id %>">
+				<header>
+					<span class="number">订单号: <%= list[i].order_sn %></span> &emsp;
+					<!--<span class="time">联系客户</span>-->
+				</header>
+
+				<div class="info" data-id="<%= list[i].order_id %>">
+					<img src="<%= list[i].image_240_url %>" alt="">
+					<div class="info-detail">
+						<h3><%= list[i].goods_name ? list[i].goods_name : '发布的时候忘记写名字了' %></h3>
+						<!--<span>
+                                服务时间: 
+                                <small><%= list[i].begin_time ? list[i].begin_time : '测试时间' %></small>    
+                            </span>-->
+						<!--<span style="height: 0.5rem;line-height:0.5rem;padding-top: 0;"> 
+                            	<i style="font-style: normal;color: #000;line-height: -2rem;">订单总额：</i>￥<%= list[i].goods_amount %>元
+                            </span>-->
+						<span style="height: 0.5rem;line-height:0.5rem;">
+                            	<i style="font-style: normal;color: #000;">已付总额：</i>￥<%= list[i].pay_amount_all %>元
+                            </span>
+						<span style="height: 0.5rem;line-height:0.5rem;">
+                            	<% if(list[i].pay_method == 2){%>
+                            	<i style="font-style: normal;color: #000;line-height: -2rem;">订金：</i>￥<%= list[i].order_amount ? list[i].order_amount : 0.00  %>元
+                            	<% } %>
+                            </span>
+
+						<strong class="status-error status" data-status="<%= list[i].order_state %>">
+                                <%
+                                	var status = '',
+                                	    order_btn = '',
+                                	    sy_amount = '',
+                                    	status_num = list[i].order_state,
+                                    	evaluation_state = list[i].evaluation_state,
+                                    	is_pay_child = list[i].is_pay_child,
+                                    	pay_sn = list[i].pay_child_info.pay_sn,
+                                    	order_type = list[i].pay_child_info.order_type;
+									var is_virtual = list[i].is_virtual;
+									var is_used= list[i].is_used;	
+									if(list[i].child_order != null && list[i].child_order != ''){
+										sy_amount = list[i].pay_child_info.sy_amount;
+									}
+
+									if(is_virtual == 1){
+										if( status_num == 0 ) {
+											status = '已取消';
+											order_btn = '<a class="status-normal">已取消</a>';
+										}else if ( status_num == 10 ) {
+											status = '待支付';
+											order_btn = '<a class="status-error">去支付</a><a class="status-normal status-pay">取消订单</a>'
+										} else if ( status_num == 40 && is_used == 0) {
+											status = '待使用';
+										} else if (is_used == 1 && status_num == 40 && evaluation_state == 0) {
+											status = '已使用';
+											order_btn = '<a class="status-error">评价</a>';
+										}else if ( (status_num == 40 && evaluation_state == 1) ||  (status_num == 40 && evaluation_state == 2) ) {
+											status = '已评价';
+										}
+									}else if(is_virtual == 0){
+										if( status_num == 0 ) {
+											status = '已取消';
+											order_btn = '<a class="status-normal">已取消</a>';
+										}else if(status_num == 25){
+											status = '退款平台审核中';
+										} else if ( status_num == 10 ) {
+											status = '待支付';
+											order_btn = '<a class="status-error">去支付</a><a class="status-normal status-pay">取消订单</a>'
+										} else if ( status_num == 20 ) {
+											order_btn = '<a class="status-normal">取消订单</a>';
+											status = '等待确认';
+										} else if ( status_num == 22 ) {
+											order_btn = '<a class="status-normal">取消订单</a>';
+											status = '等待服务';
+										} else if ( status_num == 24 && is_pay_child == 1 ) {
+											status = '开始服务';
+											order_btn = '<a class="status-error is_pay_child" data-sy-amount = '+ sy_amount +' data-pay-sn = '+ pay_sn +' data-order-type = '+ order_type +'>付尾款</a>';
+										}else if ( status_num == 24 && is_pay_child == 0 ) {
+											status = '服务中';
+										} else if ( status_num == 26 ) {
+											status = '等待用户确认';
+											order_btn = '<a class="status-error">确认完成</a>';
+										} else if( status_num == 23 ){
+											status = '商家拒绝接单';
+										} else if ( status_num == 40 && evaluation_state == 0 ) {
+											order_btn = '<a class="status-error">评价</a>';
+											status = '服务完成';
+										}else if ( (status_num == 40 && evaluation_state == 1) ||  (status_num == 40 && evaluation_state == 2) ||  (status_num == 40 && evaluation_state == 3) ) {
+											status = '已评价';
+										}
+									}
+                                %>
+                                <%= status %>
+                            </strong>
+					</div>
+				</div>
+				<style>
+					.sublist {
+						width: 100%;
+						height: :1.8rem;
+						line-height: 1.8rem;
+						background: #f4f4f4;
+						font-size: 0.6rem;
+						display: flex;
+						justify-content: space-between;
+					}
+					
+					.sublist p {
+						font-size: 0.5rem;
+						color: #000;
+						padding: 0 1.2rem 0 0.8rem;
+						margin: 0;
+					}
+					
+					.sublist p span {
+						color: #A0A0A0;
+					}
+					
+					.sublist .substatus {
+						color: orangered;
+						font-size: 0.5rem;
+					}
+				</style>
+				<!--这里应该遍历子订单,样式要重新写-->
+				<% var child_order = list[i].child_order;
+                	if(child_order != null && child_order != ''){
+		                for( var j = 0; j < child_order.length; j++ ) {
+		                	var child_state = child_order[j].child_state;
+		                	var state_str = (child_state=='20')?'已支付':'未支付';
+		                	var order_amount = child_order[j].order_amount;
+		            %>
+				<div class="sublist">
+					<% if(child_order[j].order_type == 1){%>
+					<p>追加服务&emsp;<span>￥<%=order_amount%> 元</span> </p>
+					<% }else if(child_order[j].order_type == 2) {%>
+					<p>尾款&emsp;<span>￥<%=order_amount%> 元</span> </p>
+					<% } %>
+					<p class="substatus">
+						<%=state_str%>
+					</p>
+				</div>
+				<% } }
+		            %>
+				<div class="total mui-clearfix">
+					订单总额: <em><%= list[i].goods_amount %>元</em>
+				</div>
+				<footer>
+					<span>订单时间: <i style="font-style: normal;"><%= list[i].add_time %></i></span>
+					<%=# order_btn %>
+				</footer>
+			</div>
+			<%
+                }
+            %>
+		</script>
+		<!--需求dom-->
+		<!--dom-->
+		<script type="text/html" id="edit-item">
+
+			<%
+                for( var i = 0; i < needs_list.length; i++ ) {
+            %>
+			<div class="order-item needs-item" data-id="<%= needs_list[i].order_id %>" data-storeId='<%= needs_list[i].store_id %>' data-order-amount='<%= needs_list[i].order_amount %>'>
+				<header>
+					<span class="number">订单号: <%= needs_list[i].order_sn %></span> &emsp;
+					<!--<span class="time">联系客户</span>-->
+				</header>
+
+				<div class="info" data-id="<%= needs_list[i].order_id %>">
+					<img src="<%= needs_list[i].thumb_img %>" alt="">
+					<div class="info-detail">
+						<h3><%= needs_list[i].needs_title ? needs_list[i].needs_title : '发布的时候忘记写名字了' %></h3>
+						<!--<span>
+                                服务时间: 
+                                <small><%= needs_list[i].begin_time ? needs_list[i].begin_time : '测试时间' %></small>    
+                            </span>-->
+						<span>
+                                ￥<%= needs_list[i].order_amount %>元
+                            </span>
+						<strong class="status-error status" data-status="<%= needs_list[i].order_state %>">
+                                <%
+                                    	var status = '',
+                                    	    order_btn = '',
+                                    	    sy_amount = '',
+                                        	status_num = needs_list[i].order_state,
+                                        	evaluation_state = needs_list[i].evaluation_state,
+                                        	is_pay_child = needs_list[i].is_pay_child,
+	                                    	pay_sn = needs_list[i].pay_child_info.pay_sn,
+	                                    	order_type = needs_list[i].pay_child_info.order_type;
+	                                    	if(needs_list[i].child_order != null && needs_list[i].child_order != ''){
+	                                    		sy_amount = needs_list[i].pay_child_info.sy_amount;
+	                                    	}
+                                        	
+                                    	if( status_num == 0 ) {
+                                        	status = '已取消';
+                                        	order_btn = '<a class="status-normal">已取消</a>';
+                                    	} else if ( status_num == 10 ) {
+                                        	status = '等待支付';
+                                        	order_btn = '<a class="status-error status-pay">去支付</a><a class="status-normal">取消订单</a>';
+                                    	} else if ( status_num == 20 ) {
+                                    		order_btn = '<a class="status-normal">取消订单</a>';
+                                        	status = '等待接单';
+                                    	} else if ( status_num == 22 ) {
+	                                        order_btn = '<a class="status-normal">取消订单</a>';
+	                                        status = '等待服务';
+                                    	} else if ( status_num == 24 && is_pay_child == 1) {
+	                                    	status = '服务中';
+	                                    	order_btn = '<a class="status-error is_pay_child" data-sy-amount = '+ sy_amount +' data-pay-sn = '+ pay_sn +' data-order-type = '+ order_type +'>付尾款</a>';
+	                                	} else if ( status_num == 24 && is_pay_child == 0) {
+	                                    	status = '服务中';
+	                                	} else if(status_num == 25){
+	                                		status = '退款平台审核中';
+	                                	} else if ( status_num == 26 ) {
+                                        	order_btn = '<a class="status-error">确认完成</a>';
+                                        	status = '等待确认';
+                                    	} else if ( status_num == 40 && evaluation_state == 0 ) {
+	                                        order_btn = '<a class="status-error">评价</a>';
+	                                        status = '服务完成';
+                                    	}else if ( (status_num == 40 && evaluation_state == 1) || (status_num == 40 && evaluation_state == 2) || (status_num == 40 && evaluation_state == 3) ) {
+	                                        status = '已评价';
+                                    	}
+                                %>
+                                <%= status %>
+                            </strong>
+					</div>
+				</div>
+				<!--这里应该遍历子订单,样式要重新写-->
+				<% var child_order = needs_list[i].child_order;
+                	if(child_order != null && child_order != ''){
+		                for( var j = 0; j < child_order.length; j++ ) {
+		                	var child_state = child_order[j].child_state;
+		                	var state_str = (child_state=='20')?'已支付':'未支付';
+		                	var order_amount = child_order[j].order_amount;
+		            %>
+				<div class="sublist">
+					<% if(child_order[j].order_type == 1){%>
+					<p>追加服务&emsp;<span>￥<%=order_amount%> 元</span> </p>
+					<% }else if(child_order[j].order_type == 2) {%>
+					<p>尾款&emsp;<span>￥<%=order_amount%> 元</span> </p>
+					<% } %>
+					<p class="substatus">
+						<%=state_str%>
+					</p>
+				</div>
+				<% } }
+		             %>
+				<footer class="footers">
+					<span>订单时间: <i><%= needs_list[i].add_time %></i></span>
+					<%=# order_btn %>
+				</footer>
+			</div>
+			<%
+                }
+            %>
+
+		</script>
+
+		<script src="../../js/hotcss.js"></script>
+		<script src="../../js/config.js"></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/template.js"></script>
+		<script src="../../js/common.js"></script>
+		<script src="../../js/member/service-order.js"></script>
+		<script type="text/javascript">
+			//触发上一页刷新
+			mui.init({
+				beforeback: function() {　　　　 //获得父页面的webview
+					var list = plus.webview.currentWebview().opener();　　　　 //触发父页面的自定义事件(refresh),从而进行刷新
+					mui.fire(list, 'refresh');
+					//返回true,继续页面关闭逻辑
+					return true;
+				}
+			});
+
+			//本页刷新
+			window.addEventListener('refresh', function(e) { //执行刷新
+				location.reload();
+			});
+		</script>
+	</body>
+
+</html>

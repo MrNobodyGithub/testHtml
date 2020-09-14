@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>新增地址</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/stylesheet.css" />
+		
+	</head>
+
+	<body class="bg2">
+		<header class="common-header ">
+
+			<a class="icon-back mui-action-back"></a>
+			<h1>新增地址</h1>
+
+		</header>
+
+		<footer class="footer-btn">
+			<a href="runerrands-go.html" class="btn-yellow">确定</a>
+		</footer>
+
+		<div class="mui-content address clean white">
+			<ul class=" mui-clearfix">
+				<li>联系人</li>
+				<li>联系电话</li>
+				<li>
+					<a style="color: #333;" class="add-li">
+						地址<span><img src="../../images/cleaning-right.png"/></span>
+					</a>
+				</li>
+				<li>详细信息<span>请输入具体楼栋门牌号</span></li>
+			</ul>
+			
+		</div>
+
+
+		<script src="../../js/hotcss.js" ></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/config.js"></script>
+		<script src="../../js/common.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				swipeBack:true
+			});
+			mui.plusReady(function(){
+				//各种类型页面切换  
+				$(".address_select").on("tap",function(){
+				    mui.openWindow({
+					    url:"run-address.html",
+					    createNew:false,//是否重复创建同样id的webview，默认为false:不重复创建，直接显
+					    waiting:{
+					      autoShow:false,//自动显示等待框，默认为true
+					      title:'正在加载...'//等待对话框上显示的提示内
+					    }
+					})
+				})
+				$(".add-li").on("tap",function(){
+				    mui.openWindow({
+					    url:"runerrands-map.html",
+					    createNew:false,//是否重复创建同样id的webview，默认为false:不重复创建，直接显
+					    waiting:{
+					      autoShow:false,//自动显示等待框，默认为true
+					      title:'正在加载...'//等待对话框上显示的提示内
+					    }
+					})
+				})
+				$(".btn-yellow").on("tap",function(){
+				    mui.openWindow({
+					    url:"runerrands-go.html",
+					    createNew:false,//是否重复创建同样id的webview，默认为false:不重复创建，直接显
+					    waiting:{
+					      autoShow:false,//自动显示等待框，默认为true
+					      title:'正在加载...'//等待对话框上显示的提示内
+					    }
+					})
+				})
+			})
+		</script>
+	</body>
+
+</html>

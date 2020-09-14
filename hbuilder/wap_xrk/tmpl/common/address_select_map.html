@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>选择地图</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/stylesheet.css" rel="stylesheet"  />
+	</head>
+<style>
+	html,body{
+		height: 100%;
+	}
+	body{
+		display: flex;
+		flex-direction: column;
+	}
+	.mui-content{
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 3rem;
+	}
+	#l-map{
+		flex: 1;
+	}
+	.mui-bar-footer a{
+		display: block;
+		width: 100%;background: orange; border: 0;padding: 0; font-size: 1rem;line-height: 3rem;color: #fff;text-align: center;
+	}
+	.mui-bar-footer{position: fixed;width: 100%;height: 3rem;bottom: 0;left: 0;}
+	.common-header.common-header-yellow{
+		height:2.8rem;
+	}
+	.common-header[class*=common-header-] .icon-back{
+		background-size:1.5rem;
+	}
+	.common-header h1{
+		font-size: 1.0rem;
+		padding-top: 0.5rem;
+	}
+	.common-header .city{
+		font-size: 0.8rem;
+		padding-top: 0.5rem;
+		background-size: 0.8rem;
+	}
+	.mui-search{
+		margin-top: 0.85rem;
+		height:2.5rem;
+	}
+	.map-list{
+		height:16rem;
+		overflow: auto;
+	}
+	input[type=search]{
+		height:2.5rem;
+	}
+	.mapsection{
+		overflow: hidden;
+	}
+	/*.mapsection #l-map{
+		height: 36.5rem;
+	}*/
+	/* 自定义搜索框样式，mui-search会导致魅族键盘闪现 */
+	.own-search{
+		margin-top: 0.85rem;
+		height:2.5rem;
+	}
+	.own-search input{
+		padding-left: 2.2em;
+		text-align: left;
+		background: #eee url(../../images/index-search.png) no-repeat left;
+		background-size: 1.24444444rem 1.24444444rem;
+		background-position-x: 0.44444444rem;
+	}
+	.auto-item{
+		padding: 0.8rem;
+	}
+</style>
+	<body style="background: #fff;height: 100%;overflow: hidden;">
+		<div id="loading">
+			<div class="spinner">
+				<div class="rect1"></div>
+				<div class="rect2"></div>
+				<div class="rect3"></div>
+				<div class="rect4"></div>
+				<div class="rect5"></div>
+			</div>
+			<div class="mui-tips" style="position: absolute;top: 54%;left: 40%;color: #fff;">地图加载中...</div>
+		</div>
+		<header class="common-header runmaph common-header-yellow">
+			<h1>地图</h1>
+			<a class="icon-back" href="javascript: history.go(-1);"></a>
+			<!--<a class="city">青岛市</a>-->
+		</header>
+		<section class="mui-content">
+			<!-- 不使用mui搜索组件以解决魅族等手机键盘闪现问题-->
+			<!-- <div class="mui-input-row mui-search "> -->
+			<div class="mui-input-row own-search">
+			    <form><input type="search" id="suggestId" name="suggestId" class="mui-input-clear" value="请输入小区名称或者首字母进行查找"  onfocus='this.value=""'></form>
+			</div>
+			<div id="l-map" style="text-align: center;vertical-align: middle; display: none;">地图加载中...</div>
+			<div class="map-list" style="min-height: 600px;display: none;">
+				<ul>
+					
+				</ul>
+			</div>
+		</section>
+		<footer class="mui-bar-footer">
+			<a href="javascript: history.go(-1);">确认选择</a>
+		</footer>
+		
+		
+		<!--<script src="../../js/hotcss.js"></script>-->
+		<!--<script src="http://api.map.baidu.com/api?v=2.0&ak=meIt8u4M01eiAtOVMX5lgTlBWt6U94Rp"></script>
+		-->
+		<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.0&key=ee25630e3900f5c031f5881aef6e121b"></script>
+		<script src="http://webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/config.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script src="../../js/common/address_select_map.js"></script>
+	</body>
+</html>

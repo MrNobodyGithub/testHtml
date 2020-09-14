@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+	<!--
+		author: 赵扬悦
+		date: 2017-06-23 
+		version: 1.0
+	-->
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>提现订单详情 触屏版</title>
+		<script src="../../js/hotcss.js"></script>
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link href="../../css/stylesheet.css" rel="stylesheet" />
+	</head>
+
+	<body>
+
+		<!--ucenter-->
+		<header class="common-header">
+			<h1>提现订单详情</h1>
+			<a class="icon-back mui-action-back"></a>
+		</header>
+
+		<!--body-->
+		<section class="mui-content account account-my3" style="margin-top: 20px;padding-bottom: 2rem;">
+
+		</section>
+
+		<script type="text/html" id="account-my3">
+			<% if(code == 200){ %>
+			<% for(var i=0;i<datas.record.length;i++){ %>
+			<menu style="margin-top: 0px;margin-bottom: 0px;">
+				<!--<a style="height: 1.5rem!important;">
+					<span style="padding-left: 1.4rem;font-size: 0.5rem;">会员名</span>
+					<span style="font-size: 0.5rem;padding-left: 100px;color: #ACACB4;"><%= datas.record[i].store_name %></span>
+				</a>-->
+				<a style="height: 1.5rem!important;">
+					<span style="padding-left: 1.4rem;font-size: 0.5rem;">订单</span>
+					<span style="font-size: 0.5rem;padding-left: 100px;color: #ACACB4;"><%= datas.record[i].order_sn %></span>
+				</a>
+				<a style="height: 1.5rem!important;">
+					<span style="padding-left: 1.4rem;font-size: 0.5rem;">金额</span>
+					<span style="font-size: 0.5rem;padding-left: 100px;color: #ea5505;" ><%= datas.record[i].cash_amount %></span>
+				</a>
+				<a style="height: 1.5rem!important;">
+					<span style="padding-left: 1.4rem;font-size: 0.5rem;">审核状态</span>
+					<% if(datas.record[i].state == 0 || datas.record[i].state == 1){ %>
+					<span style="font-size: 0.5rem;padding-left: 100px;color: #ACACB4;">审核中</span>
+					<% }else if(datas.record[i].state == 2){ %>
+					<span style="font-size: 0.5rem;padding-left: 100px;color: #ACACB4;">审核通过</span>
+					<% }else if(datas.record[i].state == 3){ %>
+					<span style="font-size: 0.5rem;padding-left: 100px;color: #ACACB4;">提现成功</span>
+					<% } %>
+				</a>
+				<a style="height: 1.5rem!important;">
+					<span style="padding-left: 1.4rem;font-size: 0.5rem;">完成时间</span>
+					<span style="font-size: 0.5rem;padding-left: 100px;color: #ACACB4;"><%= datas.record[i].finished_time %></span>
+				</a>
+			</menu>
+
+			<% } %>
+			  <footer class="footer-btn">
+					<div class="appoint-detail-next" style="width:100%">
+						<div style="width: 100%; text-align: center; padding-left: 0;">合计：<span><%= datas.cash_amount %>元</span></div>
+					</div>
+				</footer>
+			<% } %>
+		</script>
+
+		<script type="text/javascript" src="../../js/hotcss.js"></script>
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/config.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/template.js"></script>
+		<script src="../../js/seller/account-my3.js"></script>
+	</body>
+
+</html>

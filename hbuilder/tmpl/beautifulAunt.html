@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>论坛</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css">
+		<style>
+			.sun-back-ico {
+				width: 24px;
+				height: 24px;
+				margin-left: 10px !important;
+				margin-top: 10px;
+				line-height: 100%;
+				background: url(../images/cleaning-back.png) center no-repeat;
+				background-size: 24px 24px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon sun-back-ico mui-pull-left"></a>
+			<h1 class="mui-title"></h1>
+
+		</header>
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/config.js"></script>
+		<script src="../js/common.js"></script>
+		<script type="text/javascript">
+			mui.plusReady(function() {
+				var beautifulUrl = plus.webview.currentWebview().beautifulUrl;
+				console.log(beautifulUrl);
+				var title = plus.webview.currentWebview().title;
+				console.log(title);
+				$('.mui-title').html(title);
+				ws = plus.webview.currentWebview();
+				//plus.nativeUI.showWaiting('',{style:'black',modal:false,background:'rgba(0,0,0,0)'});
+				embed = plus.webview.create(beautifulUrl, 'beautiful', {
+					top: '45px',
+					bottom: '0px',
+					position: 'dock',
+					dock: 'bottom',
+					bounce: 'vertical'
+				});
+				ws.append(embed);
+				embed.addEventListener('loaded', function() {
+					//plus.nativeUI.closeWaiting();
+				}, false);
+			})
+		</script>
+	</body>
+
+</html>

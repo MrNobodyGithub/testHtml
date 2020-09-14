@@ -1,0 +1,347 @@
+<!doctype html>
+<html>
+<!--
+	作者：wangmin
+	时间：2017-08-01
+	描述：发布需求第一步-选择分类
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <title>发布需求第一步-选择分类</title>
+    <link rel="stylesheet" type="text/css" href="../../css/mui.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 0.55rem;
+        }
+        
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+        
+        a:active {
+            color: #000000;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .common-header h1 {
+            font-weight: normal;
+            margin: 0;
+        }
+        /*顶部导航栏*/
+        
+        .kind-header {
+            background: #fff;
+        }
+        
+        .common-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 1.95555556rem;
+            z-index: 99999;
+            background-color: #ffffff;
+            padding: 0 0.44444444rem;
+            border-bottom: 0.02962963rem solid #e6e6e8;
+        }
+        
+        .common-header .icon-back {
+            background: url(../../images/cleaning-back.png) center no-repeat;
+            background-size: 1.00740741rem;
+        }
+        
+        .common-header .icon-back {
+            float: left;
+            width: 1.97037037rem;
+            height: 100%;
+        }
+        
+        .common-header a {
+            position: relative;
+            z-index: 11;
+        }
+        
+        .common-header h1 {
+            position: absolute;
+            top: 0;
+            left: 1.97037037rem;
+            right: 1.97037037rem;
+            line-height: 1.95555556rem;
+            text-align: center;
+            font-size: 0.6962963rem;
+            z-index: 2;
+        }
+        /*内容区域*/
+        
+        .active {
+            border-left: #f9cc58 4px solid !important;
+            background: #FFFFFF;
+        }
+        
+        .actives {
+            color: #1c949a !important;
+        }
+        /*左侧*/
+        
+        .common-header~.mui-content {
+            padding-top: 1.95555556rem;
+        }
+        
+        .item-left-box {
+            width: 26%;
+            background-color: #F8F8F8;
+        }
+        
+        .item-left {
+            float: left;
+            width: 100%;
+            padding-top: 1.95555556rem;
+        }
+        
+        .item-left .list {
+            height: 2.8rem;
+            line-height: 2.8rem;
+            text-align: left;
+            border-left: #F8F8F8 4px solid;
+        }
+        
+        .item-left .list .list-a {
+            height: 2.8rem;
+            line-height: 2.8rem;
+            display: inline-block;
+            width: 100%;
+        }
+        
+        .item-left .list .list-img {
+            width: 1.35rem;
+            height: 1.35rem;
+            border-radius: 1.4rem;
+            position: relative;
+            top: 0.6rem;
+            margin-left: 0.3rem;
+        }
+        
+        .item-left .list .content {
+            display: inline-block;
+        }
+        /*右侧*/
+        
+        .item-right {
+            width: 100%;
+            margin-top: 1.95555556rem;
+        }
+        
+        .item-right-box {
+            margin-left: 26%;
+            width: 74%;
+            background-color: #ffffff;
+        }
+        
+        .item-right .list {
+            list-style: none;
+            clear: both;
+            line-height: 3.5rem;
+        }
+        
+        .item-right .clean {
+            text-align: center;
+            margin-top: 0.8rem;
+            margin-bottom: 0.8rem;
+            width: 22%;
+            float: left;
+            height: 1.2rem;
+            color: rgba(36, 180, 188, 0.5);
+            border: #24b4bc 1px solid;
+            border-radius: 1rem;
+            line-height: 1.2rem;
+            margin-left: 2%;
+            font-size: 0.45rem;
+        }
+        
+        .item-right .clean .span {
+            font-size: 0.45rem;
+        }
+        
+        .item-right .clean .jiantou {
+            width: 0.6rem;
+            position: relative;
+            top: 0.1rem;
+        }
+        /*三级列表*/
+        
+        .item-right .list-more .clean {
+            height: 1.2rem;
+            line-height: 1.2rem;
+            width: 22%;
+            margin-top: 0.9rem;
+            margin-bottom: 0.9rem;
+            margin-left: 2%;
+            text-align: center;
+            float: left;
+            border: #46c1c6 1px solid;
+            border-radius: 1rem;
+            background-color: #46c1c6;
+            font-size: 0.45rem;
+            color: #FFFFFF !important;
+        }
+        
+        .block {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="common-header kind-header">
+        <a class="icon-back mui-action-back"></a>
+        <h1>请选择您需要的服务</h1>
+    </header>
+    <section class="mui-content comkind">
+        <!--<div class="item-left-box mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<div class="item-left">
+						<ul id="segmentedControls">
+							<li class="list active">
+								<a class="list-a">
+									<img class="list-img" src="../../images/classify/baojie@2x.png" />
+									<span class="content">保洁1</span>
+								</a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="item-right-box mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<div class="item-right">
+						<ul>
+							<li id="a1" class="list">
+								<div class="clean">1111</div>
+								<div class="clean">1111</div>
+								<div class="clean">1111</div>
+								<div class="clean">1111</div>
+								<div style="clear: both;"></div>
+							</li>
+							<li id="a3" class="list" style="display: none;">
+								<div class="clean">3333</div>
+								<div class="clean list-jiantou">
+									<span class="span">3333</span>
+									<img class="jiantou" src="../../images/classify/xianjiantou@2x.png" />
+								</div>
+								<div class="clean">3333</div>
+								<div style="clear: both;"></div>
+								<ul class="block">
+									<li class="list-more ">
+										<div class="clean">4444</div>
+										<div style="clear: both;"></div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>-->
+
+        <script type="text/html" id="comkind">
+
+            <% if(code == 200){ %>
+                <div class="item-left-box mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <div class="item-left">
+                            <ul id="segmentedControls">
+                                <% for( var i = 0; i<datas.class_list.length; i++){ %>
+                                    <li class="list" data-gc-id="<%= datas.class_list[i].gc_id %>">
+                                        <a class="list-a">
+										<img class="list-img" src="<%= datas.class_list[i].image %>" />
+										<span class="content"><%= datas.class_list[i].gc_name %></span>
+									</a>
+                                    </li>
+
+                                    <% } %>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-right-box mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <div class="item-right">
+                            <ul id="segmentedControlss">
+                                <% for( var i = 0; i<datas.class_list.length; i++){ %>
+                                    <% var subchild = datas.class_list[i].child %>
+                                        <% if(datas.class_list[i].text != ''){ %>
+                                            <% for(var j = 0; j < subchild.length; j++){ %>
+                                                <% if(subchild[j].child != ""){ %>
+                                                    <li id="" class="list" data-gc-id="<%= datas.class_list[i].gc_id %>">
+                                                        <% for(var j = 0; j < subchild.length; j++){ %>
+                                                            <div>
+                                                                <div class="clean  list-jiantou">
+                                                                    <span class="span"><%= subchild[j].gc_name %></span>
+                                                                    <img class="jiantou" src="../../images/classify/xianjiantou@2x.png" />
+                                                                </div>
+                                                                <!--<div style="clear: both;"></div>-->
+                                                                <ul class="block location">
+                                                                    <div style="clear: both;"></div>
+                                                                    <li class="list-more ">
+                                                                        <% for(var x = 0;x<subchild[j].child.length;x++){ %>
+                                                                            <div class="clean cleans" data-gc-id="<%= subchild[j].child[x].gc_id %>" data-type-id="<%= subchild[j].child[x].goods_class_type.type_id %>" data-type-model="<%= subchild[j].child[x].goods_class_type.type_model %>">
+                                                                                <%= subchild[j].child[x].gc_name %>
+                                                                            </div>
+                                                                            <% } %>
+                                                                                <div style="clear: both;"></div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <% } %>
+
+                                                    </li>
+                                                    <% }else{ %>
+                                                        <li id="a1" class="list" data-gc-id="<%= datas.class_list[i].gc_id %>">
+                                                            <div>
+                                                                <% for(var j = 0; j < subchild.length; j++){ %>
+                                                                    <div class="clean cleans" data-gc-id="<%= subchild[j].gc_id %>" data-type-id="<%= subchild[j].goods_class_type.type_id %>" data-type-model="<%= subchild[j].goods_class_type.type_model %>">
+                                                                        <%= subchild[j].gc_name %>
+                                                                    </div>
+                                                                    <% } %>
+                                                                        <div style="clear: both;"></div>
+                                                            </div>
+                                                        </li>
+                                                        <% } %>
+                                                            <% } %>
+                                                                <% } %>
+                                                                    <% } %>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+        </script>
+
+    </section>
+
+    <script src="../../js/hotcss.js"></script>
+    <script src="../../js/config.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/mui.min.js"></script>
+    <script src="../../js/template.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/member/publish_needs_step1.js" ></script>
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+    <!--
+		author: 赵扬悦
+		date: 2017-06-23 11:21:29  
+		version: 1.0
+	-->
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>订单提现记录 触屏版</title>
+		<script src="../../js/hotcss.js"></script>
+        <link href="../../css/mui.css" rel="stylesheet" />
+		<link href="../../css/stylesheet.css" rel="stylesheet" />
+
+		<style>
+			.cash_item{height: auto!important;}
+			.cash_item div{line-height: 1.2rem;}
+			.cash_item div:first-child strong{font-size: 0.6rem!important;color: #333333!important;}
+			.cash_item div:not(:first-child) strong{color: #A4A4A4!important;font-size: 0.5rem!important;}
+			.cash_item div span{font-size: 0.5rem!important;}
+			.cash_item .cash_amount span{color: red!important;}
+			.acclist{ padding-bottom: 2rem;	}
+			.acc-tips{
+				line-height: 1.5;
+				margin: 0.4rem 0.4rem 4rem 0.4rem;
+				font-size: 0.56rem;
+				color: #8f8f94;
+			}
+	    </style>
+	</head>
+
+	<body>
+		
+		
+		<!--ucenter-->
+		<header class="common-header">
+			<h1>订单提现记录</h1>
+			<a class="icon-back mui-action-back"></a>
+		</header>
+		
+		
+        <!--body-->
+        <section class="mui-content account" style="margin-top: 20px;">
+
+            <!--header-->
+            <!--<header class="common-header">
+
+				<h1>发表追加</h1>
+				<a href="../ucenter/ucenter.html" class="icon-back"></a>
+	
+			</header>-->
+
+            <!--nav-->
+            
+			
+			
+					<!--<ul class="list">
+		                <li>
+		                    <div class="clearfix">
+		                        <strong>充值入账</strong>
+		                        <em style="margin-top: 20px;"><%= datas.cash_amount%>元</em>
+		                    </div>
+		                    <div class="clearfix">
+		                        <span>2017-5-20 17:38:47</span>
+		                    </div>
+		                </li>
+		                <li>
+		                    <div class="clearfix">
+		                        <strong>充值入账</strong>
+		                        <em style="margin-top: 20px;"><%= datas.cash_amount%>元</em>
+		                    </div>
+		                    <div class="clearfix">
+		                        <span>2017-5-20 17:38:47</span>
+		                    </div>
+		                </li>
+		                <li>
+		                    <div class="clearfix">
+		                        <strong>充值入账</strong>
+		                        <em style="margin-top: 20px;"><%= datas.cash_amount%>元</em>
+		                    </div>
+		                    <div class="clearfix">
+		                        <span>2017-5-20 17:38:47</span>
+		                    </div>
+		                </li>
+	               	</ul>-->
+            <!--<nav>
+                <a>
+                    <span>268</span>
+                    <small>我的收入</small>
+                </a>
+                <a>
+                    <span>890</span>
+                    <small>可提现</small>
+                </a>
+                <!--<a>
+                    <span>100</span>
+                    <small>已提现</small>
+                </a>
+            </nav>-->
+
+            <!--menu-->
+            
+
+             <!--list-->
+            <!--<ul class="list">
+                <li>
+                    <div class="clearfix">
+                        <strong>充值入账</strong>
+                        <em>+200.00元</em>
+                    </div>
+                    <div class="clearfix">
+                        <span>2017-5-20 17:38:47</span>
+                        <span>余额：1280.00元</span>
+                    </div>
+                </li>-->
+                
+                <!--<li>
+                    <div class="clearfix">
+                        <strong>充值入账</strong>
+                        <em>+200.00元</em>
+                    </div>
+                    <div class="clearfix">
+                        <span>2017-5-20 17:38:47</span>
+                        <span>余额：1280.00元</span>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="clearfix">
+                        <strong>充值入账</strong>
+                        <em>+200.00元</em>
+                    </div>
+                    <div class="clearfix">
+                        <span>2017-5-20 17:38:47</span>
+                        <span>余额：1280.00元</span>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="clearfix">
+                        <strong>充值入账</strong>
+                        <em>+200.00元</em>
+                    </div>
+                    <div class="clearfix">
+                        <span>2017-5-20 17:38:47</span>
+                        <span>余额：1280.00元</span>
+                    </div>
+                </li>
+            </ul>-->
+            
+        </section>
+        
+        <script type="text/html" id="account-my2">
+			<% if(code == 200 && datas!= ''){ %>
+				<menu style="margin-top: 0;margin-bottom: 0;">
+	                <a>
+	                    <i class="icon-history"></i> 
+	                    <span>可提现订单</span>
+	                </a>
+	            </menu>
+	            <ul class="list acclist">
+	            	<%for(var i=0;i < datas.order_list.length;i++){ %>
+	            		<!--
+                        	作者：zhaoyangyue
+                        	时间：2017-07-21
+                        	描述：提现字段内容
+                        -->
+		            	<li class="cash_item">
+		                    <div class="clearfix cash_item_detail">
+		                        <strong>订单号</strong>
+		                        <span><%= datas.order_list[i].order_sn %></span>
+		                    </div>
+		                    <div class="clearfix">
+		                        <!--灰色-->
+		                        <strong>提现金额</strong>
+		                        <span><%= datas.order_list[i].all_cash_amount %></span>
+		                    </div>
+		                    <div class="clearfix">
+		                        <!--灰色-->
+		                        <strong>税费</strong>
+		                    	<span><%= datas.order_list[i].taxes %>元</span>
+		                    </div>
+		                    <div class="clearfix cash_amount">
+		                        <!--红色-->
+		                    	<strong>可提现金额</strong>
+		                    	<span><%= datas.order_list[i].cash_amount %>元</span>
+		                    </div>
+		                    
+		                </li>
+	                <% } %>
+				</ul>
+				
+				<div class="acc-tips">
+					温馨提示：尊敬的用户，提现申请审核通过后2个工作日内到账，遇周末以及法定节假日时间顺延，如超过2个工作日未到账请联系向日葵来了客服人员，为确保您账户财产安全，请耐心等候。
+				</div>
+
+	            <footer class="footer-btn">
+					<div class="appoint-detail-next">
+						<div>合计：<span><%= datas.cash_amount %>元</span></div>
+						<a class="btn-orange1">提现</a>
+					</div>
+				</footer>
+	            
+			<% } else { %>
+				<h1 style="text-align:center;">数据错误</h1>
+			<% } %>
+		</script>
+
+		<script type="text/javascript" src="../../js/hotcss.js" ></script>
+		<script src="../../js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../../js/jquery.min.js" ></script>
+		<script type="text/javascript" src="../../js/template.js" ></script>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script src="../../js/seller/account-my2.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,327 @@
+.mui-bar-nav~.mui-content {
+	padding-top: 1.95555556rem;
+}
+
+.mui-bar-nav~.mui-content.mui-scroll-wrapper .mui-scrollbar-vertical {
+	top: 0.65185185rem;
+}
+
+.mui-bar-footer~.mui-content {
+	padding-bottom: 44px;
+}
+
+.mui-bar-footer~.mui-content.mui-scroll-wrapper .mui-scrollbar-vertical {
+	bottom: 44px;
+}
+
+.mui-bar-footer-secondary~.mui-content {
+	padding-bottom: 88px;
+}
+
+.mui-bar-footer-secondary~.mui-content.mui-scroll-wrapper .mui-scrollbar-vertical {
+	bottom: 88px;
+}
+
+.mui-bar-tab~.mui-content {
+	padding-bottom: 50px;
+}
+
+.mui-bar-tab~.mui-content.mui-scroll-wrapper .mui-scrollbar-vertical {
+	bottom: 50px;
+}
+
+.mui-bar-footer-secondary-tab~.mui-content {
+	padding-bottom: 94px;
+}
+
+.mui-bar-footer-secondary-tab~.mui-content.mui-scroll-wrapper .mui-scrollbar-vertical {
+	bottom: 94px;
+}
+
+.mui-content-padded {
+	margin: 10px;
+}
+
+body {
+	line-height: 1;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+ul,
+ol,
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a:active {
+	color: #000000;
+}
+
+@-webkit-keyframes rotate {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	50% {
+		-webkit-transform: rotate(180deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes rotate {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	50% {
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+input {
+	-webkit-user-select: text;
+}
+
+// 订单详情页
+
+.common-header .icon-back, .common-header .icon-back-white {
+    float: left;
+    width: 1.97037037rem;
+    height: 100%;
+}
+
+.common-header a {
+	position: relative;
+	z-index: 11;
+}
+
+a {
+	color: #000000;
+}
+
+.common-header h1 {
+	position: absolute;
+	top: 0;
+	left: 1.97037037rem;
+	right: 1.97037037rem;
+	line-height: 1.95555556rem;
+	text-align: center;
+	font-size: 0.6962963rem;
+	z-index: 2;
+}
+footer[class*='footer-']:not(.footer-ad) {
+	height: 2.16296296rem;
+}
+
+footer[class*='footer-']:not(.footer-ad) {
+	background-color: #fff;
+}
+
+footer[class*='footer-'] {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	z-index: 9999;
+}
+
+.appoint-detail-next {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	background: #fff;
+	height: 2.16296296rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.appoint-detail-next div {
+	width: 11.55555556rem;
+	font-size: 0.53333333rem;
+	line-height: 2.16296296rem;
+	padding-left: 1.18518519rem;
+}
+
+.appoint-detail-next div span {
+	font-size: 0.62222222rem;
+	color: #ea5505;
+}
+
+.appoint-detail-next a {
+	background-color: #ea5505;
+	font-size: 0.62222222rem;
+	color: #fff;
+	display: block;
+	text-align: center;
+	width: 4.44444444rem;
+	line-height: 2.16296296rem;
+}
+
+section.page {
+	height: 100%;
+	padding-top: 2rem;
+}
+
+.mui-slider {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999999;
+	background: rgba(0, 0, 0, 0.5);
+	justify-content: center;
+	display: none;
+}
+
+.appoint-detail {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	overflow: auto;
+	background: #fff;
+}
+
+.appoint-detail .appoint-detail-content {
+	height: auto;
+}
+
+.appoint-detail .appoint-detail-content {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	background-color: #f2f2f2;
+}
+
+.appoint-detail .appoint-detail-content ol {
+	min-height: 10rem;
+	padding-bottom: 3.0rem;
+}
+
+.appoint-detail .appoint-detail-content ol {
+	height: auto;
+	background: url(../images/appoint-detail-border.png) repeat-x center bottom #fff;
+	margin-top: 0.2962963rem;
+	overflow: hidden;
+	padding-bottom: 2.48148148rem;
+}
+
+.appoint-detail .appoint-detail-content ol li:first-child {
+	margin-top: 0.37037037rem;
+}
+
+.appoint-detail .appoint-detail-content ol li {
+	height: auto;
+	line-height: 1.2rem!important;
+	display: flex;
+	font-size: 0.59259259rem;
+	padding-left: 1.33333333rem;
+	color: #919191;
+}
+
+.appoint-detail .appoint-detail-content ol li i {
+	display: inline-block;
+	width: 2.96296296rem;
+	font-style: normal;
+	text-align: right;
+}
+
+.appoint-detail .appoint-detail-content ol i {
+	min-width: 4.5rem!important;
+	text-align: right!important;
+}
+
+.appoint-detail .appoint-detail-content ol li span {
+	color: #333333;
+}
+
+.appoint-detail .appoint-detail-content ol span {
+	height: auto!important;
+	padding-right: 0.3rem;
+}
+
+.appoint-detail .appoint-detail-content .appoint-detail-deal {
+}
+
+.appoint-detail .appoint-detail-content .appoint-detail-deal {
+	width: 8rem;
+	height: 0.71111111rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	margin: 0 !important;
+}
+.appoint-detail-content ol li:last-child span {
+	color: #000000!important;
+}
+
+.appoint-detail-content ol li:nth-last-child(2) span {
+	color: red;
+}
+section.page{
+	height:100%;
+}
+.page-coupon {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999999;
+}
+
+.page {
+	overflow: scroll !important;
+	-webkit-overflow-scrolling: touch;
+}
+
+
+.footer-btn {
+	height: 1.98518519rem;
+	position: fixed;
+	bottom: 0;
+}
+
+.mui-slider {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999999;
+	background: rgba(0, 0, 0, 0.5);
+	justify-content: center;
+	display: none;
+}
+
+/*页脚高度修改*/
+footer[class*='footer-']:not(.footer-ad){
+	height: 2.16296296rem;
+}

@@ -1,0 +1,1133 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+@import 'mixins/mixins.less';
+
+// 命名空间--冲突了就改一改
+@ucenter        :       ucenter;
+
+.@{ucenter} {
+    .bc(@back);
+
+    // & > .pserson div[class*='@{ucenter}-'] ,
+    // & > .pserson nav {
+    //     .mb(22,2);
+    // }
+
+    & > .active {
+        .db !important;
+    }
+
+    .person ,
+    .service {
+        .dn;
+    }
+    
+    .service {
+        //padding-bottom: 2.2rem;
+        background: #fff;
+    }
+
+    .person {
+        .ucenter-nav ,
+        .ucenter-order {
+            .mb( 22,2 );
+        }
+    }
+
+    &-header {
+        .por;
+        .height(290,2);
+        .background( url(../images/ucenter/banner.png) );
+        .bs;
+
+        .@{ucenter}-config {
+            .poa;
+            .zi(9);
+            .top( 42,2 );
+            .right( 47,2 );
+            .width( 63,2 );
+            .height( 50,2 );
+            .pt(30,2);
+            .pl(20,2);
+            .pr(20,2);
+            .background( url(../images/icon-qiehuan.png) center no-repeat );
+            .bs;
+        }
+
+        .@{ucenter}-ident {
+            .poa;
+            .top( 114,2 );
+            .right;
+            .width( 170,2 );
+            .height( 68,2 );
+            .bc( rgba(0,0,0,.23) );
+            .tac;
+            .fs( 30,2 );
+            .color( @white );
+            .lh( 68,2 );
+            .pl( 34,2 );
+
+            &:before {
+                .content;
+                .poa;
+                .top;
+                .left( -34,2 );
+                .square( 68,2 );
+                .background( #dbe7f4 url(../images/ucenter/zs.png) center no-repeat );
+                .bs( px2rem(26) px2rem(33) );
+                border-radius: 50%;
+                border: px2rem(2) solid #fff;
+                .box-default;
+            }
+        }
+
+        .@{ucenter}-box {
+            .df;
+            align-items: center;
+            width: 70%;
+            .padding( px2rem(74) 0 0 px2rem(40) );
+
+            & > img {
+                .db;
+                .square( 150,2 );
+                border-radius: 50%;
+            }
+
+            .@{ucenter}-info {
+                .pl( 32,2 );
+                .color( @white );
+
+                h2 , 
+                span {
+                    .db;
+                }
+
+                h2 {
+                    .fs( 40,2 );
+                    .margin( px2rem(20) 0 px2rem(25) );
+                }
+
+                span {
+                    .fs( 30,2 );
+                }
+
+                small {
+                    .por;
+                    .top( -.05rem );
+                    .dib;
+                    .vam;
+                    .fs( 0 );
+                    .pl( 28,2 );
+                }
+
+                i {
+                    .dib;
+                    .vam;
+                    .square( 30,2 );
+                    .mr( 15,2 );
+                    .background( url(../images/ucenter/star.png) center no-repeat );
+                    .bs;
+                }
+            }
+        }
+    }
+
+    &-nav {
+        .df;
+        .tac;
+        .lh(1);
+        .height(128,2);
+        background: linear-gradient( to right,#e75055 0%,#ef6953 100%);
+
+        .raty {
+            .tac;
+            i {
+                .dib;
+                .vam;
+                .square( 30,2 );
+                // .mr( 15,2 );
+                .background( url(../images/ucenter/star.png) center no-repeat );
+                .bs;
+            }
+            span {
+                background: none !important;
+            }
+        }
+
+        span , 
+        small {
+            .db;
+        }
+
+        span {
+            .height(39+24+18,2);
+            .lh(39,2);
+            .padding( px2rem(24) 0 px2rem(18) );
+        }
+
+        a {
+            flex: 1;
+            .fs(24,2);
+            .color(@white);
+
+            &:nth-child(1) {
+                span {
+                    .background( url(../images/ucenter/coupon.png) center no-repeat );
+                    .bs( auto px2rem(39) );
+                }
+            }
+        }
+    }
+
+
+    &-order {
+        .bc(@white);
+
+        h2 {
+            .fs( 36,2 );
+            .color( @title-main );
+            .pl( 40,2 );
+            .height( 109,2 );
+            .lh( 107,2 );
+            border-bottom: 2px solid #efeff1;
+        }
+
+        menu {
+            .df;
+            flex-wrap: wrap;
+            .oh;
+            .tac;
+
+            a {
+                .fs( 30,2 );
+                .color( @title-main );
+                background-repeat: no-repeat;
+                background-position: center top;
+            }
+
+            span {
+                .db;
+            }
+        }
+    }
+
+    &-order {
+        
+        menu {
+
+            a {
+                flex: 0 0 20%;
+            }
+
+        }
+
+    }
+
+    &-order {
+    
+        menu {
+            .height( 170,2 );
+            .padding( px2rem(32) 0 );
+            // align-items: center;
+
+            a {
+                .height( 96,2 );
+                
+                &:nth-child(1) {
+                    background-image: url(../images/ucenter/order1.png);
+                    .bs( px2rem(49) );
+                }
+
+                &:nth-child(2) {
+                    background-image: url(../images/ucenter/order2.png);
+                    .bs( px2rem(49) );
+                }
+
+                &:nth-child(3) {
+                    background-image: url(../images/ucenter/order3.png);
+                    .bs( px2rem(55) px2rem(49) );
+                }
+
+                &:nth-child(4) {
+                    background-image: url(../images/ucenter/order4.png);
+                    .bs( px2rem(56) px2rem(49) );
+                }
+
+                &:nth-child(5) {
+                    background-image: url(../images/ucenter/order5.png);
+                    .bs( px2rem(45) );
+                }
+            }
+
+            span {
+                .mt( 68,2 );
+            }
+        }
+
+    }
+
+    &-type {
+
+        menu {
+            .bc( @white );
+
+            a {
+                .db;
+                .height( 121,2 );
+                .lh( 121,2 );
+                background-repeat: no-repeat;
+                background-position: px2rem(40) center;
+                border-bottom: 1px solid #e6e6e8;
+                .pl(148,2);
+                .pr(47,2);
+                &.my_order{
+                    background-image: url(../images/ucenter/menu7.png);
+                    .bs( px2rem(47) px2rem(52) );
+                }
+                &.my_coupon {
+                    background-image: url(../images/ucenter/order2.png);
+                    .bs( px2rem(58) );
+                }
+                &.my_collect {
+                    background-image: url(../images/ucenter/type2.png);
+                    .bs( px2rem(58) );
+                }
+
+                &.no-checkin {
+                    background-image: url(../images/ucenter/type3.png);
+                    .bs( px2rem(74) px2rem(58) );
+                }
+
+                &.join_service {
+                    background-image: url(../images/ucenter/type4.png);
+                    .bs( px2rem(58) );
+                }
+
+                &.invite_award {
+                    background-image: url(../images/ucenter/type5.png);
+                    .bs( px2rem(51) px2rem(49) );
+                }
+                &:nth-child(6) {
+                    background-image: url(../images/ucenter/type4.png);
+                    .bs( px2rem(51) px2rem(49) );
+                }
+
+                &.config {
+                    background-image: url(../images/config.png);
+                    .bs( px2rem(56) px2rem(54) );
+                }
+
+                span {
+                    .db;
+                    .fs(36,2);
+                    .color( #3a3a3a );
+                    margin-top: 0;
+                }
+            }
+
+            span {
+                .mt( 88,2 );
+            }
+        }
+
+    }
+
+    .tab-header {
+        .df;
+        .height( 121,2 );
+        .lh( 121,2 );
+        .bc( #fff ); 
+        border-bottom: 1px solid #e6e6e8;
+
+        a {
+            .db;
+            .tac;
+            .fs( 36,2 );
+            .color( #333 );
+            flex: 1;
+
+            &.active {
+                border-bottom: 2px solid #f9cd56;
+            }
+        }
+    }
+
+    .tab-content {
+        .dn;
+
+        &.show{
+            .db;
+        }
+    }
+
+    &-button {
+        .oh;
+        .poa;
+        .right( 30,2 );
+        .bottom( 0 );
+        .padding( px2rem(50) px2rem(32) px2rem(200) );
+        //.bc( #fff );
+        
+        a{
+            .db;
+            .mt( 40,2 );
+            .square( 160,2 );
+            .lh( 160,2 );
+            .color( #fff );
+            .fs( 36,2 );
+            .tac;
+            transition: all .3s;
+            border-radius: 50%;
+
+            &.gray {
+                .bc( #ccc );
+            }
+            &.yellow {
+                .bc( #f9cd56 );
+            }
+        }
+    }
+
+    &-menu {
+
+        menu {
+            .bc( #fff );
+
+            a {
+                .db;
+                .height( 121,2 );
+                .lh( 121,2 );
+                background-repeat: no-repeat;
+                background-position: px2rem(40) center;
+                border-bottom: 1px solid #e6e6e8;
+                .pl(144,2);
+                .pr(47,2);
+
+                &:nth-child(1) {
+                    background-image: url(../images/ucenter/menu2.png);
+                    .bs( px2rem(47) px2rem(52) );
+                }
+
+                &:nth-child(2) {
+                    background-image: url(../images/ucenter/menu7.png);
+                    .bs( px2rem(47) px2rem(52) );
+                }
+
+                &:nth-child(3) {
+                    background-image: url(../images/ucenter/menu1.png);
+                    .bs( px2rem(58) );
+                }
+
+                &:nth-child(4) {
+                    background-image: url(../images/ucenter/menu8.png);
+                    .bs( px2rem(46) px2rem(53) );
+                }
+
+                &:nth-child(5) {
+                    background-image: url(../images/ucenter/menu3.png);
+                    .bs( px2rem(58) );
+                }
+
+                &:nth-child(6) {
+                    background-image: url(../images/ucenter/type5.png);
+                    .bs( px2rem(58) );
+                }
+
+                &:nth-child(7) {
+                    background-image: url(../images/ucenter/menu6.png);
+                    .bs( px2rem(56) px2rem(50) );
+                }
+
+                &:nth-child(8) {
+                    background-image: url(../images/ucenter/type3.png);
+                    .bs( px2rem(61) px2rem(46) );
+                }
+
+                span {
+                    .db;
+                    .fs(36,2);
+                    .color( #3a3a3a );
+                    margin-top: 0;
+                }
+
+                &.config {
+                    background-image: url(../images/config.png);
+                    .bs( px2rem(56) px2rem(54) );
+                }
+            }
+
+            span {
+                .mt( 96,2 );
+            }
+        }
+
+    }
+
+}
+
+// 优惠券
+@coupon         :       coupon;
+
+.@{coupon} {
+    .lh(1);
+    .bc( #f8f8f8 );
+
+    &-list {
+        .padding( px2rem(60) px2rem(80) 0 );
+        min-height: px2rem(1400);
+
+        .@{coupon}-item {
+            .height( 282,2 );
+            .bc( #fff );
+            .oh;
+            .mb( 28,2 );
+            border-radius: 10px;
+            box-shadow: 0 3px 20px rgba(0,0,0,.12);
+
+            .@{coupon}-item-info {
+                .por;
+                .height( 202,2 );
+            }
+
+            .@{coupon}-item-date {
+                .height( 80,2 );
+                .lh( 80,2 );
+                .fs( 30,2 );
+                .color( #9e9e9e );
+                .background( url(../images/ucenter/coupon-date.png) px2rem(54) center no-repeat );
+                .bs( px2rem(34) );
+                .pl( 100,2 );
+                position: relative;
+                span{
+                    position: absolute;
+                    right:px2rem(33);
+                    top:px2rem(10);
+                    border-radius:px2rem(20);
+                    display: inline-block;
+                    .height(54,2);
+                    .width(164,2);
+                    background: #f7941e;
+                    color:#fff;
+                    text-align: center;
+                    line-height:px2rem(54) ;
+                }
+            }
+            
+            h3 , small {
+                .db;
+                .color( #fff ); 
+                .ml( 65,2 );
+            }
+
+            h3 {
+                .fw( bold );
+                .fs( 48,2 );
+                .pt( 52,2 );
+                .pb( 18,2 );
+            }
+
+            small {
+                .fs( 36,2 );
+            }
+            
+            strong {
+                .poa;
+                .top( 50% );
+                .right( 82,2 );
+                transform: translateY(-50%);
+                .fs( 72,2 );
+                .color( #fff );
+            }
+
+            sup {
+                .fs( 48,2 );
+                .fw;
+                .top( -.25em );
+                .mr( -20,2 );
+            }
+        }
+
+        .@{coupon}-normal {
+            .@{coupon}-item-info {
+                background: #f59b10 url('../images/ucenter/coupon1.jpg') bottom center repeat-x;
+                background-size: px2rem( 62 ) px2rem( 10 );
+            }
+        }
+
+        .@{coupon}-new {
+            .@{coupon}-item-info {
+                background: #fe633f url('../images/ucenter/coupon2.jpg') bottom center repeat-x;
+                background-size: px2rem( 62 ) px2rem( 10 );
+
+                &:before {
+                    .content;
+                    .poa;
+                    .top;
+                    .right;
+                    .width( 78,2 );
+                    .height( 96,2 );
+                    .background( url(../images/ucenter/coupon-new.png) center no-repeat );
+                    .bs;
+                }
+            }
+        }
+
+        .@{coupon}-disabled {
+            .@{coupon}-item-info {
+                background: #b0bac1 url('../images/ucenter/coupon3.jpg') bottom center repeat-x;
+                background-size: px2rem( 62 ) px2rem( 10 );
+
+                &:before {
+                    .content;
+                    .poa;
+                    .bottom;
+                    .right;
+                    .width( 157,2 );
+                    .height( 156,2 );
+                    .background( url(../images/ucenter/coupon-disabled.png) center no-repeat );
+                    .bs;
+                }
+            }
+        }
+    }
+
+    &-history {
+        .padding( px2rem(64) px2rem(244) px2rem(230));
+        a {
+            .db;
+            .height( 102,2 );
+            .lh( 102,2 );
+            .color( #000 );
+            .tac;
+            .fs( 0 );
+            border: 2px solid #000;
+            border-radius: px2rem(51);
+
+            i , span {
+                .dib;
+                .vam;
+            }
+
+            span {
+                .fs( 48,2 );
+            }
+
+        }
+
+    }
+}
+
+// 招募服务商
+@join           :       service-ad;
+
+.@{join} {
+    .bc( @back );
+
+    &-img {
+        .tac;
+        .margin( px2rem(186) auto px2rem(72) );
+    }
+
+    &-link {
+        .db;
+        .margin( 0 auto );
+        .width( 616,2 );
+        .height( 102,2 );
+        .lh( 102,2 );
+        .fs( 40,2 );
+        .tac;
+        .color( #ea5404 );
+        border-radius: px2rem(51);
+        border: 2px solid #ea5404;
+    }
+}
+
+// 个人信息
+@person         :       person;
+
+.@{person} {
+    .bc( @back );
+
+    &-form {
+        .bc( #fefefe );
+        .padding( 0 px2rem(47) );
+
+        &:last-child {
+            .mt( 22,2 );
+        }
+        .file-person{
+            .width;
+            .height;
+            opacity: 0;
+        }
+        .form-group {
+            .tar;
+            position: relative;
+            .file-person{
+                .width;
+                .height;
+                opacity: 0;
+                position: absolute;
+               left: 0;
+            }
+            .upload-img {
+                float: right;
+                position: relative;
+            }
+            .upload-img ,
+            .person-img{
+                .height(200,2);
+                .width(200,2);
+            }
+            input {
+                .tar;
+            }
+        }
+    }
+}
+
+// 实名认证
+@Authentication :       authentication; 
+
+.@{Authentication} {
+    .bc( #f2f2f2 );
+    .pb(251,2);
+    p {
+
+        .fs( 34,2 );
+        .lh( 48,2 );
+        .color( #939292 );
+        
+        &.example {
+            .padding( px2rem(36) px2rem(48) );
+        }
+
+        &.photo {
+            .padding( px2rem(32) px2rem(48));
+        }
+    }
+
+    h3 {
+        .fs( 40,2 );
+        .color( @title-main );
+        .padding( px2rem(46) px2rem(48) 0 );
+    }
+
+    div.example {
+        
+        img , span {
+            .db;
+        }
+        img {
+            .width( 388,2 );
+            .margin( 0 auto px2rem(26) );
+        }
+
+        span {
+            .fs( 40,2 );
+            .tac;
+            .color( @title-main );
+        }
+    }
+
+    .file {
+        .width( 388,2 );
+        .margin( px2rem(55) auto 0 );
+        .height( 392,2 );
+        border: 2px solid #ea5404;
+        .background( url(../images/photo4.png) center no-repeat );
+        .bs( px2rem(388) px2rem(392) );
+        position: relative;
+        input {
+            .width( 388,2 );
+            .height( 392,2 );
+            opacity: 0;
+            z-index: 2;
+            position: absolute;
+            top:0;
+            left: 0;
+        }
+        img{
+            .width;
+            .height;
+            display: block;
+            
+        }
+
+    }
+
+    .form {
+        .bc( #fff );
+
+        .form-control {
+            .height( 136,2 );
+            .lh( 136,2 );
+            .oh;
+            
+            .padding{
+                padding-left:px2rem(146);
+            }            
+            .padding1{
+                padding-left:px2rem(60);
+            }
+        }
+    }
+}
+
+// 邀请好友
+@invite         :       invite;
+
+.@{invite} {
+    .bc( @white );
+
+    article {
+        .pt( 40,2 );
+        .pb( 50,2 );
+
+        p , span {
+            .tac;
+            .fs( 48,2 );
+            .lh( 72,2 );
+            .color( @title-main );
+        }
+
+        p {
+            .padding( 0 px2rem(100) );
+        }
+
+        span {
+            .db;
+        }
+
+    }
+
+    menu {
+        .df;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #bbbaba;
+
+        a {
+            flex: 0 0 33.33%;
+            .height( 176,2 );
+            background-repeat: no-repeat;
+            background-position: center;
+            .bs( px2rem(176) );
+            .mb( 71,2 );
+
+            &:nth-child(1) {
+                background-image: url(../images/ucenter/share-wx.png);
+            }
+
+            &:nth-child(2) {
+                background-image: url(../images/ucenter/share-pyq.png);
+            }
+
+            &:nth-child(3) {
+                background-image: url(../images/ucenter/share-sina.png);
+            }
+
+            &:nth-child(4) {
+                background-image: url(../images/ucenter/share-qq.png);
+            }
+
+            &:nth-child(5) {
+                background-image: url(../images/ucenter/share-qzone.png);
+            }
+
+            &:nth-child(6) {
+                background-image: url(../images/ucenter/share-renren.png);
+            }
+        }
+    }
+
+    .ewcode {
+
+        span , img {
+            .db;
+        }
+
+        img {
+            .width( 486,2 );
+            .height( 503,2 );
+            .margin( px2rem(56) auto px2rem(77) );
+        }
+
+        span {
+            .tac;
+            .fs( 48,2 );
+            .color( @title-main );
+        }
+
+    }
+
+}
+
+// 历史商机
+@history        :       history;
+
+.@{history} {
+
+    
+
+}
+
+
+// page
+section.page {
+    min-height: 100%;
+    overflow: auto;
+
+    &.page-show {
+        .db;
+    }
+
+    &.page-hide {
+        .dn;
+    }
+}
+
+
+
+
+
+
+
+
+//抢单
+
+.robOrder{
+     
+    header{
+        border-bottom: 1px solid #E6E6E8;
+    }       
+    .robOrder1{
+        border-radius:20px;
+        .height(60,2);
+        line-height: px2rem(60);
+        .width(160,2);
+        border:1px solid red;
+        color: red;
+        text-align: center;
+        .fs(40,2);
+        
+    } 
+    .space{
+        width: 100%;
+        .height(20,2);
+        background: #efeff4;
+    }
+    h3{
+        font-weight: 600;
+        .fs(50,2);
+    }
+    dl{
+        dt{
+            .mt(30,2);
+            .fs(40,2);
+            color: #ccc;
+        }
+        dd{
+            .fs(40,2);
+            .mt(30,2);
+            margin-left: 0;
+            span{
+                display: inline-block;
+            }
+        }
+    }
+    .order-item {
+        .bc( #fff );
+        .mb( 20,2 );
+
+        header ,
+        .total {
+            .fs( 30,2 );
+            .height( 100,2 );
+            .lh( 100,2 );
+            
+//          .number{
+//              .padding( 0 px2rem(40) 0 px2rem(40) );
+//          }
+            .time{
+                .fr;
+                .padding(0  px2rem(50) 0 0);
+//              background: url(../img/phone.png) no-repeat;
+//              background-size: px2rem(30) px2rem(29);
+            }
+        }
+
+        header {
+            .oh;
+            padding-left: px2rem(40);
+        }
+
+        .total {
+            .tar;
+            padding-right: px2rem(40);
+            em {
+                .fsi;
+                .fs( 36,2 );
+                .color( #f4415e );
+            }
+        }
+        .border{
+            border-top: 1px solid #F2F2F2;
+        }
+        .info {
+            .df;
+            align-items: center;
+//          .bc( #f7f7f7 );
+            .padding( px2rem(20) px2rem(40) );
+            position: relative;
+            img {
+                .vam;
+                .square( 200,2 );
+                .mr( 25,2 );
+            }
+        }
+        .white{
+            background: #fff;
+        }
+        
+        .add-service {
+            .df;
+            .bc( #f7f7f7 );
+            .height( 110,2 );
+            .lh( 110,2 );
+            border-top: px2rem(10) solid #fff; 
+            .padding( 0 px2rem(90) 0 px2rem(40) );
+            
+            label {
+                .fs( 36,2 );
+            }
+
+            span {
+                .fs( 36,2 );
+                .color( #f4415e );
+            }
+
+            em {
+                .fsi;
+                .fs( 30,2 );
+                .color( #919191 );
+            }
+
+            .add-service-info {
+                .oh;
+                .pl( 45,2 );
+                flex: 1;
+
+                span {
+                    .fr;
+                }
+            }
+        }
+        .info-detail1{
+            h3{
+                margin-top: px2rem(-60);
+            }
+        }
+        .info-detail2{
+            position: absolute;
+            top:30%;
+            right: px2rem(20);            
+            button{
+                .width(212,2);
+                .height(73,2);
+                .fs(30,2);
+                border: 1px solid;
+                border-radius:px2rem(38);
+                border-width: 2px;
+                border-color: rgb(245, 169, 59);
+                color: rgb(245, 169, 59);
+            }
+        }
+        .total{
+            .fs(30,2);
+            color: #464646;
+        }
+        .info-detail {
+            flex: 1;
+            .por;
+
+            h3 {
+                .fs( 36,2 );
+            }
+
+            span {
+                
+                .fs( 40,2 );
+                .color( #f4415e );
+                .mt( 20,2 );
+
+                &:nth-child(2) {
+                    .padding( px2rem(25) 0 );
+                }
+            }
+
+            small {
+                .fs( 30,2 );
+            }
+
+            strong:not(.status-error) {
+                .poa;
+                .top;
+                .right;
+                .fs( 40,2 );
+                .fw;
+            }
+
+            em , u {
+                .db;
+            }
+
+            em {
+                .fsi;
+                .mb( 25,2 );
+            }
+
+            u {
+                .color( #ccc );
+                text-decoration: line-through;
+            }
+
+            .status-error {
+                .poa;
+                .top( 50% );
+                .right( 50,2) ;
+                transform: translateY(-50%);
+                .fs( 36,2 );
+                .fw;
+            }
+        }
+
+        footer {
+            .oh;
+            .tar;
+            .padding( px2rem(18) px2rem(22) px2rem(18) px2rem(40) );
+            border-top: 1px solid #ccc;
+
+            span {
+                .fl;
+                .fs( 30,2 );
+                .lh( 78,2 );
+                .color( #ccc );
+            }
+
+            a {
+                .dib;
+                .height( 78,2 );
+                .lh( 78,2 );
+                .fs( 30,2 );
+                border: 1px solid;
+                .ml( 20,2 );
+                .padding( 0 px2rem(58) );
+                border-radius: px2rem(39);
+                transition: all .3s;
+            }
+        }
+    }
+}

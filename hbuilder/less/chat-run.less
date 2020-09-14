@@ -1,0 +1,111 @@
+@import 'config.less';
+@import './api/api-webkit.less';
+@import './api/api-common.less';
+@import './api/api-size.less';
+
+
+@pay1    :   selected;
+
+menu {
+   .margin(0);
+   .padding(0);
+}
+
+body{
+   
+    display: flex;
+    flex-direction:column ;
+}
+
+@chat     :    chat;
+   
+.chat {
+    padding:0 px2rem(40);
+
+    .time {
+        .db;
+        .tac;
+        color:#fff;
+        .fs(32,2);
+        .height(51,2);
+        .lh(51,2);
+        background-color: rgb(213, 213, 213);
+        .width(333,2);
+        .db;
+        margin:px2rem(20) auto;
+    }
+    .chat-item {
+        position: relative;
+        overflow: hidden;
+        .width;
+        &:not(:nth-child(1)) {
+            margin-bottom:px2rem(90);
+        }
+        &:nth-child(1) {
+            margin-top:px2rem(90);
+            margin-bottom:px2rem(50);
+        }
+        &>img {
+            .width( 100,2);
+            .height( 100,2);
+            margin-top:px2rem(42);
+        }
+        .chat-detail {
+            position: relative;
+            top:px2rem(10);
+            max-width:px2rem(500);
+            .fs(36,2);
+            min-height:px2rem(40);
+            .lh(40,2);
+            word-break: break-all;
+            padding:px2rem(30) px2rem(42);
+            border-radius:px2rem(6);
+            border-width:px2rem(1);            
+        }        
+        .chat-detail-img {
+            position: relative;
+            top:px2rem(10);
+            max-width:px2rem(500);
+            min-height:px2rem(40);
+            word-break: break-all;           
+        }
+    }
+    .chat-from {
+        float:left;
+        img {
+            float:left;
+        } 
+        .chat-service{
+            .fs(36,2);
+            color: rgb(126, 124, 124);
+            margin-left:px2rem(128);
+            margin-bottom: px2rem(10);
+
+        }       
+        .chat-detail {
+            float:left;
+            color:#000;
+            background-color:rgb(255, 255, 255); 
+            border-color:#e0e0e0;
+            margin-left:px2rem(28);
+        }
+    }
+    .chat-to {
+        float:right;
+        img {
+            float:right;
+            margin-right:px2rem(24);
+            margin-top:px2rem(20);
+        }
+
+        .chat-detail {
+            float:right;
+            background-color: rgb(0, 141, 238); 
+            margin-right: px2rem(30);        
+        }
+    }
+}
+
+
+  
+

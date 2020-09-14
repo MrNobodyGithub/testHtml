@@ -1,0 +1,392 @@
+<!doctype html>
+<html>
+	<!--
+		suiyi
+		2017-06-24 10:58:21
+		version 1.0
+	-->
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>服务购买-预约确认-付款</title>
+		<link rel="stylesheet" type="text/css" href="../../css/mui.css">
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet.css">
+
+		<style>
+			section.page{
+				height:100%;
+				
+			}
+			.appoint-detail .appoint-detail-content {
+				height: auto;
+			}
+			
+			.appoint-detail .appoint-detail-content ol {
+				min-height: 10rem;
+				padding-bottom: 3.0rem;
+			}
+			
+			.appoint-detail .appoint-detail-content ol li {
+				height: auto;
+				line-height: 1.2rem!important;
+				display: flex;
+			}
+			
+			.appoint-detail .appoint-detail-content ol i {
+				min-width: 4.5rem!important;
+				text-align: right!important;
+			}
+			/*备注*/
+			
+			.appoint-detail .appoint-detail-content ol span {
+				height: auto!important;
+				padding-right: 0.3rem;
+			}
+			
+			.appoint-detail-next {
+				position: fixed;
+				bottom: 0;
+			}
+			
+			/*.appoint-detail-deal {
+				height: 5rem !important;
+			}*/
+			.appoint-detail .appoint-detail-content .appoint-detail-deal{
+				margin:0 !important;
+			}
+			
+			.page-coupon {
+				display: none;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 999999;
+			}
+			
+			.page {
+				overflow: scroll !important;
+				-webkit-overflow-scrolling: touch;
+			}
+			
+			.coupon {
+				min-height: 100%;
+				background: #FFFFFF;
+			}
+			
+			.appoint-detail-content ol li:last-child span {
+				color: #000000!important;
+			}
+			
+			.appoint-detail-content ol li:nth-last-child(2) span {
+				color: red;
+			}
+			
+			.appoint-detail-content ol li:last-child {}
+			
+			.footer-btnn {
+				height: 1.98518519rem;
+				position: fixed;
+				bottom: 0;
+			}
+			
+			.appoint-detail-next {
+				width: 100%;
+			}
+			
+			.mui-slider {
+				position: absolute;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 999999;
+				background: rgba(0, 0, 0, 0.5);
+				justify-content: center;
+				display: none;
+			}
+			
+			.greata {
+				display: inline-block;
+				width: 25%;
+				height: 2.5rem;
+				overflow: hidden;
+				margin-left: 0.5rem;
+			}
+			
+			.greata img {
+				width: 100%;
+				min-height: 100%;
+			}
+			/*修改优惠券的样式*/
+			.coupon-list{
+				padding-top: 0;
+			}
+			.coupon-list .coupon-item {
+				height: 5.17777778rem;
+			}
+			
+			.prompt {
+				height: 1rem;
+				line-height: 1rem;
+				text-align: center;
+				font-size: 0.43333333rem
+			}
+			/*页脚高度修改*/
+			footer[class*='footer-']:not(.footer-ad){
+				height: 2.16296296rem;
+			}
+
+			#page-coupon-voucher{
+				padding-bottom: 1rem;
+				background: #fff;
+			}
+			.nouese{
+				 display: block;
+				 width: 80%;
+				 height: 1.5rem;
+				 text-align: center;
+				 font-size: 0.55rem;
+				 margin: 0.5rem auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="common-header">
+
+			<a class="icon-back mui-action-back"></a>
+			<h1>订单确认</h1>
+
+		</header>
+		<footer class="footer-btnn">
+			<div class="appoint-detail-next">
+				<div><i style="font-style:normal" id="type_model">合计</i>：<span id="order_amount"></span>元</div>
+				<a href="javascript:void(0);" class="btn-yellow">下一步</a>
+			</div>
+		</footer>
+		<section class="page" style="padding-top: 2rem;">
+			<div class="mui-slider">
+				<div class="mui-slider-group" onclick="closeimg();">
+
+				</div>
+			</div>
+			<script type="text/html" id="swiper-img">
+				<%  for (var i = 0; i < labelparam.length;i++){
+					if( labelparam[i].label=='图片' ){
+						for(var j = 0;j < labelparam[i].value.length; j++){
+				%>
+				<div class="mui-slider-item" onclick="closeimg();">
+					<img src="<%= labelparam[i].value[j] %>" />
+				</div>
+				<% }} } %>
+			</script>
+			<div class="mui-content appoint-detail" style="height:92vh">
+				<div class="appoint-detail-content">
+					<ol>
+
+					</ol>
+
+					<script type="text/html" id="order-info">
+						<% 
+						for (var i = 0; i < labelparam.length;i++){
+							if( labelparam[i].label=='图片' ){    
+						%>
+						<li>
+							<i><%= labelparam[i].label %>：</i>
+
+							<div style="width:65%;">
+
+								<% for(var m = 0; m < labelparam[i].value.length; m++){ %>
+								<div class="greata"><img onclick="bigImg();" src="<%= labelparam[i].value[m] %>"></div>
+								<% } %>
+
+							</div>
+						</li>
+						<% 
+							}else{
+						%>
+						<li><i><%= labelparam[i].label %>：</i><span><%= labelparam[i].value %></span></li>
+						<%
+					        } 
+						}
+						%>
+					</script>
+					<ul>
+						<li class="coupon-btn" id="coupon-btn-voucher">
+							<span>请选择优惠券</span>
+							<a id="voucher_id" data-voucher-id="">
+								<small>无可用</small> &nbsp;
+								<img src="../../images/cleaning-right.png" />
+							</a>
+						</li>
+						<li class="coupon-btn" id="coupon-btn-card">
+							<span>请选择充值卡</span>
+							<a id="card_id" data-card-id="">
+								<small>无可用</small> &nbsp;
+								<img src="../../images/cleaning-right.png" />
+							</a>
+						</li>
+						<!--<li>
+							红包
+							<input class="check" type="checkbox" name="" />
+						</li>
+						<li>
+							购买保险
+							<input class="check" type="checkbox" name="" />
+
+						</li>-->
+					</ul>
+					<div class="appoint-detail-deal">
+						<input type="checkbox" classs="check" name="" id="agreement" value="" checked="checked" style="display: none;" />
+						<a style="display:none ;">请阅读协议书内容并同意</a>
+					</div>
+				</div>
+				<!--<div class="appoint-detail-next">
+					<div>合计：<span>800元</span></div>
+					<a href="####">下一步</a>
+				</div>-->
+
+			</div>
+
+		</section>
+
+		<!--优惠券列表-->
+		<section class="page page-coupon" id="page-coupon-voucher">
+
+			<!--ucenter-->
+			<header class="common-header">
+
+				<a class="icon-back"></a>
+				<h1>优惠券</h1>
+
+			</header>
+
+			<section class="mui-content coupon">
+				
+				<button class='nouese'>不使用优惠券</button>
+				<div class="coupon-list" id="coupon-list-voucher">
+
+					<!--style: 正常-->
+					<script type="text/html" id="voucher_list">
+						<% for(var i=0;i < voucher_list.length;i++){ %>
+						<div class="coupon-item coupon-normal coupon-item-voucher" data-voucher="<%= voucher_list[i].voucher_id %>">
+							<div class="coupon-item-info">
+								<h3><%= voucher_list[i].voucher_title %></h3>
+								<small>满<span><%= voucher_list[i].voucher_limit %></span>元抵<span><%= voucher_list[i].voucher_price %></span>元</small>
+								<strong>
+                                        <sup>￥</sup>
+                                        <%= voucher_list[i].voucher_price %>
+                                    </strong>
+							</div>
+							<div class="coupon-item-date">
+								<%= voucher_list[i].voucher_start_date %> -
+								<%= voucher_list[i].voucher_end_date  %>
+							</div>
+							<p class="prompt">不可叠加，不找零，过期作废，一旦下单使用，不可退回。</p>
+						</div>
+						<% } %>
+					</script>
+
+				</div>
+
+			</section>
+
+		</section>
+
+		<!--充值卡列表-->
+		<section class="page page-coupon " id="page-coupon-card">
+
+			<!--ucenter-->
+			<header class="common-header">
+
+				<a class="icon-back"></a>
+				<h1>充值卡</h1>
+
+			</header>
+
+			<section class="mui-content coupon" style="height:100%;">
+				<!--<div id="layPassword" style="display:none;width:80%;height:8rem;border:#BBBBBB 1px solid;position: fixed;z-index:2000;left:10%;bottom: 30vh;">
+					<!--menu class="pay-menu"
+						<div style="width:100%;line-height:2rem;font-size:0.6rem;color:#434343;font-weight:600;background-color:#fff;">&nbsp;&nbsp;密码输入</div>
+						<div style="margin:0;padding:0;width:100%;">
+							<!--密码支付
+							<div style="width:100%;">
+								<div style="float:left;width:20%;height:2rem;line-height:2rem;font-size:0.6rem;color:#434343;text-align: center;">密码</div>
+								<div style="margin-left:20%;width:80%;height:1.5rem;line-height:1.5rem;text-align: left;">
+									<input type="password" id="txtPassword" name="txtPassword" class="mul-input" style="margin-top:0.4rem;width:90%;height:1.3rem;font-size: 0.5rem;" />
+								</div>
+							</div>
+							<!--是否使用充值卡
+							<div style="margin:0;padding:0;width:100%;">
+							
+								<div style="margin-left:20%;width:80%;height:1.6rem;line-height: 1.6rem;text-align: left;">
+									<input type="checkbox" id="chkUseCard" style="width:0.5rem;height:0.5rem;"/>
+									<span style="font-size: 0.5rem;line-height: 1.5rem;margin-left: 0.5rem;">是否充值卡支付</span>
+								</div>
+							</div>
+							<div style="margin:0 auto;width:95%;height:60px;text-align: center;">
+								<button id="card_btn" style="width:80%;height:1.3rem;line-height:1.3rem;font-size:0.6rem;color:#fff;background-color:#eb6100;text-align: center;">确认支付</button>	
+							</div>
+						</div>
+		                <input type="hidden" name="hidCard" value="">
+						
+					<!--/menu
+	        		
+	        	</div>-->
+				<button class='nouese'>不使用充值卡</button>
+				<div class="coupon-list" id="coupon-list-card">
+
+				</div>
+				<!--style: 正常-->
+				<script type="text/html" id="card_list">
+					<% for(var i=0;i < datas.available_rcb_list.length;i++){ %>
+					<div class="coupon-item coupon-normal" id="coupon-item-card" data-card-id="<%= datas.available_rcb_list[i].id %>">
+						<div class="coupon-item-info">
+							<h3 style="width: 52%;overflow: hidden;"><%= datas.available_rcb_list[i].batchflag %></h3>
+							<small>APP专享</small>
+							<strong>
+                                    <sup>￥</sup>
+                                    <%= datas.available_rcb_list[i].available_balance %>
+                                </strong>
+						</div>
+						<div class="coupon-item-date">
+							<%= datas.available_rcb_list[i].enddate_text  %>
+						</div>
+					</div>
+					<% } %>
+				</script>
+			</section>
+
+		</section>
+
+		<section class="mask" id="payMask">
+
+			<menu class="pay-menu">
+				<h4>支付方式</h4>
+				<a href="javascript:void(0);" class="alipay" data-type="alipay_native" style="font-size: 0.6rem;">&emsp;支付宝</a>
+				<!--<a href="javascript:void(0);" class="wxpay" data-type="wxpay_native" style="font-size: 0.6rem;">&emsp;微信</a>-->
+				<input type="hidden" name="payCode" value="">
+				<button id="pay_btn">确认支付</button>
+			</menu>
+
+		</section>
+
+		<script src="../../js/hotcss.js"></script>
+		<script src="../../js/config.js"></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/template.js"></script>
+		<script src="../../js/common.js"></script>
+		<script src="../../js/order/order.js"></script>
+	</body>
+
+</html>

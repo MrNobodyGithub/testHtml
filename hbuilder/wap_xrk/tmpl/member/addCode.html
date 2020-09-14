@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>领取礼包</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../../js/hotcss.js"></script>
+        <link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/stylesheet.css" rel="stylesheet" />
+		<style type="text/css">
+			.addCode .addPassword input{
+				padding-left: 1.3rem;
+			}
+		</style>
+	</head>
+
+	<body style="background: #efeff4;">
+		
+		
+		<!--ucenter-->
+		<header class="common-header">
+
+			<a class="icon-back mui-action-back"></a>
+			<h1>领取礼包</h1>
+
+		</header>
+		
+        <section class="mui-content addCode">
+		<div class="addCode1">
+			<span id="">输入卡密</span><input type="text" name="" id="" value="" />
+		</div>
+		<div class="addPassword">
+			<input type="" name="" id="" value="" />
+			<button>点击获取验证码</button>
+		</div>
+		<div class="addCodebtn">
+			<button>确定领取</button>
+		</div>
+        </section>
+		
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/template.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../../js/config.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			var $key = _.userInfo.getKey();
+			//console.log($key)
+			//获取验证码
+			var $codekey=null;
+			$(".addPassword").find("button").on("tap",function(){
+				$.ajax({
+					type:"get",
+					url:ApiUrl+"/index.php?act=seccode&op=makecodekey",
+					dataType:"json",
+					async:false,
+					success:function(res){
+						$codekey = res.datas.codekey
+						console.log($codekey)
+					}
+				
+				});
+				//通过验证码返回图片
+				console.log($codekey)
+				var str = ApiUrl+"/index.php?act=seccode&op=makecode&k="+$codekey;
+				$(".addPassword").find("button").css("background","url("+str+") no-repeat center");
+				$(".addPassword").find("button").text("");
+			})
+			
+			
+			
+			$(".addCodebtn").find("button").on("tap",function(){
+				
+			
+				var btnArray = ['否', '是'];
+	        	mui.confirm('是否确定领取？', '', btnArray, function(e) {
+	            	if (e.index == 1) {
+	            		$.ajax({
+							type:"post",
+							url:ApiUrl+"/index.php?act=member_voucher&op=voucher_package_binding",
+							dataType:"json",
+							data:{
+								key:$key,
+								pwd_code:$(".addCode1").find("input").val(),
+								codekey:$codekey,
+								captcha:$(".addPassword").find("input").val()
+							},
+							success:function(res){
+								if(res.code == 200){
+									mui.toast("领取成功")
+									mui.openWindow({
+										url: 'coupon.html',
+										//id: 'service-list',
+										waiting: {
+											autoShow: true,
+											title: '正在加载...'
+										}
+									})
+								}else{
+									mui.toast(res.datas.error);
+									window.location.reload();
+								}
+							}
+						});
+	            	}else if(e.index == 0){
+	            		window.location.reload();
+	            	}
+	            })	
+			})
+		</script>
+
+	</body>
+
+</html>

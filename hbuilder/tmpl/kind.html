@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>分类</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/stylesheet.css" />
+	</head>
+<style>
+	.comkind .mui-table-view{
+		width:95% !important;
+	}
+</style>
+	<body>
+		<header class="common-header kind-header">
+
+			<a class="icon-back mui-action-back"></a>
+			<h1>选择分类</h1>
+
+		</header>
+		<section class="mui-content comkind">
+			
+		</section>
+		
+		<script type="text/html" id="comkind">
+			<% if(code == 200){ %>
+			<ul class="mui-table-view comkind-list">
+				
+				<% for(var i = 0; i < datas.class_list.length; i++){ %>
+			    <li class="mui-table-view-cell mui-collapse" data-gc-id="<%= datas.class_list[i].gc_id %>">
+			        <a class="mui-navigate-right" href="#">
+			        	<span class="icon"></span>
+			        	<span class="text"><%= datas.class_list[i].gc_name %></span>
+			        </a>
+			        <% var subchild = datas.class_list[i].child %>
+			        <% if(datas.class_list[i].text != ''){ %>
+			        <div class="mui-collapse-content">
+			        	<% for(var j = 0; j < subchild.length;j++){ %>
+			            	<i data-gc-id="<%= subchild[j].gc_id %>" data-type-id = "<%= subchild[j].goods_class_type.type_id %>" data-tmpl = "<%= subchild[j].goods_class_type.app_list_templet %>" data-type-model = "<%= subchild[j].goods_class_type.type_model %>"><%= subchild[j].gc_name %></i>
+			        </div>
+			        <% } %>
+			    </li>			   
+			    <% } %>
+			</ul>
+		<% } %>
+		</script>
+		<script type="text/javascript" src="../js/hotcss.js" ></script>
+		<script type="text/javascript" src="../js/jquery.min.js" ></script>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/config.js" ></script>
+		<script type="text/javascript" src="../js/common.js" ></script>
+		<script type="text/javascript" src="../js/template.js" ></script>
+		<script type="text/javascript" src="../js/tmpl/kind.js" ></script>
+		<script type="text/javascript">
+			mui.init();
+			mui('#sheet1').popover('toggle');
+		</script>
+	</body>
+
+</html>

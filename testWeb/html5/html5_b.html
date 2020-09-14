@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<!--<canvas id="canvas_a" width="100%" height="100%"></canvas>-->
+		<canvas id="myCanvas" width="200" height="300" style="border:1px solid #c3c3c3;">
+Your browser does not support the canvas element.
+		</canvas>
+		<!--划线 填充 画圆 渐变 插图-->
+		<script type="text/javascript">
+			var c = document.getElementById("myCanvas");
+			var cxt = c.getContext("2d");
+			cxt.moveTo(15, 10);
+			cxt.lineTo(50, 30);
+			cxt.lineTo(10, 30);
+			cxt.stroke();
+		</script>
+		<script type="text/javascript">
+			var c = document.getElementById("myCanvas");
+			var cxt = c.getContext("2d");
+			cxt.fillStyle = "#FF0000";
+			cxt.fillRect(0, 0, 10, 10);
+		</script>
+		<script type="text/javascript">
+			var c = document.getElementById("myCanvas");
+			var cont = c.getContext("2d");
+			cont.beginPath();
+			//			cxt.arc(70, 18, 15, 0, Math.PI * 2, true);
+			cont.arc(100, 25, 20, 0, Math.PI * 2, true);
+			cont.closePath();
+			cont.fillStyle = "antiquewhite";
+			cont.fill();
+		</script>
+		<script type="text/javascript">
+			var can = document.getElementById("myCanvas");
+			var cont = can.getContext("2d");
+			//			var gar = cont.createLinearGradient(0, 60, 50, 20);
+			var gar = cont.createLinearGradient(0, 40, 80, 40);
+			gar.addColorStop(0, "#FF0000");
+			gar.addColorStop(0.5, "#00ff00");
+			gar.addColorStop(1, "#0000FF");
+			cont.fillStyle = gar;
+			cont.fillRect(0, 100, 80, 40);
+
+			var can = document.getElementById("myCanvas");
+			var cont = can.getContext("2d");
+			var gar = cont.createLinearGradient(-17, 35, 40, 23);
+			gar.addColorStop(0, "#FF0000");
+			gar.addColorStop(0.5, "#00ff00");
+			gar.addColorStop(1, "#0000FF");
+			cont.fillStyle = gar;
+			cont.fillRect(0, 150, 80, 50);
+		</script>
+		<script type="text/javascript"> 
+			var c = document.getElementById("myCanvas");
+			var cxt = c.getContext("2d");
+			var img = new Image();
+			img.src = "img/img3.gif";
+			cxt.drawImage(img, 10, 10);
+		</script>
+		<img src="../img/img3.gif" />
+	</body>
+
+</html>

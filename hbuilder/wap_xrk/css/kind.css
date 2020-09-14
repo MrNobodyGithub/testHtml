@@ -1,0 +1,106 @@
+.kind-header {
+  background: #fff;
+}
+.comkind {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.comkind .mui-table-view {
+  margin-top: 0!important;
+  width: 15.25925926rem;
+  margin: 0 auto;
+  background: transparent;
+}
+.comkind .mui-table-view-cell {
+  padding: 0.48888889rem 0.47407407rem;
+  border-radius: 0.2962963rem;
+  background: #fff;
+  margin-top: 0.35555556rem;
+}
+.comkind .mui-table-view-cell .mui-collapse-content {
+  padding: 0.44444444rem -0.2962963rem;
+}
+.comkind .mui-table-view-cell .mui-collapse-content .active {
+  color: #ea5404;
+  border: 1px solid #ea5404;
+  background: none;
+}
+.comkind .mui-table-view-cell .mui-collapse-content i {
+  display: inline-block;
+  font-size: 0.42962963rem;
+  color: #5c5c5c;
+  border-radius: 0.74074074rem;
+  font-style: normal;
+  padding: 0.38518519rem 0.81481481rem;
+  background: #f3f3f3;
+}
+.comkind .mui-table-view-cell .mui-collapse-content i:not(:first-child) {
+  margin-left: 0.22222222rem;
+}
+.comkind .mui-table-view-cell a {
+  font-size: 0.53333333rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.comkind .mui-table-view-cell a .icon {
+  display: block;
+  width: 0.78518519rem;
+  height: 0.96296296rem;
+  margin-right: 0.4rem;
+}
+.comkind .mui-table-view-cell a .text {
+  display: block;
+  line-height: 0.74074074rem;
+}
+.comkind .mui-table-view-cell:nth-of-type(1) .icon {
+  background: url(../images/kind/kind_01.jpg) no-repeat center center;
+  background-size: 0.63703704rem 0.63703704rem;
+}
+.comkind .mui-table-view-cell:nth-of-type(2) .icon {
+  background: url(../images/kind/kind_02.jpg) no-repeat center center;
+  background-size: 0.78518519rem 0.77037037rem;
+}
+.comkind .mui-table-view-cell:nth-of-type(3) .icon {
+  background: url(../images/kind/kind_03.jpg) no-repeat center center;
+  background-size: 0.56296296rem 0.81481481rem;
+}
+.comkind .mui-table-view-cell:nth-of-type(3) .text {
+  line-height: 0.81481481rem;
+}
+.comkind .mui-table-view-cell:nth-of-type(4) .icon {
+  background: url(../images/kind/kind_04.jpg) no-repeat center center;
+  background-size: 0.63703704rem 0.63703704rem;
+}
+.comkind .mui-table-view-cell:nth-of-type(5) .icon {
+  background: url(../images/kind/kind_05.jpg) no-repeat center center;
+  background-size: 0.63703704rem 0.63703704rem;
+}
+.comkind .mui-table-view-cell:nth-of-type(6) .icon {
+  background: url(../images/kind/kind_06.jpg) no-repeat center center;
+  background-size: 0.63703704rem 0.63703704rem;
+}
+.comkind .mui-table-view-cell:nth-of-type(7) .icon {
+  background: url(../images/kind/kind_07.jpg) no-repeat center center;
+  background-size: 0.63703704rem 0.63703704rem;
+}
+.comkind .mui-table-view-cell:nth-of-type(8) .icon {
+  background: url(../images/kind/kind_08.png) no-repeat center center;
+}
+.comkind .mui-table-view-cell:after {
+  background-color: transparent;
+}
+.comkind .mui-collapse.mui-active {
+  margin-top: 0.35555556rem;
+}
+.comkind .mui-table-view-cell.mui-active {
+  background-color: #fff;
+}

@@ -1,0 +1,152 @@
+.my-send-header {
+  border: 0;
+  color: #fff;
+  background: #084179;
+}
+.my-send-header div:nth-of-type(3) {
+  color: red;
+  background: none;
+  padding-left: 0;
+}
+.my-send-header div:first-child {
+  margin-top: 0;
+}
+.my-send {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: #084179;
+  padding: 0 0.66666667rem;
+  overflow: auto;
+  position: relative;
+  padding-bottom: 0.44444444rem;
+}
+.my-send .footer-img {
+  position: fixed;
+  bottom: 0.44444444rem;
+  right: 0.44444444rem;
+}
+.my-send .footer-img img {
+  width: 3.05185185rem;
+  height: 3.05185185rem;
+}
+.my-send .send-list {
+  background: #fff;
+  margin-top: 0.47407407rem;
+  border-radius: 0.2962963rem;
+  position: relative;
+  overflow: hidden;
+  height: 6.59259259rem;
+}
+.my-send .send-list dl {
+  width: 100%;
+  height: 5.00740741rem;
+  padding-left: 1.0962963rem;
+  padding-right: 1.24444444rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+.my-send .send-list dl i {
+  display: block;
+  width: 0.13333333rem;
+  height: 1.43703704rem;
+  position: absolute;
+  left: 0rem;
+  top: 0.04444444rem;
+}
+.my-send .send-list dl em {
+  display: block;
+  width: 3.03703704rem;
+  height: 2.66666667rem;
+  border-top-right-radius: 0.2962963rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.my-send .send-list dl dd h4 {
+  font-size: 0.6962963rem;
+  line-height: 1.11111111rem;
+}
+.my-send .send-list dl dd p:nth-of-type(1) {
+  line-height: 1.42222222rem;
+  color: #747474;
+  font-size: 0.51851852rem;
+}
+.my-send .send-list dl dd p:nth-of-type(2) {
+  line-height: 1.58518519rem;
+  color: red;
+  font-size: 0.6962963rem;
+}
+.my-send .send-list dl dt {
+  width: 3.28888889rem;
+  height: 3.28888889rem;
+}
+.my-send .send-list dl dt img {
+  width: 3.28888889rem;
+  height: 3.28888889rem;
+}
+.my-send .send-list .bottom {
+  padding: 0.25185185rem 1.0962963rem;
+  background: url(../image/my/bg.png) repeat-x;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 0.51851852rem;
+}
+.my-send .send-list .bottom .edit {
+  padding: 0.26666667rem 0.94814815rem;
+  border: 1px solid #797979;
+  border-radius: 0.59259259rem;
+  color: black;
+}
+.my-send .send-list .bottom span {
+  padding: 0.26666667rem 0.94814815rem;
+  font-size: 0.51851852rem;
+}
+.my-send .send-list.send-success i {
+  background: url(../image/my/success-b.png) no-repeat left center;
+  background-size: 0.13333333rem 1.43703704rem;
+}
+.my-send .send-list.send-success em {
+  background: url(../image/my/success.png) no-repeat center center;
+  background-size: 3.03703704rem 2.66666667rem;
+}
+.my-send .send-list.send-process i {
+  background: url(../image/my/process-b.png) no-repeat left center;
+  background-size: 0.13333333rem 1.43703704rem;
+}
+.my-send .send-list.send-process em {
+  background: url(../image/my/process.png) no-repeat center center;
+  background-size: 3.03703704rem 2.66666667rem;
+}
+.my-send .send-list.send-end i {
+  background: url(../image/my/end-b.png) no-repeat left center;
+  background-size: 0.13333333rem 1.43703704rem;
+}
+.my-send .send-list.send-end em {
+  background: url(../image/my/end.png) no-repeat center center;
+  background-size: 3.03703704rem 2.66666667rem;
+}
+.sendbtn {
+  display: block;
+  width: 2.88888889rem;
+  height: 2.84444444rem;
+  background: url(../image/images/send.png) no-repeat center center;
+  background-size: 2.88888889rem 2.84444444rem;
+  position: absolute;
+  bottom: 0.6962963rem;
+  right: 1.18518519rem;
+}

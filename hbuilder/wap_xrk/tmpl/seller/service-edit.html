@@ -1,0 +1,518 @@
+<!doctype html>
+<html>
+	<!--
+	作者：hwh
+	时间：2017-08-03
+	描述：编辑服务
+-->
+
+	<head>
+		<meta charset="UTF-8">
+		<title>编辑服务</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../css/mui.min.css" />
+		<link rel="stylesheet" href="../../css/wap/wap.css" />
+		<style type="text/css">
+			.sendspec1 p {
+				font-size: .8rem;
+				padding-left: 1rem;
+				height: 2rem;
+				line-height: 2rem;
+			}
+			
+			.send-server .form-list div .price {
+				font-size: 0.51851852rem;
+			}
+			
+			.send-server .form-list div .stock {
+			    width: 2.22222222rem;
+			    height: 1.18518519rem;
+			    border: none;
+			    background: #f7f7f7;
+			    -ms-flex-item-align: center;
+			    -ms-grid-row-align: center;
+			    align-self: center;
+			    margin-bottom: 0;
+			    margin-left: 0.37037037rem;
+			    line-height: 1.18518519rem;
+			    font-size: 0.51851852rem;
+			    text-align: center;
+			}
+			.send-server .form-list div span {
+			    margin-left:0.37rem;
+			}
+			
+			.sendtext {
+				line-height: 0.5rem
+			}
+			
+			.send-server .form-group input {
+				line-height: 100%;
+			}
+			
+			.check2:checked {
+				background: url(../../images/duigou.png) no-repeat center;
+				background-size: 24px;
+			}
+			
+			.nature {
+				height: auto;
+				width: 100%;
+				border-bottom: 1px solid #ccc;
+			}
+			
+			.nature h3 {
+				height: 1.5rem;
+				line-height: 1.5rem;
+				width: 100%;
+				border-bottom: 1px solid #CCC;
+				margin-left: 1.5rem;
+				font-size: .6rem;
+			}
+			
+			.nature p {
+				margin-left: 1.5rem;
+				font-size: .6rem;
+				height: 1rem;
+				line-height: 1rem;
+			}
+			
+			.nature1 {
+				margin-left: 1.5rem;
+			}
+			
+			.nature i {
+				font-style: normal;
+				margin-left: .6rem;
+			}
+			
+			.nature i input {
+				height: .6rem;
+				width: .6rem;
+				border: 1px solid #ccc;
+				vertical-align: middle;
+				position: relative;
+				bottom: .1rem;
+				margin-right: .2rem;
+			}
+			
+			.nature i input:checked {
+				background: url(../../images/duigou.png) no-repeat center;
+				background-size: 24px;
+			}
+			
+			.nature i span {
+				font-size: .6rem;
+			}
+			
+			.send-server .form-image .upload-img .default {
+				background: url(../../images/my/photo-upload2.jpg) no-repeat #F1F1F1 center;
+				width: 2.99999rem;
+				height: 2.999999rem;
+				flex: none;
+				margin-left: 1rem;
+			}
+			
+			.send-server .form-image .upload-img .default {
+				margin-left: 1.7rem !important;
+			}
+			
+			.send-server .form-image .upload-img .upload-moreimg span {
+				right: 0rem;
+			}
+			
+			body {
+				max-width: none !important;
+			}
+			
+			.mui-collapse-content i {
+				margin-left: 0.22222222rem;
+				margin-top: .1rem;
+			}
+			
+			.mui-collapse-content span {
+				font-size: .5rem;
+				padding: .3rem 0;
+				display: block;
+				margin-left: .3rem;
+			}
+			
+			.upload-moreimg {
+				padding: 0 !important;
+				-webkit-box-flex: 0;
+				flex: 0 0 20% !important;
+				margin-left: 10%;
+			}
+			/*新增样式*/
+			
+			.form-specContain {}
+			
+			.form-specContain h3 {
+				background-image: url(../../images/new-icon-1.jpg);
+				font-weight: normal;
+				font-size: 0.59259259rem;
+				color: #333;
+				height: 1.2rem;
+				line-height: 1.2rem;
+				margin-left: 0.59259259rem;
+				padding-left: 1.14074074rem;
+				background-position: left center;
+				background-repeat: no-repeat;
+				background-size: 0.71111111rem;
+			}
+			
+			.form-specContain dl {
+				margin-left: 0.59259259rem;
+				padding-left: 1.14074074rem;
+			}
+			
+			.form-specContain dt {
+				margin-bottom: 0.4rem;
+			}
+			
+			.form-specContain dt span {
+				font-weight: normal;
+				font-size: 0.47407407rem;
+				color: #333;
+				height: 0.6rem;
+				line-height: 0.6rem;
+			}
+			
+			.form-specContain dd {}
+			
+			.form-specContain dd ul {
+				padding-left: 0rem;
+			}
+			
+			.form-specContain dd ul li {
+				list-style-type: none;
+				display: inline-block;
+				-webkit-box-flex: 0;
+				-ms-flex: 0 0 31%;
+				flex: 0 0 31%;
+				border-width: 1px;
+				border-color: #dadada;
+				border-style: solid;
+				border-radius: 0.08888889rem;
+				background-color: #ffffff;
+				width: 3rem;
+				height: 1.2rem;
+				text-align: center;
+				vertical-align: middle;
+				position: relative;
+				font-size: 0.44444444rem;
+				line-height: 0.68148148rem;
+				padding-top: 0.2rem;
+				margin-right: 0.4rem;
+				margin-bottom: 0.4rem;
+			}
+			
+			.form-specContain dd ul li span {
+				font-weight: normal;
+				font-size: 0.47407407rem;
+				color: #333;
+			}
+			/*覆盖全局样式*/
+			
+			.form-specContain dd ul li:nth-of-type(n) {
+				width: 3rem;
+				height: 1.2rem;
+				padding: 0rem;
+				padding-top: 0.2rem;
+				background: none;
+			}
+			
+			.form-specContain dd ul li input {
+				display: block;
+				-webkit-appearance: none;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				right: 0;
+				opacity: 0;
+				z-index: 1;
+			}
+			
+			.form-specContain dd ul li input:checked+span.checkbox {
+				background: url(../../images/month/check.png) no-repeat;
+				background-size: 0.8rem 1rem;
+				width: 0.8rem;
+				height: 1rem;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}
+			
+			.form-specContain dd ul li span.checkbox {
+				display: block;
+				-webkit-appearance: none;
+				background: url(../../images/month/no-check.png) no-repeat;
+				background-size: 0.8rem 1rem;
+				width: 0.8rem;
+				height: 1rem;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}
+			
+			.sendspec label {
+				display: inline-block;
+				height: 1.45185185rem;
+				line-height: 1.45185185rem;
+			}
+			.send-server .form-city p {
+				width: auto;
+			}
+			.send-server .form-control .priceinput{
+				display: inline-block;
+				flex:1;
+				width:initial !important;
+			}
+			.send-server .form-control .unitinput{
+				display: inline-block;
+				width:2rem;
+				text-align: center;
+			}
+			.send-server .form-control .seperate{
+				font-size: 0.53333333rem;
+				color: #181818;
+				line-height: inherit;
+				padding:0 0.2rem;
+				display: inline-block;
+				height:auto!important;			
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<section class="server1">
+			<header class="common-header">
+				<h1>编辑服务</h1>
+				<a class="icon-back mui-action-back"></a>
+				<!--<a class="icon-tel"><span>说明</span></a>-->
+			</header>
+			<div class="mui-content send-server">
+
+				<img class="loadingimg" src="../../images/ruzhuloading.gif" />
+				<form id="serviceform">
+					<input type="hidden" id="commonid" name="commonid" value="">
+					<div class="form-group new-icon-1 serverkind">
+						<label for="">类型</label>
+						<div class="form-control form-icon-arrow">
+							<input type="hidden" id="cate_id" name="cate_id" value="">
+							<input type="hidden" id="type_id" name="type_id" value="">
+							<input type="hidden" id="cate_name" name="cate_name" value="">
+							<input type="hidden" id="is_gv" name="is_gv" value="0">
+							<input type="text" id="cate_name_select" readonly class="sendspan" placeholder="请选择类型">
+						</div>
+					</div>
+
+					<div class="form-group new-icon-2">
+						<label for="">标题</label>
+						<div class="form-control" style="padding-right: 0.74074074rem;">
+							<input type="text" id="g_name" name="g_name" placeholder="请填写标题" class="sendinp sendspan">
+						</div>
+					</div>
+
+					<div class="form-group new-icon-4">
+						<label for="">价格</label>
+						<div class="form-control" style="padding-right: 0.74074074rem;display:flex">
+							<input type="text" id="g_price" name="g_price" placeholder="请填写服务价格" autocomplete="off" class="priceinput">
+							<span class="seperate">/</span>
+							<input type="text" id="g_unit" name="g_unit" placeholder="次" value="次" autocomplete="off" class="unitinput">
+						</div>
+					</div>
+					<div class="form-textarea new-icon-3">
+						<textarea placeholder="描述你可服务的内容，不少于10个字，让用户更了解你的服务" name="g_jingle" id="g_jingle" cols="30" rows="5" class="sendtext"></textarea>
+					</div>
+					<div class="form-group new-icon-2" id="group_storage" style="display:none">
+						<label for="">库存</label>
+						<div class="form-control" style="padding-right: 0.74074074rem;">
+							<input type="text" id="g_storage" name="g_storage" placeholder="请填写库存数量" autocomplete="off" class="sendinp sendspan">
+						</div>
+					</div>
+					<div id="specList" class="form-specContain">
+
+					</div>
+					<script type="text/html" id="specListTpl">
+						<% if(speclist != null){ %>
+						<h3>规格选择</h3>
+						<% for(var i= 0 ;i<speclist.length;i++){ %>
+						<dl type="spec_group_name" class="spec-bg">
+							<dt>
+					          <input type="hidden" value="<%=speclist[i].sp_name%>" sp_id="<%=speclist[i].sp_id%>" name="sp_name[<%=speclist[i].sp_id%>]" class="specgrouplist">
+					          <span><%=speclist[i].sp_name%></span>
+					        </dt>
+							<dd type="sp_group_val">
+								<ul>
+									<% var specvaluelist = speclist[i].data;%>
+									<% for(var j= 0 ;j<specvaluelist.length;j++){ %>
+									<li>
+										<span><%=specvaluelist[j].sp_value_name%></span>
+										<input type="checkbox" <% if(specvaluelist[j].checked==1 ) {%> checked="true"
+										<%}%> value="<%=specvaluelist[j].sp_value_name%>" sp_value_id="<%=specvaluelist[j].sp_value_id%>" name="sp_val[<%=speclist[i].sp_id%>][<%=specvaluelist[j].sp_value_id%>]" class="specvaluelist">
+										<span class="checkbox"></span>
+									</li>
+									<% } %>
+								</ul>
+							</dd>
+						</dl>
+						<% }} %>
+					</script>
+					<div id="skuList" class="form-list sendspec1 new-icon-4" style="font-size: 0.5rem;">
+
+					</div>
+					<script type="text/html" id="skuListTpl">
+						<% var is_gv = specdata.is_gv,speclist = specdata.speclist; %>
+						<% if(speclist != null){ %>
+						<h3>规格列表</h3>
+						<% for(var i= 0 ;i<speclist.length;i++){ %>
+						<div>
+							<div class="sendspec">
+								<label><%=speclist[i].specnamesstr%></label>
+								<input type="hidden" name="spec[<%=speclist[i].specidsstr%>][goods_id]" value="<%=speclist[i].goods_id%>" />
+								<% for(var m= 0 ;m<speclist[i].specids.length;m++){ %>
+								<input type="hidden" name="spec[<%=speclist[i].specidsstr%>][sp_value][<%=speclist[i].specids[m]%>]" value="<%=speclist[i].specnames[m]%>" />
+								<% } %>
+							</div>
+							<div>
+								<span>价格</span>
+								<input type="number" id="secListprice" name="spec[<%=speclist[i].specidsstr%>][price]" class="price" value="<%=speclist[i].goods_price%>">
+								<em>元</em>
+							</div>
+							<% if (is_gv == 1) {%>
+							<div id="specStock">
+								<span>库存</span>
+								<input type="number" name="spec[<%=speclist[i].specidsstr%>][stock]" class="stock" value="<%=speclist[i].goods_stock%>">
+							</div>
+							<% } %>
+						</div>
+						<% }} %>
+					</script>
+					<div id="areaList" class="form-city">
+					</div>
+					<script type="text/html" id="areaListTpl">
+						<% if(code == 200 ){ %>
+						<p>服务区域(多选)</p>
+						<div class="privice">
+							<a>
+								<span>省</span>
+								<span><%= datas.area_pro %>省</span>
+								<input type="hidden" name="province_id" value="<%= datas.area_pro_id %>" />
+							</a>
+							<a>
+								<span>市</span>
+								<span><%= datas.area_city %></span>
+								<input type="hidden" name="city_id" value="<%= datas.area_city_id %>" />
+							</a>
+							<div class="city" style="margin-left: 1rem;">
+								<% for(var i = 0;i<datas.area_dis.length;i++){ %>
+								<% var x= null; 
+								 if((i+1)%4==0){ 
+								x="<br/>"	
+								}%>
+								<i class="area" style="margin-left: .6rem;display: inline-block;height: .8rem;line-height: .8rem;">
+									<input type="checkbox" name="area_ids[]" value="<%= datas.area_dis[i].area_id %>" class="check2" style="display: inline-block;vertical-align: middle; position: relative;bottom:.1rem"/>
+									<span style="display: inline-block;height: .8rem;line-height: .8rem;"><%= datas.area_dis[i].area_name %></span>
+								</i>
+								<%=# x %>
+								<% } %>
+							</div>
+						</div>
+						<% } %>
+					</script>
+
+					<div id="attrList" class="nature">
+
+					</div>
+					<script type="text/html" id="attrListTpl">
+						<% if(attrlist != null && attrlist.length>0){ %>
+						<h3>属性选择</h3>
+						<p>
+							<%= attrlist[0].attr_name %>：</p>
+						<div class="nature1">
+							<% for(var i= 0 ;i<attrlist[0].val.length;i++){ %>
+							<% var x= null; 
+								 if((i+1)%4==0){ 
+								x="<br/>"	
+								}%>
+							<i class="attr">
+									<input type="checkbox" <% if(attrlist[0].val[i].checked == 1) {%> checked="true" <%}%> name="attr[<%=attrlist[0].attr_id%>][<%= attrlist[0].val[i].attr_value_id %>]" value="<%= attrlist[0].val[i].attr_value_name %>" />
+									<span><%= attrlist[0].val[i].attr_value_name %></span>
+								</i>
+							<%=# x %>
+							<% } %>
+						</div>
+						<% }else{} %>
+					</script>
+					<div class="form-image new-icon-5">
+						<h3>上传照片 <small>最多(10)张</small></h3>
+						<div class="upload-img">
+							<div class="default">
+								<input type="file" class="addimg7" name="service_image" id="service_image" />
+							</div>
+						</div>
+					</div>
+					<div style="height: 1rem;width:100%"></div>
+				</form>
+			</div>
+
+			<footer class="footer-btn ">
+				<a class="btn-orange">发布</a>
+			</footer>
+		</section>
+		<section class="server2" style="display: none;">
+			<header class="common-header kind-header">
+				<a class="icon-back"></a>
+				<h1>选择分类</h1>
+			</header>
+			<section class="mui-content comkind">
+
+			</section>
+			<script type="text/html" id="comkind">
+				<% if(code == 200){ %>
+				<ul class="mui-table-view comkind-list">
+					<% for(var i = 0; i < datas.class_list.length; i++){%>
+					<% var gc_tag_name = datas.class_list[i].gc_name; %>
+					<li class="mui-table-view-cell mui-collapse" data-gc-id="<%= datas.class_list[i].gc_id %>">
+						<a class="mui-navigate-right" href="#">
+							<span class="icon" style="background: url(<%= datas.class_list[i].image %>) no-repeat center center;background-size: 1rem 1rem!important;"></span>
+							<span class="text"><%= datas.class_list[i].gc_name %></span>
+						</a>
+						<% var subchild = datas.class_list[i].child %>
+						<% if(datas.class_list[i].text != ''){ %>
+						<div class="mui-collapse-content">
+							<% for(var j = 0; j < subchild.length;j++){ %>
+							<% if(subchild[j].child != ""){ %>
+							<br/><span data-gc-id="<%= subchild[j].gc_id %>" data-type-id="<%= subchild[j].goods_class_type.type_id %>" data-type-model="<%= subchild[j].goods_class_type.type_model %>">--<%= subchild[j].gc_name %></span><br/>
+							<% var sub_gc_tag_name = gc_tag_name + ">" + subchild[j].gc_name %>
+							<% for(var x = 0;x<subchild[j].child.length;x++){ %>
+							<% var child_gc_tag_name = sub_gc_tag_name + ">" + subchild[j].child[x].gc_name %>
+							<i gc_tag_name="<%=child_gc_tag_name%>" gc_virtual="<%= subchild[j].child[x].gc_virtual %>" data-gc-id="<%= subchild[j].child[x].gc_id %>" data-type-id="<%= subchild[j].child[x].goods_class_type.type_id %>" data-type-model="<%= subchild[j].child[x].goods_class_type.type_model %>"><%= subchild[j].child[x].gc_name %></i>
+							<% } %><br/>
+							<% }else{ %>
+							<% var sub_gc_tag_name = gc_tag_name + ">" + subchild[j].gc_name %>
+							<i gc_tag_name="<%=sub_gc_tag_name%>" gc_virtual="<%= subchild[j].gc_virtual %>" data-gc-id="<%= subchild[j].gc_id %>" data-type-id="<%= subchild[j].goods_class_type.type_id %>" data-type-model="<%= subchild[j].goods_class_type.type_model %>"><%= subchild[j].gc_name %></i>
+							<% } %>
+							<% } %>
+						</div>
+						<% } %>
+					</li>
+					<% }%>
+				</ul>
+				<% } %>
+			</script>
+		</section>
+		<script src="../../js/hotcss.js"></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/template.js"></script>
+		<script src="../../js/simple-plugin.js"></script>
+		<script src="../../js/config.js"></script>
+		<script src="../../js/common.js"></script>
+		<script src="../../js/seller/service-edit.js"></script>
+	</body>
+
+</html>

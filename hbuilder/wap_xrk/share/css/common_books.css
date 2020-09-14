@@ -1,0 +1,332 @@
+.baojie_bottom {
+	padding: 0.5rem;
+}
+
+.baojie_bottom img {
+	width: 100%;
+}
+
+#footer {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	border: 0;
+}
+
+#footer button {
+	display: block;
+	width: 90%;
+	margin: 5px auto;
+}
+
+.hide {
+	display: none;
+}
+
+
+/*选择套餐*/
+
+#select-spec .mui-content {
+	padding-top: 45px;
+}
+
+#select-spec p {
+	margin-bottom: 0;
+}
+
+#select-spec #header i {
+	width: 40px;
+	height: 45px;
+	display: inline-block;
+	background: url(../img/cleaning-back.png) no-repeat center center;
+	background-size: 24px;
+}
+
+#select-spec #footer {
+	padding: 0;
+}
+
+#select-spec .detail {
+	background: none;
+	padding: 10px;
+}
+
+#select-spec #footer button {
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+#select-spec .detail span {
+	font-size: 15px;
+}
+
+#select-spec .detail p {
+	padding-left: 8px;
+	font-size: 12px;
+}
+
+#select-spec .spec div {
+	width: 29%;
+	height: auto;
+	background: #fff;
+	text-align: center;
+	border-radius: 5px;
+	margin: 8px 5px;
+	padding: 10px;
+	display: inline-block;
+}
+
+#select-spec .spec div.active {
+	border: 1px solid orangered;
+	background: url(../img/chose2.png) no-repeat right bottom #fff;
+	background-size: 30px;
+}
+
+#select-spec .spec div p {
+	color: #333;
+}
+
+#select-spec .spec div p:nth-of-type(2) {
+	color: orangered;
+	font-size: 14px;
+}
+
+.own-search {
+	height: 50px;
+	background: #fff;
+	padding: 0 12px;
+	display: flex;
+	justify-content: space-between;
+	display: none;
+}
+
+.own-search p {
+	line-height: 50px;
+	font-size: 13px;
+	color: #333;
+	display: inline-block;
+}
+
+.own-search p span {
+	color: orangered;
+	margin-left: 5px;
+}
+
+.own-search .right {
+	width: 32%;
+	float: right;
+}
+
+.own-search .right input {
+	width: 70%;
+	background: #E4E4E4;
+	border: 0;
+	height: 32px;
+}
+
+
+/*第二种套餐样式*/
+
+#select-spec dl {
+	display: flex;
+	padding: 0.3rem;
+	background: #fff;
+}
+
+#select-spec dl dt {
+	width: 4.5rem;
+	height: 4.5rem;
+}
+
+#select-spec dl dt img {
+	width: 100%;
+	height: 100%;
+}
+
+#select-spec dl dd {
+	margin: 0;
+	padding: 15px 10px;
+	position: relative;
+	flex: 1;
+}
+
+#select-spec dl dd p {
+	line-height: 1.4rem;
+	font-size: 14px;
+	color: #000;
+}
+
+#select-spec dl dd span {
+	position: absolute;
+	right: 1rem;
+	top: 50%;
+	transform: translateY(-50%);
+	display: block;
+	border: 1px solid #E4E4E4;
+}
+
+#select-spec dl dd span em,
+#select-spec dl dd span i {
+	display: inline-block;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: #e4e4e4;
+	text-align: center;
+	line-height: 1.5rem;
+}
+
+#select-spec dl dd span i {
+	background: #fff;
+	font-style: normal;
+}
+
+
+/*时间选择*/
+
+#select-time {
+	width: 100%;
+	overflow: hidden;
+}
+
+#select-time .mui-content {
+	padding-top: 45px;
+}
+
+#select-time p {
+	margin-bottom: 0;
+}
+
+#select-time #header i {
+	width: 40px;
+	height: 45px;
+	display: inline-block;
+	background: url(../img/cleaning-back.png) no-repeat center center;
+	background-size: 24px;
+}
+
+#select-time #footer {
+	padding: 0;
+}
+
+#select-time #footer button {
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+#select-time .detail {
+	background: none;
+}
+
+.time .week {
+	width: auto;
+	white-space: nowrap;
+	font-size: 0;
+	overflow-x: auto;
+	scrollbar-face-color: #f60;
+	scrollbar-highlight-color: #F60;
+	scrollbar-3dlight-color: #f60;
+	scrollbar-darkshadow-color: #f60;
+	scrollbar-Shadow-color: #f60;
+	scrollbar-arrow-color: #000;
+	scrollbar-track-color: #fff;
+}
+
+.time .week div {
+	display: inline-block;
+	width: 17.3%;
+	margin-right: -3px;
+	text-align: center;
+	background: #fff;
+	padding: 5px 0;
+}
+
+.time .week div.busy {
+	background: #e4e4e4;
+}
+
+.time .week div.active {
+	border-bottom: 2px solid orangered;
+}
+
+.time .week div.active p {
+	color: orangered;
+}
+
+.time .hour {
+	padding: 5px 10px;
+}
+
+.time .hour div {
+	display: none;
+}
+
+.time .hour span {
+	display: inline-block;
+	width: 23.7%;
+	background: #fff;
+	text-align: center;
+	border-radius: 5px;
+	border: 1px solid #A4A4A4;
+	font-size: 14px;
+	line-height: 30px;
+	margin: 5px 2.1px;
+}
+
+.time .hour span.active {
+	border: 1px solid orangered;
+	background: orange;
+}
+
+.time .hour span.busy {
+	background: #e4e4e4;
+}
+
+#selecttaocan_detail {
+	display: none;
+	padding-left: 15px;
+	height: auto!important;
+}
+
+#selecttaocan_detail dl {
+	display: flex;
+	padding: 0.3rem;
+	background: #fff;
+	margin: 0;
+	height: 4.5rem;
+}
+
+#selecttaocan_detail dl dt {
+	width: 3.5rem;
+	height: 3.5rem;
+}
+
+#selecttaocan_detail dl dt img {
+	width: 100%;
+	height: 100%;
+}
+
+#selecttaocan_detail dl dd {
+	margin: 0;
+	padding: 6px 10px;
+	flex: 1;
+	position: relative;
+}
+
+#selecttaocan_detail dl dd p {
+	line-height: 1.0rem;
+	font-size: 14px;
+	color: #000;
+}
+
+#selecttaocan_detail dl dd span {
+	position: absolute;
+	right: 1rem;
+	top: 50%;
+	transform: translateY(-50%);
+	display: block;
+	padding-right: 10px;
+}

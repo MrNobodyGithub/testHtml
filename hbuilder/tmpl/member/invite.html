@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+	<!--
+    	作者：suiyi
+    	时间：2017-06-24
+    	描述：version 1.0
+    -->
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>邀请好友 触屏版</title>
+		<link rel="stylesheet" type="text/css" href="../../css/mui.css">
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet.css">
+	</head>
+	<style>
+		.common-header {
+			background-color: #fdd000;
+			border: 2px solid #f39800;
+		}
+		.common-header h1{
+			color:#f39800;
+		}
+		/*更换返回按钮图片*/
+		.common-header .icon-back {
+		    background: url(../../images/cleaning-back1.png) center no-repeat;
+		}
+		.search {
+			background-color: #fdd000;
+			padding-top: 1rem;
+		}
+		
+		.searchs {
+			width: 80%;
+			height: 2rem;
+			background: #FFFFFF;
+			border: 10px solid #f39800;
+		}
+		
+		.searchs span {
+			display: inline-block;
+			float: left;
+			line-height: 1.7rem;
+			padding-left: 0.5rem;
+			font-size: 0.6rem;
+		}
+		
+		.searchs img {
+			float: right;
+			padding: 0.4rem;
+		}
+		
+		.share {
+			background-color: #fdd000;
+			text-align: center;
+		}
+		
+		.share img {
+			padding-left: 1rem;
+			padding-right: 1rem;
+			padding-top: 1rem;
+		}
+		
+		.share span {
+			display: inline-block;
+			padding-left: 1.7rem;
+			padding-right: 1.7rem;
+			padding-top: 0.3rem;
+			font-family: "微软雅黑";
+			font-size: 0.4rem;
+		}
+		.process{
+			background-color: #fdd000;
+		}
+		.codes {
+			background-color: #fdd000;
+			text-align: center;
+			padding: 1rem;
+		}
+		
+		.codes span {
+			font-family: "微软雅黑";
+			font-size: 0.4rem;
+			display: inline-block;
+			padding-top: 0.3rem;
+		}
+		.QQ{
+			display: inline-block;
+		}
+		.QQ img{
+			width:4.8rem;
+		}
+		.weichat{
+			display: inline-block;
+		}
+		
+		.weichat img{
+			width:4.8rem;
+		}
+	</style>
+
+	<body style="background: #fdd000;">
+
+		<!--ucenter-->
+		<header class="common-header">
+
+			<h1>邀请好友</h1>
+			<a class="icon-back mui-action-back"></a>
+
+		</header>
+
+		<!--body-->
+		<section class="mui-content invite">
+			<div class="search">
+				<center>
+					<div class="searchs">
+						<span>您的邀请码：<label id="inviteCode"></label></span>
+						<!--<img src="../../images/two.png">-->
+					</div>
+				</center>
+			</div>
+			<div class="process">
+				<img src="../../images/process.png">
+			</div>
+			<div class="share">
+				<div class="QQ" onclick="shareQQMessage()">
+					<img src="../../images/QQ.png"><br>
+					<span><strong>QQ好友</strong></span>
+				</div>
+				<div class="weichat" onclick="shareWeixinHYMessage()">
+					<img src="../../images/wechat.png"><br>
+					<span><strong>微信好友</strong></span>
+				</div>
+			</div>
+			<div class="codes">
+				<img src="../../images/code.png"><br>
+				<span><strong>扫面二维码直接下载APP</strong></span>
+			</div>
+		</section>
+		<script src="../../js/hotcss.js"></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/config.js"></script>
+		<script src="../../js/common.js"></script>
+
+		<script>
+			var mobile = _.userInfo.get().phone;
+			$('#inviteCode').html(mobile);
+			
+			var shares = null,
+				sharewx = null,
+				sharewtqq = null;
+			// 监听plusready事件  
+			document.addEventListener("plusready", function() {
+				// 扩展API加载完毕，现在可以正常调用扩展API
+				plus.share.getServices(function(s) {
+					shares = s;
+					for(var i in s) {
+						if('weixin' == s[i].id) {
+							sharewx = s[i];
+						}
+						if('qq' == s[i].id) {
+							sharewtqq = s[i];
+						}
+					}
+				}, function(e) {
+					alert("获取分享服务列表失败：" + e.message);
+				});
+			}, false);
+
+			//微信好友
+			function shareWeixinHYMessage() {
+				sharewx.send({
+					title:"向日葵来了！",
+					content: "向日葵来了！",
+					href: "http://www.hisunflower.com/share/invite-share.php?phone="+ _.userInfo.get().phone,
+					pictures: ["../../images/APP.png"],
+					extra: {
+						scene: "WXSceneSession"
+					}
+				}, function() {
+					alert("分享成功！");
+				}, function(e) {
+					alert("分享失败：" + e.message);
+				});
+			}
+			//qq
+			function shareQQMessage() {
+				sharewtqq.send({
+					title: "向日葵来了！",
+					content: "向日葵来了！",
+					href: "http://www.hisunflower.com/share/invite-share.php?phone="+ _.userInfo.get().phone,
+					pictures: ["../../images/APP.png"],
+					extra: {
+						scene: "WXSceneTimeline"
+					}
+				}, function() {
+					alert("分享成功！");
+				}, function(e) {
+					alert("分享失败：" + e.message);
+				});
+			}
+		</script>
+	</body>
+
+</html>

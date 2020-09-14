@@ -1,0 +1,476 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+
+.form-login ,
+.form-register {
+    .oh;
+
+    h1 {
+        .fs( 0 );
+        .square( 284,2 );
+        background-position: center;
+        background-repeat: no-repeat;
+        .bs;
+    }
+}
+
+.box {
+
+    .width( 768,2 );
+    .margin( 0 auto);
+
+    .form-group {
+        .height( 136,2 );
+        .lh( 136,2 );
+        border-bottom: 1px solid transparent;
+        
+        input {
+            .fs( 36,2 );
+            .pl( 130,2 );
+            .bc( #f9f9f9 );
+            .color( #333 );
+            border-radius: px2rem(10);
+
+            &::-webkit-input-placeholder {
+                color: #bbb;
+            }
+        }
+
+    }
+
+    .box-button {
+        .db;
+        .width;
+        .height( 136,2 );
+        .lh( 136,2 );
+        .bc( #ea5404 );
+        .color( #fff );
+        .fs( 52,2 );
+        letter-spacing: px2rem(30);
+        border-radius: px2rem(10);
+        border: 0;
+        box-shadow: 0 0 15px 3px rgba(234,84,4,.75);
+    }
+
+    .form-reglink {
+        .tac;
+        .fs( 36,2 );
+
+        a {
+            .pl( 52,2 );
+            .fs( 36,2 );
+            .color( #ea5404 );
+        }
+    }
+}
+
+.form-login {
+    .background( url(../images/form/login-back.png) bottom center no-repeat );
+    .bs( contain );
+
+    h1 {
+        .bi( url(../images/form/login-img.png) );
+        .margin( px2rem(217) auto px2rem(81) );
+    }
+
+    .form-group {
+        &:not(:last-child) {
+            .mb( 28,2 );
+        }
+    }
+
+    .form-forget {
+        .tar;
+        .mt( 31,2 );
+        .mb( 63,2 );
+        .height( 42,2 );
+
+        a {
+            .fr;
+            .width( auto );
+            .pr( 39,2 );
+            .pl( 46,2 );
+            .fs( 36,2 );
+            .lh( 1 );
+            .color( #333 );
+            .background( url(../images/icon/icon-qa.png) left center no-repeat );
+            .bs( px2rem(36) );
+        }
+    }
+
+    .login-ohter {
+        .mt( 79,2 );
+
+        h3 {
+            .por;
+            .tac;
+            .height( 36,2 );
+            .fw( normal );
+
+            &:after {
+                .content;
+                .poa;
+                .left;
+                .top( 50% );
+                .width;
+                .height( 1px );
+                .bc( #e5e2e1 );
+                transform: translateY(-50%);
+            }
+
+            small {
+                .db;
+                .por;
+                .zi( 11 );
+                .fs( 36,2 );
+                .width( 280,2 );
+                .margin;
+                .color( #7d7d7d );
+                .bc( #fff );
+            }
+        }
+
+        menu {
+            .oh;
+            .mt( 69,2 );
+            
+            a {
+                .fl;
+                .square( 166,2 );
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: px2rem(166);
+
+                &:not(:first-child) {
+                    .ml( 135,2 );
+                }
+
+                &.icon-wx {
+                    background-image: url(../images/form/type-wx.png);
+                }
+                &.icon-qq {
+                    background-image: url(../images/form/type-qq.png);
+                }
+                &.icon-wb {
+                    background-image: url(../images/form/type-wb.png);
+                }
+            }
+        }
+
+    }
+
+    .form-reglink {
+        .mt( 64,2 );
+    }
+
+}
+
+.form-register {
+
+    h1 {
+        .bi( url(../images/form/login-img.png) );
+        .margin( px2rem(188) auto px2rem(88) );
+    }
+
+    .form-group {
+        .por;
+        .mb( 19,2 );
+    }
+
+    .yzm {
+        .db;
+        .height;
+        .padding( 0 px2rem(60) );
+        .fs( 36,2 );
+        .color( #ea5404 );
+        border: 0;
+        outline: 0;
+        background: #f9f9f9;
+
+        &:disabled {
+            color: #333;
+        }
+    }
+
+    .form-check {
+        .fs( 36,2 );
+        .pl( 48,2 );
+        .color( #333 );
+        .padding( px2rem(31) 0 px2rem(50) px2rem(48) );
+
+        input , 
+        span {
+            .dib;
+            .vam;
+        }
+
+        input[type="checkbox"] {
+            .square( 38,2 );
+            outline: 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+
+            &:checked {
+                background: url(../images/icon/icon-check.png) center no-repeat;
+                .bs;
+            }
+        }
+    }
+
+    .form-reglink {
+        .mt( 100,2 );
+    }
+
+}
+
+// 用到的icon
+
+.form-login ,
+.form-register {
+    input[class*='icon-'] {
+        background-repeat: no-repeat;
+        background-position: px2rem(49) center;
+    }
+}
+
+.icon-username ,
+.icon-password {
+    .bs( px2rem(39) px2rem(58) );
+}
+
+.icon-username {
+    .bi( url(../images/icon/icon-username.png) );
+}
+
+.icon-password {
+    .bi( url(../images/icon/icon-password.png) );
+}
+
+.icon-email {
+    .bi( url(../images/icon/icon-email.png) );
+    .bs( px2rem(53) px2rem(58) );
+}
+
+.icon-password2 {
+    .bi( url(../images/icon/icon-pwd2.png) );
+    .bs( px2rem(48) px2rem(50) );
+}
+
+.form-main {
+    .pr(30,2);
+    .bc( #fff );
+    .icon1{
+       
+        background: url(../img/hos2.png) no-repeat px2rem(20) px2rem(45);
+        background-size: px2rem(48) px2rem(48);
+    }
+    .icon2{
+       
+        background: url(../img/hos.png) no-repeat px2rem(20) px2rem(45);
+        background-size: px2rem(48) px2rem(48);
+    }
+    .icon3{
+       
+        background: url(../img/body.png) no-repeat px2rem(20) px2rem(45);
+        background-size: px2rem(48) px2rem(48);
+    }
+    .icon4{
+       
+        background: url(../img/how.png) no-repeat px2rem(20) px2rem(45);
+        background-size: px2rem(48) px2rem(48);
+    }
+    .icon5{
+       
+        background: url(../img/sex.png) no-repeat px2rem(20) px2rem(45);
+        background-size: px2rem(48) px2rem(48);
+    }
+    .icon6{
+       
+        background: url(../img/cleaning4.png) no-repeat px2rem(20) px2rem(45);
+        background-size: px2rem(48) px2rem(48);
+    }
+    .icon7{
+       
+        background: url(../img/cleaning4.png) no-repeat px2rem(20) px2rem(45);
+        background-size: px2rem(48) px2rem(48);
+    }
+    .icon8{
+       
+        background: url(../img/type.png) no-repeat px2rem(20) px2rem(45);
+        background-size: px2rem(48) px2rem(48);
+    }
+    .icon9{
+       
+        background: url(../img/cleaning4.png) no-repeat px2rem(20) px2rem(45);
+        background-size: px2rem(48) px2rem(48);
+    }
+    .icon10{
+       
+        background: url(../img/cleaning2.png) no-repeat px2rem(20) px2rem(45);
+        background-size: px2rem(48) px2rem(48);
+    }
+    .icon11{
+       
+        background: url(../img/add.png) no-repeat px2rem(20) px2rem(45);
+        background-size: px2rem(48) px2rem(48);
+    }
+    .icon12{
+       
+        background: url(../img/tel2.png) no-repeat px2rem(20) px2rem(45);
+        background-size: px2rem(48) px2rem(48);
+    }
+    .icon13{
+       
+        background: url(../img/tel.png) no-repeat px2rem(20) px2rem(45);
+        background-size: px2rem(48) px2rem(48);
+    }
+    .form-icon-hos {
+        .pl(86,2);
+    }
+    
+    .form-control {
+        .oh;
+        padding-left: px2rem(60);
+    }
+    
+    .select{
+        float:right;
+    }
+    .text{
+            margin-left: px2rem(6);
+            padding-left: px2rem(87);
+            padding-bottom: px2rem(30);
+            background: url(../img/cleaning-remark.png) no-repeat px2rem(10) px2rem(74);
+            background-size: px2rem(48) px2rem(48);
+            .remark{
+                .width(920,2);
+                .height(216,2);
+                border: px2rem(3) solid #e6e6e8;
+                .fs(36,2);
+                border-radius: px2rem(30);
+                padding: px2rem(30) px2rem(16);
+                margin-top: px2rem(50);
+            
+                &::-webkit-input-placeholder {
+                    color: #ccc;
+                }
+            }
+        }
+    
+    .form-group {
+        .fs( 0 );
+        text-align: right;
+        
+        img{
+            .width(150,2);
+            .height(150,2);
+        }
+        & > label {
+            .por;
+            .dib;
+            .height(80,2);
+            .lh( 80,2 );
+            .fs( 36,2 );
+            .ml(19,2);
+            .mt(38,2);
+            .pl(0);
+            border-radius: 8px;
+            border: 1px solid #a1d66a;
+            
+        }
+        
+        span {
+            .db;
+            .color( #a1d66a);
+            .pl(28,2);
+            .pr(28,2);
+            transition: all .3s;
+            border-radius: 8px;
+            .fs(36,2);
+        }
+        
+        .icheck {
+            .poa;
+            .top;
+            .left;
+            .width;
+            .height;
+            opacity: 0;
+            
+            &:checked + span {
+                .bc( #a1d66a );
+                .color( #fff );
+            }
+        }
+    }
+    
+}
+
+.form-main {
+    .pl(30,2);
+    .pr(30,2);
+    .bc( #fff );
+    
+    .form-icon-hos {
+        .pl(86,2);
+    }
+    
+    .form-control {
+        .height( 132,2 );
+        .lh( 132,2 );
+        
+        input {
+            .lh( 132,2 );
+            overflow: hidden;
+        }
+    }
+    
+    .form-group {
+        .fs( 0 );
+        text-align: right;
+        
+        img{
+            .width(150,2);
+            .height(150,2);
+        }
+        
+        & > label {
+            .por;
+            .dib;
+            .height(80,2);
+            .lh( 80,2 );
+            .fs( 36,2 );
+            .ml(19,2);
+            .mt(38,2);
+            border-radius: 8px;
+            border: 1px solid #a1d66a;
+        }
+        
+        span {
+            .db;
+            .color( #a1d66a );
+            .pl(28,2);
+            .pr(28,2);
+            transition: all .3s;
+            border-radius: 8px;
+        }
+        
+        .icheck {
+            .poa;
+            .top;
+            .left;
+            .width;
+            .height;
+            opacity: 0;
+            
+            &:checked + span {
+                .bc( #a1d66a );
+                .color( #fff );
+            }
+        }
+    }
+
+}

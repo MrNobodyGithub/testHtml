@@ -1,0 +1,59 @@
+.addCode .addCode1 {
+  margin-top: 0.44444444rem;
+  background: #fff;
+  height: 2.14814815rem;
+}
+.addCode .addCode1 span {
+  width: 4.68148148rem;
+  height: 2.14814815rem;
+  line-height: 2.14814815rem;
+  text-align: center;
+  font-size: 0.59259259rem;
+  color: black;
+  display: inline-block;
+}
+.addCode .addCode1 input {
+  height: 2.14814815rem;
+  line-height: 2.14814815rem;
+  font-size: 0.59259259rem;
+  color: black;
+  display: inline-block;
+  width: 10.81481481rem;
+  border: 0;
+}
+.addCode .addPassword {
+  margin-top: 0.44444444rem;
+  width: 100%;
+  height: 2.14814815rem;
+  background: #fff;
+}
+.addCode .addPassword input {
+  width: 70%;
+  height: 2.14814815rem;
+  line-height: 2.14814815rem;
+  border: 0;
+  font-size: 0.74074074rem;
+}
+.addCode .addPassword button {
+  width: 22%;
+  height: 2.14814815rem;
+  background-size: 3.7037037rem 2.22222222rem !important;
+  font-size: 0.44444444rem;
+  border: 0;
+  background: #ccc;
+  color: #fff ;
+}
+.addCode .addCodebtn {
+  margin-top: 1.68888889rem;
+  margin-left: 0.8rem;
+}
+.addCode .addCodebtn button {
+  width: 14.4rem;
+  height: 2.04444444rem;
+  line-height: 2.04444444rem;
+  text-align: center;
+  background: #ea5505;
+  color: #fff;
+  font-size: 0.71111111rem;
+  border-radius: 0.2962963rem;
+}

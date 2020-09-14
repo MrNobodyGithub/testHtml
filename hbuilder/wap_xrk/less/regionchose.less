@@ -1,0 +1,151 @@
+//regionchose
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';  
+    
+     //regionchose
+    
+    
+    .regionchose-section{
+        position: relative;
+        .mt(50,2);
+        .choseheaderimg{
+            position: fixed;
+            top:px2rem(132);
+            z-index:2;
+            img{
+                .width;
+            }
+        }
+        .regionchose-leftlist{
+            height:100%;
+            overflow: hidden;
+            .width(260,2);
+            
+            a{
+                .height(144,2);
+                line-height: px2rem(144);
+                display: block;
+                .width;
+                text-align: center;
+                .fs(37,2);
+                background: #fff;
+                color:#000;
+                border-bottom: 1px solid #f5f6fa;
+                border-top:1px solid #ecedf1 ;
+            }
+            .active3{
+                background:#f1f2f6;
+                color:#e4333b;
+            }
+        }
+        .regionchose-rightlist{
+            .pl(25,2);
+            .pr(20,2);
+            .width(820,2);
+            position: fixed;
+            top: 2.9rem;
+            right: 0; 
+            height:100%;
+            overflow: hidden;
+            dl{
+                display: none;
+
+                dt{
+                    .fs(30,2);
+                    .mt(70,2);
+                    .mb(25,2);
+                }
+                dd{
+                    margin:0;
+                }
+            }
+            ol{
+                .df;
+                flex-wrap: wrap;
+                align-items: center;
+
+                li{
+                    margin-top: px2rem(8);
+                    margin-bottom: px2rem(8);
+                    background: #fff;
+                    .height(88,2);
+                    line-height: px2rem(88);
+                    .fs(30,2);
+                    flex: 0 0 31%;
+                    list-style: none;
+                    text-align: center;
+
+                    &:not(:nth-child(3n+1)) {
+                        margin-left: 3.5%;
+                    }
+                }
+                .active4{
+                    border:1px solid #e84546;
+                    background: url(../images/chose1.png) no-repeat right bottom #fff;
+                    background-size:px2rem(54) ;
+                }
+            } 
+        }
+    }
+   
+
+section:not(.form) {
+    .form-status-error {
+        box-shadow: 0 0 0 #000;
+        border-bottom: 2px solid rgba(255,0,0,.7);
+    }
+}
+
+footer button {
+    border: 0;
+}
+
+
+// 选择
+ 
+.mask {
+    .dn;
+    position: fixed;
+    .top;
+    .left;
+    .right;
+    .bottom;
+    .bc( rgba(0,0,0,.5) );
+    .zi( 111111 );
+}
+
+.layer-up-select {
+    .poa;
+    .bottom(-100%);
+    .width( 95% );
+    .left( 2.5% );
+    .right( 2.5% );
+    transition: bottom .2s;
+
+    span {
+        .db;
+        .tac;
+        .fs( 32,2 );
+        .color( #333 );
+        .padding( .4rem 0 );
+        .bc( rgba(255,255,255,.8) );
+
+        &.no {
+            .mt( 20,2 );
+            .color( #40AFFE );
+            border-radius: px2rem(5);
+        }
+
+        &:first-child{
+            border-radius: px2rem(5) px2rem(5) 0 0;
+        }
+
+        &:not(:first-child) ,
+        &:not(.no) {
+            border-bottom: 1px solid #ccc;
+        }
+    }
+
+}

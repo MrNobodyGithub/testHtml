@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+	<!--
+	作者：张馨元
+	时间：2017-06-23 
+	描述：公告
+-->
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>公告</title>
+		<link rel="stylesheet" type="text/css" href="../../css/mui.css">
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet.css">
+	</head>
+	<style>
+		.feedback .notice {
+			width: 97%;
+		}
+		
+		.contact {
+			/*-webkit-box-flex: 1;*/
+			/*-ms-flex: 1;*/
+			/*flex: 1;*/
+			/*position: relative;
+			height: 3.91111112rem;*/
+		}
+		
+		.contact ul {
+			/*position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			background-color: #fff;
+			height: 3.91111112rem;*/
+			position: absolute;
+			top: 1.95555556rem;
+			left: 0;
+			right: 0;
+			background-color: #fff;
+			height: 5.86666668rem;
+		}
+		
+		.contact ul li {
+			background: url(../../images/feedback-phone.png) no-repeat 0.77037037rem center;
+			background-size: 0.62222222rem 0.5037037rem;
+			height: 1.95555556rem;
+		}
+		
+		.contact ul li#j_feedback {
+			background: url(../../images/Cleaning3.png) no-repeat 0.77037037rem center;
+			background-size: 0.62222222rem 0.62222222rem;
+			height: 1.95555556rem;
+		}
+		.contact ul li.cj {
+			background: url(../../images/why.png) no-repeat 0.77037037rem center;
+			background-size: 0.62222222rem 0.62222222rem;
+			height: 1.95555556rem;
+		}
+		
+		.contact ul li a {
+			display: block;
+			height: 1.77777778rem;
+			padding: 0 0.53333333rem 0 2.01481481rem;
+			line-height: 1.77777778rem;
+			font-size: 0.53333333rem;
+			color: #525a66;
+			background: url(../../images/cleaning-right.png) 96% center no-repeat;
+			background-size: 0.23703704rem 0.4rem;
+		}
+	</style>
+
+	<body>
+		<header class="common-header">
+			<a class="icon-back mui-action-back"></a>
+			<h1>帮助与反馈</h1>
+		</header>
+
+		<section class="mui-content feedback mui-clearfix">
+			<ul class="notice" style="display: none;">
+				<h3>公告</h3>
+			</ul>
+			<script type="text/html" id="feedback">
+				<% if(code == 200){ %>
+				<% for(var i=0;i<datas.length;i++){ %>
+				<li>
+					<a data-feedback-id="<%= datas[i].help_id%>">
+						<span><%= datas[i].help_title%></span>
+						<img src="../../images/cleaning-right.png" style="width: 16px;height: 27px;margin-top: 15px;" />
+					</a>
+				</li>
+				<% } %>
+				<% } %>
+				<li class="last">
+					<a></a>
+				</li>
+			</script>
+
+			<!--<div class="problem">
+				<ul>
+					<li class="p-top empty"></li>
+					<li>
+						<a>
+							<i></i>
+							<span data-pay-id="102">支付问题</span>
+						</a>
+					</li>
+					<li>
+						<a>
+							<i></i>
+							<span data-pay-id="103">账户问题</span>
+						</a>
+					</li>
+					<li>
+						<a>
+							<i></i>
+							<span data-pay-id="104">订单问题</span>
+						</a>
+					</li>
+					<li> 
+						<a>
+							<i></i>
+							<span data-pay-id="106">认证问题</span>
+						</a>
+					</li>
+					<li>
+						<a>
+							<i></i>
+							<span data-pay-id="105">发布信息问题</span>
+						</a>
+					</li>
+					<li>
+						<a>
+							<i></i>
+							<span data-pay-id="102">财务及退款问题</span>
+						</a>
+					</li>
+					<script type="text/html" id="feedback">
+						<% if(code == 200){ %>
+							<% for(var i=0;i<datas.length;i++){ %>
+							<li>
+								<a data-feedback-id="<%= datas[i].help_id%>">
+									<span><%= datas[i].help_title%></span>
+									<img src="../../images/cleaning-right.png" style="width: 16px;height: 27px;margin-top: 15px;"/>
+								</a>
+							</li>					
+							<% } %>
+						<% } %>
+					</script>
+					<li class="p-bottom empty">
+						
+					</li>
+				</ul>
+			</div>-->
+		</section>
+		<div class="contact">
+			<ul>
+				<li id="j_feedback">
+					<!--<a>在线客服</a>-->
+					<a>
+						问题反馈
+					</a>
+				</li>
+				<li id="j_questions" class="cj">
+					<a>常见问题</a>
+				</li>
+				<li>
+					<a class="kf">联系客服</a>
+				</li>
+			</ul>
+		</div>
+
+		<script type="text/javascript" src="../../js/hotcss.js"></script>
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../js/template.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/config.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/feedback.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

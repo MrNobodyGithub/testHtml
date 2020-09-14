@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<!--
+	作者：yrp
+	时间：2017-06-23
+	描述：
+-->
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/stylesheet.css" rel="stylesheet"  />
+		<script src="../../js/hotcss.js"></script>
+		
+	</head>
+
+	<body>
+		<!--许可资格证明页面-->
+		<header class="common-header merchantsdetailsh">
+			<a href="merchantsfirst.html" class="icon-back"></a>
+			<h1>商家入驻</h1>
+		</header>
+		<section class="mui-content merchantsdetails-section">
+			<table border="1" cellspacing="0" cellpadding="0" >
+					<tr>
+						<td>
+							服务商分类
+						</td>
+						<td>
+							所需资料
+						</td>
+					</tr>
+					<tr>
+						<td>
+							护工
+						</td>
+						<td rowspan="8">
+							1、营业执照；2、法人身份证正反面及手持身份证照片（委托他人，需要有加盖公章的委托书）；3、加盖公章的团队服务人员名单。
+						</td>
+					</tr>
+					<tr>
+						<td style="color:red;">
+							保洁
+						</td>
+					</tr>
+					<tr>
+						<td>
+							跑腿
+						</td>
+					</tr>
+					<tr>
+						<td>
+							车服务驾驶陪练
+						</td>
+					</tr>
+					<tr>
+						<td>
+							车服务代审车
+						</td>
+					</tr>
+					<tr>
+						<td style="color:red;">
+							月嫂保姆
+						</td>
+					</tr>
+					<tr>
+						<td>
+							家教
+						</td>
+					</tr>
+					<tr>
+						<td>
+							笔杆子
+						</td>
+					</tr>
+					<tr>
+						<td>
+							车服务汽车租赁
+						</td>
+						<td rowspan="2">
+							1、营业执照；2、法人身份证正反面及手持身份证照片（委托他人，需要有加盖公章的委托书）；3、加盖公章的团队服务人员名单
+						</td>
+					</tr>
+					<tr>
+						<td>
+							车服务汽车维修保养
+						</td>
+					</tr>
+					<tr>
+						<td>
+							搬家
+						</td>
+						<td>
+							1、营业执照；2、法人身份证正反面及手持身份证照片（委托他人，需要有加盖公章的委托书）；3、提供加盖公章的人员名单
+						</td>
+					</tr>
+					<tr>
+						<td>
+							维修
+						</td>
+						<td>
+							1、营业执照；2、法人身份证正反面及手持身份证照片（委托他人，需要有加盖公章的委托书）；3、加盖公章的团队服务人员名单；<span style="color:red;">4、电路业务需要电工证，开锁业务需要资质证书。</span>
+						</td>
+					</tr>
+			</table>
+		</section>	
+
+		
+		
+		
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				swipeBack:true
+			});
+			mui.plusReady(function(){
+				//各种类型页面切换
+				//月嫂
+				$(".product-item").on("tap",function(){
+				    mui.openWindow({
+					    url:"hos-detail.html",
+					    id:"hos0",
+					    createNew:false,//是否重复创建同样id的webview，默认为false:不重复创建，直接显
+					    extras:{
+					    	
+					    },
+					    waiting:{
+					      autoShow:false,//自动显示等待框，默认为true
+					      title:'正在加载...'//等待对话框上显示的提示内
+					    }
+					})
+				})
+			})	
+		</script>
+	</body>
+
+</html>

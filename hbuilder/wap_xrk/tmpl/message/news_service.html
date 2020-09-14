@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>系统公告 触屏版</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/msg.css" rel="stylesheet" />
+	</head>
+
+	<body class="white">
+		<!--ucenter-->
+		<header class="mui-bar mui-bar-nav">
+
+			<a class="mui-action-back mui-icon icon-back"></a>
+			<h1 class="mui-title">系统公告</h1>
+
+		</header>
+
+		<div class="mui-content content">
+			<ul class="mui-table-view" id="news_list" style="line-height: 100%;">
+			</ul>
+		</div>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/config.js"></script>
+		<script src="../../js/common.js"></script>
+
+		<script type="text/javascript">
+    		var page = 1;//页码数
+    		
+			var key = _.userInfo.getKey();
+			console.log("key：" + key);
+			
+			mui.init({
+				swipeBack: true,
+				pullRefresh: {
+					container: '.content',
+					down: {
+						style: 'circle',
+						color: '#2BD009', //可选，默认“#2BD009” 下拉刷新控件颜色
+						height: 50, //可选,默认50.触发下拉刷新拖动距离,
+						auto: false, //可选,默认false.首次加载自动上拉刷新一次
+						callback: pulldownRefresh
+					},
+					up: {
+						height: 100, //可选.默认50.触发上拉加载拖动距离
+						auto: false, //可选,默认false.自动上拉加载一次
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			});
+			
+			data_content()
+			//下拉刷新
+			function pulldownRefresh() {
+				data_content(1, 0);
+			}
+			//上拉更多
+			function pullupRefresh() {
+            	page++; // 每次请求，页码加1
+				data_content(page, 1);
+			}
+			
+            function data_content(pagesize, pullDirect){
+            	
+				pullDirect = pullDirect || 0; //默认下拉
+				var param = {
+					curpage: pagesize || 1,
+					key: key || 0,
+				};
+			$.ajax({
+				url: ApiUrl + '/index.php?act=member_msglist&op=msg_news',
+				data:param,
+				async: true, // 异步 || 同步
+				dataType: 'json',
+				type: 'post',
+				timeout: 10000,
+				success: function(data) {
+	                	if(pullDirect == 1) {
+							mui('.content').pullRefresh().endPullupToRefresh();
+						} else {
+     						mui('.content').pullRefresh().endPulldown();
+						}
+						
+	                	if(pagesize == 1){
+							$('#news_list').html('');
+							$.each(data.datas.news_list, function(key, value) {
+								if(data.code == 200) {
+									var str = '<li class="mui-table-view-cell">' +
+										'<div class="mui-table"><div class="mui-table-cell mui-col-xs-10"><span class="mui-ellipsis" sytle="font-size:16px;">' +
+										value.article_title +
+										'</span><h5 style="padding-top: 5px;">' +
+										value.article_content +
+										'</h5><p class="mui-h6 mui-ellipsis">' +
+										$.formatDate(parseInt(value.article_time)*1000) +
+										'</p></div></div></li>';
+		
+									$('#news_list').append(str);
+								}
+							})
+	                	}else{
+	                		
+							$.each(data.datas.news_list, function(key, value) {
+								if(data.code == 200) {
+									var str = '<li class="mui-table-view-cell">' +
+										'<div class="mui-table"><div class="mui-table-cell mui-col-xs-10"><span class="mui-ellipsis" sytle="font-size:16px;">' +
+										value.article_title +
+										'</span><h5 style="padding-top: 5px;">' +
+										value.article_content +
+										'</h5><p class="mui-h6 mui-ellipsis">' +
+										$.formatDate(parseInt(value.article_time)*1000) +
+										'</p></div></div></li>';
+		
+									$('#news_list').append(str);
+								}
+							})
+	                	}
+				},
+				error: function(xhr, type, errorThrown) {
+					// 请求失败
+						if(pullDirect == 1) {
+							mui('.content').pullRefresh().endPullupToRefresh();
+						} else {
+     						mui('.content').pullRefresh().endPulldown();
+						}
+				}
+			});
+			}
+		</script>
+
+</html>

@@ -1,0 +1,313 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+a{
+    color: #000000;
+}
+em{
+    font-style: normal;
+}
+
+
+.server-header{
+    background:#fff;
+    div:first-child{
+        .mt(0);
+    }
+}
+//发布服务
+.send-server{
+    flex: 1;
+    background: #fff;
+    overflow: auto;
+    .form-city{
+        .height(2000,2);
+    }
+    ul{
+        .pl(30,2);
+        li{
+            .width;
+            border-bottom: 1px solid #e6e6e8;
+            background: url(../images/my/send-server-icon1.png) no-repeat px2rem(10) center;
+            background-size: px2rem(48) px2rem(48);
+            a{
+                .df;
+                justify-content: space-between;
+                .width;
+                .pl(88,2);
+                .pr(42,2);
+                .pt(42,2);
+                .pb(42,2);
+                .fs(39,2);
+                span:last-child{
+                    .pr(38,2);
+                    background: url(../img/cleaning-right.png) no-repeat right center;
+                    background-size: px2rem(20) px2rem(34);
+                }
+                
+            }
+            &:nth-of-type(2){
+                .height(150,2);
+                a{
+                    padding-top: px2rem(20);
+                    padding-bottom: px2rem(20);
+                    input{
+                        margin-bottom:0 ;
+                        .height(100,2);
+                        border:0;
+                        .fs(39,2);
+                    }
+                }
+            }
+            &:nth-of-type(3){
+                .pt(30,2);
+                .pb(30,2);
+                .pl(75,2);
+                .pr(42,2);
+                background: url(../img/my/send-server-icon3.png) no-repeat px2rem(10) px2rem(33);
+                background-size: px2rem(48) px2rem(48);
+                textarea{ 
+                    .width;
+                    .height(212,2);
+                    border-radius: px2rem(20);
+                    padding:px2rem(35) px2rem(18);
+                    .fs(30,2);
+                }
+            }
+            &:nth-of-type(4){
+                .pt(40,2);
+                .pb(30,2);
+                .pl(88,2);
+                .pr(42,2);
+                 background: url(../img/my/send-server-icon4.png) no-repeat px2rem(10) px2rem(33);
+                background-size: px2rem(48) px2rem(48);
+                p{
+                    .fs(40,2);
+                    color: #000;
+                }
+                i{
+                    .dib;
+                    padding: px2rem(18) px2rem(54);
+                    border: 1px solid #e6e6e8;
+                    font-style: normal;
+                    .fs(28,2);
+                    border-radius: px2rem(11);
+                    .mt(33,2);
+                    .ml(20,2);
+                }
+                .active{
+                    border: 1px solid #ea5505;
+                    color: #ea5505;
+                }
+            }
+            &:nth-of-type(5){
+                .pl(88,2);
+                .pr(42,2);
+                 background: url(../img/my/send-server-icon5.png) no-repeat px2rem(10) px2rem(33);
+                background-size: px2rem(48) px2rem(48);
+                p{
+                    .fs(40,2);
+                    color: #000;
+                    .lh(128,2);
+                }
+                div{
+                    
+                    .lh(98,2);
+                    .df;
+                    justify-content:space-between ;
+                    .check{
+                        .dib;
+                        .vam;
+                        .form-default;
+                        .square(37,2);
+                        border: 1px solid #E6E6E8;
+                        border-radius: px2rem(12);
+                        .ml(20,2);
+                        .mr(20,2);
+                        align-self: center;
+                        &:checked{
+                            background: url(../img/appoint-detail-check-s.png) no-repeat center center;
+                            background-size: px2rem(21) px2rem(17);
+                        }
+                    }
+                    span{
+                        .fs(35,2);
+                        .lh(98,2);
+                    }
+                    .price{
+                        .width(200,2);
+                        .height(80,2);
+                        border: none;
+                        background: #f7f7f7;
+                        align-self: center;
+                        .mb(0);
+                        .ml(25,2);
+                        .lh(80,2);
+                        .fs(28,3);
+                        text-align: center;
+                    }
+                    em{
+                        .dib;
+                        .width(145,2);
+                        .height(80,2);
+                        background: #f7f7f7;
+                        align-self: center;
+                        text-align: center;
+                        .fs(34,2);
+                        color: #000;
+                        .ml(10,2);
+                        .lh(80,2);
+                    }
+                }
+                div:not(:first-child){
+                    border-top: 1px solid #E6E6E8;
+                }
+            }
+            &:nth-of-type(6){
+                .pl(88,2);
+                .pb(38,2);
+                 background: url(../img/my/send-server-icon6.png) no-repeat px2rem(10) px2rem(33);
+                background-size: px2rem(48) px2rem(48);
+                p{
+                    .fs(40,2);
+                    color: #000;
+                    .lh(128,2);
+                    border-bottom: 1px solid #E6E6E8;
+                }
+                .privice{
+                    .pl(60,2);
+                     a{
+                        border-bottom: 1px solid #E6E6E8;
+                        .pl(0);
+                    }
+                }
+                .city{
+                    .df;
+                    flex-wrap: wrap;
+                    div{
+                        .mt(33,2);
+                    }
+                    .check{
+                        .dib;
+                        .vam;
+                        .form-default;
+                        .square(37,2);
+                        border: 1px solid #E6E6E8;
+                        border-radius: px2rem(12);
+                        .ml(20,2);
+                        .mr(10,2);
+                        align-self: center;
+                        &:checked{
+                            background: url(../img/appoint-detail-check-s.png) no-repeat center center;
+                            background-size: px2rem(21) px2rem(17);
+                        }
+                    }
+                    span{
+                        .fs(35,2);
+                    }
+                }
+            }
+            &:nth-of-type(7){
+                background: url(../img/my/send-server-icon7.png) no-repeat px2rem(10) center;
+                background-size: px2rem(48) px2rem(48);
+                
+            }
+            &:nth-of-type(8){
+                background: url(../img/my/send-server-icon8.png) no-repeat px2rem(10) center;
+                background-size: px2rem(48) px2rem(48);
+                
+            }
+            &:nth-of-type(9){
+                background: url(../img/my/send-server-icon9.png) no-repeat px2rem(10) center;
+                background-size: px2rem(48) px2rem(48);
+                
+            }
+            &:nth-of-type(10){
+                background: url(../img/my/send-server-icon10.png) no-repeat px2rem(10) center;
+                background-size: px2rem(48) px2rem(48);
+                
+            }
+            &:nth-of-type(11){
+                background: url(../img/my/send-server-icon11.png) no-repeat px2rem(10) px2rem(35);
+                background-size: px2rem(48) px2rem(48);
+                .pl(24,2);
+                .pb(38,2);
+                height:auto !important;
+                p{
+                    padding: px2rem(45) 0;
+                    .pl(54,2);
+                    span{
+                        .fs(38,2);
+                        color: #464646;
+                    }
+                }
+                .upload-img{
+                    .df;
+                    display: flex;
+                    flex-wrap: wrap;
+                    .upload-moreimg{
+                        flex: 0 0 50%;
+                        .width(198,2);
+                        .height(198,2);
+                        .df;
+                        align-items: center;
+                        justify-content: center;
+                        .mt(20,2);
+                        position: relative;
+                        img{
+                            .db;
+                            .square(198,2);
+                            
+                        }
+                        
+                        span{
+                            .db;
+                            .square(45,2);
+                            background: url(../img/my/del.png) no-repeat center center;
+                            background-size: px2rem(45) px2rem(45);
+                            position: absolute;
+                            top: px2rem(-22);
+                            right: px2rem(110);
+                        }
+                    }
+                    .default{
+                         flex: 0 0 50%;
+                        .width(198,2);
+                        .height(198,2);
+                        .mt(20,2);
+                        background:url(../img/my/photo-upload2.jpg) no-repeat center;
+                        background-size: px2rem(198);
+                        text-align: center;
+                        .addimg7{
+                            .square(198,2);
+                            .width(198,2);
+                            .height(198,2);
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .send-accept{
+        padding: px2rem(68) px2rem(109);
+        .pb(200,2);
+        p{
+            .fs(26,2);
+            .lh(54,2);
+        }
+    }
+}
+
+
+
+
+
+
+//选择城市
+
+.form-city{
+    .height(2000,2);
+}
+

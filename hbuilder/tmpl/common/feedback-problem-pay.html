@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<!--auth:张馨元-->
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>支付问题</title>
+		<link rel="stylesheet" type="text/css" href="../../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet.css">
+	</head>
+	<body style="background: white;">
+		<header class="common-header">
+
+			<a class="icon-back mui-action-back"></a>
+			<h1>支付问题</h1>
+
+		</header>
+		<section class="mui-content feedback-problem-pay">
+			<ul class="mui-table-view feedback-pay-list" style="margin-top: 0;">
+				
+			</ul>
+			<script type="text/html" id="feedback2">
+			
+				<% if(code == 200){ %>
+					<% for(var i=0;i<datas.length;i++){ %>
+					 <li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" data-feedback-id="<%= datas[i].help_id%>">
+							<span class="badge"><%= i+1%></span>
+							<span class="text"><%= datas[i].help_title %></span>
+						</a>
+						<div class="mui-collapse-content">
+				            <p><%=# datas[i].help_info %></p>
+				        </div>
+					</li>					
+					<% } %>
+				<% } %>	
+			</script>
+			   
+			<div class="wrap-problem-solve">
+				<div class="problem-solve">
+					<p>没有解决您的问题？</p>
+					<div>
+						<a>在线客服</a>
+						<a>联系客服</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+		
+		<script type="text/javascript" src="../../js/hotcss.js" ></script>
+		<script type="text/javascript" src="../../js/jquery.min.js" ></script>
+		<script type="text/javascript" src="../../js/template.js" ></script>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/config.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/feedback-problem-pay.js" ></script>
+		<script type="text/javascript">
+			mui.init();
+			mui('#sheet1').popover('toggle');
+		</script>
+	</body>
+
+</html>

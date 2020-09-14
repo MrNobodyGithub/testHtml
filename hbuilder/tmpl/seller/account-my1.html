@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+    <!--
+		author: 赵扬悦
+		date: 2017-06-23 11:21:29  
+		version: 1.0
+	-->
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>我的账户 触屏版</title>
+		<script src="../../js/hotcss.js"></script>
+        <link href="../../css/mui.css" rel="stylesheet" />
+		<link href="../../css/stylesheet.css" rel="stylesheet" />
+		<style>
+			
+			.common-header .bank{
+				float: right;
+				line-height: 1.95555556rem;
+				text-align: left;
+				padding-right: 0.77037037rem;
+			}
+			/*审核通过和审核失败图片样式*/
+			.examineFailImg ,.examinePassImg {
+				position: relative;
+				width: 1.9rem;
+				/*height: 1.9rem;*/
+			}
+			.examinePassImg:before {
+				content: "";
+				border-radius: 50%;
+				position: absolute;
+				background-size: 0.6rem;
+			    width: 0.6rem;
+			    height: 0.6rem;
+			    left: -0.7rem;
+			    top: -0.1rem;
+				background: url('../../images/cash_examine_pass@2x.png') no-repeat center center;
+			} 
+			.examineFailImg:before {
+				content: "";
+				border-radius: 50%;
+				position: absolute;
+				background-size: 0.6rem;
+			    width: 0.6rem;
+			    height: 0.6rem;
+			     /*width: 2rem;
+			    height:2rem;*/
+			    left: -0.7rem;
+			    top: -0.1rem;
+				background: url('../../images/cash_examine_fail@2x.png') no-repeat center center;
+			}
+			
+			#pullrefresh {
+				margin-top: 2.3rem;
+				width: 100%;
+				font-size: 0.5rem;
+			}
+			.send_list {
+				width: 100%;
+			}
+		    #pullrefresh .list	li {
+			    display: list-item;
+			    text-align: -webkit-match-parent;
+			    box-sizing: border-box;
+			    height: 2.63703704rem;
+			    padding-left: 1.12592593rem;
+			    padding-right: 0.93333333rem;
+			    border-bottom: 1px solid #e6e6e8;
+			}
+				
+			 #pullrefresh .list li .clearfix:nth-child(1) {
+			    padding-top: 0.60740741rem;
+			    padding-bottom: 0.45925926rem;
+			}
+			
+			 #pullrefresh .list li em {
+			    float: right;
+			    font-style: normal;
+			    color: #ff4752;
+			}
+			
+			 #pullrefresht .list li span {
+			    font-size: 0.41481481rem;
+			    color: #b7b9c5;
+			}
+			
+			 #pullrefresh .list li span:nth-child(2) {
+			    float: right;
+			}
+			 #pullrefresh .list li span {
+			    font-size: 0.41481481rem;
+			    color: #b7b9c5;
+			}
+													 
+		</style>
+	</head>
+
+	<body>
+		
+		<!--ucenter-->
+		<header class="common-header">
+			<h1>我的账户</h1>
+			<a class="icon-back mui-action-back"></a>
+			<a class="bank"><img src="../../images/add_yhk.png"/></a>
+		</header>
+		
+        <!--我的收入,可提现,已冻结-->
+        <section class="mui-content account">
+            
+        </section>
+        
+        <script type="text/html" id="account-my">
+			<% if(code == 200){ %>
+				<nav data-store-id="<%= datas.store_id%>" style="margin-top: 0px;z-index: 1; position: fixed;width: 100%;border: none;">
+					<a>
+						<% if(datas.order_amount != null){ %>
+							<span><%= datas.order_amount%></span>
+						<% } else{ %>
+							<span>0</span>
+						<% } %>
+						
+						<small>我的收入</small>
+					</a>
+					<a class="cash">
+						<% if(datas.cash_amount !=null){ %>
+							<span><%= datas.cash_amount%></span>
+						<% } else{ %>
+							<span>0</span>
+						<% } %> 
+						
+						<small>可提现</small>
+					</a>
+					<a class="frozenAmount" >
+						<% if(datas.freeze_cash_amount !=null){ %>
+							<span><%= datas.freeze_cash_amount%></span>
+						<% } else{ %>
+							<span>0</span>
+						<% } %> 
+						<small>已冻结</small>
+					</a>
+
+				</nav>	
+				<menu style="position:fixed;top: 3.98rem;width: 100%;z-index:1;border-top:1px solid #CCCCCC;">
+	                <a>
+	                    <i class="icon-history"></i> 
+	                    <span>提现明细</span>
+	                </a>
+	            </menu>
+	            
+			<% } %>
+		</script>
+		<!--提现明细(内容)即:上拉刷,下拉加载容器-->
+		<section class="mui-content" id="pullrefresh">
+			<div class="send_list"></div>
+		</section>
+		
+		 <script type="text/html" id="details-tem">
+			<% if(code == 200 && datas.record != undefined){ %>
+	            <ul class="list" style="border-top: 1px solid #e6e6e8;background-color: #fff;    box-sizing: border-box">
+	            	<% var data = datas.record %>
+	            	<% for(var i=0;i < data.length;i++){ %>
+		            	<li data-cash-id="<%= data[i].cash_id %>" class="listLi" >
+		                    <div class="clearfix">
+		                        <strong style="font-size: 0.62222222rem;color: #333;font-weight: normal;">提现</strong>
+		                        <em><%= data[i].cash_amount %></i>元</em>
+		                    </div>
+		                    <div class="clearfix" >
+		                    	<span><%= data[i].cash_add_time %></span>
+		                    	<% if(data[i].cash_pay_state == 0 || data[i].cash_pay_state == 1){ %>
+		                    		<span>审核中</span>
+		                        <% }else if(data[i].cash_pay_state == 2){ %>
+		                        	<span class="examinePassImg">审核通过</span>
+		                        <% }else if(data[i].cash_pay_state == 3){ %>
+		                        	<span >提现成功</span>
+		                         <% }else if(data[i].cash_pay_state == 4){ %>
+		                        	<span class="clearfixFail examineFailImg">提现失败</span>
+		                        <% } %>
+		                    </div>
+		                </li>
+	                <% } %>
+	            </ul>
+	            
+			<% } %>
+		</script>
+		<script type="text/javascript" src="../../js/hotcss.js" ></script>
+		<script src="../../js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../../js/jquery.min.js" ></script>
+		<script type="text/javascript" src="../../js/template.js" ></script>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script src="../../js/seller/account-my1.js"></script>
+	</body>
+
+</html>

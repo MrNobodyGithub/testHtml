@@ -1,0 +1,71 @@
+.white {
+  background-color: #fff;
+}
+.gray {
+  background-color: #f2f2f2;
+}
+.tutor .filter nav a {
+  color: #333;
+}
+.tutor .filter nav a.active,
+.tutor .filter nav a:active {
+  color: #f8cade;
+}
+.tutor .product-detail .product {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 0.59259259rem;
+  line-height: 1.18518519rem;
+}
+.tutor .product-item {
+  position: relative;
+}
+.tutor .product-item .tutor-text {
+  position: absolute;
+  right: 1.06666667rem;
+  bottom: 1.48148148rem;
+  font-size: 0.56296296rem;
+  color: #929292;
+}
+.tutor .product-item .product-title {
+  padding-left: 0;
+}
+.tutor .product-item .label em {
+  color: #f8cade;
+}
+.tutor .product-item .tag span {
+  color: #f8cade;
+  border-color: #f8cade;
+}
+.tutor .product-item .control a {
+  color: #f4415e;
+  border-color: #f4415e;
+}
+.tutor .grab-state button {
+  color: #f8cade;
+  border-color: #f8cade;
+  background-color: #fff;
+}
+.tutor .grab-remarks {
+  color: #f8cade;
+}
+.tutor .detail-worktime .active,
+.tutor .detail-price .active {
+  color: #f8cade;
+  border: 1px solid #f8cade !important;
+}
+.tutor .detail-worktime .worktime-content ol {
+  margin-left: 0.77037037rem;
+}
+.tutor .title span {
+  background-color: #f8cade;
+}
+.tutor .detail-comment .comment-content span {
+  color: #f8cade;
+}
+.common-header-pink {
+  background: #f8cade;
+}
+.footer-menu-pink .link {
+  background-color: #f8cade;
+}

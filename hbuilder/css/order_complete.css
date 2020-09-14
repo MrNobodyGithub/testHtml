@@ -1,0 +1,51 @@
+.order_complete {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: url(../images/order/orderComplete_03.png) no-repeat center 2.51851852rem #fff;
+  background-size: 8.59259259rem;
+}
+.order_complete .content {
+  padding-top: 10.96296296rem;
+  text-align: center;
+}
+.order_complete .content h2 {
+  line-height: 3.37777778rem;
+  text-align: center;
+  font-size: 0.74074074rem;
+  color: #333;
+}
+.order_complete .content ol {
+  padding-left: 2.96296296rem;
+}
+.order_complete .content ol li {
+  line-height: 1.18518519rem;
+  text-align: left;
+  font-size: 0.59259259rem;
+  color: #333;
+}
+.order_complete .content ol .price span {
+  color: red;
+}
+.order_complete .content ol .pay span {
+  color: orange;
+}
+.order_complete .content button {
+  display: block;
+  width: 5.88148148rem;
+  height: 1.45185185rem;
+  margin: 0 auto;
+  font-size: 0.47407407rem;
+  border: none;
+  margin-top: 0.34074074rem;
+  border-radius: 0.2962963rem;
+}
+.order_complete .content button.back {
+  color: #4f4501;
+  background: #fbce00;
+  margin-top: 1.48148148rem;
+}
+.order_complete .content button.detail {
+  color: #fff;
+  background: #919191;
+}

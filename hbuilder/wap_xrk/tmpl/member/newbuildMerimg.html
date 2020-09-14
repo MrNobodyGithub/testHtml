@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+<!--
+	作者：yrp
+	时间：2017-06-23
+	描述：
+-->
+	<head>
+		<meta charset="UTF-8">
+		<title>个人信息上传</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/wap/wap.css" rel="stylesheet"  />	
+	</head>
+<style>
+	body{
+		max-width: none !important;
+	}
+</style>
+	<body class="bg1">
+		<header class="common-header merchantsperson">
+			<a class="icon-back mui-action-back"></a>
+			<h1>新类目资质上传</h1>
+		</header>
+		<section class="mui-content merchantsperson-section">
+			
+			<div class="merchantsenterlist3">
+				<h3>上传资质信息</h3>
+				<p>请上传其他资质信息，例如：驾驶证、健康证、资质证、服务人员明细表… 请上传相关资质证明材料，否则不予通过</p>
+				<div class = "perdiv"style="position: relative;">
+					<div class="addimg addimgother1" >
+						<img class="loadingimg" src="../../images/ruzhuloading.gif"/ style="position: absolute;top:50%;height: 1.77777778rem; width: 1.77777778rem;left: 45%;">
+						<form id="form7" method="post">
+							<input type="file" class="addimg7" name ="default_pic" id="default_pic7"/>
+							<input type="hidden" name="name" value="default_pic" />
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="merchantsdetails-section">
+				
+			</div>
+			<script type="text/html" id="certificate">
+				<%  if( is_person == 0 ){ %>
+					<table border="1" cellspacing="0" cellpadding="0" >
+						<tr>
+							<td>
+								服务商分类
+							</td>
+							<td>
+								所需资料
+							</td>
+						</tr>
+						<tr>
+							<td>
+								护工
+							</td>
+							<td rowspan="8">
+								1、营业执照；2、法人身份证正反面及手持身份证照片（委托他人，需要有加盖公章的委托书）；3、加盖公章的团队服务人员名单。
+							</td>
+						</tr>
+						<tr>
+							<td style="color:red;">
+								保洁
+							</td>
+						</tr>
+						<tr>
+							<td>
+								跑腿
+							</td>
+						</tr>
+						<tr>
+							<td>
+								车服务驾驶陪练
+							</td>
+						</tr>
+						<tr>
+							<td>
+								车服务代审车
+							</td>
+						</tr>
+						<tr>
+							<td style="color:red;">
+								月嫂保姆
+							</td>
+						</tr>
+						<tr>
+							<td>
+								家教
+							</td>
+						</tr>
+						<tr>
+							<td>
+								笔杆子
+							</td>
+						</tr>
+						<tr>
+							<td>
+								车服务汽车租赁
+							</td>
+							<td rowspan="2">
+								1、营业执照；2、法人身份证正反面及手持身份证照片（委托他人，需要有加盖公章的委托书）；3、加盖公章的团队服务人员名单
+							</td>
+						</tr>
+						<tr>
+							<td>
+								车服务汽车维修保养
+							</td>
+						</tr>
+						<tr>
+							<td>
+								搬家
+							</td>
+							<td>
+								1、营业执照；2、法人身份证正反面及手持身份证照片（委托他人，需要有加盖公章的委托书）；3、提供加盖公章的人员名单
+							</td>
+						</tr>
+						<tr>
+							<td>
+								维修
+							</td>
+							<td>
+								1、营业执照；2、法人身份证正反面及手持身份证照片（委托他人，需要有加盖公章的委托书）；3、加盖公章的团队服务人员名单；<span style="color:red;">4、电路业务需要电工证，开锁业务需要资质证书。</span>
+							</td>
+						</tr>
+				    </table>
+				<% } else if( is_person == 1 ) { %>
+					<table border="1" cellspacing="0" cellpadding="0">
+						<tr>
+							<td>
+								服务商分类
+							</td>
+							<td>
+								所需资料
+							</td>
+						</tr>
+						<tr>
+							<td>
+								护工
+							</td>
+							<td rowspan="3">
+								身份证正反面及手持身份证照片。
+							</td>
+						</tr>
+						<tr>
+							<td>
+								跑腿
+							</td>
+						</tr>
+						<tr>
+							<td>
+								笔杆子
+							</td>
+						</tr>
+						<tr>
+							<td>
+								家教
+							</td>
+							<td>
+								1、身份证正反面及手持身份证照片；<span style="color:red;">2、学生证或者教师资格证或相关资格证书。</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								保洁
+							</td>
+							<td>
+								1、身份证正反面及手持身份证照片；<span style="color:red;">2、健康证。</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								月嫂保姆
+							</td>
+							<td>
+								1、身份证正反面及手持身份证照片；<span style="color:red;">2、健康证；3、资格证。</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								维修
+							</td>
+							<td>
+								1、身份证正反面及手持身份证照片；
+							</td>
+						</tr>
+						<tr>
+							<td>
+								车服务代审车
+							</td>
+							<td>
+								1、身份证正反面及手持身份证照片；<span style="color:red;">2、驾驶证。</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								车服务驾驶陪练
+							</td>
+							<td>
+								1、身份证正反面及手持身份证照片；<span style="color:red;">2、驾驶证；3、教练证。</span>
+							</td>
+						</tr>
+					</table>
+				<% } %>
+			</script>
+
+		</section>	
+		<footer class="merchantsperson-footer">
+			<a><button style="z-index: 200;">完成</button></a>
+		</footer>
+		
+		
+		<script src="../../js/hotcss.js"></script>
+		<script src="../../js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/jquery.form.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/template.js"></script>
+		<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/member/newbuildMerimg.js"></script>
+	
+	</body>
+
+</html>

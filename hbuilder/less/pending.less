@@ -1,0 +1,176 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+//待审车详情
+@pending       :       pending;
+@pendingColor  :       #f5a93b;
+
+.@{pending} {
+
+    .filter {
+
+        nav {
+            a {
+                color: @title-main;
+
+                &.active ,
+                &:active {
+                    color: @pendingColor;
+                }
+            }
+        }
+
+    }
+
+    .product-item {
+
+        .label {
+            em {
+                .color( @pendingColor );
+            }
+        }
+
+        .tag {
+            span {
+                color: @pendingColor;
+                border-color: @pendingColor;
+            }
+        }
+
+        .control {
+            a {
+                color: @pendingColor;
+                border-color: @pendingColor;
+            }
+        }
+    }
+
+    .grab-state {
+        button {
+            color: @pendingColor;
+            border-color: @pendingColor;
+            .bc( #fff );
+        }
+    }
+
+    .grab-remarks {
+        color: @pendingColor;
+    }
+
+    .detail-worktime ,
+    .detail-price {
+        .active{
+            color: @pendingColor;
+            border:1px solid @pendingColor !important;
+        }  
+    }
+
+    .title {
+        span {
+            background-color: @pendingColor;
+        }
+    }
+
+    .detail-comment {
+        .comment-content {
+            span {
+                color: @pendingColor;
+            }
+        }
+    }
+}
+
+.footer-menu-yellow {
+    .link {
+        .bc( @pendingColor );
+    }
+}
+
+
+.@{pending}{
+    .product-detail .product{
+        width:100%;
+        margin: 0 auto;
+        .fs(40,2);
+        .lh(80,2);
+    }
+    .pending-info{
+        .height(377,2);
+        position: relative;
+        .product-item{
+            .product-info{
+                .icon-type1{
+                    background-image: none;
+                    .pl(0);
+                    .lh(70,2);
+                }
+                .label{
+                    .mb(0);
+                    .mt(20,2);
+                }
+            }
+        }
+        
+        .info-price{
+            position: absolute;
+            right: px2rem(118);
+            top: px2rem(143);
+            span:nth-of-type(1){
+                color: @pendingColor;
+                .fs(45,2);
+            }
+            span:nth-of-type(2){
+                color: #a1a1a1;
+                .fs(24,2);
+            }
+        }
+    }
+    
+    .detail-process{
+        .height(548,2);
+        .pending-process{
+            .pl(43,2);
+            .pr(64,2);
+            p{
+                .lh(54,2);
+                .fs(33,2);
+                color: #282828;
+                .mb(0);
+            }
+        }
+    }
+    .detail-price{
+        
+        .one{
+            .dib;
+            padding: px2rem(22) px2rem(65);
+            border: 1px solid @title-main;
+            .fs(33,2);
+            border-radius: px2rem(20);
+            .mt(55,2);
+            .mb(68,2);
+            &:not(:first-child){
+                .mt(29,2);
+            }
+        }
+    }
+    .pending-ready{
+        height: px2rem(870);
+        dl{
+            .pl(78,2);
+            .fs(32,2);
+            dt{
+                .lh(66,2);
+            }
+            dd{
+                .ml(0);
+                .lh(52,2);
+            }
+        }
+    }
+    .pending-join{
+        .mb(25,2);
+    }
+}

@@ -1,0 +1,198 @@
+.expret .product-info {
+  position: relative;
+}
+.expret .product-info .raty i {
+  display: inline-block;
+  height: 0.44444444rem;
+  font-size: 0.41481481rem;
+  font-style: normal;
+  position: relative;
+  left: -0.51851852rem;
+  color: #555555;
+  margin-left: 0.56296296rem;
+}
+.expret .album-pink {
+  background-color: rgba(232, 146, 184, 0.6);
+  position: absolute;
+  right: -1.77777778rem;
+  bottom: 1.54074074rem;
+  padding-right: 1.18518519rem;
+}
+.expret .filter nav a {
+  color: #333;
+}
+.expret .filter nav a.active,
+.expret .filter nav a:active {
+  color: #aedb7e;
+}
+.expret .product-item .label em {
+  color: #aedb7e;
+}
+.expret .product-item .tag {
+  margin-top: 0.59259259rem;
+}
+.expret .product-item .tag span {
+  color: #aedb7e;
+  border-color: #aedb7e;
+}
+.expret .product-item .description {
+  display: block;
+  margin-right: 0.74074074rem;
+  margin-top: 0.44444444rem;
+  font-size: 0.47407407rem;
+  color: #747474;
+  padding-right: 0.88888889rem;
+}
+.expret .product-item .description .detail-ping {
+  background: url(../img/Nanny/detail-ping.png) center right no-repeat;
+  background-size: 0.4rem 0.4rem;
+}
+.expret .product-item .description .detail-gao {
+  background: url(../img/Nanny/detail-ping.png) center right no-repeat;
+  background-size: 0.4rem 0.4rem;
+}
+.expret .product-item .description small {
+  display: inline-block;
+  padding-right: 0.74074074rem;
+  color: #F4425D;
+}
+.expret .product-item .description span {
+  margin-left: 0.37037037rem;
+}
+.expret .product-item .share {
+  font-size: 0.59259259rem;
+  color: #929292;
+  position: absolute;
+  top: 1.62962963rem;
+  right: 1.92592593rem;
+}
+.expret .product-item .control a {
+  border: none;
+  color: #6D6D72;
+  margin-top: 0.74074074rem;
+}
+.expret .product-item .control span {
+  margin-top: 0.74074074rem;
+}
+.expret .grab-state button {
+  color: #aedb7e;
+  border-color: #aedb7e;
+  background-color: #fff;
+}
+.expret .grab-remarks {
+  color: #aedb7e;
+}
+.expret .detail-worktime .active,
+.expret .detail-price .active {
+  color: #aedb7e;
+  border: 1px solid #aedb7e !important;
+}
+.expret .detail-worktime .price-content dd,
+.expret .detail-price .price-content dd {
+  position: relative;
+}
+.expret .detail-worktime .price-content dd strong,
+.expret .detail-price .price-content dd strong {
+  font-size: 0.47407407rem;
+  color: red;
+}
+.expret .detail-worktime .price-content dd:after,
+.expret .detail-price .price-content dd:after {
+  content: attr(name);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -1.18518519rem;
+  color: #939393;
+}
+.expret .detail-worktime .price-content .top,
+.expret .detail-price .price-content .top {
+  margin-top: 1.48148148rem;
+}
+.expret .detail-worktime .price-content .day,
+.expret .detail-price .price-content .day {
+  padding-top: 1.00740741rem;
+}
+.expret .detail-worktime .price-content .day input,
+.expret .detail-price .price-content .day input {
+  border-width: 0.02962963rem;
+  border-color: #333333;
+  border-style: solid;
+  border-radius: 0.14814815rem;
+  background-color: #ffffff;
+  width: 3.17037037rem;
+  height: 1.22962963rem;
+  text-align: center;
+  font-size: 0.44444444rem;
+}
+.expret .detail-worktime .price-content .day dd,
+.expret .detail-price .price-content .day dd {
+  border-style: none;
+  padding: 0;
+  margin: 0;
+}
+.expret .detail-worktime .price-content .day dd span,
+.expret .detail-price .price-content .day dd span {
+  margin-left: 0.2962963rem;
+}
+.expret .worktime-check {
+  padding: 0.88888889rem 1.18518519rem;
+}
+.expret .worktime-check li {
+  background: url(../img/Nanny/danxuan.png) no-repeat left center;
+  background-size: 0.65185185rem 0.65185185rem;
+  padding-left: 1.06666667rem;
+  width: 50%;
+  height: 0.88888889rem;
+  line-height: 0.88888889rem;
+  font-size: 0.59259259rem;
+  margin-bottom: 0.25185185rem;
+}
+.expret .worktime-check li:nth-child(odd) {
+  float: left;
+}
+.expret .worktime-check li:nth-child(even) {
+  float: right;
+}
+.expret .title span {
+  background-color: #aedb7e;
+}
+.expret .money span {
+  color: #F4425D;
+}
+.expret .detail-comment .comment-content span {
+  color: #F4425D;
+}
+.expret .detail-comment .comment-content .server-hour {
+  display: block;
+  background: url(../img/Nanny/date.png) no-repeat left;
+  background-size: 0.71111111rem 0.72592593rem;
+  padding-left: 0.74074074rem;
+}
+.expret .product-item {
+  border-top: none;
+  border-bottom: 0.01481481rem solid #e2e3e7;
+}
+.expret .mouth-white {
+  background: white;
+  height: 100%;
+}
+.expret .detail-server .server-content .big-img {
+  padding: 0;
+  margin: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column ;
+          flex-direction: column ;
+  height: 8.88888889rem;
+}
+.expret .detail-server .server-content .big-img dt {
+  width: 100%;
+  height: 152;
+}
+.expret .detail-server .server-content .big-img img {
+  margin-left: -0.44444444rem;
+}
+.footer-menu-green .link {
+  background-color: #aedb7e;
+}

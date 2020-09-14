@@ -1,0 +1,52 @@
+@import 'config.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+@import 'api/api-webkit.less';
+
+* {
+    .margin( 0 );
+    .padding( 0 );
+    .box-default;
+    .tap-default;
+    .form-default;
+    .lh( 1 );
+}
+
+body {
+    max-width: px2rem(1080px);
+    .margin;
+}
+
+a {
+    text-decoration: none;
+}
+
+::selection {
+    color: #fff;
+    background: #ea5404;
+}
+
+html , body , .page {
+    height: 100%;
+}
+
+footer > button {
+    border: 0;
+}
+
+@import 'header.less';
+@import 'footer.less';
+
+// form-group
+@import 'forms.less';
+@import 'form.less';
+
+// send
+@import 'kind.less';
+@import 'my-send.less';
+@import 'send-server.less';
+
+
+@import 'merchants.less';
+@import 'agreement.less';
+

@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+<!--
+	作者：13706342556@163.com
+	时间：2017-06-24
+	描述：
+-->
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>月嫂列表</title>
+		<link rel="stylesheet" type="text/css" href="../css/mui.css">
+		<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+		<style>
+			.form-control { overflow: hidden; }
+			.filter_active{
+				background:url(../images/filter_common.png) no-repeat center center!important;
+			}
+		</style>
+	</head>
+<style>
+	.monthTime .select-month button{
+		width:96% ;
+			}
+</style>
+	<body style="background: #fff;">
+		
+		
+		<!--预产期内容-->
+		<section class="mui-content monthTime form" style="display: block;flex: 1;">
+			<header class="common-header">
+
+				<h1>在向日葵，找优质月嫂</h1>
+				<a class="icon-back mui-action-back"></a>
+		
+			</header>
+			
+			<!--content-->
+			<section class="mui-content monthTime form">
+				
+				<small>您的预产期:</small>
+				
+				<menu>
+		
+					
+				</menu>
+				
+				<div class="form">
+					
+					<div class="form-control">
+						<label for="">您的称呼：</label>
+						<div class="form-group"><input type="text" class="month-name" id="sex" placeholder="女士/男士"/></div>
+					</div>
+					<div class="form-control">
+						<label for="">您的手机号：</label>
+						<div class="form-group"><input type="tel" class="month-timeinp" id="phone" placeholder="请输入手机号" /></div>
+					</div>
+				</div>
+				
+				<a class="select-month">
+					<button>去挑选月嫂</button>
+				</a>
+				
+			</section>
+		</section>
+
+		<section class="mui-content layout clean white nanny" style="display: none;padding-top: 2rem;">
+			<header class="common-header common-header-pink">
+				<h1>月嫂</h1>
+				<a class="icon-back mui-action-back"></a>
+				<a class="city">青岛</a>
+			</header>
+	
+			<!--<footer class="footer-ad"">
+				<img src="../images/month/month-4.png" alt="">
+			</footer>-->
+			
+			<!--swiper-->
+			<div class="swiper">
+				
+			</div>
+
+			<!--menu-->
+			<div class="filter" style="position: relative;z-index: 9;">
+				<nav>
+					<a class="active" data-key="0">综合排序</a>
+					<a class="traget" data-key="3">按价格</a>
+					<a class="traget" data-key="1">按销量</a>
+					<a class="traget" data-key="4">按好评率</a>
+				</nav>
+				<span style="margin-top: 0px;" class="filter_mask"></span>
+			</div>
+			<div class="content">
+			    <div class="product"></div>
+			    <div class="product"></div>
+			     <div class="product"></div>
+			    <div class="product"></div>
+			    <div class="screening">
+			    	<div class="filter_content">
+			    		<div class="filter_list">
+				    		<dl class="type">
+				    			<dt>类型</dt>
+				    			<dd>公司</dd>
+				    			<dd>个人</dd>
+				    		</dl>
+				    		<dl class="price">
+				    			<dt>价格</dt>
+				    			<input class="start" type="number" name="" id="" value="" />
+				    			<span>—</span>
+				    			<input class="end" type="number" name="" id="" value="" />
+				    		</dl>
+				    		
+				    	</div>
+				    	<div class="select">
+				    		<button class="cancle">取消</button>
+				    		<button class="confirm">确认</button>
+			    		</div>
+			    	</div>
+			    	
+		    	</div>
+			</div>
+			
+		</section>
+		<script type="text/html" id="list">
+			<% var res = datas.goods_list %>
+			<%for(var i = 0;i<res.length;i++){%>
+			<div class="product-item mark mark3" data-goods-id="<%= res[i].goods_id %>">
+				<img src="<%= res[i].goods_image_url%>" alt="">
+				<div class="product-info ">
+					<% if(res[i].is_person == 1){ %>
+						<!--个人-->
+						<h2 class="icon-type2" style="margin-top: 10px;"><a><%=res[i].goods_name%></a></h2>
+					<% }else if(res[i].is_person == 0){ %>
+						<!--企业-->
+						<h2 class="icon-type1" style="margin-top: 10px;"><a><%=res[i].goods_name%></a></h2>
+					<% } %>
+					
+					<div class="raty" >
+						<%for(var j=0;j<res[i].evaluation_good_star;j++){%>
+							<span class="icon-raty" style="margin-bottom: 20px;"></span>
+						<%}%>
+					</div>
+					<div class="label">
+						<span><%=res[i].goods_jingle%></span>
+					</div>
+					<div class="control mui-clearfix">
+						<span style="margin-top: -40px;">
+							<%=res[i].goods_price%>元
+							<% if(res[i].goods_unit != null){ %>
+								/<%= res[i].goods_unit %>
+							<% }else{ %>
+								
+							<% } %>
+						</span>
+					</div>
+				</div>
+			</div>
+			<%}%>
+		</script>
+		
+		
+		<script type="text/javascript" src="../js/hotcss.js"></script>
+		<script src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/template.js" ></script>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/dropload.min.js" ></script>
+		<script type="text/javascript" src="../js/config.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<script type="text/javascript" src="../js/tmpl/month-list.js"></script>
+	</body>
+	<script>
+			$(".filter_list").on("tap", "dd", function(){
+				$(this).addClass("active").siblings().removeClass("active");
+			})
+			$(".filter_mask").on("tap", function(){
+				$(".screening").slideToggle(300, function(e){
+					return false;
+				}, false);
+				if($(".content").css("position") == "fixed"){
+					$(".content").css("position", "");
+					$(".screening").css("top", "9rem");
+				}else{
+					$(".content").css({
+						"position": "fixed",
+						"left": "0",
+						"right": "0"
+					});
+					$(".screening").css("top", "0");
+				}
+				if($(this).hasClass("filter_active")){
+					$(this).removeClass("filter_active");
+				}else{
+					$(this).addClass("filter_active");
+				}
+				
+			})
+			$(".screening").on("tap", function(event){
+				console.log(event)
+				console.log(event.target.className);
+				var odiv = event.target;
+				if(event.target.className == "screening"){
+					$(this).slideUp("slow");
+					if($(".filter_mask").hasClass("filter_active")){
+						$(".filter_mask").removeClass("filter_active");
+					}else{
+						$(".filter_mask").addClass("filter_active");
+					}
+				}
+			})
+		</script>
+
+</html>

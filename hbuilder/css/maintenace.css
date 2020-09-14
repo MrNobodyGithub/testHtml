@@ -1,0 +1,166 @@
+.maintenace .filter nav a {
+  color: #333;
+}
+.maintenace .filter nav a.active,
+.maintenace .filter nav a:active {
+  color: #f5a93b;
+}
+.maintenace .product-item .product-info {
+  position: relative;
+}
+.maintenace .product-item .product-info .icon-type1 {
+  padding-left: 0;
+  background: none;
+}
+.maintenace .product-item .product-info .raty i {
+  display: inline-block;
+  font-size: 0.44444444rem;
+  font-style: normal;
+  color: #f5a93b;
+  position: relative;
+  top: -3px;
+  margin-left: 0.44444444rem;
+}
+.maintenace .product-item .product-info .m-price {
+  position: absolute;
+  top: 65%;
+  right: 1.52592593rem;
+  color: #999;
+  font-size: 0.44444444rem;
+}
+.maintenace .product-item .product-info .m-distance {
+  color: #f5a93b;
+  background: url(../img/car/position.png) no-repeat left center;
+  background-size: 0.68148148rem 0.68148148rem;
+  padding-left: 0.59259259rem;
+  position: absolute;
+  font-size: 0.53333333rem;
+  line-height: 0.62222222rem;
+  top: 0.53333333rem;
+  right: 0.78518519rem;
+}
+.maintenace .product-item .label em {
+  color: #f5a93b;
+}
+.maintenace .product-item .tag span {
+  color: #f5a93b;
+  border-color: #f5a93b;
+}
+.maintenace .product-item .control a {
+  color: #f5a93b;
+  border-color: #f5a93b;
+}
+.maintenace .grab-state button {
+  color: #f5a93b;
+  border-color: #f5a93b;
+  background-color: #fff;
+}
+.maintenace .grab-remarks {
+  color: #f5a93b;
+}
+.maintenace .detail-worktime .active,
+.maintenace .detail-price .active {
+  color: #f5a93b;
+  border: 1px solid #f5a93b !important;
+}
+.maintenace .detail-worktime .active p,
+.maintenace .detail-price .active p {
+  color: #f5a93b;
+}
+.maintenace .detail-worktime .test,
+.maintenace .detail-price .test {
+  line-height: 1.51111111rem;
+  font-size: 0.5037037rem;
+  color: #E6454A;
+  padding-left: 0.88888889rem;
+}
+.maintenace .detail-worktime .price-content,
+.maintenace .detail-price .price-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.maintenace .detail-worktime .price-content div,
+.maintenace .detail-price .price-content div {
+  width: 4.47407407rem;
+  height: 3.14074074rem;
+  padding-left: 0.32592593rem;
+  padding-right: 0.32592593rem;
+  border: 1px solid #333;
+  border-radius: 0.2962963rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.2962963rem;
+}
+.maintenace .detail-worktime .price-content div:not(:first-child),
+.maintenace .detail-price .price-content div:not(:first-child) {
+  margin-left: 0.38518519rem;
+}
+.maintenace .detail-worktime .price-content div p,
+.maintenace .detail-price .price-content div p {
+  text-align: center;
+  line-height: 0.5037037rem;
+  font-size: 0.38518519rem;
+  padding-right: 0;
+}
+.maintenace .detail-worktime .price-content div p:first-child,
+.maintenace .detail-price .price-content div p:first-child {
+  line-height: 1.03703704rem;
+  margin-bottom: 0;
+  font-size: 0.51851852rem;
+  margin-top: 0.47407407rem;
+}
+.maintenace .title span {
+  background-color: #f5a93b;
+}
+.maintenace .detail-comment {
+  height: auto;
+  padding-bottom: 0.59259259rem;
+}
+.maintenace .detail-comment .comment-content span {
+  color: #f5a93b;
+}
+.maintenace .detail-comment .comment-content .m-content {
+  text-indent: 2em;
+  font-size: 0.48888889rem;
+  color: #333;
+}
+.maintenace .detail-comment .comment-content .m-open {
+  display: block;
+  width: 2.37037037rem;
+  height: 0.65185185rem;
+  text-align: center;
+  line-height: 0.65185185rem;
+  background: url(../img/feedback-bottom.png) no-repeat left center;
+  background-size: 0.59259259rem 0.35555556rem;
+  padding-left: 0.74074074rem;
+  color: #464646;
+  margin: 0 auto;
+  font-size: 0.47407407rem;
+}
+.maintenace .detail-comment .m-around {
+  padding-bottom: 0.44444444rem;
+}
+.maintenace .detail-comment .m-around p {
+  color: #333;
+  line-height: 0.48888889rem;
+  margin-bottom: 0;
+}
+.maintenace .detail-comment .m-album {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.maintenace .detail-comment .m-album div {
+  height: 4.88888889rem;
+  overflow: hidden;
+  padding: 0.22222222rem;
+}
+.maintenace .m-padding {
+  margin-bottom: 0.44444444rem;
+}

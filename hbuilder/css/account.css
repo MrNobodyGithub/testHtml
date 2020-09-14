@@ -1,0 +1,259 @@
+.account menu,
+.account nav,
+.account .list {
+  background-color: #fff;
+}
+.account menu,
+.account nav {
+  margin-bottom: 0.22222222rem;
+  border-bottom: 2px solid #e6e6e8;
+}
+.account nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2.04444444rem;
+  border-top: 1px solid #f5f5f5;
+}
+.account nav a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  text-align: center;
+}
+.account nav a:not(:first-child):after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.56296296rem;
+  width: 1px;
+  height: 1.00740741rem;
+  background-color: #e6e6e8;
+}
+.account nav small,
+.account nav span {
+  display: block;
+}
+.account nav span {
+  font-size: 0.62222222rem;
+  color: #333;
+  padding: 0.44444444rem 0 0.32592593rem;
+}
+.account nav small {
+  font-size: 0.35555556rem;
+  color: #919191;
+}
+.account menu a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2.01481481rem;
+  font-size: 0.71111111rem;
+  color: #333;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.account menu a i {
+  display: block;
+}
+.account menu a i.icon-history {
+  width: 0.75555556rem;
+  height: 0.8rem;
+  background: url(../images/account/icon-pay3.png) center;
+  background-size: cover;
+  margin-left: 1.02222222rem;
+  margin-right: 0.54814815rem;
+}
+.account menu a i.icon-pay,
+.account menu a i.icon-post {
+  margin-left: 0.65185185rem;
+  margin-right: 0.51851852rem;
+}
+.account menu a i.icon-pay {
+  width: 0.91851852rem;
+  height: 0.68148148rem;
+  background: url(../images/account/icon-pay.png) center;
+  background-size: cover;
+}
+.account menu a i.icon-post {
+  width: 0.93333333rem;
+  height: 0.74074074rem;
+  background: url(../images/account/icon-post.png) center;
+  background-size: cover;
+}
+.account menu a span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.account .list {
+  border-top: 1px solid #e6e6e8;
+}
+.account .list li {
+  height: 2.63703704rem;
+  padding-left: 1.12592593rem;
+  padding-right: 0.93333333rem;
+  border-bottom: 1px solid #e6e6e8;
+}
+.account .list li span {
+  font-size: 0.41481481rem;
+  color: #b7b9c5;
+}
+.account .list li span:nth-child(2) {
+  float: right;
+}
+.account .list li strong,
+.account .list li em {
+  font-size: 0.62222222rem;
+}
+.account .list li strong {
+  font-weight: normal;
+  color: #333;
+}
+.account .list li em {
+  float: right;
+  font-style: normal;
+  color: #ff4752;
+}
+.account .list li .clearfix:nth-child(1) {
+  padding-top: 0.60740741rem;
+  padding-bottom: 0.45925926rem;
+}
+.account .slide img {
+  display: block;
+  width: 100%;
+}
+.account .recharge-item {
+  position: relative;
+  height: 3.3037037rem;
+  padding: 0 0.81481481rem 0 2.81481481rem;
+  border-bottom: 1px solid #ccc;
+  background-repeat: no-repeat;
+  background-position: 1.39259259rem 0.94814815rem;
+  background-size: 0.78518519rem 0.74074074rem;
+}
+.account .recharge-item h3 {
+  font-size: 0.62222222rem;
+  color: #333;
+  padding: 1.02222222rem 0 0.2962963rem;
+}
+.account .recharge-item small {
+  font-size: 0.44444444rem;
+  color: #626262;
+}
+.account .recharge-item a {
+  position: absolute;
+  width: 2.48888889rem;
+  height: 1.0962963rem;
+  background-color: #fff;
+  top: 50%;
+  right: 0.81481481rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  line-height: 1.0962963rem;
+  font-size: 0.44444444rem;
+  text-align: center;
+  color: #ea5c51;
+  border: 1px solid #ea5c51;
+}
+.account .recharge-type1 {
+  background-image: url(../images/account/retype1.png);
+}
+.account .recharge-type2 {
+  background-image: url(../images/account/retype2.png);
+}
+.account .recharge-type3 {
+  background-image: url(../images/account/retype3.png);
+}
+.account .form .form-control {
+  background-color: #fff;
+  padding: 0 0.59259259rem;
+}
+.account .form > a {
+  display: block;
+  width: 14.4rem;
+  height: 2.01481481rem;
+  line-height: 2.01481481rem;
+  background-color: #e6454a;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  font-size: 0.71111111rem;
+}
+.account .form input {
+  font-size: 0.59259259rem;
+  padding-left: 0.88888889rem;
+}
+.account .add-bankcard {
+  padding-top: 0.63703704rem;
+}
+.account .add-bankcard > a {
+  margin: 0.54814815rem auto;
+}
+.account .add-bankcard .form-control:nth-child(3) {
+  margin-top: 0.38518519rem;
+}
+.account .postal > a {
+  margin: 1.43703704rem auto;
+}
+.account .postal .form-control em {
+  padding-left: 0.07407407rem;
+  font-style: normal;
+  font-size: 0.62222222rem;
+  color: #333;
+}
+.account .postal .form-control .reg-span {
+  font-size: 0.59259259rem;
+  color: orange;
+}
+.account .postal .form-group input {
+  text-align: right;
+}
+.account .postal .form-group input[readonly='readonly'] {
+  color: #e6454a;
+}
+.account .config {
+  padding-top: 0.34074074rem;
+}
+.account .config > a {
+  margin: 1.82222222rem auto;
+}
+.account .config input {
+  text-align: right;
+}
+.account .config .form-control a {
+  display: block;
+}
+.account .config-top {
+  padding-top: 0.34074074rem;
+}
+.account .config-top > a {
+  margin: 1.82222222rem auto;
+}
+.account .change-bankcard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 2.78518519rem;
+  margin: 0.34074074rem 0 0.32592593rem;
+  background: #fff url(../images/ucenter/form-icon-arrow.png) 96% center no-repeat;
+  border: solid #e6e6e8;
+  border-width: 1px 0;
+}
+.account .change-bankcard i {
+  display: block;
+  width: 1.06666667rem;
+  height: 0.71111111rem;
+  background: url(../images/account/tixian.png) center no-repeat;
+  background-size: cover;
+  margin: 0 0.54814815rem 0 1.12592593rem;
+}
+.account .change-bankcard span {
+  font-size: 0.62222222rem;
+  color: #333;
+}

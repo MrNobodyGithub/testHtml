@@ -1,0 +1,309 @@
+@import '../config.less';
+@import '../api/api-webkit.less';
+@import '../api/api-common.less';
+@import '../api/api-size.less';
+
+
+@nannyDetail       :       nannyDetail;
+@nannyDetailColor  :       #f8cade;
+
+
+.@{nannyDetail} {
+    
+    .product-info{
+        position: relative;
+        .raty{
+            i{
+                .dib;
+                .height(30,2);
+                .fs(28,2);
+                font-style: normal;
+                position: relative;
+                left: px2rem(-35);
+                color:#555555;
+                .ml(38,2);
+            }
+        }
+
+    }
+    .album-pink{
+        background-color: rgba(232, 146, 184,0.6);
+        position: absolute;
+        right:px2rem(-120);
+        bottom:px2rem(104);
+        padding-right:px2rem(80);
+    }
+
+    .filter {
+
+        nav {
+            a {
+                color: @title-main;
+
+                &.active ,
+                &:active {
+                    color: @nannyDetailColor;
+                }
+            }
+        }
+
+    }
+
+    .product-item {
+
+        .label {
+            overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+            em {
+                .color( @nannyDetailColor );
+            }
+        }
+
+        .tag {
+            margin-top: px2rem(40);
+            span {
+                color: @nannyDetailColor;
+                border-color: @nannyDetailColor;
+                margin-top: -30px;
+            }
+        }
+        .description{
+                
+                .db; 
+                margin-right: px2rem(50);
+                margin-top: px2rem(30);
+                .fs(32,2);
+                color: rgb(116, 116, 116);
+                padding-right: px2rem(60);
+                
+                .detail-ping{
+                    background: url(../images/Nanny/detail-ping.png) center right no-repeat;
+                    background-size: px2rem(27) px2rem(27);
+                }
+                
+                .detail-gao{
+                    background: url(../images/Nanny/detail-ping.png) center right no-repeat;
+                    background-size: px2rem(27) px2rem(27);
+                }                
+            
+            small {
+                .dib;
+                padding-right: px2rem(50);      
+                color:#F4425D;          
+            }
+            span{
+                margin-left: px2rem(25);
+            } 
+           
+                   
+        }
+        .share{
+                .fs(40,2);
+                color: rgb(146, 146, 146);
+                position: absolute;
+                top:px2rem(110);
+                right: px2rem(130);
+        } 
+        .control {
+            a {
+                border: none;
+                color: #6D6D72;
+                margin-top: px2rem(50);
+            }
+            span{
+                margin-top: px2rem(50);
+            }
+            
+        }
+    }
+
+    .grab-state {
+        button {
+            color: @nannyDetailColor;
+            border-color: @nannyDetailColor;
+            .bc( #fff );
+        }
+    }
+
+    .grab-remarks {
+        color: @nannyDetailColor;
+    }
+    
+        
+    .detail-worktime ,
+    .detail-price {
+        .active{
+            color: @nannyDetailColor;
+            border:1px solid @nannyDetailColor !important;
+        }
+        .price-content{
+
+            dd{
+                .por;
+                strong {
+                    .fs(32,2);
+                    color:red;
+                }
+                
+                &:after {
+                    content: attr(name);
+                    .poa;
+                    .width;
+                    .left;
+                    .bottom(-80,2);
+                    color: #939393;
+                }
+            }
+            .top{
+                margin-top: px2rem(100);
+            }
+            .day{
+                padding-top: px2rem(68);
+                input{
+                    border-width:px2rem(2);
+                    border-color: rgb(51, 51, 51);
+                    border-style: solid;
+                    border-radius: px2rem(10);
+                    background-color: rgb(255, 255, 255);
+                    .width(214,2);
+                    .height(83,2);
+                    .tac;
+                    .fs(30,2);
+                }
+                dd{
+                    border-style: none;
+                    padding: 0;
+                    margin: 0;
+                    span{
+                        margin-left: px2rem(20);
+                    }
+                }
+            }
+            
+        }
+
+    }
+//  .product-detail .product{
+//      .df;
+//      
+//      img {
+//          width:50%;
+//          height:50%;
+//          .ml( 30,2 );
+//      }
+//
+//      div {
+//          .fs( 36,2 );
+//          width:50%;
+//      }
+//  }
+    .product-detail .product{
+        width:100%;
+        margin: 0 auto;
+        .fs(40,2);
+        .lh(80,2);
+    }
+    .worktime-check{
+        padding:px2rem(60) px2rem(80);
+    
+        li{
+            background: url(../images/danxuan.png) no-repeat left center;
+            background-size: px2rem(44) px2rem(44);
+            padding-left:px2rem(72) ;
+            .width(50%);
+            .height(60,2);
+            .lh(60,2);
+            .fs(40,2);
+            margin-bottom: px2rem(17);
+            
+            &:nth-child(odd){
+                .fl;
+            }
+            &:nth-child(even){
+                .fr;
+            }
+        }
+        
+
+    }
+
+    
+    .title {
+        span {
+            background-color: @nannyDetailColor;
+        }
+    }
+    
+    .money{
+        span{
+            color:#F4425D;
+        }
+    }
+
+    .detail-comment {
+        .comment-content {
+            span {
+                color:#F4425D;
+            }
+            .server-hour{
+                .db;
+                background: url(../images/Nanny/date.png) no-repeat left;
+                background-size: px2rem(48) px2rem(49);
+                padding-left: px2rem(50);
+            }
+        }
+    }
+    .product-item{
+        border-top: none;
+        border-bottom: px2rem(1) solid  #e2e3e7;
+    }
+    .mouth-white{
+        background: white;
+        .height;
+    }
+}
+
+.@{nannyDetail} {
+    .detail-server{
+        .server-content{
+            .big-img{
+                padding: 0;
+                margin: 0;
+                flex-direction:column ;
+                .height(600,2);
+                dt{
+                    .width;
+                    .height(152);
+                }
+                img{
+                    margin-left: px2rem(-30);
+                }
+            }
+        } 
+    } 
+} 
+
+
+.footer-menu-pink {
+    .link {
+        .bc( @nannyDetailColor );
+    }
+}
+
+.all{
+        position: relative;
+        .right {
+            .fs(35,2);
+            margin-top: 0;
+            margin-bottom: px2rem(10);
+            color: #8f8f94;
+            position: absolute;
+            right:px2rem(30);
+            bottom:px2rem(10);
+        }
+    } 
+    
+  

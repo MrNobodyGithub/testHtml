@@ -1,0 +1,269 @@
+.hos-detail .detail-price .one {
+  display: inline-block;
+  padding: 0.32592593rem 0.96296296rem;
+  border: 1px solid #333;
+  font-size: 0.48888889rem;
+  border-radius: 0.2962963rem;
+  margin-top: 0.81481481rem;
+  margin-bottom: 1.00740741rem;
+}
+.hos-detail .detail-price .one:not(:first-child) {
+  margin-top: 0.42962963rem;
+}
+.hos-detail .detail-price .price-content {
+  padding: 1.25925926rem 0.81481481rem;
+}
+.hos-detail .detail-price .price-content table {
+  width: 100%;
+  height: 100%;
+  line-height: 1.40740741rem;
+  text-align: center;
+  font-size: 0.56296296rem;
+  border-color: #ccc;
+}
+.hos-detail .detail-price .price-content table th {
+  background: #f1f2f6;
+}
+.hos-detail .product-info {
+  position: relative;
+}
+.hos-detail .product-info p {
+  font-size: 0.44444444rem;
+  margin-top: 0.44444444rem;
+}
+.hos-detail .product-info .raty i {
+  display: inline-block;
+  height: 0.44444444rem;
+  font-size: 0.41481481rem;
+  font-style: normal;
+  position: relative;
+  left: -0.51851852rem;
+  color: #555555;
+  margin-left: 0.56296296rem;
+}
+.hos-detail .album-pink {
+  background-color: rgba(232, 146, 184, 0.6);
+  position: absolute;
+  right: -1.77777778rem;
+  bottom: 1.54074074rem;
+  padding-right: 1.18518519rem;
+}
+.hos-detail .filter nav a {
+  color: #333;
+}
+.hos-detail .filter nav a.active,
+.hos-detail .filter nav a:active {
+  color: #a1d66a;
+}
+.hos-detail .product-item .label em {
+  color: #a1d66a;
+}
+.hos-detail .product-item .tag {
+  margin-top: 0.59259259rem;
+}
+.hos-detail .product-item .tag span {
+  color: #a1d66a;
+  border-color: #a1d66a;
+}
+.hos-detail .product-item .description {
+  display: block;
+  margin-right: 0.74074074rem;
+  margin-top: 0.44444444rem;
+  font-size: 0.47407407rem;
+  color: #747474;
+  padding-right: 0.88888889rem;
+}
+.hos-detail .product-item .description .detail-ping {
+  background: url(../img/hos/ping.png) center right no-repeat;
+  background-size: 0.4rem 0.4rem;
+  color: #f4425d;
+}
+.hos-detail .product-item .description .detail-gao {
+  background: url(../img/hos/gao.png) center right no-repeat;
+  background-size: 0.4rem 0.4rem;
+  color: #f4425d;
+}
+.hos-detail .product-item .description small {
+  display: inline-block;
+  padding-right: 0.74074074rem;
+}
+.hos-detail .product-item .description span {
+  margin-left: 0.37037037rem;
+}
+.hos-detail .product-item .share {
+  font-size: 0.59259259rem;
+  color: #929292;
+  position: absolute;
+  top: 2.07407407rem;
+  right: 0.88888889rem;
+}
+.hos-detail .product-item .share i {
+  font-style: normal;
+  color: #ff5000;
+}
+.hos-detail .product-item .control a {
+  border: none;
+  color: #6D6D72;
+  margin-top: 0.74074074rem;
+}
+.hos-detail .product-item .control span {
+  margin-top: 0.74074074rem;
+}
+.hos-detail .grab-state button {
+  color: #a1d66a;
+  border-color: #a1d66a;
+  background-color: #fff;
+}
+.hos-detail .grab-remarks {
+  color: #a1d66a;
+}
+.hos-detail .detail-worktime {
+  height: auto;
+  padding-bottom: 0.59259259rem;
+}
+.hos-detail .detail-worktime .hos-worktime {
+  height: auto;
+}
+.hos-detail .detail-worktime .hos-worktime ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 1.21481481rem;
+}
+.hos-detail .detail-worktime .hos-worktime ul li {
+  line-height: 0.47407407rem;
+  padding-top: 0.88888889rem;
+}
+.hos-detail .detail-worktime .hos-worktime ul .more {
+  padding-right: 0.2962963rem;
+  padding-left: 0.2962963rem;
+  padding-top: 0.59259259rem;
+  line-height: 0.59259259rem;
+}
+.hos-detail .detail-worktime .hos-worktime ul .active {
+  color: #a1d66a;
+  border-color: #a1d66a;
+}
+.hos-detail .hos-server {
+  padding-bottom: 0.59259259rem;
+}
+.hos-detail .detail-price .active {
+  color: #a1d66a;
+  border: 1px solid #a1d66a !important;
+}
+.hos-detail .detail-price .price-content {
+  padding-bottom: 0.59259259rem;
+}
+.hos-detail .detail-price .price-content dd {
+  position: relative;
+}
+.hos-detail .detail-price .price-content dd strong {
+  font-size: 0.47407407rem;
+  color: red;
+}
+.hos-detail .detail-price .price-content dd:after {
+  content: attr(name);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -1.18518519rem;
+  color: #939393;
+}
+.hos-detail .detail-price .price-content .day {
+  padding-top: 0.56296296rem;
+}
+.hos-detail .detail-price .price-content .day input {
+  border-width: 0.02962963rem;
+  border-color: #333333;
+  border-style: solid;
+  border-radius: 0.14814815rem;
+  background-color: #ffffff;
+  width: 3.17037037rem;
+  height: 1.22962963rem;
+  text-align: center;
+  line-height: 0.44444444rem;
+}
+.hos-detail .detail-price .price-content .day dd {
+  border-style: none;
+  padding: 0;
+  margin: 0;
+}
+.hos-detail .detail-price .price-content .day dd span {
+  margin-left: 0.2962963rem;
+}
+.hos-detail .worktime-check {
+  margin: 0.81481481rem auto;
+  padding: 0 1.18518519rem;
+}
+.hos-detail .worktime-check li {
+  display: block;
+  background: url(../img/hos/danxuan.png) no-repeat left;
+  background-size: 0.65185185rem 0.65185185rem;
+  padding-left: 1.06666667rem;
+  width: 45%;
+  height: 0.88888889rem;
+  font-size: 0.56296296rem;
+  line-height: 0.88888889rem;
+}
+.hos-detail .worktime-check li:nth-child(odd) {
+  float: left;
+}
+.hos-detail .worktime-check li:nth-child(even) {
+  float: right;
+}
+.hos-detail .title span {
+  background-color: #a1d66a;
+}
+.hos-detail .money span {
+  color: #F4425D;
+}
+.hos-detail .detail-comment .comment-content p {
+  font-size: 0.59259259rem !important;
+}
+.hos-detail .detail-comment .comment-content span {
+  color: #F4425D;
+}
+.hos-detail .detail-comment .comment-content .server-hour {
+  display: block;
+  background: url(../img/Nanny/date.png) no-repeat left;
+  background-size: 0.71111111rem 0.72592593rem;
+  padding-left: 0.74074074rem;
+}
+.hos-detail .product-item {
+  border-top: none;
+  border-bottom: 0.01481481rem solid #e2e3e7;
+}
+.hos-detail .mouth-white {
+  background: white;
+  height: 100%;
+}
+.hos-detail .join-color span {
+  background: #a1d66a !important;
+}
+.hos-detail .join-color p {
+  color: #a1d66a !important;
+}
+.hos-detail .detail-join {
+  margin-bottom: 0.44444444rem;
+}
+.hos-detail .detail-server .server-content .big-img {
+  padding: 0;
+  margin: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column ;
+          flex-direction: column ;
+  height: 8.88888889rem;
+}
+.hos-detail .detail-server .server-content .big-img dt {
+  width: 100%;
+  height: 152;
+}
+.hos-detail .detail-server .server-content .big-img img {
+  margin-left: -0.44444444rem;
+}
+.footer-menu-green .link {
+  background-color: #a1d66a;
+}

@@ -1,0 +1,144 @@
+menu {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column ;
+          flex-direction: column ;
+}
+.cleaning {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.cleaning .cleaning-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.cleaning .cleaning-content li {
+  height: 1.92592593rem;
+  padding-left: 0.66666667rem;
+  font-size: 0.53333333rem;
+  line-height: 1.92592593rem;
+}
+.cleaning .cleaning-content li input {
+  height: 1.86666667rem;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 0.04444444rem solid #b7b7b8;
+  font-size: 0.53333333rem;
+  padding-left: 1.28888889rem;
+}
+.cleaning .cleaning-content li:nth-of-type(1) {
+  position: relative;
+}
+.cleaning .cleaning-content li:nth-of-type(1) input {
+  background: url(../img/Cleaning/Cleaning1.png) no-repeat 0.14814815rem center;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.cleaning .cleaning-content li:nth-of-type(1) span {
+  position: absolute;
+  right: 0.41481481rem;
+  font-size: 0.44444444rem;
+  color: #f5a93b;
+}
+.cleaning .cleaning-content li:nth-of-type(2) {
+  margin-left: 0.66666667rem;
+  padding-left: 1.28888889rem;
+  padding-right: 0.74074074rem;
+  border-bottom: 0.04444444rem solid #b7b7b8;
+  background: url(../img/Cleaning/Cleaning4.png) no-repeat 0.14814815rem center;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.cleaning .cleaning-content li:nth-of-type(2) a {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #b7b7b8;
+  font-size: 0.59259259rem;
+}
+.cleaning .cleaning-content li:nth-of-type(2) a span {
+  display: inline-block;
+  width: 0.53333333rem;
+  height: 0.5037037rem;
+  background: url(../img/Cleaning/jiantou.png) no-repeat center center;
+  margin-top: 0.59259259rem;
+}
+.cleaning .cleaning-content li:nth-of-type(4) {
+  margin-top: 0.88888889rem;
+}
+.cleaning .cleaning-content li:nth-of-type(4) input {
+  background: url(../img/Cleaning/Cleaning4.png) no-repeat 0.14814815rem center;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.cleaning .cleaning-content li:nth-of-type(5) {
+  position: relative;
+}
+.cleaning .cleaning-content li:nth-of-type(5) input {
+  background: url(../img/Cleaning/Cleaning2.png) no-repeat 0.14814815rem center;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.cleaning .cleaning-content li:nth-of-type(5) span {
+  position: absolute;
+  right: 0.41481481rem;
+  font-size: 0.44444444rem;
+}
+.cleaning .cleaning-content li:nth-of-type(3) {
+  height: 3.40740741rem;
+  margin-left: 0.66666667rem;
+  padding-left: 1.28888889rem;
+  background: url(../img/Cleaning/Cleaning3.png) no-repeat 0.14814815rem 1.0962963rem;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.cleaning .cleaning-content li:nth-of-type(3) .remark {
+  width: 13.62962963rem;
+  height: 3.2rem;
+  border: 0.04444444rem solid #e6e6e8;
+  font-size: 0.53333333rem;
+  border-radius: 0.44444444rem;
+  padding: 0.44444444rem 0.23703704rem;
+  margin-top: 0.74074074rem;
+  margin-bottom: 0.88888889rem;
+  color: #b7b7b8;
+}
+.cleaning .cleaning-content li:nth-of-type(6) {
+  font-size: 0.44444444rem;
+  color: #cccccc;
+  margin-left: 1.45185185rem;
+}
+.cleaning .cleaning-content li:nth-of-type(7) {
+  font-size: 0.44444444rem;
+  color: #cccccc;
+  margin-left: 3.7037037rem;
+  margin-top: -0.88888889rem;
+}
+.cleaning .cleaning-next {
+  height: 2.16296296rem;
+  background-color: #f5a93b;
+}
+.cleaning .cleaning-next a {
+  font-size: 0.62222222rem;
+  color: #fff;
+  display: block;
+  text-align: center;
+  line-height: 2.16296296rem;
+}

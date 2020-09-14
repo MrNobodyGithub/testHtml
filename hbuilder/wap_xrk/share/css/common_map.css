@@ -1,0 +1,130 @@
+html,
+body {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+.mui-content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 3rem;
+	padding-top: 2.2rem;
+}
+
+#l-map {
+	flex: 1;
+}
+
+.mui-bar-footer a {
+	display: block;
+	width: 100%;
+	background: orange;
+	border: 0;
+	padding: 0;
+	font-size: 1rem;
+	line-height: 3rem;
+	color: #fff;
+	text-align: center;
+}
+
+.mui-bar-footer {
+	position: fixed;
+	width: 100%;
+	height: 3rem;
+	bottom: 0;
+	left: 0;
+}
+.common-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+    padding: 0 0.44444444rem;
+    border-bottom: 0.02962963rem solid #e6e6e8;
+}
+.common-header.common-header-yellow {
+	height: 2.8rem;
+	background-color: #f5a93b;
+}
+
+.common-header[class*=common-header-] .icon-back {
+	background-size: 1.5rem;
+}
+.common-header h1 {
+	margin: 0;
+	padding: 0;
+    position: absolute;
+    top: 0;
+    left: 1.97037037rem;
+    right: 1.97037037rem;
+    text-align: center;
+    line-height: 2.8rem;
+    font-size: 1.0rem;
+    z-index: 2;
+    color: #fff;
+}
+.common-header[class*=common-header-] .icon-back {
+    background: url(../img/cleaning-back-w.png) center no-repeat;
+    background-size: 1.7rem;
+}
+.common-header .icon-back, .common-header .icon-back-white {
+    float: left;
+    width: 1.97037037rem;
+    height: 100%;
+}
+.common-header a {
+    position: relative;
+    z-index: 11;
+}
+.common-header .city {
+	font-size: 0.8rem;
+	padding-top: 0.5rem;
+	background-size: 0.8rem;
+}
+.mui-search {
+	margin-top: 0.85rem;
+	height: 2.5rem;
+}
+
+.map-list {
+	height: 16rem;
+	overflow: auto;
+}
+
+input[type=search] {
+	height: 2.5rem;
+}
+
+.mapsection {
+	overflow: hidden;
+}
+
+
+/*.mapsection #l-map{
+		height: 36.5rem;
+	}*/
+
+
+/* 自定义搜索框样式，mui-search会导致魅族键盘闪现 */
+
+.own-search {
+	margin-top: 0.85rem;
+	height: 2.5rem;
+}
+
+.own-search input {
+	padding-left: 2.2em;
+	text-align: left;
+	background: #eee url(../img/index-search.png) no-repeat left;
+	background-size: 1.24444444rem 1.24444444rem;
+	background-position-x: 0.44444444rem;
+}
+
+.auto-item {
+	padding: 0.8rem;
+}

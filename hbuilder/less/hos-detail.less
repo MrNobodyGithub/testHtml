@@ -1,0 +1,351 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+
+@hosDtail       :       hos-detail;
+@hosDtailColor  :       #a1d66a;
+
+.@{hosDtail} {
+    .detail-price{
+        
+        .one{
+            .dib;
+            padding: px2rem(22) px2rem(65);
+            border: 1px solid @title-main;
+            .fs(33,2);
+            border-radius: px2rem(20);
+            .mt(55,2);
+            .mb(68,2);
+            &:not(:first-child){
+                .mt(29,2);
+            }
+        }
+        .price-content{
+            padding: px2rem(85) px2rem(55);
+            table{
+                .width;
+                .height;
+                .lh(95,2);
+                text-align: center;
+                .fs(38,2);
+                border-color: #ccc;
+                th{
+                    background: #f1f2f6;
+                }
+            }
+        }
+        
+    }
+    .product-info{
+        position: relative;
+        p{
+            .fs(30,2);
+            margin-top: px2rem(30);
+        }
+        .raty{
+            i{
+                .dib;
+                .height(30,2);
+                .fs(28,2);
+                font-style: normal;
+                position: relative;
+                left: px2rem(-35);
+                color:#555555;
+                .ml(38,2);
+            }
+        }
+
+    }
+    .album-pink{
+        background-color: rgba(232, 146, 184,0.6);
+        position: absolute;
+        right:px2rem(-120);
+        bottom:px2rem(104);
+        padding-right:px2rem(80);
+    }
+
+    .filter {
+
+        nav {
+            a {
+                color: @title-main;
+
+                &.active ,
+                &:active {
+                    color:@hosDtailColor;
+                }
+            }
+        }
+
+    }
+
+    .product-item {
+
+        .label {
+            em {
+                .color(@hosDtailColor );
+            }
+        }
+
+        .tag {
+            margin-top: px2rem(40);
+            span {
+                color: @hosDtailColor;
+                border-color: @hosDtailColor;
+            }
+        }
+        .description{
+                
+                .db; 
+                margin-right: px2rem(50);
+                margin-top: px2rem(30);
+                .fs(32,2);
+                color: rgb(116, 116, 116);
+                padding-right: px2rem(60);
+                
+                .detail-ping{
+                    background: url(../img/hos/ping.png) center right no-repeat;
+                    background-size: px2rem(27) px2rem(27);
+                    color: #f4425d;
+                }
+                
+                .detail-gao{
+                    background: url(../img/hos/gao.png) center right no-repeat;
+                    background-size: px2rem(27) px2rem(27);
+                    color: #f4425d;
+                }                
+            
+            small {
+                .dib;
+                 padding-right: px2rem(50);                
+            }
+            span{
+                margin-left: px2rem(25);
+            } 
+           
+                   
+        }
+        .share{
+                .fs(40,2);
+                color: rgb(146, 146, 146);
+                position: absolute;
+                top:px2rem(140);
+                right: px2rem(60);
+                i{
+                    font-style: normal;
+                    color: #ff5000;
+                }
+        } 
+        .control {
+            a {
+                border: none;
+                color: #6D6D72;
+                margin-top: px2rem(50);
+            }
+            span{
+                margin-top: px2rem(50);
+            }
+            
+        }
+    }
+
+    .grab-state {
+        button {
+            color: @hosDtailColor;
+            border-color: @hosDtailColor;
+            .bc( #fff );
+        }
+    }
+
+    .grab-remarks {
+        color: @hosDtailColor;
+    }
+
+    .detail-worktime{
+        height: auto;
+        .pb(40,2);
+        
+        .hos-worktime{
+            
+            height: auto;
+            ul{
+                .df;
+                justify-content: space-around;
+                .pb(82,2);
+                li{
+                    .lh(32,2);
+                    .pt(60,2);
+                }
+                .more{
+                    padding-right: px2rem(20);
+                    padding-left: px2rem(20);
+                    padding-top: px2rem(40);
+                    .lh(40,2);
+                }
+                .active{
+                    color: @hosDtailColor;
+                    border-color: @hosDtailColor;
+                }
+            }
+        }
+    } 
+    .hos-server{
+        .pb(40,2);
+    }
+    .detail-price {
+        .active{
+            color: @hosDtailColor;
+            border:1px solid @hosDtailColor !important;
+        }
+        .price-content{
+            padding-bottom: px2rem(40);
+            dd{
+                .por;
+                strong {
+                    .fs(32,2);
+                    color:red;
+                }
+                
+                &:after {
+                    content: attr(name);
+                    .poa;
+                    .width;
+                    .left;
+                    .bottom(-80,2);
+                    color: #939393;
+                }
+            }
+            .day{
+                padding-top: px2rem(38);
+                input{
+                    border-width:px2rem(2);
+                    border-color: rgb(51, 51, 51);
+                    border-style: solid;
+                    border-radius: px2rem(10);
+                    background-color: rgb(255, 255, 255);
+                    .width(214,2);
+                    .height(83,2);
+                    .tac;
+                    .lh(30,2);
+                }
+                dd{
+                    border-style: none;
+                    padding: 0;
+                    margin: 0;
+                    span{
+                        margin-left: px2rem(20);
+                    }
+                }
+            }
+            
+        }
+        
+        
+    }
+    .worktime-check{
+        margin:px2rem(55) auto;
+        padding: 0 px2rem(80);
+        li{
+            .db;
+            background: url(../img/hos/danxuan.png) no-repeat left ;
+            background-size: px2rem(44) px2rem(44);
+            padding-left:px2rem(72) ;
+            .width(45%);
+            .height(60,2);
+            .fs(38,2);
+            .lh(60,2);
+            
+            &:nth-child(odd){
+                .fl;
+            }
+            &:nth-child(even){
+                .fr;
+            }
+        }
+        
+    }
+    
+       
+    
+    .title {
+        span {
+            background-color: @hosDtailColor;
+        }
+    }
+    
+    .money{
+        span{
+            color:#F4425D;
+        }
+    }
+
+    .detail-comment {
+        .comment-content {
+
+            p{
+                .fs(40,2) !important;
+                
+            }
+            span {
+                color:#F4425D;
+            }
+            .server-hour{
+                .db;
+                background: url(../img/Nanny/date.png) no-repeat left;
+                background-size: px2rem(48) px2rem(49);
+                padding-left: px2rem(50);
+            }
+        }
+    }
+    .product-item{
+        border-top: none;
+        border-bottom: px2rem(1) solid  #e2e3e7;
+    }
+    .mouth-white{
+        background: white;
+        .height;
+    }
+    .join-color{
+        span{
+            background: @hosDtailColor!important;
+        }
+        p{
+            color: @hosDtailColor!important;
+        }
+    }
+    .detail-join{
+        .mb(30,2);
+    }
+}
+
+.@{hosDtail} {
+    .detail-server{
+        .server-content{
+            .big-img{
+                padding: 0;
+                margin: 0;
+                flex-direction:column ;
+                .height(600,2);
+                dt{
+                    .width;
+                    .height(152);
+                }
+                img{
+                    margin-left: px2rem(-30);
+                }
+            }
+        } 
+    } 
+} 
+
+
+.footer-menu-green {
+    .link {
+        .bc( @hosDtailColor );
+    }
+}
+
+
+  

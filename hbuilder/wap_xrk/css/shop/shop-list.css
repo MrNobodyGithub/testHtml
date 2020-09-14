@@ -1,0 +1,560 @@
+.finish {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: auto;
+}
+.finish .finish-name {
+  background: #fff;
+  width: 15.40740741rem;
+  height: 3.76296296rem;
+  position: relative;
+  border-bottom: 0.02962963rem solid #F2F2F2;
+  border-radius: 0.44444444rem 0.44444444rem 0 0;
+  margin-top: 0.59259259rem;
+  margin-left: 0.2962963rem;
+}
+.finish .finish-name h3 {
+  font-size: 0.56296296rem;
+  color: #464646;
+  width: 9.58518519rem;
+  margin-left: 0.74074074rem;
+  padding-top: 1.03703704rem;
+  margin-bottom: 0.44444444rem;
+}
+.finish .finish-name strong {
+  font-size: 0.71111111rem;
+  color: #ea5404;
+  margin-left: 0.74074074rem;
+}
+.finish .finish-name span {
+  display: block;
+  width: 0.04444444rem;
+  height: 2.96296296rem;
+  background-color: #F2F2F2;
+  position: absolute;
+  top: 0.2962963rem;
+  right: 3.77777778rem;
+}
+.finish .finish-name .share {
+  display: block;
+  width: 0.93333333rem;
+  height: 0.87407407rem;
+  background: url(../img/today-icon3_03.png) center right no-repeat;
+  background-size: 0.93333333rem 0.87407407rem;
+  position: absolute;
+  top: 1.03703704rem;
+  right: 1.48148148rem;
+}
+.finish .finish-name .share-zi {
+  font-size: 0.47407407rem;
+  color: #747474;
+  position: absolute;
+  top: 2.22222222rem;
+  right: 1.48148148rem;
+}
+.finish .finish-parameter {
+  background: #f8f8f8;
+  width: 15.40740741rem;
+  height: 2.57777778rem;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0.2962963rem;
+  margin-left: 0.2962963rem;
+  border-radius: 0 0 0.44444444rem 0.44444444rem;
+}
+.finish .finish-parameter p {
+  font-size: 0.53333333rem;
+  color: #333333;
+  margin-left: 0.91851852rem;
+  margin-top: 0.44444444rem;
+}
+.finish .finish-parameter p span {
+  color: #747474;
+}
+.finish .finish-user {
+  background: #fff;
+  width: 15.40740741rem;
+  height: 4.5037037rem;
+  position: relative;
+  border-bottom: 0.02962963rem solid #F2F2F2;
+  border-radius: 0.44444444rem;
+  margin-top: 0.59259259rem;
+  margin-left: 0.2962963rem;
+}
+.finish .finish-user h3 {
+  font-size: 0.71111111rem;
+  color: #333333;
+  width: 9.58518519rem;
+  margin-left: 3.11111111rem;
+  padding-top: 0.59259259rem;
+  margin-bottom: 0.44444444rem;
+}
+.finish .finish-user .finish-p {
+  margin-top: -0.14814815rem;
+  margin-left: 3.11111111rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.finish .finish-user .finish-p span {
+  background: url(../img/waiting/waiting-4.png);
+  width: 0.2962963rem;
+  height: 0.2962963rem;
+  background-size: 0.2962963rem 0.2962963rem;
+}
+.finish .finish-user .finish-p i {
+  display: inline-block;
+  background: url(../img/huiyuan.png);
+  width: 0.32592593rem;
+  height: 0.38518519rem;
+  background-size: 0.32592593rem 0.38518519rem;
+  font-style: normal ;
+}
+.finish .finish-user .finish-p small {
+  padding-left: 0.14814815rem;
+  font-size: 0.44444444rem;
+  color: #8a8989;
+}
+.finish .finish-user .finish-p2 {
+  margin-top: 0.2962963rem;
+  margin-left: 3.11111111rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.44444444rem;
+}
+.finish .finish-user .finish-p2 i {
+  font-style: normal;
+  margin-right: 0.44444444rem;
+}
+.finish .finish-user .finish-p2 i span {
+  color: #F5A93B;
+}
+.finish .finish-user .finish-p3 {
+  margin-left: 3.11111111rem;
+  margin-top: 0.74074074rem;
+}
+.finish .finish-user .finish-p3 span {
+  color: #f9cd56;
+  font-size: 0.44444444rem;
+  width: 2.93333333rem;
+  height: 0.71111111rem;
+  line-height: 0.71111111rem;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: block;
+  background-color: #ffffff;
+  border-style: solid;
+  border-radius: 0.11851852rem;
+  border-width: 0.01481481rem;
+  margin-right: 0.14814815rem;
+}
+.finish .finish-user .finish-service {
+  position: absolute;
+  top: 0.2962963rem;
+  right: 0rem;
+  border-radius: 0.56296296rem;
+  background-color: #f1c30f;
+  width: 2.54814815rem;
+  height: 1.14074074rem;
+  color: #fff;
+  font-size: 0.44444444rem;
+  line-height: 1.14074074rem;
+  text-align: center;
+  border-radius: 0.74074074rem 0 0 0.74074074rem;
+}
+.finish .finish-user .share {
+  display: block;
+  width: 1.98518519rem;
+  height: 1.98518519rem;
+  background: url(../img/waiting/waiting-2.png) center center no-repeat;
+  background-size: 1.98518519rem 1.98518519rem;
+  position: absolute;
+  top: 0.53333333rem;
+  left: 0.74074074rem;
+}
+.finish .finish-add {
+  background: #fff;
+  width: 15.40740741rem;
+  height: 3.17037037rem;
+  position: relative;
+  border-bottom: 0.02962963rem solid #F2F2F2;
+  border-radius: 0.44444444rem 0.44444444rem 0 0;
+  margin-top: 0.59259259rem;
+  margin-left: 0.2962963rem;
+}
+.finish .finish-add h3 {
+  font-size: 0.71111111rem;
+  color: #333333;
+  width: 9.58518519rem;
+  margin-left: 3.11111111rem;
+  padding-top: 0.59259259rem;
+  margin-bottom: 0.44444444rem;
+}
+.finish .finish-add .finish-p {
+  margin-top: -0.14814815rem;
+  margin-left: 3.11111111rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.finish .finish-add .finish-p span {
+  background: url(../img/waiting/waiting-4.png);
+  width: 0.2962963rem;
+  height: 0.2962963rem;
+  background-size: 0.2962963rem 0.2962963rem;
+}
+.finish .finish-add .finish-p i {
+  display: inline-block;
+  background: url(../img/huiyuan.png);
+  width: 0.32592593rem;
+  height: 0.38518519rem;
+  background-size: 0.32592593rem 0.38518519rem;
+  font-style: normal ;
+}
+.finish .finish-add .finish-p small {
+  padding-left: 0.14814815rem;
+  font-size: 0.44444444rem;
+  color: #8a8989;
+}
+.finish .finish-add .finish-p2 {
+  margin-top: 0.2962963rem;
+  margin-left: 3.11111111rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.44444444rem;
+}
+.finish .finish-add .finish-p2 i {
+  font-style: normal;
+  margin-right: 0.44444444rem;
+}
+.finish .finish-add .finish-p2 i span {
+  color: #F5A93B;
+}
+.finish .finish-add .finish-p3 {
+  margin-left: 3.11111111rem;
+  margin-top: 0.74074074rem;
+}
+.finish .finish-add .finish-p3 span {
+  color: #f9cd56;
+  font-size: 0.44444444rem;
+  width: 2.93333333rem;
+  height: 0.71111111rem;
+  line-height: 0.71111111rem;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: block;
+  background-color: #ffffff;
+  border-style: solid;
+  border-radius: 0.11851852rem;
+  border-width: 0.01481481rem;
+  margin-right: 0.14814815rem;
+}
+.finish .finish-add .finish-service {
+  position: absolute;
+  top: 0.2962963rem;
+  right: 0rem;
+  border-radius: 0.56296296rem;
+  background-color: #f1c30f;
+  width: 2.54814815rem;
+  height: 1.14074074rem;
+  color: #fff;
+  font-size: 0.44444444rem;
+  line-height: 1.14074074rem;
+  text-align: center;
+  border-radius: 0.74074074rem 0 0 0.74074074rem;
+}
+.finish .finish-add .share {
+  display: block;
+  width: 1.98518519rem;
+  height: 1.98518519rem;
+  background: url(../img/waiting/waiting-2.png) center center no-repeat;
+  background-size: 1.98518519rem 1.98518519rem;
+  position: absolute;
+  top: 0.53333333rem;
+  left: 0.74074074rem;
+}
+.finish .finish-parameter1 {
+  background: #f8f8f8;
+  width: 15.40740741rem;
+  height: 1.33333333rem;
+  margin-bottom: 0.2962963rem;
+  margin-left: 0.2962963rem;
+  border-radius: 0 0 0.44444444rem 0.44444444rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.finish .finish-parameter1 .finish-position {
+  margin-left: 0.82962963rem;
+  display: block;
+  background: url(../img/dingwei.png) no-repeat center center;
+  background-size: 0.47407407rem 0.56296296rem;
+  width: 0.47407407rem;
+  height: 0.56296296rem;
+  margin-top: 0.2962963rem;
+}
+.finish .finish-parameter1 small {
+  font-size: 0.53333333rem;
+  color: #333333;
+  margin-top: 0.2962963rem;
+  margin-left: 0.2962963rem;
+}
+.finish .finish-background {
+  background: #fff;
+  border-radius: 0.2962963rem;
+  width: 15.40740741rem;
+  margin-left: 0.2962963rem;
+}
+.finish .finish-user2 {
+  width: 15.40740741rem;
+  height: 4.5037037rem;
+  position: relative;
+  border-bottom: 0.02962963rem solid #F2F2F2;
+}
+.finish .finish-user2 h3 {
+  font-size: 0.71111111rem;
+  color: #333333;
+  width: 9.58518519rem;
+  margin-left: 3.11111111rem;
+  padding-top: 0.59259259rem;
+  margin-bottom: 0.44444444rem;
+}
+.finish .finish-user2 .finish-p5 {
+  width: 15.40740741rem;
+  height: 1.45185185rem;
+}
+.finish .finish-user2 .finish-p5 .finish-join {
+  font-size: 0.35555556rem;
+  color: #333333;
+  margin-top: 0.2962963rem;
+  margin-left: 1.18518519rem;
+  height: 1.45185185rem;
+}
+.finish .finish-user2 .finish-p {
+  margin-top: -0.14814815rem;
+  margin-left: 3.11111111rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.finish .finish-user2 .finish-p span {
+  background: url(../img/waiting/waiting-4.png);
+  width: 0.2962963rem;
+  height: 0.2962963rem;
+  background-size: 0.2962963rem 0.2962963rem;
+}
+.finish .finish-user2 .finish-p i {
+  display: inline-block;
+  background: url(../img/huiyuan.png);
+  width: 0.32592593rem;
+  height: 0.38518519rem;
+  background-size: 0.32592593rem 0.38518519rem;
+  font-style: normal ;
+}
+.finish .finish-user2 .finish-p small {
+  padding-left: 0.14814815rem;
+  font-size: 0.44444444rem;
+  color: #8a8989;
+}
+.finish .finish-user2 .finish-p2 {
+  margin-top: 0.2962963rem;
+  margin-left: 3.11111111rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.44444444rem;
+}
+.finish .finish-user2 .finish-p2 i {
+  font-style: normal;
+  margin-right: 0.44444444rem;
+}
+.finish .finish-user2 .finish-p2 i span {
+  color: #F5A93B;
+}
+.finish .finish-user2 .finish-p3 {
+  margin-left: 3.11111111rem;
+  margin-top: 0.74074074rem;
+}
+.finish .finish-user2 .finish-p3 span {
+  color: #f9cd56;
+  font-size: 0.44444444rem;
+  width: 2.93333333rem;
+  height: 0.71111111rem;
+  line-height: 0.71111111rem;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: block;
+  background-color: #ffffff;
+  border-style: solid;
+  border-radius: 0.11851852rem;
+  border-width: 0.01481481rem;
+  margin-right: 0.14814815rem;
+}
+.finish .finish-user2 .finish-RMB {
+  position: absolute;
+  top: 0.91851852rem;
+  right: 1.33333333rem;
+  font-size: 0.44444444rem;
+  color: #ea5404;
+}
+.finish .finish-user2 .finish-service {
+  position: absolute;
+  top: 1.77777778rem;
+  right: 0.44444444rem;
+  border-radius: 0.22222222rem;
+  background-color: #ea5404;
+  width: 1.98518519rem;
+  height: 0.99259259rem;
+  color: #fff;
+  font-size: 0.44444444rem;
+  line-height: 0.99259259rem;
+  text-align: center;
+}
+.finish .finish-user2 .share {
+  display: block;
+  width: 1.98518519rem;
+  height: 1.98518519rem;
+  background: url(../img/waiting/waiting-2.png) center center no-repeat;
+  background-size: 1.98518519rem 1.98518519rem;
+  position: absolute;
+  top: 0.53333333rem;
+  left: 0.74074074rem;
+}
+.finish .finish-user3 {
+  width: 15.40740741rem;
+  height: 6.99259259rem;
+  position: relative;
+  border-bottom: 0.02962963rem solid #F2F2F2;
+}
+.finish .finish-user3 h3 {
+  font-size: 0.71111111rem;
+  color: #333333;
+  width: 9.58518519rem;
+  margin-left: 3.11111111rem;
+  padding-top: 1.18518519rem;
+  margin-bottom: 0.44444444rem;
+}
+.finish .finish-user3 .finish-p5 {
+  width: 15.40740741rem;
+  height: 1.45185185rem;
+}
+.finish .finish-user3 .finish-p5 .finish-join {
+  font-size: 0.35555556rem;
+  color: #333333;
+  margin-top: 0.77037037rem;
+  margin-left: 1.18518519rem;
+  height: 1.45185185rem;
+}
+.finish .finish-user3 .finish-p5 .finish-people {
+  font-size: 0.35555556rem;
+  color: #333333;
+  margin-top: 0.77037037rem;
+  margin-right: 1.18518519rem;
+  height: 1.45185185rem;
+}
+.finish .finish-user3 .finish-p {
+  margin-top: -0.14814815rem;
+  margin-left: 3.11111111rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.finish .finish-user3 .finish-p span {
+  background: url(../img/waiting/waiting-4.png);
+  width: 0.2962963rem;
+  height: 0.2962963rem;
+  background-size: 0.2962963rem 0.2962963rem;
+}
+.finish .finish-user3 .finish-p i {
+  display: inline-block;
+  background: url(../img/huiyuan.png);
+  width: 0.32592593rem;
+  height: 0.38518519rem;
+  background-size: 0.32592593rem 0.38518519rem;
+  font-style: normal ;
+}
+.finish .finish-user3 .finish-p small {
+  padding-left: 0.14814815rem;
+  font-size: 0.44444444rem;
+  color: #8a8989;
+}
+.finish .finish-user3 .finish-p2 {
+  margin-top: 0.2962963rem;
+  margin-left: 3.11111111rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.44444444rem;
+}
+.finish .finish-user3 .finish-p2 i {
+  font-style: normal;
+  margin-right: 0.44444444rem;
+}
+.finish .finish-user3 .finish-p2 i span {
+  color: #F5A93B;
+}
+.finish .finish-user3 .finish-p3 {
+  margin-left: 3.11111111rem;
+  margin-top: 0.74074074rem;
+}
+.finish .finish-user3 .finish-p3 span {
+  color: #f9cd56;
+  font-size: 0.44444444rem;
+  width: 2.93333333rem;
+  height: 0.71111111rem;
+  line-height: 0.71111111rem;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: block;
+  background-color: #ffffff;
+  border-style: solid;
+  border-radius: 0.11851852rem;
+  border-width: 0.01481481rem;
+  margin-right: 0.14814815rem;
+}
+.finish .finish-user3 .finish-RMB {
+  position: absolute;
+  top: 2.45925926rem;
+  right: 1.33333333rem;
+  font-size: 0.44444444rem;
+  color: #ea5404;
+}
+.finish .finish-user3 .finish-service {
+  position: absolute;
+  top: 3.25925926rem;
+  right: 0.44444444rem;
+  border-radius: 0.22222222rem;
+  background-color: #ea5404;
+  width: 1.98518519rem;
+  height: 0.99259259rem;
+  color: #fff;
+  font-size: 0.44444444rem;
+  line-height: 0.99259259rem;
+  text-align: center;
+}
+.finish .finish-user3 .share {
+  display: block;
+  width: 1.98518519rem;
+  height: 1.98518519rem;
+  background: url(../img/waiting/waiting-2.png) center center no-repeat;
+  background-size: 1.98518519rem 1.98518519rem;
+  position: absolute;
+  top: 2.37037037rem;
+  left: 0.74074074rem;
+}
+.footer-btn .left .finish-footer {
+  background: #FFFFFF;
+  width: 8.1037037rem;
+  color: #747474;
+  text-align: center;
+  line-height: 1.98518519rem;
+  font-size: 0.56296296rem;
+  margin: 0;
+}

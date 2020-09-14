@@ -1,0 +1,191 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+//发布需求
+.req-header{
+    background: #fff;
+    div:last-child{
+        background: none;
+        padding-left: 0;
+        a{
+            color: #464646;
+        }
+    }
+    div:first-child{
+        
+        .mt(0);
+    }
+}
+.require{
+    flex: 1;
+    overflow: auto;
+    p{
+        margin-bottom: 0;
+    }
+    .req-detail{
+        height:auto;
+        background: #fff;
+        padding: px2rem(31) px2rem(38);
+        border-bottom: 1px solid #BDC6D2;
+        .active{
+            border: 1px solid #ef742c;
+            color: #EF742C;
+        }
+        ul{
+            display: flex;
+            li{
+                padding: px2rem(30) px2rem(24);
+                border: 1px solid #E1E1E1;
+                .fs(32,2);
+                border-radius: px2rem(20);
+                
+                &:not(:first-child){
+                    .ml(12,2);
+                }
+            }
+        }
+        .req-text{
+            background: #fbfbfb;
+            .height(250,2);
+            .mt(40,2);
+            .lh(48,2);
+            .fs(33,2);
+            color: #cecccc;
+            padding: px2rem(40) px2rem(29);
+            border: none;
+        }
+        .sendimg{
+            .height(205,2);
+            display: flex;
+            li{
+                .square(200,2);
+                border: 1px solid #E5E4E4;
+                &:not(:first-child){
+                    .ml(26,2);
+                }
+            }
+            .cover{
+                background: url(../img/my/my-demo.png) no-repeat center center;
+                background-size: px2rem(198) px2rem(198);
+                position: relative;
+                p{
+                    .width;
+                    .height(52,2);
+                    .lh(52,2);
+                    color: #fff;
+                    position: absolute;
+                    bottom: 0;
+                    background: rgba(0,0,0,0.5);
+                    text-align: center;
+                    .fs(29,2);
+                }
+                input{
+                    .square(46,2);
+                    border: 2px solid #fff;
+                    border-radius: 50%;
+                    background: url(../img/my/del.png) no-repeat center center;
+                    background-size: px2rem(45) px2rem(45);
+                    position: absolute;
+                    top: px2rem(-23);
+                    right: px2rem(-23);
+                }
+            }
+            .default{
+                
+                background: url(../img/my/photo-upload2.jpg) no-repeat center center #f1f1f1;
+//              background-size: px2rem(200) px2rem(200);
+            }
+        }
+    }
+    .list{
+        .df;
+        justify-content: space-between;
+        .pl(115,2);
+        .pr(40,2);
+        .pt(48,2);
+        .pb(48,2);
+        .fs(38,2);
+        color: #333;
+       position: relative;
+        img{
+            .width(20,2);
+            .height(39,2);
+            
+        }
+        em{
+            display: inline-block;
+            background: url(../img/cleaning-right.png) no-repeat right center;
+            .pr(39,2);
+            background-size: px2rem(19) px2rem(39);
+            font-style: normal;
+        }
+        input{
+            .width(688,2);
+            border: none;
+            margin: 0;
+            padding: 0;
+            .height(38,2);
+            .fs(38,2);
+            position: absolute;
+            right: px2rem(70);
+            text-align: right;
+        }
+        
+        &.address{
+            background: url(../img/cleaning-address.png) no-repeat px2rem(32) center #fff;
+            background-size: px2rem(48) px2rem(48);
+        }
+        &.server{
+            background: url(../img/my/send-server-icon1.png) no-repeat px2rem(32) center #fff;
+            background-size: px2rem(48) px2rem(48);
+        }
+        &.price{
+            background: url(../img/cleaning-time.png) no-repeat px2rem(32) center #fff;
+            background-size: px2rem(48) px2rem(48);
+        }
+        &.comp{
+            background: url(../img/my/comp.png) no-repeat px2rem(32) center #fff;
+            background-size: px2rem(48) px2rem(48);
+        }
+        &.endtime{
+            background: url(../img/cleaning-time.png) no-repeat px2rem(32) center #fff;
+            background-size: px2rem(48) px2rem(48);
+        }
+        &.server-around{
+            background: url(../img/cleaning-address.png) no-repeat px2rem(32) px2rem(40) #fff;
+            background-size: px2rem(48) px2rem(48);
+            flex-direction: column;
+            textarea{
+                .width(870,2);
+                .height(140,2);
+                background: #fff;
+                margin: 0;
+                .mt(30,2);
+                .fs(36,2);
+                padding: px2rem(20);
+                border: 0;
+            }
+        }
+    }
+    
+    .req-list{
+        .mt(23,2);
+        background: #fff;
+        .list{
+            border-bottom: 1px solid #BBBBBB;
+        }
+    }
+    .send{
+        .db;
+        .width(1000,2);
+        .height(118,2);
+        background: #eb5606;
+        border: 0;
+        .fs(42,2);
+        color: #fff;
+        margin: px2rem(58) auto;
+        border-radius: px2rem(20);
+    }
+}

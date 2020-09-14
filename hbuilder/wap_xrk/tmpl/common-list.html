@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>公共列表页</title>
+		<link rel="stylesheet" type="text/css" href="../css/mui.css">
+		<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+		<style>
+			.filter_active{
+				background:url(../images/filter_common.png) no-repeat center center!important;
+			}
+			.label span:first-child{
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				overflow:hidden;   
+				text-overflow:ellipsis; 
+				height: 2.4em;
+			}
+			.nanny .product-item .label{
+				width: 11rem !important;
+				height: auto !important;
+			}
+			.layout .product-item:last-child {
+			     border-bottom: 0;
+			}
+			.layout .product-item .raty{
+				padding: 0.23703704rem 0 0.24444444rem !important;
+			}
+			.icon-type1, .icon-type2{
+				text-overflow: ellipsis;overflow: hidden;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;line-height: 0.8rem;	
+			}
+			.layout .product-item .control{
+				padding-top: 0;
+			}
+			.nanny .product-item .control span{
+				/* margin-top: 0; */
+			}
+			.nodata{
+				width: 100%!important;
+				height: 100%!important;
+				background: #fff;
+			}
+			.nodata img{
+				margin: 0;
+				padding: 0;
+				display: block;
+				width: 6rem;
+				height: 6rem;
+				margin: 0 auto;
+				margin-top: 3rem!important;
+			}
+		</style>
+	</head>
+
+	<body style="background: #fff;">
+		<header class="common-header common-header-pink">
+			<h1>月嫂</h1>
+			<a class="icon-back mui-action-back"></a>
+			<a href="javascript:void(0)" class="city">青岛</a>
+		</header>
+
+		<section class="mui-content layout clean white nanny">
+		
+			<!--swiper-->
+			<div class="swiper" style="position: fixed; width: 100%; top: 1.95555556rem; z-index: 99999;"></div>
+
+			<!--menu-->
+			<div class="filter" style="position: fixed; width: 100%; top: 7.14rem; z-index: 9; background-color: #fff;">
+				<nav>
+					<a class="traget active" data-key="0">综合排序</a>
+					<a class="traget" data-key="3">按价格</a>
+					<a class="traget" data-key="1">按销量</a>
+					<a class="traget" data-key="4">按好评率</a>
+				</nav>
+				<span style="margin-top: 0rem;" class="filter_mask"></span>
+			</div>
+			<div class="content content1 mui-scroll" style="margin-top: 7.25rem;">
+			    <div class="product"></div>
+			    <div class="product" style="display: none;"></div>
+			    <div class="product" style="display: none;"></div>
+			    <div class="product" style="display: none;"></div>
+			    <div class="screening" style="display: none; position: fixed; top: 0rem;">
+			    	<div class="filter_content" style="height:auto;">
+			    		<div class="filter_list">
+				    		<dl class="type">
+				    			<dt>类型</dt>
+				    			<dd data-is-person='0'>公司</dd>
+				    			<dd data-is-person='1'>个人</dd>
+				    		</dl>
+				    		<dl class="price">
+				    			<dt>区域</dt>
+				    			<span id="spanArea"></span>
+				    			<!--input class="start" type="number" name="" id="" value="" />
+				    			<span>—</span>
+				    			<input class="end" type="number" name="" id="" value="" /-->
+				    		</dl>
+				    		
+				    	</div>
+				    	<div class="select">
+				    		<button class="cancle" style="border:1px solid #000000;border-radius:0.4rem;">取消</button>
+				    		<button class="confirm">确认</button>
+			    		</div>
+			    	</div>
+			    	
+		    	</div>
+			</div>
+		</section>
+		<script type="text/html" id="list">
+				<% if(code == 200){ %>
+					<% var data = datas.goods_list %>
+					<%	if(data.length > 0){	%>
+					<% for(var i=0;i < data.length;i++){ %>
+					<div class="product-item" data-goods-id="<%= data[i].goods_id %>">
+						<img src="<%= data[i].goods_image_url %>" alt="">
+						
+						<div class="product-info">
+							<% if(data[i].is_person == 1){ %>
+								<!--个人-->
+								<h2 class="icon-type2" ><%= data[i].goods_name %></h2>
+							<% }else if(data[i].is_person == 0){ %>
+								<!--公司-->
+								<h2 class="icon-type1"><%= data[i].goods_name %></h2>
+							<% } %>
+							
+							<div class="raty">
+								<% for(var j=0;j<data[i].evaluation_good_star;j++){ %>
+								<span class="icon-raty"></span>
+								<% } %>
+							</div>
+							<div class="label">
+								<span style="text-overflow: ellipsis;overflow: hidden;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;"><%= data[i].goods_jingle %></span>
+								<span>已售<em><%= data[i].goods_salenum %></em>单</span>
+							</div>
+							<div class="control mui-clearfix">
+								<span>
+									￥<i style="color: #ee742b;font-style: normal;"><%= data[i].goods_price %></i>
+									<% if(data[i].goods_unit != null){ %>
+										/<%= data[i].goods_unit %>					
+									<% }else{ %>
+										
+									<% } %>
+								</span>
+							</div>
+						</div>
+					</div>
+				<% } %>
+				<% }else if(data.length == 0){%>
+					<div class="product-item"">
+					<div class="nodata">
+						<img class="" src="../images/list-nodata.png" />
+					</div>
+					</div>
+				<% } %>
+			<% } %>
+			</script>
+		<script src="../js/hotcss.js"></script>
+		<script src="../js/config.js"></script>
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/common.js"></script>
+		<script src="../js/template.js"></script>
+		<script src="../js/tmpl/common-list.js"></script>
+		
+	</body>
+</html>

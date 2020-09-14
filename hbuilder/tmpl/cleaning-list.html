@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<!--
+	作者：13706342556@163.com
+	时间：2017-06-23
+	描述：列表
+-->
+	<head>
+		<meta charset="UTF-8">
+		<title>列表</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/dropload.css" />
+		<link href="../css/stylesheet.css" rel="stylesheet"  />
+		
+		<style>
+			.filter_active{
+				background:url(../images/filter_common.png) no-repeat center center!important;
+			}
+		</style>
+	</head>
+
+	<body style="background: #fff;">
+		
+		<header class="common-header common-header-yellow">
+			<h1>保洁</h1>
+			<a class="icon-back mui-action-back"></a>
+			<a href="javascript:void(0)" class="city">青岛</a>
+		</header>
+
+		<footer class="footer-ad">
+			<!--<img src="../images/gg2x.png" alt="">-->
+		</footer>
+
+		<section class="mui-content layout clean white nanny">
+
+			<!--swiper-->
+			<div class="swiper">
+				
+			</div>
+
+			<!--menu-->
+			<div class="filter" style="position: relative;z-index: 9;">
+				<nav>
+					<a class="active" data-key="0">综合排序</a>
+					<a class="traget" data-key="3">按价格</a>
+					<a class="traget" data-key="1">按销量</a>
+					<a class="traget" data-key="4">按好评率</a>
+				</nav>
+				<span style="margin-top: 0px;" class="filter_mask"></span>
+			</div>
+			<div class="content">
+			    <div class="product"></div>
+			    <div class="product"></div>
+			     <div class="product"></div>
+			    <div class="product"></div>
+			    <div class="screening">
+			    	<div class="filter_content">
+			    		<div class="filter_list">
+				    		<dl class="type">
+				    			<dt>类型</dt>
+				    			<dd>公司</dd>
+				    			<dd>个人</dd>
+				    		</dl>
+				    		<dl class="price">
+				    			<dt>区域</dt>
+				    			<span id="spanArea"></span>
+				    			<!--input class="start" type="number" name="" id="" value="" />
+				    			<span>—</span>
+				    			<input class="end" type="number" name="" id="" value="" /-->
+				    		</dl>
+				    		
+				    	</div>
+				    	<div class="select">
+				    		<button class="cancle">取消</button>
+				    		<button class="confirm">确认</button>
+			    		</div>
+			    	</div>
+			    	
+		    	</div>
+			</div>
+			
+		</section>
+		<script type="text/html" id="list">
+			<% var res = datas.goods_list %>
+			<%for(var i = 0;i<res.length;i++){%>
+			<div class="product-item mark mark3" data-goods-id="<%= res[i].goods_id %>">
+				<img src="<%= res[i].goods_image_url%>" alt="">
+				<div class="product-info ">
+					<% if(res[i].is_person == 1){ %>
+						<!--个人-->
+						<h2 class="icon-type2" style="margin-top: 10px;"><a><%=res[i].goods_name%></a></h2>
+					<% }else if(res[i].is_person == 0){ %>
+						<!--企业-->
+						<h2 class="icon-type1" style="margin-top: 10px;"><a><%=res[i].goods_name%></a></h2>
+					<% } %>
+					<div class="raty">
+						<%for(var j=0;j<res[i].evaluation_good_star;j++){%>
+							<span class="icon-raty" style="margin-bottom: -10px;"></span>
+						<%}%>
+					</div>
+					<div class="label">
+						<span><%=res[i].goods_jingle%></span>
+					</div>
+					<div class="control mui-clearfix">
+						<span style="margin-top: -30px;">
+						<%=res[i].goods_price%>元
+						
+						<% if(res[i].goods_unit != null){ %>
+								/<%= res[i].goods_unit %>					
+							<% }else{ %>
+								
+							<% } %>
+						</span>
+					</div>
+				</div>
+			</div>
+			<%}%>
+		</script>
+		
+		
+		<script src="../js/hotcss.js"></script>
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../js/dropload.min.js" ></script>
+		<script type="text/javascript" src="../js/template.js" ></script>
+		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../js/tmpl/cleaning-list.js"></script>
+		
+	</body>
+	<script>
+		var _height = $(".filter_mask").offset().top;
+		var $height = $(".filter_mask").height();
+		console.log("导航栏高度-----"+$height);
+		console.log("距离顶部高度"+_height);
+		
+		var _top = $height + _height + 350;
+		console.log(parseInt(_top))
+		//高级筛选
+			$(".filter_list").on("tap", "dd", function(){
+				$(this).addClass("active").siblings().removeClass("active");
+			})
+			$(".filter_mask").on("tap", function(){
+				$(".screening").slideToggle(300, function(e){
+					return false;
+				}, false);
+				if($(".content").css("position") == "fixed"){
+					$(".content").css("position", "");
+					$(".screening").css("top", _top);
+				}else{
+					$(".content").css({
+						"position": "fixed",
+						"left": "0",
+						"right": "0"
+					});
+					$(".screening").css("top", "0");
+				}
+				if($(this).hasClass("filter_active")){
+					$(this).removeClass("filter_active");
+				}else{
+					$(this).addClass("filter_active");
+				}
+				
+			})
+			$(".screening").on("tap", function(event){
+				console.log(event)
+				console.log(event.target.className);
+				var odiv = event.target;
+				if(event.target.className == "screening"){
+					$(this).css("display", "none");
+					if($(".filter_mask").hasClass("filter_active")){
+						$(".filter_mask").removeClass("filter_active");
+					}else{
+						$(".filter_mask").addClass("filter_active");
+					}
+				}
+			})
+			/*$(".order_complete .confirm").on("tap", function(){
+				var start = $('.order_complete .price').find('.start').val(),
+					end = $('.order_complete .price').find('.end').val(),
+					sum = end - start;
+				
+			})*/
+		</script>
+
+</html>

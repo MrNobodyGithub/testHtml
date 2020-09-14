@@ -1,0 +1,557 @@
+{
+  "index.html": {
+    "resources": [
+      "js/upgrade.js",
+      "js/jquery.min.js",
+      "images/news.png",
+      "images/common/footer3.png",
+      "js/index_msg.js",
+      "css/mui.css",
+      "css/stylesheet.css",
+      "js/push.js",
+      "images/tj.png",
+      "js/common.js",
+      "images/common/footer5.png",
+      "js/socket.io.min.js",
+      "js/hotcss.js",
+      "js/mui.min.js",
+      "images/common/footer1a.png",
+      "images/icon-city-b.png",
+      "js/template.js",
+      "images/xing.png",
+      "js/config.js",
+      "js/index.js",
+      "images/search.png",
+      "images/my/del1.png",
+      "images/my/guanbi.png",
+      "images/index-search.png",
+      "images/index/xiaomifeng@2x.png",
+      "images/banner_02.jpg",
+      "images/common/footer2.png",
+      "images/common/footer6.png",
+      "images/common/add.png",
+      "images/kefu@2x.png"
+    ],
+    "refer": [
+      "tmpl/move-list.html",
+      "guide.html",
+      "tmpl/seller/seller.html",
+      "tmpl/search-1.html",
+      "tmpl/city.html",
+      "tmpl/beautifulAunt.html",
+      "tmpl/yuesao-list.html",
+      "tmpl/common-list.html",
+      "tmpl/member/publish_needs_step2.html",
+      "tmpl/hos-list.html",
+      "tmpl/member/publish_needs_runner.html",
+      "tmpl/tutor-list.html",
+      "tmpl/car-list.html",
+      "tmpl/member/member.html",
+      "tmpl/member/login.html",
+      "tmpl/land.html"
+    ]
+  },
+  "tmpl/move-list.html": {
+    "resources": [
+      "images/kind-com.png",
+      "images/filter.png",
+      "js/common.js",
+      "js/jquery.min.js",
+      "images/cleaning-back-w.png",
+      "js/dropload.min.js",
+      "js/mui.min.js",
+      "js/hotcss.js",
+      "js/tmpl/move-list.js",
+      "js/template.js",
+      "css/mui.css",
+      "css/stylesheet.css",
+      "js/config.js"
+    ],
+    "refer": []
+  },
+  "guide.html": {
+    "resources": [
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "js/template.js",
+      "css/mui.css",
+      "css/stylesheet.css",
+      "js/config.js"
+    ],
+    "refer": []
+  },
+  "tmpl/seller/seller.html": {
+    "resources": [
+      "images/ucenter/menu6.png",
+      "images/common/footer5a.png",
+      "js/seller/seller.js",
+      "css/stylesheet.css",
+      "images/ucenter/menu1.png",
+      "images/ucenter/menu8.png",
+      "images/common/footer1.png",
+      "js/common.js",
+      "js/mui.min.js",
+      "images/ucenter/type5.png",
+      "js/template.js",
+      "js/config.js",
+      "images/ucenter/banner3.jpg",
+      "images/icon-qiehuan.png",
+      "js/jquery.min.js",
+      "images/adddianyuan.png",
+      "images/config.png",
+      "images/ucenter/type3.png",
+      "css/mui.css",
+      "js/dropload.min.js",
+      "js/hotcss.js",
+      "images/message.png",
+      "images/ucenter/menu2.png",
+      "images/ucenter/menu3.png",
+      "images/ucenter/menu7.png",
+      "css/dropload.css"
+    ],
+    "refer": [
+      "tmpl/member/member.html",
+      "tmpl/member/login.html",
+      "tmpl/seller/account-my1.html",
+      "tmpl/member/setting.html"
+    ]
+  },
+  "tmpl/member/member.html": {
+    "resources": [
+      "images/ucenter/banner.jpeg",
+      "images/ucenter/zs.png",
+      "js/jquery.min.js",
+      "js/member/member.js",
+      "images/ucenter/type4.png",
+      "css/mui.css",
+      "images/ucenter/photo.jpg",
+      "css/stylesheet.css",
+      "js/common.js",
+      "js/hotcss.js",
+      "js/mui.min.js",
+      "js/template.js",
+      "images/ucenter/type2.png",
+      "js/config.js",
+      "images/config.png",
+      "images/ucenter/menu6.png",
+      "images/ucenter/type3.png",
+      "images/common/footer5a.png",
+      "images/common/footer1.png",
+      "images/message.png",
+      "images/ucenter/menu7.png",
+      "images/ucenter/type5.png",
+      "images/icon-qiehuan.png",
+      "images/common/footer6.png",
+      "images/common/footer2.png",
+      "images/tel2.png",
+      "images/common/add.png"
+    ],
+    "refer": [
+      "tmpl/seller/seller.html",
+      "tmpl/member/login.html"
+    ]
+  },
+  "tmpl/member/login.html": {
+    "resources": [
+      "js/jquery.min.js",
+      "images/icon/icon-username.png",
+      "css/mui.css",
+      "images/form/login-back.png",
+      "images/form/login-img.png",
+      "js/common.js",
+      "js/simple-plugin.js",
+      "js/hotcss.js",
+      "js/mui.min.js",
+      "js/member/login.js",
+      "js/template.js",
+      "js/config.js",
+      "images/icon/icon-password.png",
+      "css/wap.css",
+      "images/icon/icon-check.png",
+      "images/form/type-qq.png",
+      "images/form/xinlang1.png",
+      "images/form/qq1.png",
+      "images/form/weixin1.png",
+      "images/form/type-wb.png",
+      "images/form/type-wx.png"
+    ],
+    "refer": [
+      "tmpl/seller/seller.html"
+    ]
+  },
+  "tmpl/seller/account-my3.html": {
+    "resources": [
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "js/hotcss.js",
+      "js/template.js",
+      "css/mui.css",
+      "css/stylesheet.css",
+      "js/config.js",
+      "js/seller/account-my3.js"
+    ]
+  },
+  "tmpl/seller/account-my1.html": {
+    "resources": [
+      "images/account/icon-pay3.png",
+      "js/seller/account-my1.js",
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "images/add_yhk.png",
+      "js/hotcss.js",
+      "js/template.js",
+      "css/mui.css",
+      "css/stylesheet.css",
+      "js/config.js",
+      "images/cleaning-back.png"
+    ],
+    "refer": [
+      "tmpl/seller/account-my3.html"
+    ]
+  },
+  "tmpl/search-1.html": {
+    "resources": [
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/tmpl/search1.js",
+      "js/mui.min.js",
+      "js/hotcss.js",
+      "js/template.js",
+      "css/mui.css",
+      "css/stylesheet.css",
+      "js/config.js",
+      "images/cleaning-back.png",
+      "images/kind-ge.png"
+    ]
+  },
+  "tmpl/city.html": {
+    "resources": [
+      "js/tmpl/city.js",
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "js/hotcss.js",
+      "js/pinyin_dict_firstletter.js",
+      "js/pinyinUtil.js",
+      "js/config.js",
+      "images/cleaning-back.png",
+      "css/mui.css",
+      "css/stylesheet.css"
+    ]
+  },
+  "tmpl/beautifulAunt.html": {
+    "resources": [
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/config.js",
+      "images/cleaning-back.png"
+    ]
+  },
+  "tmpl/member/setting.html": {
+    "resources": [
+      "images/ucenter/form-icon-arrow.png",
+      "js/member/setting.js",
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "js/hotcss.js",
+      "css/mui.css",
+      "css/stylesheet.css",
+      "js/config.js",
+      "images/cleaning-back.png"
+    ],
+    "refer": [
+      "tmpl/member/login.html"
+    ]
+  },
+  "tmpl/yuesao-list.html": {
+    "resources": [
+      "images/filter.png",
+      "js/jquery.min.js",
+      "images/cleaning-back-w.png",
+      "css/mui.css",
+      "css/stylesheet.css",
+      "js/tmpl/yuesao-list.js",
+      "images/kind-com.png",
+      "images/kind-ge.png",
+      "js/common.js",
+      "js/hotcss.js",
+      "js/mui.min.js",
+      "js/template.js",
+      "js/config.js"
+    ],
+    "refer": [
+      "tmpl/common-detail.html"
+    ]
+  },
+  "tmpl/common-detail.html": {
+    "resources": [
+      "images/icon-like.png",
+      "js/jquery.min.js",
+      "images/common.jpg",
+      "images/Nanny/huangguan.png",
+      "css/stylesheet.css",
+      "js/tmpl/common-detail.js",
+      "images/Nanny/detail-ping.png",
+      "images/Nanny/renzheng.png",
+      "images/cleaning/cleaning-detail-bg.png",
+      "js/common.js",
+      "images/ucenter/nodata-error.png",
+      "js/hotcss.js",
+      "js/mui.min.js",
+      "images/common/service-1.jpg",
+      "css/mui.min.css",
+      "images/common/icon-kf.png",
+      "js/template.js",
+      "js/config.js",
+      "js/jquery.zdatepicker.js",
+      "images/cleaning-back.png"
+    ],
+    "refer": [
+      "tmpl/common_books.html"
+    ]
+  },
+  "tmpl/common_books.html": {
+    "resources": [
+      "js/simple-plugin.js",
+      "js/common.js",
+      "js/mui.picker.min.js",
+      "js/jquery.min.js",
+      "css/fields.css",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/fields.js",
+      "js/tmpl/common_books.js",
+      "js/template.js",
+      "css/mui.picker.min.css",
+      "js/config.js"
+    ]
+  },
+  "tmpl/common-list.html": {
+    "resources": [
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "js/hotcss.js",
+      "js/tmpl/common-list.js",
+      "js/template.js",
+      "css/mui.css",
+      "js/config.js"
+    ],
+    "refer": [
+      "tmpl/common-detail.html"
+    ]
+  },
+  "tmpl/member/publish_needs_step2.html": {
+    "resources": [
+      "js/member/publish_needs_step2.js",
+      "js/simple-plugin.js",
+      "js/common.js",
+      "js/mui.picker.min.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "js/fields.js",
+      "js/template.js",
+      "js/config.js"
+    ]
+  },
+  "tmpl/member/publish_needs_runner.html": {
+    "resources": [
+      "images/runerrands/weight.png",
+      "images/runerrands/runbanner1.png",
+      "images/cleaning-right.png",
+      "js/jquery.min.js",
+      "js/mui.picker.min.js",
+      "css/stylesheet.css",
+      "js/member/publish_needs_runner.js",
+      "js/common.js",
+      "js/simple-plugin.js",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "images/my/photo-upload2.jpg",
+      "images/cleaning/Cleaning3.png",
+      "css/mui.picker.min.css",
+      "js/template.js",
+      "images/runerrands/runbuy-ji.png",
+      "js/config.js",
+      "images/runerrands/runbuy-shou.png"
+    ]
+  },
+  "tmpl/hos-list.html": {
+    "resources": [
+      "images/filter.png",
+      "js/jquery.min.js",
+      "images/cleaning-back-w.png",
+      "css/mui.css",
+      "css/stylesheet.css",
+      "images/hos/yuyue.png",
+      "images/kind-com.png",
+      "images/kind-ge.png",
+      "js/common.js",
+      "js/hotcss.js",
+      "js/mui.min.js",
+      "js/tmpl/hos-list.js",
+      "js/template.js",
+      "js/config.js"
+    ],
+    "refer": [
+      "tmpl/hos-detail.html"
+    ]
+  },
+  "tmpl/hos-detail.html": {
+    "resources": [
+      "images/common/service-2.jpg",
+      "images/hos/detail_03.png",
+      "images/hoss.png",
+      "js/jquery.min.js",
+      "images/hos/detail_06.png",
+      "css/stylesheet.css",
+      "js/tmpl/common-detail.js",
+      "images/Nanny/detail-ping.png",
+      "images/cleaning/cleaning-detail-bg.png",
+      "images/webwxgetmsgimg (3).jpg",
+      "js/common.js",
+      "js/hotcss.js",
+      "js/mui.min.js",
+      "images/common/service-1.jpg",
+      "css/mui.min.css",
+      "js/template.js",
+      "js/config.js",
+      "js/jquery.zdatepicker.js"
+    ],
+    "refer": [
+      "tmpl/common_books.html"
+    ]
+  },
+  "tmpl/pen-detail.html": {
+    "resources": [
+      "images/icon-like.png",
+      "images/common/service-2.jpg",
+      "js/jquery.min.js",
+      "images/Nanny/huangguan.png",
+      "css/stylesheet.css",
+      "js/tmpl/common-detail.js",
+      "images/Nanny/detail-ping.png",
+      "images/Nanny/renzheng.png",
+      "images/cleaning/cleaning-detail-bg.png",
+      "images/pen-img.jpg",
+      "js/common.js",
+      "images/ucenter/nodata-error.png",
+      "js/hotcss.js",
+      "js/mui.min.js",
+      "images/common/service-1.jpg",
+      "css/mui.min.css",
+      "images/common/icon-kf.png",
+      "js/template.js",
+      "js/config.js",
+      "js/jquery.zdatepicker.js"
+    ],
+    "refer": [
+      "tmpl/common_books.html"
+    ]
+  },
+  "tmpl/tutor-list.html": {
+    "resources": [
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/dropload.min.js",
+      "js/mui.min.js",
+      "js/hotcss.js",
+      "js/tmpl/tutor-list.js",
+      "js/template.js",
+      "css/mui.css",
+      "images/kind/kind_09.png",
+      "css/stylesheet.css",
+      "js/config.js",
+      "images/cleaning-back.png",
+      "images/filter.png",
+      "images/cleaning-back-w.png",
+      "images/kind-com.png",
+      "images/kind/kind_02.jpg"
+    ],
+    "refer": [
+      "tmpl/pen-detail.html",
+      "tmpl/tutor-detail.html"
+    ]
+  },
+  "tmpl/tutor-detail.html": {
+    "resources": [
+      "images/icon-like.png",
+      "images/common/service-2.jpg",
+      "images/teacher.jpg",
+      "js/jquery.min.js",
+      "images/Nanny/huangguan.png",
+      "css/stylesheet.css",
+      "js/tmpl/common-detail.js",
+      "images/Nanny/detail-ping.png",
+      "images/Nanny/renzheng.png",
+      "images/cleaning/cleaning-detail-bg.png",
+      "js/common.js",
+      "images/ucenter/nodata-error.png",
+      "js/hotcss.js",
+      "js/mui.min.js",
+      "images/common/service-1.jpg",
+      "css/mui.min.css",
+      "images/common/icon-kf.png",
+      "js/template.js",
+      "js/config.js",
+      "js/jquery.zdatepicker.js"
+    ],
+    "refer": [
+      "tmpl/common_books.html"
+    ]
+  },
+  "tmpl/car-list.html": {
+    "resources": [
+      "images/kind-ge.png",
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "js/hotcss.js",
+      "js/tmpl/car-list.js",
+      "js/template.js",
+      "css/mui.css",
+      "css/stylesheet.css",
+      "js/config.js"
+    ],
+    "refer": [
+      "tmpl/car-detail.html"
+    ]
+  },
+  "tmpl/car-detail.html": {
+    "resources": [
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "js/hotcss.js",
+      "images/cleaning/icon-service-2.png",
+      "images/car.png",
+      "images/cleaning/icon-service-1.png",
+      "js/template.js",
+      "css/mui.css",
+      "css/stylesheet.css",
+      "js/tmpl/common-detail.js",
+      "js/config.js",
+      "js/jquery.zdatepicker.js"
+    ],
+    "refer": [
+      "tmpl/common_books.html"
+    ]
+  },
+  "tmpl/land.html": {
+    "resources": [
+      "css/mui.min.css",
+      "images/cleaning-back.png",
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "js/config.js"
+    ]
+  }
+}

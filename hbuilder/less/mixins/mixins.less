@@ -1,0 +1,34 @@
+@import '../config.less';
+@import '../api/api-webkit.less';
+@import '../api/api-common.less';
+@import '../api/api-size.less';
+
+@index-menu         :       '../images/index/menu';
+@index-shop         :       '../images/index/shop';         
+
+// 循环
+.menu-loop( @n , @i: 1 ,@type: @index-menu ) when ( @i <= @n ) {
+    a:nth-child(@{i}) {
+        background-image: url("@{type}@{i}.png");
+    }
+    .menu-loop(@n, (@i + 1));
+}
+
+.shop-loop( @n , @i: 1 ,@type: @index-shop ) when ( @i <= @n ) {
+    a:nth-child(@{i}) {
+        background-image: url("@{type}@{i}.png");
+    }
+    .shop-loop(@n, (@i + 1));
+}
+
+@ucenter-order      :       '../images/ucenter/order';
+@ucenter-type       :       '../images/ucenter/type';
+@ucenter-menu       :       '../images/ucenter/menu';
+
+.order-loop( @n , @i: 1 ,@type: @ucenter-order ) when ( @i <= @n ) {
+    a:nth-child(@{i}) {
+        background-image: url("@{type}@{i}.png");
+    }
+    .order-loop(@n, (@i + 1));
+}
+

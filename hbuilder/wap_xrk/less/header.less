@@ -1,0 +1,225 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+.appoint-header{
+    .height(132,2);
+    
+    display:flex;
+    justify-content: space-between;
+    padding: 0 px2rem(47);
+    border-bottom: px2rem(2) solid #e6e6e8;
+    position: relative;
+    z-index: 99999;
+    div{
+        .fs(47,2);
+        .lh(132,2);
+        img{
+            .width(68,2);
+            .height(68,2);
+        }
+    }
+    div:nth-of-type(1){
+        margin-top: px2rem(20);
+    } 
+    div:nth-of-type(3){
+        padding-left: px2rem(50);
+        background: url(../images/cleaning-help.png) no-repeat left center;
+        a{
+            .fs(40,2);
+        }
+    } 
+}
+
+.common-header {
+    .position( fixed );
+    .top;
+    .width;
+    .height( 132,2 );
+    .zi( 99999 );
+    .bc( rgba(255,255,255,1) );
+    .padding( 0 px2rem(30) );
+    border-bottom: px2rem(2) solid #e6e6e8;
+
+    & ~ .mui-content {
+        .pt( 132,2 )
+    }
+
+    h1 {
+        .poa;
+        .top;
+        .left( 133,2 );
+        .right( 133,2 );
+        .lh( 132,2 );
+        .tac;
+        .fs( 47,2 );
+        .zi( 2 );
+    }
+
+    a {
+        .por;
+        .zi( 11 );
+    }
+
+    .icon-back ,
+    .icon-back-white {
+        .fl;
+        .width( 133,2 );
+        .height;
+    }
+
+    .icon-back {
+        .background( url(../images/cleaning-back.png) center no-repeat );
+        .bs( px2rem(68) );
+    }
+
+    .icon-back-white {
+        .background( url(../images/cleaning-back-w.png) center no-repeat );
+        .bs( px2rem(68) );
+    }
+
+    .icon-link {
+        .fr;
+        .lh( 133,2 );
+        .fs( 40,2 );
+        .mr( 34,2 );
+        .color( #ea5404 );
+    }
+
+    .icon-share {
+        .fr;
+        .width( 133,2 );
+        .height;
+        .background( url(../images/today-icon3_03.png) center no-repeat );
+        .bs( px2rem(68) );
+    }
+    .icon-tel {
+        .fr;
+        .width( 150,2 );
+        .height;
+        .background( url(../images/cleaning-help.png) center no-repeat );
+        .bs( px2rem(30) );        
+        position: relative;        
+        span{
+            position: absolute;
+            top:px2rem(50);
+            right: px2rem(-5); 
+            .fs(30,2); 
+            padding-left: px2rem(30);          
+        }
+    }    
+    .city {
+        .fr;
+        min-width: px2rem(120);
+        .color( #fff );
+        .fs( 32,2 );
+        .lh( 132,2 );
+        .tal;
+        .pr( 52,2 );
+        .mr( 30,2 );
+        .background( url(../images/icon-city.png) right center no-repeat );
+        .bs( px2rem(34) px2rem(19) );
+    }
+    
+    &.fixed-header {
+        border-bottom: 0;
+        background: rgba(255,255,255,0);
+
+        & ~ .mui-content {
+            .pt( 0 )
+        }
+
+        h1 {
+            .color( #fff );
+        }
+
+        .icon-back {
+            .background( url(../images/cleaning-back-w.png) center no-repeat );
+            .bs( px2rem(68) );
+        }
+
+        .city {
+            .fl;
+            transition: all .3s;
+        }
+
+        .search-form {
+            .poa;
+            .top( 27,2 );
+            .left( 170,2 );
+            .right( 170,2 );
+            .height( 78,2 );
+            .lh( 78,2 );
+
+            input {
+                .tal;
+                .db;
+                .width;
+                .height;
+                .color( #8e96a6 );
+                .fs( 30,2 );
+                border-radius: px2rem(39);
+                .pl( 82,2 );
+                background:#fff url(../images/index-search.png) px2rem(20) center no-repeat;
+                .bs( px2rem(39) );
+            }
+        }
+
+        .classify {
+            .fr;
+            .height;
+            .lh( 132,2 );
+            .fs( 30,2 );
+            .color( #fff );
+            .pl( 45,2 );
+            transition: all .3s;
+            .background( url(../images/icon-classify.png) left center no-repeat );
+            .bs( px2rem(34) px2rem(28) );
+        }
+    }
+
+    &.mui-active {
+        border-bottom: 2px solid #e6e6e8;
+        .city {
+            .color( #000 );
+            .background( url(../images/icon-city-b.png) right center no-repeat );
+            .bs( px2rem(34) px2rem(19) );
+        }
+
+        .search-form {
+            input {
+                border: 1px solid #ccc;
+            }
+        }
+
+        .classify {
+            .color( #000 );
+            .background( url(../images/icon-classify-b.png) left center no-repeat );
+            .bs( px2rem(34) px2rem(28) );
+        }
+    }
+
+    &[class*=common-header-] {
+        h1 {
+            .color( #fff );
+        }
+
+        .icon-back {
+            .background( url(../images/cleaning-back-w.png) center no-repeat );
+            .bs( px2rem(68) );
+        }
+    }
+
+    &.common-header-yellow {
+        .bc( #f5a93b );
+    }
+
+    &.common-header-pink {
+        .bc( #f8cade );
+    }
+    
+    &.common-header-green {
+        .bc( #a1d66a );
+    }
+}

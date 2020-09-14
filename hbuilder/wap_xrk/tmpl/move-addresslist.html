@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<!--
+	作者：yrp
+	时间：2017-06-25
+	描述：
+-->
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/stylesheet.css" />
+	</head>
+
+	<body>
+		<header class="common-header">
+
+			<a class="icon-back mui-action-back"></a>
+			<h1>我的地址</h1>
+
+		</header>
+		<footer class="footer-menu footer-yellow">
+			<a class="link">添加地址</a>
+		</footer>
+		
+		
+		<section class="mui-content run-add">
+			<div class="wrap-add">
+				
+			</div>
+		</section>
+		<script type="text/html" id="addresslist">
+			<% if(code == 200){ %>
+				<% for(var i = 0 ;i<datas.address_list.length;i++){ %>
+					<div class="add-content">
+						<div class="top">
+							<p>
+								<span><%= datas.address_list[i].true_name %></span>
+								<span><%= datas.address_list[i].mob_phone %></span>
+							</p>
+							<p><%= datas.address_list[i].area_info %>--<%= datas.address_list[i].address %></p>
+						</div>
+						
+						<div class="bottom">
+							<% if(datas.address_list[i].is_default == 1){ %>
+								<p><input type="checkbox" checked="checked" />设为默认</p>
+							<% }else{ %>
+								<p><input type="checkbox"/>设为默认</p>
+								<% } %>
+							<p>
+								<a addressid = "<%= datas.address_list[i].address_id %>" class="edit">编辑</a>  
+								<a addressid = "<%= datas.address_list[i].address_id %>" class="del">删除</a>
+							</p>
+						</div>
+					</div>	
+				<% } %>	
+			<% } %>		
+		</script>
+		
+		
+		
+		
+		
+		<script src="../js/hotcss.js"></script>
+		<script src="../js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/template.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../js/move-addresslist.js"></script>
+		
+	</body>
+
+</html>

@@ -1,0 +1,193 @@
+.req-header {
+  background: #fff;
+}
+.req-header div:last-child {
+  background: none;
+  padding-left: 0;
+}
+.req-header div:last-child a {
+  color: #464646;
+}
+.req-header div:first-child {
+  margin-top: 0;
+}
+.require {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: auto;
+}
+.require p {
+  margin-bottom: 0;
+}
+.require .req-detail {
+  height: auto;
+  background: #fff;
+  padding: 0.45925926rem 0.56296296rem;
+  border-bottom: 1px solid #BDC6D2;
+}
+.require .req-detail .active {
+  border: 1px solid #ef742c;
+  color: #EF742C;
+}
+.require .req-detail ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.require .req-detail ul li {
+  padding: 0.44444444rem 0.35555556rem;
+  border: 1px solid #E1E1E1;
+  font-size: 0.47407407rem;
+  border-radius: 0.2962963rem;
+}
+.require .req-detail ul li:not(:first-child) {
+  margin-left: 0.17777778rem;
+}
+.require .req-detail .req-text {
+  background: #fbfbfb;
+  height: 3.7037037rem;
+  margin-top: 0.59259259rem;
+  line-height: 0.71111111rem;
+  font-size: 0.48888889rem;
+  color: #cecccc;
+  padding: 0.59259259rem 0.42962963rem;
+  border: none;
+}
+.require .req-detail .sendimg {
+  height: 3.03703704rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.require .req-detail .sendimg li {
+  width: 2.96296296rem;
+  height: 2.96296296rem;
+  border: 1px solid #E5E4E4;
+}
+.require .req-detail .sendimg li:not(:first-child) {
+  margin-left: 0.38518519rem;
+}
+.require .req-detail .sendimg .cover {
+  background: url(../img/my/my-demo.png) no-repeat center center;
+  background-size: 2.93333333rem 2.93333333rem;
+  position: relative;
+}
+.require .req-detail .sendimg .cover p {
+  width: 100%;
+  height: 0.77037037rem;
+  line-height: 0.77037037rem;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 0.42962963rem;
+}
+.require .req-detail .sendimg .cover input {
+  width: 0.68148148rem;
+  height: 0.68148148rem;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: url(../img/my/del.png) no-repeat center center;
+  background-size: 0.66666667rem 0.66666667rem;
+  position: absolute;
+  top: -0.34074074rem;
+  right: -0.34074074rem;
+}
+.require .req-detail .sendimg .default {
+  background: url(../img/my/photo-upload2.jpg) no-repeat center center #f1f1f1;
+}
+.require .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 1.7037037rem;
+  padding-right: 0.59259259rem;
+  padding-top: 0.71111111rem;
+  padding-bottom: 0.71111111rem;
+  font-size: 0.56296296rem;
+  color: #333;
+  position: relative;
+}
+.require .list img {
+  width: 0.2962963rem;
+  height: 0.57777778rem;
+}
+.require .list em {
+  display: inline-block;
+  background: url(../img/cleaning-right.png) no-repeat right center;
+  padding-right: 0.57777778rem;
+  background-size: 0.28148148rem 0.57777778rem;
+  font-style: normal;
+}
+.require .list input {
+  width: 10.19259259rem;
+  border: none;
+  margin: 0;
+  padding: 0;
+  height: 0.56296296rem;
+  font-size: 0.56296296rem;
+  position: absolute;
+  right: 1.03703704rem;
+  text-align: right;
+}
+.require .list.address {
+  background: url(../img/cleaning-address.png) no-repeat 0.47407407rem center #fff;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.require .list.server {
+  background: url(../img/my/send-server-icon1.png) no-repeat 0.47407407rem center #fff;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.require .list.price {
+  background: url(../img/cleaning-time.png) no-repeat 0.47407407rem center #fff;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.require .list.comp {
+  background: url(../img/my/comp.png) no-repeat 0.47407407rem center #fff;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.require .list.endtime {
+  background: url(../img/cleaning-time.png) no-repeat 0.47407407rem center #fff;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.require .list.server-around {
+  background: url(../img/cleaning-address.png) no-repeat 0.47407407rem 0.59259259rem #fff;
+  background-size: 0.71111111rem 0.71111111rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.require .list.server-around textarea {
+  width: 12.88888889rem;
+  height: 2.07407407rem;
+  background: #fff;
+  margin: 0;
+  margin-top: 0.44444444rem;
+  font-size: 0.53333333rem;
+  padding: 0.2962963rem;
+  border: 0;
+}
+.require .req-list {
+  margin-top: 0.34074074rem;
+  background: #fff;
+}
+.require .req-list .list {
+  border-bottom: 1px solid #BBBBBB;
+}
+.require .send {
+  display: block;
+  width: 14.81481481rem;
+  height: 1.74814815rem;
+  background: #eb5606;
+  border: 0;
+  font-size: 0.62222222rem;
+  color: #fff;
+  margin: 0.85925926rem auto;
+  border-radius: 0.2962963rem;
+}

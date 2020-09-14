@@ -1,0 +1,179 @@
+// 
+// 通用属性
+// 
+
+
+// display
+.display( @param: block ) {
+    display: @param;
+}
+
+
+.db() { .display; }
+.dn() { .display( none ); }
+.di() { .display( inline ); }
+.df() { .display( flex ); }
+.dt() { .display( table ); }
+.dib() { .display( inline-block ); };
+.dtc() { .display( table-cell ); };
+
+// float
+.float( @param: left ) {
+    float: @param;
+}
+
+.fl() { .float; }
+.fr() { .float( right ); }
+
+.clear( @param: both ) {
+    clear: @param;
+}
+
+.cl() { .clear( left ); }
+.cr() { .clear( right ); }
+
+// overflow/visibility
+.overflow( @param: hidden ) {
+    overflow: @param;
+}
+
+.oh() { .overflow; }
+.os() { .overflow( scroll ); }
+.oa() { .overflow( auto ); }
+
+.overflow-x( @param: hidden ) {
+    overflow-x: @param;
+}
+
+.oxh() { .overflow-x; }
+.oxs() { .overflow-x( scroll ); }
+.oxa() { .overflow-x( auto ); }
+
+.overflow-y( @param: hidden ) {
+    overflow-y: @param;
+}
+
+.oyh() { .overflow-y; }
+.oys() { .overflow-y( scroll ); }
+.oya() { .overflow-y( auto ); }
+
+// visibility
+.visibility( @param: hidden ) {
+    visibility: @param;
+}
+
+.vh() { .visibility; }
+.vv() { .visibility( visible ); }
+
+// background
+.background( @param ) {
+    background+_: @param;
+}
+
+.bs( @param: cover ) { 
+    background-size: @param; 
+}
+
+.bp( @param: no-repeat ) {
+    background-repeat: @param;
+}
+
+.bp( @param: center ) {
+    background-position: @param;
+}
+
+.bc( @param: @white ) {
+    background-color: @param; 
+}
+
+.bi( @param ) {
+    background-image: @param;
+}
+
+.bci( @param: border-box ) {
+    background-clip: @param;
+}
+
+// color
+.color( @param ) {
+    color: @param;
+}
+
+.opacity( @param: .3 ) {
+    opacity: @param;
+}
+
+// font
+
+// position
+.position( @param: absolute ) {
+    position: @param;
+}
+
+.poa() { .position; }
+.por() { .position( relative ); }
+.pos() { .position( static ); }
+.zi( @param: 1 ) { z-index: @param; }
+
+// font
+.font( @param: @font ) {
+    font: @param;
+}
+
+.fw( @param: normal ) { font-weight: @param; }
+.fsi( @param: normal ) { font-style: @param; }
+.ff( @param ) { font-family: @param };
+
+// text
+.text-align( @param: left ) {
+    text-align: @param;
+}
+
+.tal() { .text-align; }
+.tar() { .text-align( right ); }
+.tac() { .text-align( center ); }
+
+.tdes( @param: underline ) { text-decoration: @param; }
+
+.vertical-align( @param: middle ) {
+    vertical-align: @param;
+}
+
+.vam() { .vertical-align; }
+.vat() { .vertical-align( top ); }
+.vab() { .vertical-align( bottom ); }
+.vabl() { .vertical-align( baseline ); }
+
+
+// list-style
+.list-style( @param: none ) {
+    list-style: none;
+}
+
+.list-style-type( @param: none ) {
+    list-style-type: @param;
+}
+
+.list-style-image( @param ) {
+    list-style-image: @param;
+}
+
+.content( @param: '' ) {
+    content: @param;
+}
+
+.cursor( @param: pointer ) {
+    cursor: @param;
+}
+
+.cp() { .cursor; }
+
+.flex( @param: 1 ) {
+    flex: @param;
+}
+
+.flw( @param:nowrap ) { flex-wrap: @param; }
+.fld( @param: row ) { flex-direction: @param; }
+
+.ac( @param: center ) { align-content: @param; }
+.ai( @param: center ) { align-items: @param; }

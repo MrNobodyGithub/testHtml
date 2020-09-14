@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>订单详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/stylesheet.css" />
+		<style>
+			.order-status .order-status-pic+ul {
+				padding: 0 2rem !important;
+			}
+
+			.order-status .order-status-pic+ul li {
+				display: flex;
+			}
+
+			.order-status .order-status-pic+ul li span:first-child {
+				width: 35%;
+				text-align: right;
+				color: #919191;
+				padding-right: 0.2rem;
+			}
+
+			.order-status .order-status-pic+ul li span:nth-child(2) {
+				width: 65%;
+			}
+		</style>
+	</head>
+
+	<body style="background: #fff;">
+		
+		<section class="order-status">
+			<!--ucenter-->
+			<header class="common-header">
+
+				<a class="icon-back mui-action-back"></a>
+				<h1>订单详情</h1>
+
+			</header>
+
+			<div class="mui-content finish" style="background: #fff;padding-bottom: 2.5rem!important;">
+				
+
+			</div>
+			
+			<!--need append dom-->
+			<script type="text/html" id="orderInfo">
+				
+				<% if(datas.order_info.prop==0){ %>
+					<div class="order-status-pic finish-name" 
+						data-sn="<%= datas.order_info.pay_sn %>" 
+						style="height:0;margin-top: 0;">
+					</div>
+	
+		            <ul class="order-list10">
+		                <li>
+		                    <span>订单号：</span>
+		                    <span><%= datas.order_info.order_sn %></span>
+		                </li>
+		                <li>
+		                    <span>下单时间：</span>
+		                    <span><%= datas.order_info.add_time %></span>
+		                </li>
+		                <li>
+		                    <span>订单状态：</span>
+		                    <span class="status-error"><%= datas.order_info.state_desc %></span>
+		                </li>
+		                <li>
+		                    <span>订单总额：</span>
+		                    <span class="status-error"><%= datas.order_info.goods_amount %></span>
+		                </li>
+		                <%if(datas.order_info.pay_method == 2){%>
+		                <li>
+		                    <span>订金金额：</span>
+		                    <span class="status-error"><%= datas.order_info.order_amount %>元</span>
+		                </li>
+		                <%}%>
+		                <% if( datas.order_info.all_voucher_price != 0){ %>
+		                	<li>
+			                    <span>优惠券抵扣：</span>
+			                    <span class="status-error"><%= datas.order_info.all_voucher_price %>元</span>
+			                </li>
+		                <% }%>
+		                
+		                <% if(datas.order_info.rcb_amount != 0){%>
+		                	<li>
+			                    <span>充值卡抵扣：</span>
+			                    <span class="status-error"><%= datas.order_info.rcb_amount %>元</span>
+			                </li>
+		                <% } %>
+		                <li>
+		                    <span>在线支付金额：</span>
+		                    <span class="status-error"><%= datas.order_info.all_paid_amount %>元</span>
+		                </li>
+		                <li>
+		                    <span>未支付金额：</span>
+		                    <span class="status-error"><%= datas.order_info.all_no_pay_amount %>元</span>
+		                </li>
+		                <% for(var i = 0;i<datas.order_info.extend_service_book.length;i++){ %>
+	                	<li>
+		                    <span><%= datas.order_info.extend_service_book[i].field_title %>： </span>
+		                    <span data_type = "<%= datas.order_info.extend_service_book[i].field_type %>" data_name = "<%= datas.order_info.extend_service_book[i].field_name %>"><%= datas.order_info.extend_service_book[i].value %></span>
+		                </li>
+		                <% } %>
+		            </ul>
+		            <div class="order-status-userinfo">
+	                <h3>雇主信息</h3>
+	                <div class="userinfo">
+	                    <img src="<%= datas.order_info.buy_member_avatar %>" alt="">
+	                    <div class="info">
+	                        <h4><%= datas.order_info.buyer_name %></h4>
+                        	<!--<span>电话：<%= datas.order_info.buyer_phone %></span>-->
+                        	<!--<span>地点：<%= datas.order_info.area_info_to %><%= datas.order_info.address_to %></span>-->
+	                    </div>
+	                </div>
+	                <% }else if(datas.order_info.prop==1){ %>
+	                	<div class="order-status-pic finish-name" 
+	                		data-sn="<%= datas.order_info.pay_sn %>"
+	                		style="height:0;margin-top: 0;">
+	                	</div>
+	
+			            <ul class="order-list10">
+			                <li>
+			                    <span>订单号：</span>
+			                    <span><%= datas.order_info.order_sn %></span>
+			                </li>
+			                <li>
+			                    <span>下单时间：</span>
+			                    <span><%= datas.order_info.add_time %></span>
+			                </li>
+			                <li>
+			                    <span>订单状态：</span>
+			                    <span class="status-error"><%= datas.order_info.state_desc %></span>
+			                </li>
+			                <li>
+			                    <span>订单总额：</span>
+			                    <span class="status-error"><%= datas.order_info.goods_amount %></span>
+			                </li>
+			                <%if(datas.order_info.pay_method == 2){%>
+			                <li>
+			                    <span>订金金额：</span>
+			                    <span class="status-error"><%= datas.order_info.order_amount %>元</span>
+			                </li>
+			                <%}%>
+			                <% if( datas.order_info.all_voucher_price != 0){ %>
+			                	<li>
+				                    <span>优惠券抵扣：</span>
+				                    <span class="status-error"><%= datas.order_info.all_voucher_price %>元</span>
+				                </li>
+			                <% }%>
+			                
+			                <% if(datas.order_info.rcb_amount != 0){%>
+			                	<li>
+				                    <span>充值卡抵扣：</span>
+				                    <span class="status-error"><%= datas.order_info.rcb_amount %>元</span>
+				                </li>
+			                <% } %>
+			                
+			                <% for(var i = 0;i<datas.order_info.extend_service_need.length;i++){ %>
+			                	<li>
+				                    <span><%= datas.order_info.extend_service_need[i].field_title %>：</span>
+				                    <span data_type = "<%= datas.order_info.extend_service_need[i].field_type %>" 
+				                    	  data_name = "<%= datas.order_info.extend_service_need[i].field_name %>">
+				                    	  <%= datas.order_info.extend_service_need[i].value %>
+				                    </span>
+				                </li>
+			                <% } %>
+			            </ul>
+			            <div class="order-status-userinfo">
+			                <h3>雇主信息</h3>
+			                <div class="userinfo">
+			                    <img style="background: red;" src="<%= datas.order_info.buy_member_avatar %>" alt="" />
+			                    <div class="info">
+			                        <h4><%= datas.order_info.buyer_name %></h4>
+	                        		<!--<span>电话：<%= datas.order_info.buyer_phone %></span>-->
+	                        		<!--<span>地点：<%= datas.order_info.area_info_to %><%= datas.order_info.address_to %></span>-->
+			                    </div>
+			                </div>
+	                	</div>
+                <% } %>	
+				
+			</script>
+			
+			<script type="text/html" id="storeInfo">
+				
+				<div class="finish-user mui-clearfix" style="height: auto; padding-bottom: .59rem;">
+					<a href="" class="share" style="background-image: url(<%= store_info.store_avatar %>);"></a>		
+					<h3><%= store_info.store_name %></h3>
+					<p class="finish-p2">
+						<%= store_info.store_credit_text %>
+					</p>
+				</div>
+				
+			</script>
+			
+			<footer class="footer-btn">
+				<div class="cleaning-footer" style="flex: 1;">
+					<a href="#javascript:void(0);" class="right" style="width: 100%; flex: 1;">立即支付</a>
+				</div>
+			</footer>
+		</section>
+
+		<section class="mask">
+			
+			<menu class="pay-menu">
+				<h4>支付方式</h4>
+				<a href="javasecript:void(0);" class="alipay" data-type="alipay_native" style="font-size: 0.6rem;">&emsp;支付宝</a>
+				<a href="javascript:void(0);" class="wxpay" data-type="wxpay_native" style="font-size: 0.6rem;">&emsp;微信</a>
+                <input type="hidden" name="payCode" value="">
+				<button id="pay_btn">确认支付</button>
+			</menu>
+			
+		</section>
+		
+		
+		<script src="../../js/hotcss.js"></script>
+		<script src="../../js/config.js"></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/template.js"></script>
+		<script src="../../js/common.js"></script>
+		<script src="../../js/member/order-detail.js"></script>
+		
+	</body>
+
+</html>

@@ -1,0 +1,161 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+//我的发布页面
+
+.my-send-header{
+    border:0;
+    color: #fff;
+    background: #084179;
+    // position: fixed;
+    // width: 100%;
+    div:nth-of-type(3){
+        color: red;
+        background: none;
+        .pl(0);
+    }
+    div:first-child{
+        .mt(0);
+    }
+}
+.my-send{
+    flex: 1;
+    background: #084179;
+    padding: 0 px2rem(45);
+    overflow: auto;
+    position: relative;
+    .pb(30,2);
+    
+    .footer-img{
+        position: fixed;
+        bottom:px2rem(30);
+        right: px2rem(30);
+        
+        img{
+            .width(206,2);
+            .height(206,2);        
+        }    
+    }
+    .send-list{
+        background: #fff;
+            .mt(32,2);
+            border-radius: px2rem(20);
+             position: relative;
+            overflow: hidden;
+            .height(445,2);
+        dl{
+            .width;
+            .height(338,2);
+            .pl(74,2);
+            .pr(84,2);
+            .mt(0);
+            .mb(0);
+            .df;
+            justify-content: space-between;
+            align-items: center;
+            
+            position: relative;
+            i{
+                .db;
+                .width(9,2);
+                .height(97,2);
+                position: absolute;
+                left: px2rem(0);
+                top: px2rem(3);
+                
+            }
+            em{
+                .db;
+                .width(205,2);
+                .height(180,2);
+                border-top-right-radius: px2rem(20);
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            dd{
+                h4{
+                    .fs(47,2);
+                    .lh(75,2);
+    //              .mt(54,2);
+                }
+                p:nth-of-type(1){
+                    .lh(96,2);
+                    color: #747474;
+                    .fs(35,2);
+                }
+                p:nth-of-type(2){
+                    .lh(107,2);
+                    color: red;
+                    .fs(47,2);
+                }
+            }
+            dt{
+                .square(222,2);
+                img{
+                    .square(222,2);
+                }
+            }
+        }
+        .bottom{
+            padding: px2rem(17) px2rem(74);
+            background: url(../image/my/bg.png) repeat-x;
+            .df;
+            justify-content: space-between;
+            .fs(35,2);
+            .edit{
+                padding: px2rem(18) px2rem(64);
+                border: 1px solid #797979;
+                border-radius: px2rem(40);
+                color: black;
+            }
+            span{
+                padding: px2rem(18) px2rem(64);
+                .fs(35,2);
+            }
+        }
+        &.send-success{
+            i{
+                background: url(../image/my/success-b.png) no-repeat left center;
+                background-size: px2rem(9) px2rem(97);
+            }
+            em{
+                background: url(../image/my/success.png) no-repeat center center;
+                background-size: px2rem(205) px2rem(180);
+            }
+        }
+        &.send-process{
+            i{
+                background: url(../image/my/process-b.png) no-repeat left center;
+                background-size: px2rem(9) px2rem(97);
+            }
+            em{
+                background: url(../image/my/process.png) no-repeat center center;
+                background-size: px2rem(205) px2rem(180);
+            }
+        }
+        &.send-end{
+            i{
+                background: url(../image/my/end-b.png) no-repeat left center;
+                background-size: px2rem(9) px2rem(97);
+            }
+            em{
+                background: url(../image/my/end.png) no-repeat center center;
+                background-size: px2rem(205) px2rem(180);
+            }
+        }
+    }
+    
+}
+.sendbtn{
+    .db;
+    .width(195,2);
+    .height(192,2);
+    background: url(../image/images/send.png) no-repeat center center;
+    background-size: px2rem(195) px2rem(192);
+    position: absolute;
+    bottom: px2rem(47);
+    right: px2rem(80);
+}

@@ -1,0 +1,92 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+// 通用表单
+
+@form       :       form;
+
+.@{form} {
+
+    &-group {
+        .df;
+        align-items: center;
+        min-height: px2rem(136);
+        border-bottom: 2px solid #e6e6e8;
+        transition: all .3s;
+        .must{
+            position: absolute;
+            .fs(50,2);
+            color:red;
+        }
+        label {
+            .fs( 40,2 );
+            .color( #181818 );
+            .pl( 29,2 );
+            width: auto;
+        }
+    }
+
+    &-status-error {
+        box-shadow: 6px 5px 2px rgba(255,0,0,.3);
+    }
+
+    &-control {
+        .por;
+        flex: 1;
+        .height;
+        position: relative;
+        a ,
+        input {
+            .db;
+            .width;
+            .height;
+            .fs( 36,2 );
+            .color( #181818 );
+            border: 0;
+            outline: 0;
+
+            &::-webkit-input-placeholder {
+                .color( @placeholder );
+            }
+        }
+
+        i {
+            .dib;
+            .square( 31,2 );
+            .background( url(../image/ucenter/star2.png) center no-repeat );
+            .bs;
+            .ml( 13,2 );
+        }
+
+        .form-control-reset {
+            .width( 86,2 );
+            .padding( 0 px2rem(20) );
+            .background( url(../image/icon/input-reset.png) center no-repeat );
+            .bs( px2rem(46)) ;
+            .height;
+            .poa;
+            .top;
+            .right;
+        }
+    }
+
+    &-icon-arrow {
+        .pr( 50,2 );
+        .background( url(../image/ucenter/form-icon-arrow.png) 99% center no-repeat );
+        .bs( px2rem(19) px2rem(32) );
+    }
+
+    &-upload {
+        .pt( 45,2 );
+        .pb( 45,2 );
+
+        img {
+            .vam;
+            border-radius: 50%;
+        }
+    }
+}
+
+

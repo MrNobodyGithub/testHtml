@@ -1,0 +1,162 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+
+//
+@maintenaceList       :       maintenace-list;
+@cleaningColor  :       #f5a93b;
+
+.@{maintenaceList}  {
+
+    .filter {
+
+        nav {
+            a {
+                color: @title-main;
+
+                &.active ,
+                &:active {
+                    color: @cleaningColor;
+                }
+            }
+        }
+
+    }
+
+    .product-item {
+
+        .label {
+            em {
+                .color( @cleaningColor );
+            }
+        }
+
+        .tag {
+            span {
+                color: @cleaningColor;
+                border-color: @cleaningColor;
+            }
+        }
+
+        .control {
+            a {
+                color: @cleaningColor;
+                border-color: @cleaningColor;
+                .fs(30,2);
+            }
+        }
+    }
+
+    .grab-state {
+        button {
+            color: @cleaningColor;
+            border-color: @cleaningColor;
+            .bc( #fff );
+        }
+    }
+
+    .grab-remarks {
+        color: @cleaningColor;
+    }
+
+    .detail-worktime ,
+    .detail-price {
+        .active{
+            color: @cleaningColor;
+            border:1px solid @cleaningColor !important;
+        }  
+    }
+
+    .title {
+        span {
+            background-color: @cleaningColor;
+        }
+    }
+
+    .detail-comment {
+        .comment-content {
+            span {
+                color: @cleaningColor;
+            }
+        }
+    }
+}
+
+.footer-menu-yellow {
+    .link {
+        .bc( @cleaningColor );
+    }
+}
+
+
+.@{maintenaceList}{
+    .filter1{
+        nav{
+            .df;
+            align-items: center;
+            justify-content: space-around;
+            li{
+                flex: 1;
+                text-align: center;
+                border-top: 1px solid #e6e6e6;
+            }
+            a{
+                display: inline-block;
+                .height(126,2);
+                .lh(126,2);
+                .fs(37,2);
+                color: @title-main;
+            }
+            .active1{
+                border-bottom: 1px solid @cleaningColor;
+//              background: red;
+                color: @cleaningColor;
+            }
+        }
+    }
+    .carserver-list{
+        .product-item{
+            position: relative;
+            .product-info{
+                .icon-type1{
+                    background-image: none;
+                    .pl(0);
+                    .lh(70,2);
+                }
+                .control{
+                    .pt(0);
+                    span{
+                        .fs(36,2);
+                        .mr(17,2);
+                        color: #464646;
+                    }
+                    del{
+                        .dib;
+                        .lh(65,2);
+                        color: #c4c3c3;
+                        .fs(30,2);
+                    }
+                }
+                .label{
+                    .mt(15,2);
+                }
+                .raty{
+                    .pb(23,2);
+                }
+            }
+            .order{
+                .db;
+                position: absolute;
+                right: px2rem(30);
+                top: 35%;
+                padding: px2rem(23) px2rem(45);
+                border: 1px solid @cleaningColor;
+                color: @cleaningColor;
+                border-radius: px2rem(40);
+                .fs(30,2);
+            }
+        }
+    }
+}

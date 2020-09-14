@@ -1,0 +1,579 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+// gray
+.white {
+    .bc( #fff );
+}
+.gray {
+    .bc( #f2f2f2 );
+}
+
+//保洁预约
+.appoint{
+    background: #fff;
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    .appoint-content{
+        flex: 1;
+        background: #fff;
+        .pb(150,2);
+        .pr(30,2);
+        li{
+            .height(130,2);
+            padding-left: px2rem(45);
+            .fs(36,2);
+            .lh(130,2);
+            input{
+                .height(126,2);
+                .width;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: px2rem(3) solid #e6e6e8;
+                .fs(36,2);
+                padding-left: px2rem(87);
+            }
+        }
+        .input1{
+            input{
+                background: url(../images/cleaning-address.png) no-repeat px2rem(10) center;
+                background-size: px2rem(48) px2rem(48);
+            }
+        }
+        .input2{
+            margin-left: px2rem(45);
+            padding-left: px2rem(87);
+            padding-right: px2rem(50);
+            border-bottom: px2rem(2) solid #E6E6E8;
+            background: url(../images/cleaning-time.png) no-repeat px2rem(10) center;
+            background-size: px2rem(48) px2rem(48);
+            
+            a{
+                display: block;
+                display: flex;
+                justify-content: space-between;
+                color: #666;
+              
+            }
+        }
+        .input6{
+            margin-left: px2rem(45);
+            padding-left: px2rem(87);
+            padding-right: px2rem(50);
+            border-bottom: px2rem(2) solid #E6E6E8;
+            background: url(../images/cleaning-time.png) no-repeat px2rem(10) center;
+            background-size: px2rem(48) px2rem(48);
+            
+            a{
+                display: block;
+                display: flex;
+                justify-content: space-between;
+                color: #666;
+
+                span{
+                    color: red;
+                }
+            }
+        }
+        .input3{
+            input{
+                background: url(../images/cleaning-contact.png) no-repeat px2rem(10) center;
+                background-size: px2rem(48) px2rem(48);
+            }
+        }
+        .input4{
+            input{
+                background: url(../images/cleaning-tel.png) no-repeat px2rem(10) center;
+                background-size: px2rem(48) px2rem(48);
+            }
+        }
+        .input5{
+            margin-left: px2rem(45);
+            padding-left: px2rem(87);
+            background: url(../images/cleaning-remark.png) no-repeat px2rem(10) px2rem(74);
+            background-size: px2rem(48) px2rem(48);
+            height:px2rem(250);
+            .remark{
+                .width(920,2);
+                .height(216,2);
+                border: px2rem(3) solid #e6e6e8;
+                .fs(36,2);
+                border-radius: px2rem(30);
+                padding: px2rem(30) px2rem(16);
+                margin-top: px2rem(50);
+            
+                &::-webkit-input-placeholder {
+                    color: #ccc;
+                }
+            }
+        }
+        .input7{
+            margin-left: px2rem(45);
+            padding-left: px2rem(87);
+            padding-right: px2rem(50);
+            border-bottom: px2rem(2) solid #E6E6E8;
+            background: url(../images/cleaning-time.png) no-repeat px2rem(10) center;
+            background-size: px2rem(48) px2rem(48);
+            
+            a{
+                display: block;
+                display: flex;
+                justify-content: space-between;
+                color: #666;
+
+                span{
+                    display: inline-block;
+                    .width(31,2);
+                    .height(31,2);
+                    background: url(../images/42x.png) no-repeat center center;
+                    margin-top: px2rem(40);
+                    background-size: px2rem(31) px2rem(31); 
+                }
+            }
+        }
+    }
+    .appoint-next{
+        .height(146,2);
+        background-color: #e6454a;
+        a{
+            .fs(42,2);
+            color: #fff;
+            display: block;
+            text-align: center;
+            .lh(146,2);
+        }
+    }
+}
+//保洁预约详情
+.appoint-detail{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    background: #fff;
+    .appoint-detail-content{
+        flex: 1;
+//      .pb(60,2);
+        background-color: #f2f2f2;
+        ol{
+            height: auto;
+            background: url(../images/appoint-detail-border.png) repeat-x center bottom #fff;
+            margin-top: px2rem(20);
+            overflow: hidden;
+            .pb(100,2);
+            li{
+                .fs(40,2);
+                .height(90,2);
+                .lh(90,2);
+                padding-left: px2rem(90);
+                color: #919191;
+                i{
+                    display: inline-block;
+                    .width(200,2);
+                    font-style: normal;
+                    text-align: right;
+                }
+                span{
+                    color: #333333;
+                   
+                }
+                small{
+                    .fs(30,2);
+                }
+            }
+            
+            li:first-child{
+                margin-top: px2rem(25);
+            }
+            li:last-child{
+                span{
+                    color: #E6454A;
+                }
+            }
+            .border{
+                .lh(55,2);
+                border-top: 1px solid red;
+                padding-top: px2rem(40);
+                padding-right: px2rem(116);    
+            }
+        }
+        .wating-p{
+            .height(350,2);
+            background:#fff;
+            margin-bottom: px2rem(20);
+            overflow: hidden;
+            p{
+                .fs(40,2);
+                .height(90,2);
+                .lh(90,2);
+                padding-left: px2rem(90);
+                color: #919191;
+                i{
+                    display: inline-block;
+                    .width(200,2);
+                    font-style: normal;
+                    text-align: right;
+                }
+                span{
+                    color: #333333;
+                }
+            }
+            p:first-child{
+                margin-top: px2rem(25);
+            }
+        }
+        ul{
+            li{
+                .height(146,2);
+                .fs(42,2);
+                .lh(146,2);
+                padding-left: px2rem(162);
+                background-color: #fff;
+                display: flex;
+                justify-content: space-between;
+                padding-right: px2rem(76);
+            }
+            li:nth-of-type(1){
+                background: url(../images/appoint-detail-discount.png) no-repeat px2rem(75) center #fff;
+                background-size: px2rem(55) px2rem(37);
+                a{
+                    color: #919191;
+                }
+                images{
+                    display: inline-block;
+                    .width(24,2);
+                    .height(30,2);
+                    margin-left: px2rem(30);
+                    
+                }
+            }
+            li:nth-of-type(2){
+                background: url(../images/appoint-detail-hongbao.png) no-repeat px2rem(80) center #fff;
+                background-size: px2rem(50) px2rem(51);
+                margin-top: px2rem(14);
+                
+                .check{
+                    display: block;
+                    .form-default;
+                    .width(70,2);
+                    .height(70,2);
+                    border: 1px solid #c1c1c1;
+                    border-radius: px2rem(20);
+                    margin-top: px2rem(38);
+                    
+                    &:checked {
+                        background:url(../images/appoint-detail-check.png) no-repeat center center;
+                        background-size: px2rem(38) px2rem(30);
+                    }
+                }
+            }
+            li:nth-of-type(3){
+                background: url(../images/appoint-detail-baoxian.png) no-repeat px2rem(80) center #fff;
+                background-size: px2rem(50) px2rem(51) ;
+                margin-top: px2rem(14);
+                .check{
+                    display: block;
+                    .form-default;
+                    .width(70,2);
+                    .height(70,2);
+                    border: 1px solid #c1c1c1;
+                    border-radius: px2rem(20);
+                    margin-top: px2rem(38);
+                    &:checked {
+                        background:url(../images/appoint-detail-check.png) no-repeat center center;
+                        background-size: px2rem(38) px2rem(30);
+                    }
+                }
+            }
+        }
+        .appoint-detail-deal{
+            .width(540,2);
+            .height(48,2);
+            display: flex;
+            justify-content: space-between;
+            margin: px2rem(77) auto;
+            .check{
+                display: inline-block;
+                .form-default;
+                .width(48,2);
+                .height(48,2);
+                border: 1px solid #c1c1c1;
+                border-radius: px2rem(10);
+                &:checked{
+                    background: url(../images/appoint-detail-check-s.png) no-repeat center center;
+                    background-size: px2rem(29) px2rem(23);
+                }
+            }
+            a{
+                display: inline-block;
+                .height(48,2);
+                .fs(42,2);
+                .lh(48,2);
+                text-decoration: underline;
+                color: #a6a6a6;
+            }
+            
+        }
+    }
+    .appoint-detail-next{
+        .height(146,2);
+        display: flex;
+        justify-content: space-between;
+        div{
+            .width(780,2);
+            .fs(36,2);
+            .lh(146,2);
+            padding-left: px2rem(80);
+            span{
+                .fs(42,2);
+                color: #e6454a;
+            }
+        }
+        a{
+            background-color: #e6454a;
+            .fs(42,2);
+            color: #fff;
+            display: block;
+            text-align: center;
+            .width(300,2);
+            .lh(146,2);
+        }
+    }
+}
+.appoint-detail-next{
+    background: #fff;
+    .height(146,2);
+    display: flex;
+    justify-content: space-between;
+    div{
+        .width(780,2);
+        .fs(36,2);
+        .lh(146,2);
+        padding-left: px2rem(80);
+        span{
+            .fs(42,2);
+            color: #ea5505;
+        }
+    }
+    a{
+        background-color: #ea5505;
+        .fs(42,2);
+        color: #fff;
+        display: block;
+        text-align: center;
+        .width(300,2);
+        .lh(146,2);
+    }
+}   
+
+
+@cleaning       :       clean;
+@cleaningColor  :       #f39c11;
+
+.@{cleaning} {
+    .circle-details-commentlist{
+        .pb(142,2);
+                   ul{
+                       li{
+                           .height(218,2);
+                           .width;
+                           .pl(30,2);
+                           .pt(22,2);
+                           display: flex;
+                           images{
+                               .width(276,2);
+                               .height(276,2);
+                               .mr(32,2);
+                           }
+                           .circlecommentlist-right{
+                               width:80%;  
+                               b{  
+                                   font-style: normal;                                 
+                                   .fs(37,2); 
+                                                                    
+                               }
+                           }
+                       }
+                   }
+               }
+    .product-info{
+        position: relative;
+        .raty{
+            i{
+                .dib;
+                .height(30,2);
+                .fs(28,2);
+                font-style: normal;
+                position: relative;
+                left: px2rem(-35);
+                color:#555555;
+                .ml(38,2);
+            }
+        }
+
+    }
+
+    .filter {
+
+        nav {
+            a {
+                color: @title-main;
+
+                &.active ,
+                &:active {
+                    color: @cleaningColor;
+                }
+            }
+        }
+
+    }
+
+    .product-item {
+            display: flex;
+        .label {
+            height:px2rem(80);
+       position: relative;
+            line-height: px2rem(36);
+            
+            
+            overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+
+
+//&:after {
+  //          content: '...';
+    //        position: absolute;
+      //      right: 0;
+        //    bottom: 0;
+          //  height:px2rem(40);
+           // width: 3em;
+           // text-align: center;
+           // padding-left: .1rem;
+           // background:red;
+//          background: -webkit-linear-gradient(left, rgba(255,255,255,.8), #fff);
+       // }
+
+
+            em {
+                .color( @cleaningColor );
+                
+            }
+        }
+
+        .tag {
+            margin-top: px2rem(40);
+            span {
+                color: @cleaningColor;
+                border-color: @cleaningColor;
+            }
+        }
+
+        .control {
+            a{
+                color: @cleaningColor;
+                border-color: @cleaningColor;
+            }
+            
+        }
+    }
+
+    .grab-state {
+        button {
+            color: @cleaningColor;
+            border-color: @cleaningColor;
+            .bc( #fff );
+        }
+    }
+
+    .grab-remarks {
+        color: @cleaningColor;
+    }
+
+    .detail-worktime{
+        padding-bottom: px2rem(30);
+    } 
+    .price {
+        .active{
+            color: @cleaningColor;
+            border:1px solid @cleaningColor !important;
+        }  
+        .price-content{
+            padding-bottom: px2rem(40);
+            .active{
+                color: @cleaningColor;
+                border:1px solid @cleaningColor !important;
+            }
+            input{
+                .form-default;
+                .width(32,2);
+                .height(32,2);
+                background: #fff;
+                border-radius: px2rem(5);
+                border:1px solid @cleaningColor;
+                margin-right:px2rem(20); 
+                margin-left:px2rem(5);
+                
+                &:checked{
+                    background:url(../images/cleaning/checked.png) no-repeat center center;
+                    background-size: px2rem(18) px2rem(14);
+                }
+            }
+        }
+    }
+
+    .title {
+        .fs(44,2);
+        span {
+            background-color: @cleaningColor;
+        }
+    }
+
+    .detail-comment {
+        .comment-content {
+            span {
+                color:#F4425D;
+            }
+            .server-hour{
+                .db;
+                background: url(../images/Nanny/date.png) no-repeat left;
+                background-size: px2rem(48) px2rem(49);
+                padding-left: px2rem(50);
+            }
+        }
+    }
+    .product-detail .product{
+        div{
+            width:90%;
+            margin: 0 auto;
+            .fs(40,2);
+            .lh(60,2);
+        }
+        img{
+            margin: 0 auto;
+            width: 100%;
+            padding: 0 px2rem(30);
+        }
+    }
+    .product-item{
+        border-top: none;
+        border-bottom: px2rem(1) solid  #e2e3e7;
+    }
+    .mouth-white{
+        background: white;
+        .height;
+    }
+}
+
+.footer-menu-yellow {
+    .link {
+        .bc( @cleaningColor );
+    }
+}

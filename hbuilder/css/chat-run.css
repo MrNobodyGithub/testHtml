@@ -1,0 +1,95 @@
+menu {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column ;
+          flex-direction: column ;
+}
+.chat {
+  padding: 0 0.59259259rem;
+}
+.chat .time {
+  text-align: center;
+  color: #fff;
+  font-size: 0.47407407rem;
+  height: 0.75555556rem;
+  line-height: 0.75555556rem;
+  background-color: #d5d5d5;
+  width: 4.93333333rem;
+  display: block;
+  margin: 0.2962963rem auto;
+}
+.chat .chat-item {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.chat .chat-item:not(:nth-child(1)) {
+  margin-bottom: 1.33333333rem;
+}
+.chat .chat-item:nth-child(1) {
+  margin-top: 1.33333333rem;
+  margin-bottom: 0.74074074rem;
+}
+.chat .chat-item > img {
+  width: 1.48148148rem;
+  height: 1.48148148rem;
+  margin-top: 0.62222222rem;
+}
+.chat .chat-item .chat-detail {
+  position: relative;
+  top: 0.14814815rem;
+  max-width: 7.40740741rem;
+  font-size: 0.53333333rem;
+  min-height: 0.59259259rem;
+  line-height: 0.59259259rem;
+  word-break: break-all;
+  padding: 0.44444444rem 0.62222222rem;
+  border-radius: 0.08888889rem;
+  border-width: 0.01481481rem;
+}
+.chat .chat-item .chat-detail-img {
+  position: relative;
+  top: 0.14814815rem;
+  max-width: 7.40740741rem;
+  min-height: 0.59259259rem;
+  word-break: break-all;
+}
+.chat .chat-from {
+  float: left;
+}
+.chat .chat-from img {
+  float: left;
+}
+.chat .chat-from .chat-service {
+  font-size: 0.53333333rem;
+  color: #7e7c7c;
+  margin-left: 1.8962963rem;
+  margin-bottom: 0.14814815rem;
+}
+.chat .chat-from .chat-detail {
+  float: left;
+  color: #000;
+  background-color: #ffffff;
+  border-color: #e0e0e0;
+  margin-left: 0.41481481rem;
+}
+.chat .chat-to {
+  float: right;
+}
+.chat .chat-to img {
+  float: right;
+  margin-right: 0.35555556rem;
+  margin-top: 0.2962963rem;
+}
+.chat .chat-to .chat-detail {
+  float: right;
+  background-color: #008dee;
+  margin-right: 0.44444444rem;
+}

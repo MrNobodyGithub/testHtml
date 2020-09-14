@@ -1,0 +1,238 @@
+@import '../config.less';
+@import '../api/api-webkit.less';
+@import '../api/api-common.less';
+@import '../api/api-size.less';
+
+
+
+@nanny       :       nanny;
+@nannyColor  :       #f8cade;
+
+.@{nanny} {
+    .product-info{
+        
+        .icon-type2{
+            
+            a{
+                display: block;
+                height: px2rem(40);
+                .lh(42,2);
+                overflow: hidden;
+            }
+        }
+        .icon-type1{
+         
+        }
+       
+        .raty{
+            margin-top: 5px;
+//          星星上方距离
+            i{
+                .dib;
+                .height(30,2);
+                .fs(28,2);
+                font-style: normal;
+                position: relative;
+                left: px2rem(-35);
+                color:#555555;
+                .ml(38,2);
+            }
+        }
+    }
+    .icon-raty{
+       
+    }
+    .filter {
+
+        nav {
+            a {
+                color: @title-main;
+
+                &.active ,
+                &:active {
+                    color: @nannyColor;
+                }
+            }
+        }
+
+    }
+    .content{
+//      position: fixed;
+        .screening{
+            position: absolute;
+            .width;
+            height: px2rem(1200);
+            background:rgba(0,0,0,0.2);
+            display: none;
+            z-index: 99999;
+            overflow: hidden;
+            .filter_content{
+                .width;
+                .height(540,2);
+                background: #fff;
+                .filter_list{
+                    padding: 0 px2rem(47);
+                    overflow: hidden;
+                    dl{
+                        .mt(45,2);
+                        dt{
+                            font-size: px2rem(36);
+                        }
+                        dd{
+                            display: inline-block;
+                            padding: px2rem(13) px2rem(48);
+                            border: 1px solid #a0a0a0;
+                            border-radius: px2rem(15);
+                            color: #a0a0a0;
+                            .mt(25,2);
+                            font-size: px2rem(36);
+                            &.active{
+                                border: 1px solid #EF2B43;
+                                color: #EF2B43;
+                            }
+                        }
+                        input{
+                            
+                            display: inline-block;
+                            width: px2rem(180);
+                            height: px2rem(65);
+                            .mt(25,2);
+                            border-radius: px2rem(15);
+                            text-align: center;
+                            font-size: px2rem(36);
+                            line-height: px2rem(54);
+                            &.start{
+                                margin-left: px2rem(50);
+                            }
+                        }
+                        span{
+                            margin: 0 px2rem(15);
+                        }
+                    }
+                }
+                .select{
+                    .height(160,2);
+                    border-top: 1px solid #A0A0A0;
+                    .mt(20,2);
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    padding: 0 px2rem(150);
+                    button{
+                        .height(76,2);
+                        .width(216,2);
+                        border: none;
+                        font-size: px2rem(36);
+                        &.confirm{
+                            border-radius: px2rem(30);
+                            border: 1px solid #f4415e;
+                            color: #f4415e;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    .product-item {
+        .por;
+        &.mark {
+            &:after{
+                .content;
+                .poa;
+                top:px2rem(28);
+                left: px2rem(28);
+                .width(66,2);
+                .height(72,2);
+                border-radius: px2rem(10) 0 0 0;
+            }
+        }    
+        &.mark1{ 
+            &:after{
+                background: url(../img/Nanny/Nanny-zhong.png);
+                background-size: px2rem(66) px2rem(72);
+            }                           
+        }
+        &.mark2{ 
+            &:after{
+                background: url(../img/Nanny/Nanny-fei.png);
+                background-size: px2rem(66) px2rem(72);
+            }                           
+        }
+        &.mark3{ 
+            &:after{
+                background: url(../img/Nanny/Nanny-zhu.png);
+                background-size: px2rem(66) px2rem(72);
+            }                           
+        }
+        .label {
+             margin-top:-5px;
+//           星星下方文字距离
+            em {
+                color: #ff7583;
+            }
+        }
+
+        .tag {
+            span {
+                color: #ff7583;
+                border-color: @nannyColor;
+            }
+        }
+
+        .control {
+            span{
+                margin-top: -30px;
+            }
+            a {
+                color: #F4415E;
+                border-color:#f4415e;
+            }
+        }
+    }
+
+    .grab-state {
+        button {
+            color: @nannyColor;
+            border-color: @nannyColor;
+            .bc( #fff );
+        }
+    }
+
+    .grab-remarks {
+        color: @nannyColor;
+    }
+
+    .detail-worktime ,
+    .detail-price {
+        .active{
+            color: @nannyColor;
+            border:1px solid @nannyColor !important;
+        }  
+    }
+
+    .title {
+        span {
+            background-color: @nannyColor;
+        }
+    }
+
+    .detail-comment {
+        .comment-content {
+            span {
+                color: @nannyColor;
+               
+            }
+        }
+    }
+}
+
+.footer-menu-pink {
+    .link {
+        .bc( @nannyColor );
+    }
+}
+
+
+
+

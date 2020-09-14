@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>站内信 触屏版</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/msg.css" rel="stylesheet" />
+		<style>
+			.mui-content>.mui-table-view:first-child {
+				margin-top: 0px !important;
+			}
+			
+			.mui-table-view-cell {
+				font-size: 0.8rem;
+				line-height: 1.2rem;
+			}
+		</style>
+	</head>
+
+	<body class="white">
+		<!--ucenter-->
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon icon-back"></a>
+			<h1 class="mui-title">消息</h1>
+
+		</header>
+
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell" onclick="inside(1)">买家消息
+					<span class="mui-badge mui-badge-danger" style="display:none" id="buyers"></span>
+				</li>
+				<li id="seller_msg" class="mui-table-view-cell" onclick="inside(2)">卖家消息
+					<span class="mui-badge mui-badge-danger" style="display:none" id="seller"></span>
+				</li>
+				<li class="mui-table-view-cell" onclick="inside(3)">系统公告
+				</li>
+				<li class="mui-table-view-cell" onclick="inside(4)">客服消息
+					<span class="mui-badge mui-badge-danger" style="display:none" id="notice"></span>
+				</li>
+				<li class="mui-table-view-cell" onclick="inside(5)">客户到访评价表
+				</li>
+				<li class="mui-table-view-cell" onclick="inside(6)">客户购房后评价表
+				</li>
+			</ul>
+		</div>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/config.js"></script>
+		<script src="../../js/common.js"></script>
+		<script type="text/javascript">
+		mui.init({
+				beforeback: function() {　　　　 //获得父页面的webview
+					var list = plus.webview.currentWebview().opener();　　　　 //触发父页面的自定义事件(refresh),从而进行刷新
+					mui.fire(list, 'refresh');
+					//返回true,继续页面关闭逻辑
+					return true;
+				}
+			});			
+
+
+//			返回刷新页面的方法   与inside_letter.html相对应
+			
+			
+			window.addEventListener('refresh', function(e) { //执行刷新
+				location.reload();
+			});
+
+			var key = _.userInfo.getKey();
+			var store_info = _.storeInfo.get();
+			_.debug(store_info);
+			if(store_info && store_info.storeId) {
+				$('#seller_msg').show();
+			} else {
+				$('#seller_msg').hide();
+			}
+			$.ajax({
+				url: ApiUrl + '/index.php?act=member_msglist&op=msg_count',
+				data: {
+					'key': key
+				},
+				async: true, // 异步 || 同步
+				dataType: 'json',
+				type: 'post',
+				timeout: 10000,
+				success: function(data) {
+					_.debug(data);
+					if(data.code == 200) {
+						if(data.datas.buyers_count > 0) {
+							$('#buyers').html(data.datas.buyers_count);
+							$('#buyers').css('display', 'inline-block');
+						} else {
+							$('#buyers').css('display', 'none');
+						}
+						if(data.datas.seller_count > 0) {
+							$('#seller').html(data.datas.seller_count);
+							$('#seller').css('display', 'inline-block');
+						} else {
+							$('#seller').css('display', 'none');
+						}
+						if(data.datas.notice_count > 0) {
+							$('#notice').html(data.datas.notice_count);
+							$('#notice').css('display', 'inline-block');
+						} else {
+							$('#notice').css('display', 'none');
+						}
+					} else {
+						$('#buyers').css('display', 'none');
+						$('#seller').css('display', 'none');
+						$('#notice').css('display', 'none');
+						mui.toast('消息获取异常，请联系系统管理员！', {
+							duration: 'long',
+							type: 'div'
+						});
+					}
+				},
+				error: function(xhr, type, errorThrown) {
+					// 请求失败
+					mui.toast('网络错误！');
+				}
+			});
+		</script>
+		<script type="text/javascript">
+			mui.init();
+
+			function inside(obj) {
+				if(obj == 1) {
+					_.openWindow({
+						url: 'inside_letter.html?identity=1',
+						id: _.pageName.message_list_buyers,
+						reOpen: true
+					});
+				} else if(obj == 2) {
+					_.openWindow({
+						url: 'inside_letter.html?identity=2',
+						id: _.pageName.message_list_seller,
+						reOpen: true
+					});
+				} else if(obj == 3) {
+
+					mui.openWindow({
+						url: 'news_service.html',
+						id: 'message_list',
+						waiting: {
+							autoShow: true, //自动显示等待框，默认为true
+							title: '正在加载...' //等待对话框上显示的提示内
+						}
+					})
+				} else if(obj == 4) {
+
+					mui.openWindow({
+						url: 'system_notice.html',
+						id: 'message_chat_list',
+						waiting: {
+							autoShow: true, //自动显示等待框，默认为true
+							title: '正在加载...' //等待对话框上显示的提示内
+						}
+					})
+				} else if(obj == 5) {
+
+					mui.openWindow({
+						url: '../evaluate.html',
+						id: 'evalute_1',
+						waiting: {
+							autoShow: true, //自动显示等待框，默认为true
+							title: '正在加载...' //等待对话框上显示的提示内
+						},
+						extras: {
+							type: 1
+						}
+					})
+				} else if(obj == 6) {
+
+					mui.openWindow({
+						url: '../evaluate.html',
+						id: 'evalute_2',
+						waiting: {
+							autoShow: true, //自动显示等待框，默认为true
+							title: '正在加载...' //等待对话框上显示的提示内
+						},
+						extras: {
+							type: 2
+						}
+					})
+				}
+			}
+		</script>
+	</body>
+
+</html>

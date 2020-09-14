@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>搜索 触屏版</title>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/stylesheet.css" />
+		<style type="text/css">
+			.search-header div span {
+				top: 0.0062963rem;
+				display: inline-block;
+				width: 1.15555556rem;
+				height: 1.15555556rem;
+			}
+			
+			.search-icon .hisicon .del {
+				display: inline-block;
+				float: right;
+				width: 1.41481481rem;
+				height: 1.51851852rem;
+				top: -1.5rem;
+				position: relative;
+				right: 0.3rem;
+				margin: 0;
+			}
+			/*重写搜索栏的样式*/
+			
+			.search-header div {
+				width: 80%;
+			}
+			
+			.search-header .mui-action-back img {
+				display: inline-block;
+				width: 0.9rem;
+				height: 0.9rem;
+				margin-right: 0.14814815rem;
+				top: -0.1rem;
+				position: relative;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="search-header">
+			<a class="back mui-action-back">
+				<img src="../images/cleaning-back.png" />
+			</a>
+
+			<div>
+				<a>
+					<input type="text" class="searchText" placeholder="找服务" />
+					<span id="delete"></span>
+				</a>
+			</div>
+
+			<a class="mui-action-back"><em>取消</em></a>
+		</header>
+
+		<section class="mui-content search-icon">
+			<div class="hoticon">
+				<h4>大家都在搜</h4>
+				<div>
+
+				</div>
+			</div>
+			<script type="text/html" id="index-hoticon">
+				<% if(code == 200){ %>
+				<% for(var i=0;i<datas.class_list.length;i++){ %>
+				<span><%= datas.class_list[i].gc_name %></span>
+				<% } %>
+				<% } %>
+			</script>
+			<div class="hisicon">
+				<h4>历史搜索</h4>
+				<p class="del">
+					<strong></strong>
+				</p>
+				<div id="j_content" class="content">
+
+				</div>
+			</div>
+		</section>
+
+		<script type="text/javascript" src="../js/hotcss.js"></script>
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/template.js"></script>
+		<script type="text/javascript" src="../js/config.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<script type="text/javascript" src="../js/tmpl/search.js"></script>
+
+	</body>
+
+</html>

@@ -1,0 +1,461 @@
+// 
+// 
+// 
+
+@designWidth : 1080;
+// hotcss px2rem function
+.function{
+	.px2rem(@px){
+		return : unit(@px*320/@designWidth/20 , rem);
+	}
+
+    .scale(@px) {
+        return : unit(@px/@scale,rem);
+    }
+}
+
+
+@normal     :       1;
+@hotcss     :       2;
+@rem        :       3;
+@px         :       4;
+@per        :       5;
+
+@scale      :       40;
+
+// width 
+.width( @param: 100% ) {
+    width: @param;
+}
+
+.width( @param , @type ) when ( @type = @normal ) {
+    width: @param;
+}
+
+.width( @param , @type ) when ( @type = @hotcss ) {
+    width: px2rem( @param );
+}
+
+.width( @param , @type ) when ( @type = @rem ) {
+    width: scale( @param );
+}
+
+.width( @param , @type ) when ( @type = @px ) {
+    width: unit( @param , px );
+}
+
+.width( @param , @type ) when ( @type = @per ) {
+    width: unit( @param , % );
+}
+
+// height
+.height( @param: 100% ) {
+    height: @param;
+}
+
+.height( @param , @type ) when ( @type = @normal ) {
+    height: @param;
+}
+
+.height( @param , @type ) when ( @type = @hotcss ) {
+    height: px2rem( @param );
+}
+
+.height( @param , @type ) when ( @type = @rem ) {
+    height: scale( @param );
+}
+
+.height( @param , @type ) when ( @type = @px ) {
+    height: unit( @param , px );
+}
+
+.height( @param , @type ) when ( @type = @per ) {
+    height: unit( @param , % );
+}
+
+// line-height
+.lh( @param: 1 ) {
+    line-height: @param;
+}
+
+.lh( @param , @type ) when ( @type = @normal ) {
+    line-height: @param;
+}
+
+.lh( @param , @type ) when ( @type = @hotcss ) {
+    line-height: px2rem( @param );
+}
+
+.lh( @param , @type ) when ( @type = @rem ) {
+    line-height: scale( @param );
+}
+
+.lh( @param , @type ) when ( @type = @px ) {
+    line-height: unit( @param , px );
+}
+
+
+// font-size
+.fs( @param: 12px ) {
+    font-size: @param;
+}
+
+.fs( @param , @type ) when ( @type = @normal ) {
+    font-size: @param;
+}
+
+.fs( @param , @type ) when ( @type = @hotcss ) {
+    font-size: px2rem( @param );
+}
+
+.fs( @param , @type ) when ( @type = @rem ) {
+    font-size: scale( @param );
+}
+
+.fs( @param , @type ) when ( @type = @px ) {
+    font-size: unit( @param , px );
+}
+
+// top
+.top( @param: 0 ) {
+    top: @param;
+}
+
+.top( @param , @type ) when ( @type = @normal ) {
+    top: @param;
+}
+
+.top( @param , @type ) when ( @type = @hotcss ) {
+    top: px2rem( @param );
+}
+
+.top( @param , @type ) when ( @type = @rem ) {
+    top: scale( @param );
+}
+
+.top( @param , @type ) when ( @type = @px ) {
+    top: unit( @param , px );
+}
+
+.top( @param , @type ) when ( @type = @per ) {
+    top: unit( @param , % );
+}
+
+// left
+.left( @param: 0 ) {
+    left: @param;
+}
+
+.left( @param , @type ) when ( @type = @normal ) {
+    left: @param;
+}
+
+.left( @param , @type ) when ( @type = @hotcss ) {
+    left: px2rem( @param );
+}
+
+.left( @param , @type ) when ( @type = @rem ) {
+    left: scale( @param );
+}
+
+.left( @param , @type ) when ( @type = @px ) {
+    left: unit( @param , px );
+}
+
+.left( @param , @type ) when ( @type = @per ) {
+    left: unit( @param , % );
+}
+
+// right
+.right( @param: 0 ) {
+    right: @param;
+}
+
+.right( @param , @type ) when ( @type = @normal ) {
+    right: @param;
+}
+
+.right( @param , @type ) when ( @type = @hotcss ) {
+    right: px2rem( @param );
+}
+
+.right( @param , @type ) when ( @type = @rem ) {
+    right: scale( @param );
+}
+
+.right( @param , @type ) when ( @type = @px ) {
+    right: unit( @param , px );
+}
+
+.right( @param , @type ) when ( @type = @per ) {
+    right: unit( @param , % );
+}
+
+// bottom
+.bottom( @param: 0 ) {
+    bottom: @param;
+}
+
+.bottom( @param , @type ) when ( @type = @normal ) {
+    bottom: @param;
+}
+
+.bottom( @param , @type ) when ( @type = @hotcss ) {
+    bottom: px2rem( @param );
+}
+
+.bottom( @param , @type ) when ( @type = @rem ) {
+    bottom: scale( @param );
+}
+
+.bottom( @param , @type ) when ( @type = @px ) {
+    bottom: unit( @param , px );
+}
+
+.bottom( @param , @type ) when ( @type = @per ) {
+    bottom: unit( @param , % );
+}
+
+// margin
+.margin( @param:0 auto ) {
+    margin: @param;
+}
+
+
+// padding
+.padding( @param: 0 ) {
+    padding: @param;
+}
+
+// top
+.mt( @param: 0 ) {
+    margin-top: @param;
+}
+
+.mt( @param , @type ) when ( @type = @normal ) {
+    margin-top: @param;
+}
+
+.mt( @param , @type ) when ( @type = @hotcss ) {
+    margin-top: px2rem( @param );
+}
+
+.mt( @param , @type ) when ( @type = @rem ) {
+    margin-top: scale( @param );
+}
+
+.mt( @param , @type ) when ( @type = @px ) {
+    margin-top: unit( @param , px );
+}
+
+.mt( @param , @type ) when ( @type = @per ) {
+    margin-top: unit( @param , % );
+}
+
+// left
+.ml( @param: 0 ) {
+    margin-left: @param;
+}
+
+.ml( @param , @type ) when ( @type = @normal ) {
+    margin-left: @param;
+}
+
+.ml( @param , @type ) when ( @type = @hotcss ) {
+    margin-left: px2rem( @param );
+}
+
+.ml( @param , @type ) when ( @type = @rem ) {
+    margin-left: scale( @param );
+}
+
+.ml( @param , @type ) when ( @type = @px ) {
+    margin-left: unit( @param , px );
+}
+
+.ml( @param , @type ) when ( @type = @per ) {
+    margin-left: unit( @param , % );
+}
+
+// right
+.mr( @param: 0 ) {
+    margin-right: @param;
+}
+
+.mr( @param , @type ) when ( @type = @normal ) {
+    margin-right: @param;
+}
+
+.mr( @param , @type ) when ( @type = @hotcss ) {
+    margin-right: px2rem( @param );
+}
+
+.mr( @param , @type ) when ( @type = @rem ) {
+    margin-right: scale( @param );
+}
+
+.mr( @param , @type ) when ( @type = @px ) {
+    margin-right: unit( @param , px );
+}
+
+.mr( @param , @type ) when ( @type = @per ) {
+    margin-right: unit( @param , % );
+}
+
+// bottom
+.mb( @param: 0 ) {
+    margin-bottom: @param;
+}
+
+.mb( @param , @type ) when ( @type = @normal ) {
+    margin-bottom: @param;
+}
+
+.mb( @param , @type ) when ( @type = @hotcss ) {
+    margin-bottom: px2rem( @param );
+}
+
+.mb( @param , @type ) when ( @type = @rem ) {
+    margin-bottom: scale( @param );
+}
+
+.mb( @param , @type ) when ( @type = @px ) {
+    margin-bottom: unit( @param , px );
+}
+
+.mb( @param , @type ) when ( @type = @per ) {
+    margin-bottom: unit( @param , % );
+}
+
+
+// top
+.pt( @param: 0 ) {
+    padding-top: @param;
+}
+
+.pt( @param , @type ) when ( @type = @normal ) {
+    padding-top: @param;
+}
+
+.pt( @param , @type ) when ( @type = @hotcss ) {
+    padding-top: px2rem( @param );
+}
+
+.pt( @param , @type ) when ( @type = @rem ) {
+    padding-top: scale( @param );
+}
+
+.pt( @param , @type ) when ( @type = @px ) {
+    padding-top: unit( @param , px );
+}
+
+.pt( @param , @type ) when ( @type = @per ) {
+    padding-top: unit( @param , % );
+}
+
+// left
+.pl( @param: 0 ) {
+    padding-left: @param;
+}
+
+.ml( @param , @type ) when ( @type = @normal ) {
+    padding-left: @param;
+}
+
+.pl( @param , @type ) when ( @type = @hotcss ) {
+    padding-left: px2rem( @param );
+}
+
+.pl( @param , @type ) when ( @type = @rem ) {
+    padding-left: scale( @param );
+}
+
+.pl( @param , @type ) when ( @type = @px ) {
+    padding-left: unit( @param , px );
+}
+
+.pl( @param , @type ) when ( @type = @per ) {
+    padding-left: unit( @param , % );
+}
+
+// right
+.pr( @param: 0 ) {
+    padding-right: @param;
+}
+
+.pr( @param , @type ) when ( @type = @normal ) {
+    padding-right: @param;
+}
+
+.pr( @param , @type ) when ( @type = @hotcss ) {
+    padding-right: px2rem( @param );
+}
+
+.pr( @param , @type ) when ( @type = @rem ) {
+    padding-right: scale( @param );
+}
+
+.pr( @param , @type ) when ( @type = @px ) {
+    padding-right: unit( @param , px );
+}
+
+.pr( @param , @type ) when ( @type = @per ) {
+    padding-right: unit( @param , % );
+}
+
+// bottom
+.pb( @param: 0 ) {
+    padding-bottom: @param;
+}
+
+.pb( @param , @type ) when ( @type = @normal ) {
+    padding-bottom: @param;
+}
+
+.pb( @param , @type ) when ( @type = @hotcss ) {
+    padding-bottom: px2rem( @param );
+}
+
+.pb( @param , @type ) when ( @type = @rem ) {
+    padding-bottom: scale( @param );
+}
+
+.pb( @param , @type ) when ( @type = @px ) {
+    padding-bottom: unit( @param , px );
+}
+
+.pb( @param , @type ) when ( @type = @per ) {
+    padding-bottom: unit( @param , % );
+}
+
+
+// mixins
+.square( @param: 100% ) {
+    .width( @param );
+    .height( @param );
+}
+
+.square( @param , @type ) when ( @type = @normal ) {
+    .width( @param , 1 );
+    .height( @param , 1 );
+}
+
+.square( @param , @type ) when ( @type = @hotcss ) {
+    .width( @param , 2 );
+    .height( @param , 2 );
+}
+
+.square( @param , @type ) when ( @type = @rem ) {
+    .width( @param , 3 );
+    .height( @param , 3 );
+}
+
+.square( @param , @type ) when ( @type = @px ) {
+    .width( @param , 4 );
+    .height( @param , 4 );
+}
+
+.square( @param , @type ) when ( @type = @per ) {
+    .width( @param , 5 );
+    .height( @param , 5 );
+}

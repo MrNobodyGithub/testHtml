@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>选择地图</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/common.css" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/map.css" rel="stylesheet"  />
+	</head>
+	<body>
+		<div id="loading">
+			<div class="spinner">
+				<div class="rect1"></div>
+				<div class="rect2"></div>
+				<div class="rect3"></div>
+				<div class="rect4"></div>
+				<div class="rect5"></div>
+			</div>
+			<div class="mui-tips" style="position: absolute;top: 54%;left: 40%;color: #fff;">地图加载中...</div>
+		</div>
+		<header class="common-header runmaph common-header-yellow">
+			<h1>地图</h1>
+			<a class="icon-back" href="javascript: history.go(-1);"></a>
+		</header>
+		<section class="mui-content">
+			<div class="mui-input-row own-search">
+			    <form><input type="search" id="suggestId" name="suggestId" class="mui-input-clear" placeholder="请输入小区名称或者首字母进行查找"  onfocus='this.value=""'></form>
+			</div>
+			<div id="l-map" style="text-align: center;vertical-align: middle; display: none;">地图加载中...</div>
+			<div class="map-list" style="min-height: 600px;display: none;">
+				<ul>
+					
+				</ul>
+			</div>
+		</section>
+		<footer class="mui-bar-footer">
+			<a href="javascript: history.go(-1);">确认选择</a>
+		</footer>
+		
+		<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.0&key=ee25630e3900f5c031f5881aef6e121b"></script>
+		<script src="http://webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/config.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<script src="../js/common/address_select_map.js"></script>
+	</body>
+	<script>
+		
+	</script>
+</html>

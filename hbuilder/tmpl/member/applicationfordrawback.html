@@ -1,0 +1,471 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>申请退款</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/stylesheet.css" />
+		<style>
+			body {
+				background-color: #F7F7F7 !important;
+			}
+			
+			.mui-content {
+				background-color: #ffffff;
+				font-size: 0.59999999rem;
+			}
+			
+			.footer-btn~.mui-content {
+				margin-bottom: 1.98518519rem;
+				padding-bottom: 0;
+			}
+			
+			.footer-btn .btn-yellow {
+				background-color: #F4415E;
+			}
+			
+			.boundary {
+				height: 0.5rem;
+				background-color: #F7F7F7;
+			}
+			
+			.mui-content .main-list li {
+				height: 2rem;
+				line-height: 2rem;
+				margin: 0 0.5rem;
+				border-bottom: 0.02962963rem solid #e6e6e8;
+			}
+			
+			.mui-content .main-list .list-title img {
+				height: 2rem;
+				width: 2rem;
+				line-height: 2rem;
+				float: left;
+				margin-top: -0.2rem;
+			}
+			
+			.mui-content .main-list .list-title span {
+				margin-left: 0.5rem;
+			}
+			
+			.mui-content .main-list .list-why img {
+				height: 0.8rem;
+				line-height: 0.8rem;
+				margin-top: 0.6rem;
+			}
+			
+			.mui-content .main-list .list-why img.why {
+				float: left;
+			}
+			
+			.mui-content .main-list .list-why img.cleaning-right {
+				height: 0.6rem;
+				line-height: 0.6rem;
+				margin-top: 0.7rem;
+				float: right;
+			}
+			
+			.mui-content .main-list .list-why span {
+				margin-left: 0.5rem;
+			}
+			
+			.mui-content .main-list .list-price img {
+				height: 0.8rem;
+				line-height: 0.8rem;
+				margin-top: 0.6rem;
+				float: left;
+			}
+			
+			#content {
+				float: right;
+				margin-right: 0.5rem;
+				width: 7rem;
+				text-align: right;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 1;
+				-webkit-box-orient: vertical;
+			}
+			
+			.mui-content .main-list .list-price .num {
+				float: right;
+				color: #656565;
+				height: 1.9rem;
+				line-height: 1.9rem;
+				border: 0;
+				font-size: 0.59999999rem;
+				text-align: right;
+				width: inherit;
+			}
+			
+			.mui-content .main-list .list-price .txt {
+				margin-left: 0.5rem;
+			}
+			
+			.mui-content .main-list .list-explain {
+				height: 5rem;
+				border: 0;
+			}
+			
+			.mui-content .main-list .list-explain img {
+				height: 0.8rem;
+				line-height: 0.8rem;
+				float: left;
+				margin-top: 0.5rem;
+			}
+			
+			.mui-content .main-list .list-explain .textarea {
+				height: 3.4rem;
+				margin-top: 0.8rem;
+				margin-left: 1.3rem;
+			}
+			
+			.mui-content .main-list .list-explain textarea {
+				font-size: 0.5rem;
+				height: 4.4rem;
+				padding: 0.5rem;
+				line-height: 0.8rem;
+			}
+			
+			.mui-content .main-list .list-pic {
+				border-bottom: 0;
+				background-color: #FFFFFF;
+				height: auto;
+				width: 100%;
+				margin: 0;
+			}
+			
+			.mui-content .main-list .list-pic .txt {
+				color: #A0A0A0;
+				font-size: 0.5rem;
+				margin: 0 0.5rem;
+			}
+			/*提取wap樣式*/
+			
+			.addimg {
+				background: url(../../images/mearchcamera.png) no-repeat center;
+				background-size: 3.52222222rem;
+				width: 3.52222222rem;
+				height: 3.52222222rem;
+				margin-top: 0;
+				float: left;
+				margin-bottom: 1rem;
+				-webkit-box-flex: 0;
+				-ms-flex: 0 0 33.3%;
+				flex: 0 0 33.3%;
+				margin-top: 10px;
+			}
+			
+			.addimg input {
+				border: 0;
+				opacity: 0;
+				z-index: 2;
+				left: 0;
+			}
+			
+			.addimg img {
+				width: 3.52222222rem;
+				height: 3.52222222rem;
+			}
+			/*上传图片区域样式*/
+			
+			.perdiv {
+				border-bottom: 0;
+				display: inline;
+			}
+			
+			.perdiv .active11 img {
+				width: 3.52222222rem;
+				height: 3.52222222rem;
+			}
+			/*弹出菜单样式*/
+			/*9、弹出菜单区域*/
+			
+			.mui-popover-arrow {
+				display: none;
+			}
+			
+			.mui-popover {
+				bottom: 0 !important;
+				top: inherit !important;
+				width: 100%;
+				left: 0 !important;
+				border-radius: 0;
+				background-color: #FFFFFF;
+			}
+			
+			.mui-popover .mui-table-view {
+				max-height: none;
+			}
+			
+			.mui-popover .delivery {
+				height: 2rem;
+				line-height: 2rem;
+				text-align: center;
+				font-size: 0.59999999rem;
+			}
+			
+			.mui-popover ul li {
+				height: 2rem;
+				line-height: 1.5rem;
+				text-align: center;
+				font-size: 0.59999999rem;
+				background-color: #FFFFFF;
+			}
+			
+			.mui-popover .bottom {
+				height: 50px;
+				width: 100%;
+				position: absolute;
+				bottom: 0;
+				line-height: 50px;
+				text-align: center;
+				color: #FFFFFF;
+				background-color: #FF6B00;
+				font-size: 18px;
+			}
+			
+			.block {
+				display: block;
+			}
+			/*上传照片的删除按钮*/
+			
+			.perdiv {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+				text-align: center;
+			}
+			
+			.active11 {
+				position: relative;
+				-webkit-box-flex: 0;
+				-ms-flex: 0 0 33.3%;
+				flex: 0 0 33.3%;
+				margin-top: 10px;
+			}
+			
+			.del-img3 {
+				position: absolute;
+				top: -0.3rem;
+				right: 0.4rem;
+				width: 0.59259259rem;
+				height: 0.59259259rem;
+				background: url(../../images/reg-del.png) no-repeat left;
+				background-size: 0.51851852rem;
+			}
+		</style>
+	</head>
+
+	<body class="bg2">
+		<header class="common-header ">
+			<a class="icon-back mui-action-back"></a>
+			<h1>申请退款</h1>
+		</header>
+		<footer class="footer-btn">
+			<a class="btn-yellow">申请退款</a>
+		</footer>
+
+		<div class="mui-content">
+			<div class="boundary"></div>
+			<ul class="main-list">
+				<li id="JorderInfo" class="list-title">
+
+					<img id="j_img" src="" alt="">
+					<span id="j_title"></span>
+				</li>
+				<li class="list-why">
+					<a href="#bottomPopover" class="block">
+						<img class="why" src="../../images/cleaning/why.png" alt="">
+						<span>退款原因</span>
+						<img class="cleaning-right" src="../../images/cleaning-right.png" />
+						<span id="content"></span>
+					</a>
+				</li>
+				<li class="list-price">
+					<img class="price" src="../../images/cleaning/Cleaning2.png" alt="">
+					<span class="txt">退款金额</span>
+					<input class="num" id="price" align="right" type="number"></input>
+				</li>
+				<li class="list-explain">
+					<img src="../../images/cleaning/Cleaning3.png" alt="">
+					<div class="textarea">
+						<textarea rows="3" id="mark" placeholder="添加备注说明"></textarea>
+					</div>
+				</li>
+				<li class="list-pic">
+					<div class="txt">上传照片(最多10张)</div>
+					<div class="perdiv">
+						<div class="addimg addimgother1">
+							<form id="form7" method="post">
+								<input type="file" class="addimg7" name="refund_pic" id="default_pic7" />
+								<input type="hidden" name="name" value="refund_pic" />
+							</form>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--弹出菜单-->
+
+		<div id="bottomPopover" class="mui-popover">
+			<div class="mui-popover-arrow"></div>
+			<ul class="mui-table-view  aapopover">
+				<!--<li class="mui-table-view-cell mui-radio mui-right">
+					测试数据一
+				</li>
+				<li class="mui-table-view-cell mui-radio mui-right">
+					测试数据二
+				</li>
+				<li class="mui-table-view-cell mui-radio mui-right">
+					测试数据三
+				</li>
+				<li class="mui-table-view-cell mui-radio mui-right">
+					测试数据四
+				</li>-->
+				<script type="text/html" id="order-item">
+					<% for(var i = 0; i< list.length; i++ ){ %>
+					<li class="mui-table-view-cell mui-radio mui-right" data="<%= list[i].reason_id%>">
+						<%= list[i].reason_info  %>
+					</li>
+					<%
+		                }
+		            %>
+				</script>
+			</ul>
+		</div>
+
+		<script src="../../js/hotcss.js"></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/jquery.form.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/config.js"></script>
+		<script src="../../js/common.js"></script>
+		<script src="../../js/template.js"></script>
+		<script src="../../js/tmpl/applicationfordrawback.js"></script>
+		<script type="text/javascript">
+			mui.plusReady(function() {
+				//1.弹出菜单的关闭事件
+				var $reason_id = 0;
+				var $reason_info = 0;
+				mui("#bottomPopover").on('tap', 'li', function() {
+					$reason_id = $(this).attr('data');
+					$reason_info = $(this).text();
+					console.log($reason_info);
+					$('#content').html($reason_info);
+					mui('#bottomPopover').popover('toggle'); //关闭弹出菜单
+				});
+
+				//
+				var $key = _.userInfo.getKey();
+				//console.log($key);
+				//2.1 接收列表页传递的派车单ID
+				var webview = plus.webview.currentWebview();
+				var orderId = webview.orderId; //1124; 
+				var img = webview.img;
+				var title = webview.title;
+				var $buy = ApiUrl + '/index.php?act=service_refund_reason&op=list';
+				var $orderUrl = ApiUrl + '/index.php?act=service_member_refund&op=refund_all_form';
+
+				console.log(orderId);
+				console.log(img);
+				console.log(title);
+				$('#j_img').attr("src", img);
+				$('#j_title').html(title);
+
+				function reasonList(url, param) {
+					var $load = true,
+						$data = {};
+
+					_.data.send(url, 'get', $load, $data, function(data) {
+
+						if(data.code == 200) {
+							var $list = template.render('order-item', data.datas);
+							//console.log(data);
+							$('#bottomPopover .aapopover').html($list);
+						} else {
+							mui.alert(data.datas.error);
+						}
+					})
+				}
+
+				//点击进入详情
+				$(".btn-yellow").on("tap", function() {
+
+					var str4 = new Array();
+					for(var i = 0; i < $(".active11").length; i++) {
+						//	str4 += $(".active11").eq(i).find("img").attr("src") + ","
+						str4[i] = $(".active11").eq(i).find("img").attr("src");
+						//var $str2 = str4.substring(0, str4.length - 1)
+						//console.log(str4)
+					}
+
+					//alert(typeof(str4));
+
+					if($('#price').val() == '') {
+						mui.alert('请输入退款金额');
+						return false;
+					}
+
+					if($('#mark').val() == '') {
+						mui.alert('请填写备注说明');
+						return false;
+					}
+
+					// 变量start
+					var $price = $('#price').val(),
+						$mark = $('#mark').val();
+					console.log('post_ready');
+					$.ajax({
+						type: "post",
+						url: ApiUrl + "/index.php?act=service_member_refund&op=refund_part_post",
+						dataType: "json",
+						async: true,
+						data: {
+							key: $key,
+							order_id: orderId,
+							buyer_message: $mark,
+							refund_amount: $price,
+							reason_id: $reason_id,
+							reason_info: $reason_info,
+							refund_pic: str4
+						},
+						success: function(res) {
+							console.log(res);
+							//console.log(JSON.stringify(res));
+							if(res.code == 400) {
+								mui.alert(res.datas.error);
+								return false;
+							}
+
+							if(res.code == 200) {
+								mui.toast(res.datas.message);
+
+								console.log(res);
+							}
+						},
+						error: function(xhr) {
+
+							console.log(JSON.stringify(xhr));
+						}
+					});
+				});
+
+				reasonList($buy);
+			});
+		</script>
+	</body>
+
+</html>

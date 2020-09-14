@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<!--
+	作者：13706342556@163.com
+	时间：2017-06-25
+	描述：
+-->
+	<head>
+		<meta charset="UTF-8">
+		<title>全部评论</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/stylesheet.css" />
+	</head>
+	<style type="text/css">
+		.product-info .photo{
+			float: left;
+			margin:0.5rem;
+		}
+		.product-info .photo img{
+			width:2rem;
+		}
+		.product-info .icon-type2{
+			float: left;
+		}
+		.product-info p{
+			font-size: 30px;
+		}
+		.additional{
+			width:75%;
+			height:auto;
+			float:right;
+			margin-right: 0.5rem;
+			background:rgba(220,220,220,0.5) ;
+			border-radius:0.2rem;
+			margin-top: 0.2rem;
+			padding:0.2rem;
+			font-family: "微软雅黑";
+			font-size: 0.4rem;
+		}
+		.contant h2{
+			font-size:0.5rem;
+		}
+		.contant p{
+			font-size: 0.4rem;
+		}
+	</style>
+	<body id="month-detail">
+		<header class="common-header">
+			<a class="icon-back mui-action-back"></a>
+			<h1>全部评论</h1>
+		</header>
+
+		<section class="mui-content layout nannyDetail">
+			<div class="commentList-content">
+				<div class="store-list">
+				
+				</div>
+			</div>
+			
+			
+		</section>
+			<script type="text/html" id="store_list">
+				<% if(code == 200){ %>
+					<% if(datas.goods_eval_list != ''){ %>
+						<% for(var i = 0;i < datas.goods_eval_list.length;i++){ %>
+							<div class="product-info mui-clearfix store-d" style="padding: 20px;border-bottom: 1px solid #E1E1E1;background-color: #fff;">
+								<div class="photo">
+									<img src="<%= datas.goods_eval_list[i].member_avatar %>" alt="">
+								</div>
+								<div class="contant" style="padding-left: 180px;">
+									<h2 style="line-height: 60px;"><%= datas.goods_eval_list[i].geval_frommembername %></h2>
+				                    <p><%= datas.goods_eval_list[i].geval_content  %></p>   
+								</div>
+								
+								<% if(datas.goods_eval_list[i].geval_content_again  != ''){ %>
+				                    <div class="additional">
+				                    	<span>追加评价：
+					                    		<lable><%= datas.goods_eval_list[i].geval_content_again %></lable>
+				                    	</span>
+				                    </div>
+								<% } %>
+							</div>
+						<% } %>
+					<% }else{ %>
+						<div style="text-align: center; margin: 0 auto;width: 100%;padding-top:60px;"><img src="../images/ucenter/nodata-error.png" style="margin: auto;" /></div>
+						<div style="text-align:center;font-size: 0.5rem;padding-bottom: 40px;">暂无数据</div>
+					<% } %>
+				<% } %>
+			</script>
+			
+	<script src="../js/hotcss.js" ></script>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/mui.min.js"></script>
+	<script src="../js/template.js"></script>
+	<script src="../js/jquery.zdatepicker.js"></script>
+	<script type="text/javascript" src="../js/dropload.min.js" ></script>
+	<script type="text/javascript" src="../js/config.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script src="../js/tmpl/comment-detail-list.js"></script>
+	</body>
+
+</html>

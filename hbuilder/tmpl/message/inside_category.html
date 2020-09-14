@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>站内信 触屏版</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body class="white">
+		<!--ucenter-->
+		<header class="mui-bar mui-bar-nav">
+
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">消息</h1>
+
+		</header>
+
+		<div class="mui-content">
+			<ul class="mui-table-view">
+			    <li class="mui-table-view-cell" onclick="inside(1)">买家消息
+			        <span class="mui-badge mui-badge-primary" id="inside">0</span>
+			    </li>
+			    <li class="mui-table-view-cell" onclick="inside(2)">卖家消息
+			        <span class="mui-badge mui-badge-success" id="news">0</span>
+			    </li>
+			</ul>
+		</div>
+	<script src="../../js/jquery.min.js"></script>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/config.js"></script>
+	<script src="../../js/common.js"></script>
+	<script type="text/javascript">
+
+		var key = _.userInfo.getKey();
+        $.ajax({
+            url: ApiUrl + '/index.php?act=member_msglist&op=msg_count',
+            data: {
+                'key':key
+            },
+            async: true, // 异步 || 同步
+            dataType: 'json',
+            type: 'post',
+            timeout: 10000,
+            success: function(data) {
+                if(data.code == 200){
+                    $('#inside').html(data.datas.buyers_count);
+                    $('#news').html(data.datas.seller_count);
+                }else{
+                    mui.toast('消息获取异常，请联系系统管理员！',{ duration:'long', type:'div' });
+				}
+            },
+            error: function(xhr, type, errorThrown) {
+                // 请求失败
+            }
+        });
+	
+	</script>
+		<script type="text/javascript">
+			mui.init();
+			function  inside(obj) {
+                mui.openWindow({
+                    url: 'inside_letter.html?identity='+obj,
+                    id: 'message_list',
+                    waiting: {
+                        autoShow: true, //自动显示等待框，默认为true
+                        title: '正在加载...' //等待对话框上显示的提示内
+                    }
+                })
+            }
+		</script>
+	</body>
+
+</html>

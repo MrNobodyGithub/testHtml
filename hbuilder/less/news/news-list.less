@@ -1,0 +1,95 @@
+@import '../config.less';
+@import '../api/api-webkit.less';
+@import '../api/api-common.less';
+@import '../api/api-size.less';
+
+
+@pay1    :   selected;
+
+//保洁
+.todayHeadlines{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    background:#fff;
+     
+    .todayHeadlines-content{
+        flex: 1;
+        
+            .todayHeadlines-margin{
+               .height(287,2);
+               margin-top: px2rem(50);  
+               margin-left: px2rem(30);
+               margin-right: px2rem(30);  
+               border-bottom: px2rem(2) solid #e6e6e8;
+               position: relative;
+               .df;
+               h3{
+                   .lh(60,2);
+               }
+               a{
+                   margin-left: px2rem(40);
+               }
+            }
+            
+            .todayHeadlines-img{
+                .db;
+                .width(245,2);
+                .height(245,2);
+                
+                img {
+                    .db;
+                    .width;
+                    .height;
+                }
+            }
+            
+            h3{
+                .fs(38,2);
+                color: rgb(51, 51, 51);
+                display:block;
+                white-space:nowrap; 
+                overflow:hidden; 
+                text-overflow:ellipsis;
+                
+            }
+            
+            p{
+               .fs(28,2);
+               .width(660,2);
+               .lh(45,2);
+                color: rgb(166, 166, 166); 
+                margin-top: px2rem(35); 
+            }
+            .todayHeadlines-position{
+                position: absolute;
+                right: px2rem(60);
+                bottom: px2rem(55);
+                
+               .todayHeadlines-icon{
+                .db;
+                .width(35,2);
+                .height(32,2);
+                background: url(../img/todayHeadlines/today-icon_03.png) ;
+                background-size: px2rem(35) px2rem(32);
+                
+                   
+                } 
+                
+             span{
+                    .fs(28,2);
+                    color: rgb(166, 166, 166);
+                    margin-left: px2rem(10);
+                }
+                
+            }
+            
+            
+            
+            
+        }
+
+      }
+
+
+

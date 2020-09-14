@@ -1,0 +1,137 @@
+.search-header {
+  height: 1.98518519rem;
+  padding-left: 0.59259259rem;
+  background: #fff;
+}
+.search-header div {
+  display: inline-block;
+  width: 89%;
+  position: relative;
+}
+.search-header div input {
+  width: 100%;
+  height: 1.15555556rem;
+  line-height: 1.15555556rem;
+  padding-left: 1.21481481rem;
+  font-size: 0.44444444rem;
+  border: 0;
+  border-radius: 0.59259259rem;
+  background: url(../images/search.png) no-repeat 0.2962963rem center #f8f8f8;
+  background-size: 0.57777778rem 0.57777778rem;
+}
+.search-header div span {
+  display: block;
+  width: 0.51851852rem;
+  height: 0.51851852rem;
+  background: url(../images/my/guanbi.png) no-repeat center center;
+  background-size: 0.51851852rem 0.51851852rem;
+  position: absolute;
+  right: 0.44444444rem;
+  top: 0.2962963rem;
+}
+.search-header img {
+  display: block;
+  width: 1.00740741rem;
+  height: 1.00740741rem;
+}
+.search-header em {
+  display: inline-block;
+  margin-left: 0.22222222rem;
+  font-size: 0.45925926rem;
+  line-height: 1.98518519rem;
+  font-style: normal;
+  color: #000000;
+}
+.search-header-1 {
+  height: 1.98518519rem;
+  padding-left: 0.44444444rem;
+  background: #fff;
+  padding-top: 0.44444444rem;
+}
+.search-header-1 div {
+  display: inline-block;
+  width: 89%;
+  position: relative;
+}
+.search-header-1 div input {
+  width: 100%;
+  height: 1.15555556rem;
+  line-height: 1.15555556rem;
+  padding-left: 1.21481481rem;
+  font-size: 0.44444444rem;
+  border: 0;
+  border-radius: 0.59259259rem;
+  background: url(../images/search.png) no-repeat 0.2962963rem center #f8f8f8;
+  background-size: 0.57777778rem 0.57777778rem;
+}
+.search-header-1 div span {
+  display: block;
+  width: 0.51851852rem;
+  height: 0.51851852rem;
+  background: url(../images/my/guanbi.png) no-repeat center center;
+  background-size: 0.51851852rem 0.51851852rem;
+  position: absolute;
+  right: 0.44444444rem;
+  top: 0.2962963rem;
+}
+.search-header-1 img {
+  display: inline-block;
+  width: 1.00740741rem;
+  height: 1.00740741rem;
+  margin-right: 0.14814815rem;
+}
+.search-icon {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: #fff;
+  padding-left: 0.72592593rem;
+  padding-top: 0.41481481rem;
+}
+.search-icon h4 {
+  font-weight: 400;
+  font-size: 0.57777778rem;
+  line-height: 1.51111111rem;
+  color: #333;
+}
+.search-icon .hoticon,
+.search-icon .hisicon {
+  position: relative;
+}
+.search-icon .hoticon strong,
+.search-icon .hisicon strong {
+  position: absolute;
+  right: 0.88888889rem;
+  top: 0.44444444rem;
+  background: url(../images/my/del1.png);
+  background-size: 0.41481481rem 0.51851852rem;
+  width: 0.41481481rem;
+  height: 0.51851852rem;
+}
+.search-icon .hoticon div,
+.search-icon .hisicon div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.search-icon .hoticon div span,
+.search-icon .hisicon div span {
+  display: inline-block;
+  padding: 0.28148148rem 0.57777778rem;
+  border: 1px solid #e6e6e8;
+  border-radius: 0.59259259rem;
+  font-size: 0.42962963rem;
+  color: #333;
+  margin-top: 0.2962963rem;
+  margin-right: 0.34074074rem;
+}
+.search-icon .hoticon div .active,
+.search-icon .hisicon div .active {
+  border-color: #e6454a;
+  color: #e6454a;
+}
+.search-icon .hisicon {
+  margin-top: 0.81481481rem;
+}

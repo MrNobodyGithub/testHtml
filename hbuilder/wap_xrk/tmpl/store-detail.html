@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>店铺详情页</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/stylesheet.css" />
+</head>
+<style type="text/css">
+    .product-info {
+        /*padding: 10px;*/
+        display: flex;
+        align-items: center;
+    }
+    
+    .product-info .photo {
+        float: left;
+        height: 4rem;
+        width: 4rem;
+        /* margin-right: 30px; */
+        margin-right: .4rem;
+    }
+    
+    .product-info h2 {
+        line-height: 1.6;
+        font-size: .6rem;
+        color: #333;
+        margin-top: 0rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .product-info p {
+        /* margin-top: .2rem; */
+        font-size: .5rem; 
+        color: #999999;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .product-info p>span {
+        color: red;
+    }
+    
+    .product-info p.one {
+         margin-top: .3rem; 
+         display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow:hidden;   
+        text-overflow:ellipsis; 
+        height: 2.4em;
+        line-height: 1.2;
+    }
+    
+    .product-info .photo img {
+    	/* display: block; */
+        height: 100%; 
+        widows: 100%;
+    }
+
+    .contant{
+        -webkit-box-flex:1;
+        flex:1;
+    	/* width: 10rem;   */
+    }
+</style>
+
+<body id="month-detail">
+    <header class="common-header">
+
+        <a class="icon-back mui-action-back"></a>
+        <h1>店铺详情</h1>
+        <!--	2017.7.1张文君隐藏<a class="icon-share"></a>结束-->
+    </header>
+
+
+
+    <section class="mui-content layout nannyDetail">
+        <div class="store-top">
+
+        </div>
+        <div class="store-list">
+            <div class="mouth-white" style="margin-top: 20px;">
+                <p class="title" style="height:1.61481481rem;"><span></span>该服务商还提供以下服务</p>
+            </div>
+            <div class="list">
+
+            </div>
+        </div>
+
+    </section>
+    <script type="text/html" id="monthDetail">
+        <% if(code == 200){ %>
+            <!--swiper-->
+
+            <div class="swiper">
+                <img src="<%= datas.store_info.store_avatar %>" alt="">
+            </div>
+
+            <div class="detail-info">
+                <div class="product-item" style="display: block;">
+                    <div class="product-info" style="float: none;">
+                        <h2 class="icon-type1">
+                            <%= datas.store_info.store_name %>
+                        </h2>
+                    </div>
+                    <% var text = datas.store_info.store_credit_text.split(","); %>
+                        <div class="label">
+                            <% for(var i=0;i<text.length;i++){%>
+                                <small class="detail-ping"></small>
+                                <span style="line-height: 100px;color: #464646;"><%= text[i] %></span>
+                            <% } %>
+                        </div>
+                </div>
+                <!--<div class="bottom">
+					<a>查看服务商资料</a>
+				</div>		-->
+
+            </div>
+
+            <% } %>
+    </script>
+    <script type="text/html" id="store-list">
+
+        <% if(code == 200 && datas.goods_list!=""){ %>
+            <% for(var i = 0;i < datas.goods_list.length;i++){ %>
+                <div class="product-info mui-clearfix store-d" data-goods-id="<%= datas.goods_list[i].goods_id %>" data-detail-templet="<%= datas.goods_list[i].extend.app_detail_templet %>" style="border-bottom: 1px solid #E1E1E1;background-color: #fff;height: 6rem;padding: 0rem .5rem;">
+                    <div class="photo">
+                        <img src="<%= datas.goods_list[i].goods_image_url %>" alt="">
+                    </div>
+                    <div class="contant">
+                        <h2>
+                            <%= datas.goods_list[i].goods_name %>
+                        </h2>
+                        <p class="one">
+                            <%= datas.goods_list[i].goods_jingle %>
+                        </p>
+                        <p>已售<em style="color: orange;"><%= datas.goods_list[i].goods_salenum %></em>单</p>
+                        <p class="two">价格：<span>￥<%= datas.goods_list[i].goods_price %></span></p>
+                    </div>
+                </div> 
+                <!-- <div class="product-item" data-goods-id = "<%= datas.goods_list[i].goods_id %>" data-goods-id="<%= datas.goods_list[i].goods_id %>" data-detail-templet="<%= datas.goods_list[i].extend.app_detail_templet %>">
+                    <img src="<%= datas.goods_list[i].goods_image_url %>" alt="">
+					<div class="product-info">
+                        <h2 class="icon-type2" style="margin-top: 10px;">
+                            <a><%= datas.goods_list[i].goods_name %></a>
+                        </h2>
+						<div class="label">
+							<span style="text-overflow: ellipsis;overflow: hidden;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;"><%= datas.goods_list[i].goods_jingle %></span>
+							<span>服务过<em><%= datas.goods_list[i].goods_salenum %></em>户</span>
+						</div>
+						<div class="control mui-clearfix">
+							价格：<span style="margin-bottom: -20px;"><%= datas.goods_list[i].goods_price %></span>
+						</div>
+					</div>
+				</div> -->
+            <% } %>
+           
+        <% } %>
+
+    </script>
+
+    <script src="../js/hotcss.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/mui.min.js"></script>
+    <script type="text/javascript" src="../js/dropload.min.js"></script>
+    <script src="../js/template.js"></script>
+    <script src="../js/jquery.zdatepicker.js"></script>
+    <script type="text/javascript" src="../js/config.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script src="../js/tmpl/store-detail.js"></script>
+</body>
+
+</html>

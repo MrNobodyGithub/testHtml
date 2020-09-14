@@ -1,0 +1,118 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+@nodata         :       nodata;
+
+.@{nodata} {
+
+    span , 
+    a {
+        .db;
+    }
+
+
+    &-order ,
+    &-bid {
+        .nohave {
+            .db;
+            .margin( px2rem(357) auto px2rem(134) );
+            .pt( 299,2 );
+            .height( 30,2 );
+            .background( url(../img/ucenter/nodata-error.png) top center no-repeat );
+            .bs( px2rem(325) px2rem(299) );
+
+            .tac;
+            .fs( 30,2 );
+            .color( #949494 );
+        }
+
+        .make{
+            .db;
+            .margin( px2rem(135) auto );
+            .width( 377,2 );
+            .height( 89,2 );
+            .lh( 89,2 );
+            .tac;
+            .fs( 42,2 );
+            .color( #ec4556 );
+            border-radius: px2rem(45);
+            border: 2px solid #ec4556;
+        }
+        .history {
+                background: #fff;
+                border-bottom: 1px solid #F2F2F2;
+                .width;
+                .height(268,2);
+                .df;
+                justify-content:space-around;
+            .history-one{
+                .df;
+                flex-direction: column;
+                align-items: center;
+                padding-top: px2rem(62);
+                h1{
+                    padding-top: px2rem(58);
+                    .fs(48,2)
+                }
+                small{
+                    .fs(36,2);
+                    color: #959494;
+                }
+            }
+        }
+        .biao{
+            background: #fff;
+            .width;
+            .height(120,2);
+            .df;
+            justify-content:space-around;
+            position: relative;
+            border-bottom: 1px solid #F2F2F2;
+            strong{
+                .df;
+                flex-direction: column;
+                align-items: center;
+                padding-top: px2rem(40);
+                .fs(35,2);
+                font-style: normal;
+                font-weight:normal;
+                
+                small{
+                    .height(40,2);
+                    .width(3,2);
+                    background: #F2F2F2;
+                    position: absolute;
+                    top: px2rem(40);
+                    left: px2rem(240);
+                    .db;
+                    .fs(40,2);
+                    color: #959494;
+                }
+                
+                h1{
+                    .fs(40,2);
+                }
+            }
+            .jian{
+                background: url(../img/ucenter/jiantou.png) no-repeat px2rem(70) px2rem(50);
+                background-size: px2rem(25) px2rem(14);
+                padding-right: px2rem(40);
+                .fs(30,2);
+                color: #000000;
+            }
+            .active{
+                border-bottom: 1px solid #ea5404;
+                .width(255,2);
+                color:#ea5404;
+            }
+            .no{
+                color: #979797;
+            }
+        }    
+        
+    }
+
+    
+}

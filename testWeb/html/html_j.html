@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title> form </title>
+		<script type="text/javascript">
+			function btnActionA (){
+				alert("双引号 点击事件")
+			}
+		</script>
+	</head>
+
+	<body>
+		
+		<h3> 自整理</h3>
+		<p> form 输入类型 如下所示</p>
+		
+		
+		<hr />
+		<!--<pre>&lt;p&gt;This is a paragraph&lt;/p&gt; </pre>-->
+		<h3> 表单元素</h3>
+		<p> 0 input元素 1单选按钮 2复选框 3提交按钮</p>
+		<hr />
+
+		<form>
+			First name:<br>
+			<!--的默认宽度是 20 个字符-->
+			<input type="text" name="firstname">
+			<br> Last name:<br>
+			<input type="text" name="lastname">
+			<br />
+			<!--<input type="text" name="zzz" />-->
+		</form>
+		<hr />
+		<form>
+			<input type="radio" name="sex" value="male" checked="">Male
+			<br>
+			<input type="radio" name="sex" value="female">Female
+		</form>
+		<hr />
+		<form action="action_page.php">
+			First name:<br>
+
+			<input type="text" name="firstname" value="Mickey">
+			<br> Last name:<br>
+			<input type="text" name="lastname" value="Mouse">
+			<br><br>
+			<input type="submit" value="Submit">
+		</form>
+		<hr />
+		<h4> &lt;select&gt; 元素定义下拉列表：</h4>
+
+		<select name="people">
+			<option value="yellow">Y</option>
+			<option value="black" selected="selected">B</option>
+			<option value="white">W</option>
+		</select>
+		<hr />
+		
+		<h4> &lt;textarea> 元素定义多行输入字段（文本域）：</h4>
+		<textarea name="message" rows="3" cols="20">
+The cat was playing in the garden.
+		</textarea>
+		<hr />
+		<h4>&lt;button> 元素定义可点击的按钮：</h4>
+		<button type="button" onclick="alert('在双引号之内 只能用单引号 ')">on click! </button>
+		<button type="button" onclick="btnActionA()">btn action a</button>
+		<!--type button submit reset-->
+	</body>
+
+</html>

@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+	<!--
+		author: suiyi  date: 2017-06-23 11:21:50  version: 1.0
+	-->
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>登录 触屏版</title>
+		<link rel="stylesheet" type="text/css" href="../../css/mui.css">
+		<link rel="stylesheet" type="text/css" href="../../css/wap.css">
+		<style>
+			input {
+				-webkit-user-select: text;
+			}
+			.form-control ,
+			.form-control > input {
+				height: 2.01481481rem;
+				line-height: 2.01481481rem;
+			}
+			.form-control{
+				position: relative;
+			}		
+			/*显示隐藏密码图标样式*/
+			.eye_icon{
+				width: 1rem;
+				height: 1rem;
+				display: inline-block;
+				position: absolute; 
+				right: 0.8rem;
+				top:30%;
+				background: url(../../images/hide_pass.png) no-repeat center center;
+				background-size: 0.8rem 0.4rem;
+			}
+			.active_eye{
+				/*display: block;*/
+				background: url(../../images/show_pass.png) no-repeat center center;
+				background-size: 0.8rem 0.4rem;
+			}
+			
+			.form-login .login-ohter menu a.icon-wx{
+				background-image: url(../../images/form/weixin1.png);
+			}
+			.form-login .login-ohter menu a.icon-wx.active {
+			    background-image: url(../../images/form/type-wx.png);
+			}
+			.form-login .login-ohter menu a.icon-qq{
+				background-image: url(../../images/form/qq1.png);
+			}
+			.form-login .login-ohter menu a.icon-qq.active{
+				background-image: url(../../images/form/type-qq.png);
+			}
+			.form-login .login-ohter menu a.icon-wb{
+				background-image: url(../../images/form/xinlang1.png);
+			}
+			.form-login .login-ohter menu a.icon-wb.active{
+				background-image: url(../../images/form/type-wb.png);
+			}
+			#yzm{
+				position: absolute;
+				right: 0.6rem;
+				top: 0.6rem;
+				background: none;
+				font-size: 0.5rem;
+				color: orangered;
+				border: none;
+			}
+			.form-check{
+				text-align: center;
+			}
+			.form-control, .form-control > input {
+			     line-height: 0.91481481rem; 
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<section class="page form form-login login">
+
+			<h1>向日葵来了</h1>
+			
+			<div class="box form-register">
+	
+				<!--username-->
+				<div class="form-group">
+					<div class="form-control">
+						<input type="text" class="icon-username" name="username" id="username" placeholder="请输入您的手机号码">
+					</div>   
+				</div> 
+				<div class="form-group" style="position: relative;">
+					<div class="form-control">
+						<input type="text" class="icon-password" name="yzm" id="confirm" placeholder="请输入验证码直接登录">
+						<!--<span class="eye_icon"></span>-->
+						<button id="yzm">获取验证码</button>
+					</div>   
+				</div>
+				<!--password-->
+				<!--<div class="form-group" style="position: relative;">
+					<div class="form-control">
+						<input type="password" class="icon-password" name="password" id="password" placeholder="请输入您的验证码">
+						<span class="eye_icon"></span>
+					</div>   
+				</div>-->
+				<!--forget-->
+				<!--<div class="form-forget">
+					<a  class="form-forget1">忘记密码</a>
+				</div>-->
+				<!--<input type="checkbox" name="" id="" value="" />-->
+				<div class="form-check" id="">
+					<input type="checkbox" class="loginchek" name="" id="" value="" checked="checked" />
+					<a href="#foot"><span class = "register-agreement">同意向日葵平台 《用户服务协议》</span></a>
+				</div>
+				<!--submit-->
+				<input type="button" class="box-button" value="登录">
+				
+				<!--login with ohter-->
+				<div class="login-ohter">
+					<h3>
+						<small>其他登录方式</small>
+					</h3>
+
+					<menu>
+						<a class="icon-wx"></a>
+						<a class="icon-qq"></a>
+						<a class="icon-wb"></a>
+					</menu>
+				</div>
+
+				<!--form-control-->
+				<!--<div class="form-reglink">
+					还没有账号？
+					<a>注册新账号</a>
+				</div>-->
+			
+			</div>
+			<!--2017.7.1调整登录底部图片 开始-->
+			<!--<div class="footer">
+			
+			</div>-->
+			<!--2017.7.1调整登录底部图片 结束-->
+		</section>
+		
+		<!--协议-->
+		<section class="page page-hide form-agreement">
+			<header class="common-header">
+				<a class="icon-back"></a>
+				<h1>用户服务协议</h1>
+			</header>
+			<section class="mui-content layout agreement" style="padding-top: 0.5rem!important;">
+				<div class="agreement-text">
+					<p></p>
+					<!--用于直接跳转协议底部-->
+					<div id="foot" style="height: 1rem;"></div> 
+				</div>	
+			</section>
+		</section>	
+	</body>
+	<script src="../../js/hotcss.js"></script>
+	<script src="../../js/config.js"></script>
+	<script src="../../js/jquery.min.js"></script>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/template.js"></script>
+	<script src="../../js/common.js"></script>
+	<script src="../../js/simple-plugin.js"></script>
+	<script src="../../js/member/login.js"></script>
+	
+</html>

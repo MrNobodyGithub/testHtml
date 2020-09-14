@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>发布需求第二步-录入需求表单</title>
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/mui.picker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/fields.css" />
+		<link rel="stylesheet" href="../css/publish_step2.css" />
+		
+	</head>
+
+	<body>
+		<div id="home" class="content">
+			<header class="mui-bar mui-bar-nav">
+				<a class="mui-action-back mui-icon mui-pull-left"><img src="../images/cleaning-back.png" /></a>
+				<h1 class="mui-title" style="padding-left: -10px;padding-top: 5px;">需求描述</h1>
+			</header>
+	
+			<section class="mui-content">
+				<div class="mui-table-view-cell selectKind" id="showUserPicker">
+					<input data-label="保洁分类" type="hidden" id="kind" name="kind" value="">
+					<a class="mui-navigate-right">
+						<span class="mui-icon mui-icon-info" style="color:#000000" ;=""></span>保洁分类<span class="sun-required">*</span>
+						<span class="sun-required"></span>
+						<span class="mui-right-text" value="" style="color:#000000">选择套餐</span>
+					</a>
+				</div>
+				<ul id='fieldscontent' class="mui-table-view mui-input-group">
+					
+				</ul>
+				<p class="mui-tips"></p>
+				<div class="mui-content-padded">
+					<button id="submit" style="height:2.5rem;font-size: 0.8rem;line-height: 0.8 !important" type="button" class="mui-btn mui-btn-block mui-btn-warning mui-btn-main">下一步</button>
+				</div>
+			</section>
+		</div>
+
+		<script src="../js/config.js"></script>
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/mui.picker.min.js"></script>
+		<script src="../js/template.js"></script>
+		<script src="../js/common.js"></script>
+		<script src="../js/simple-plugin.js"></script>
+		<script src="../js/fields.js"></script>
+		<script src="../js/member/publish_needs_step2.js"></script>
+
+	</body>
+
+</html>

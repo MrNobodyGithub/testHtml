@@ -1,0 +1,992 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+
+//跑腿  map
+    .mapsection{
+               
+        #l-map{
+            .height(1010,2);
+            width:100%;
+            transform-origin: center;
+        }
+        #r-result{
+            width:100%;
+            background: #e6e6e8;
+            text-align: center;
+            .height(120,2);
+            line-height: px2rem(120);
+            input{
+                .width(1020,2);
+                .height(80,2);
+                border-radius:50px;
+                .pl(90,2);
+                background: url(../images/runerrands/search.png) no-repeat  center #fff;
+                background-size: px2rem(60);
+                background-position-x:px2rem(30) ;
+                .fs(30,2);
+                
+            }
+        }
+        .map-list{
+            ul{
+                .width;
+                li{
+                    .width;
+                    .height(210,2);
+                    .pl(158,2);
+                    background: url(../images/runerrands/mapposi1.png) no-repeat center;
+                    background-size: px2rem(84) px2rem(112);
+                    background-position-x: px2rem(30);
+                    overflow: hidden;
+                    span{
+                        .mt(20,2);
+                        color:#ed6a00 ;
+                        .fs(36,2);
+                        line-height: px2rem(100);
+                        display: block;
+                        .height(100,2);
+                    }
+                    p{
+                        .fs(36,2);
+                        .height(60,2);
+                        line-height: px2rem(60);
+                    }
+                }
+            }
+        }
+    }
+    
+    //跑腿  代买页
+    .map-buysection{
+        .run-swiper{
+            img{
+                width:100%;
+                
+            }
+        }
+        .runbuy-buttons{
+            .pt(80,2);
+            .width;
+            display: flex;
+            justify-content: space-around;
+            .pb(80,2);
+            button{
+                .width(296,2);
+                .height(98,2);
+                border: 1px solid #333;
+                .fs(43,2);
+            }
+            .active{
+                background:#f9cc55 ;
+                color: #fff;
+                border:0;
+            }  
+            
+        }
+        .runbuy-position1{
+            .pl(40,2);
+            p{  .height(120,2);
+                .pl(100,2);
+                .pr(30,2);
+                &:nth-of-type(1){
+                    background:url(../images/runerrands/runbuy-mai.png) no-repeat left center;
+                    background-size:px2rem(100);
+                }
+                &:nth-of-type(2){
+                    background:url(../images/runerrands/runbuy-shou.png) no-repeat left center;
+                    background-size:px2rem(100);
+                }
+                input{
+                    .mt(20,2);
+                    .height(100,2);
+                    border: solid #ccc;
+                    border-width: 0 0 1px 0;
+                    .fs(36,2);
+                    &:nth-of-type(1){
+                        background: url(../images/cleaning-right.png) no-repeat px2rem(863) center;
+                        background-size:px2rem(20) px2rem(34);
+                    }
+                }
+            }
+        }
+        .runbuy-list{
+            .edit-content{
+                flex: 1;
+                li{
+                    .height(130,2);
+                    padding-left: px2rem(45);
+                    .fs(36,2);
+                    .lh(130,2);
+                    input{
+                        .height(126,2);
+                        border-top: none;
+                        border-left: none;
+                        border-right: none;
+                        border-bottom: px2rem(3) solid #b7b7b8;
+                        .fs(36,2);
+                        padding-left: px2rem(87);
+                        
+                    }
+                }
+                li:nth-of-type(1){
+        
+                    position: relative;
+                    input{
+                        background: url(../images/runerrands/weight.png) no-repeat px2rem(10) center;
+                        background-size: px2rem(48) px2rem(48);
+                        color: #b7b7b8;
+                    }
+                    span{
+                        position: absolute;
+                        right: px2rem(28);
+                        .fs(30,2);
+                        color: #ccc;
+                    }
+                    
+                }
+                li:nth-of-type(2){
+        
+                    position: relative;
+                    input{
+                        background: url(../images/Cleaning/Cleaning1.png) no-repeat px2rem(10) center;
+                        background-size: px2rem(48) px2rem(48);
+                        color: #b7b7b8;
+                    }
+                    span{
+                        position: absolute;
+                        right: px2rem(28);
+                        .fs(30,2);
+                        color: #ccc;
+                    }
+                    
+                }
+                li:nth-of-type(3){
+                    margin-left: px2rem(45);
+                    padding-left: px2rem(87);
+                    padding-right: px2rem(50);
+                    border-bottom: px2rem(3) solid #b7b7b8;
+                    background: url(../images/Cleaning/Cleaning4.png) no-repeat px2rem(10) center;
+                    background-size: px2rem(48) px2rem(48);
+                    
+                    a{
+                        display: block;
+                        display: flex;
+                        justify-content: space-between;
+                        color: rgb(183, 183, 184);
+                        .fs(40,2);
+                        span{
+                            display: inline-block;
+                            .width(36,2);
+                            .height(34,2);
+                            background: url(../images/cleaning-right.png) no-repeat center center;
+                            margin-top: px2rem(40);
+                            
+                        }
+                    }
+                }
+                li:nth-of-type(4){
+                    margin-left: px2rem(45);
+                    padding-left: px2rem(87);
+                    padding-right: px2rem(50);
+                    border-bottom: px2rem(3) solid #b7b7b8;
+                    background: url(../images/Cleaning/Cleaning2.png) no-repeat px2rem(10) center;
+                    background-size: px2rem(48) px2rem(48);
+                    
+                    a{
+                        display: block;
+                        display: flex;
+                        justify-content: space-between;
+                        color: rgb(183, 183, 184);
+                        .fs(40,2);
+                        span{
+                            display: inline-block;
+                            
+                            .height(34,2);
+                            
+                            
+                        }
+                    }
+                }
+                
+                li:nth-of-type(5){
+                    .height(230,2);
+                    margin-left: px2rem(45);
+                    padding-left: px2rem(87);
+                    background: url(../images/Cleaning/Cleaning3.png) no-repeat px2rem(10) px2rem(74);
+                    background-size: px2rem(48) px2rem(48);
+                    
+                    .remark{
+                        .width(920,2);
+                        .height(216,2);
+                        border: px2rem(3) solid #e6e6e8;
+                        .fs(36,2);
+                        border-radius: px2rem(30);
+                        padding: px2rem(30) px2rem(16);
+                        margin-top: px2rem(50);
+                        margin-bottom: px2rem(60);
+                        color: rgb(183, 183, 184);
+                    }
+                }
+                li:nth-of-type(6){
+                    .mt(50,2);
+                    .height(250,2);
+                    border-bottom: 1px solid #e6e6e8;
+                    img{
+                        .ml(80,2);
+                    }
+                }
+            }
+        }
+        .runbuy-protocol{
+            .height(461,2);
+            .width;
+            background: #fff;
+            .pt(123,2);
+            position: relative;
+            text-align: center;
+            .fs(42,2);
+            a{
+                color: #000000;
+            }
+            input{
+                position: absolute;
+                top: px2rem(70);
+                left:px2rem(250);
+                display: block;
+                .width(50,2);
+                .height(50,2);
+                border:1px solid #bfbfbf;
+                .mt(45,2);
+                .mr(40,2);
+                .form-default;
+                &:checked{
+                    background: url(../images/runerrands/duigou.png) no-repeat center;
+                }
+            }
+        }
+    }
+    .runbuyfooter{
+        a:nth-of-type(1){
+            width:80%;
+            line-height:px2rem(150);
+            .fs(35,2);
+            color: #000;
+            text-align: left;
+            .pl(60,2);
+            span{
+                color:#f4425d;
+                .fs(48,2);
+            }
+        }
+    }
+    
+    // 跑腿代送页面
+    .map-gosection{
+        .run-swiper{
+            img{
+                width:100%;
+                
+            }
+        }
+        .runbuy-buttons{
+            .pt(80,2);
+            .width;
+            display: flex;
+            justify-content: space-around;
+            .pb(80,2);
+            button{
+                .width(296,2);
+                .height(98,2);
+                border: 1px solid #333;
+                .fs(43,2);
+            }
+            .active{
+                background:#f9cc55 ;
+                color: #fff;
+                border:0;
+            }  
+            
+        }
+        .runbuy-position1{
+            .pl(40,2);
+            p{  .height(120,2);
+                .pl(100,2);
+                .pr(30,2);
+                
+                input{
+                    .mt(20,2);
+                    .height(100,2);
+                    border: solid #ccc;
+                    border-width: 0 0 1px 0;
+                    .fs(36,2);
+                    &:nth-of-type(1){
+                        background: url(../images/cleaning-right.png) no-repeat px2rem(863) center;
+                        background-size:px2rem(20) px2rem(34) ;
+                    }
+                }
+            }
+            .run-ji{
+                background:url(../images/runerrands/runbuy-ji.png) no-repeat left center;
+                background-size:px2rem(100);
+            }
+            .run-shou{
+                background:url(../images/runerrands/runbuy-shou.png) no-repeat left center;
+                background-size:px2rem(100);
+            }
+        }
+        .runbuy-list{
+            .edit-content1{
+                li{
+                    .height(130,2);
+                    .fs(36,2);
+                    .lh(130,2);
+                    margin-left: px2rem(45);
+                    padding-left: px2rem(87);
+                    padding-right: px2rem(50);
+                    border-bottom: px2rem(1) solid #b7b7b8;
+                    background: url(../images/runerrands/thing.png) no-repeat px2rem(10) center;
+                    background-size: px2rem(48) px2rem(48);
+                    
+                    a{
+                        display: block;
+                        display: flex;
+                        justify-content: space-between;
+                        color: rgb(183, 183, 184);
+                        .fs(40,2);
+                        span{
+                            display: inline-block;
+                            .width(36,2);
+                            .height(34,2);
+                            background: url(../images/cleaning-right.png) no-repeat center center;
+                            background-size:px2rem(20) px2rem(34) ;
+                            margin-top: px2rem(40);
+                            
+                        }
+                    }
+                }
+            }
+            .edit-content{
+                flex: 1;
+                li{
+                    .height(130,2);
+                    padding-left: px2rem(45);
+                    .fs(36,2);
+                    .lh(130,2);
+                    input{
+                        .height(126,2);
+                        border-top: none;
+                        border-left: none;
+                        border-right: none;
+                        border-bottom: px2rem(3) solid #b7b7b8;
+                        .fs(36,2);
+                        padding-left: px2rem(87);
+                        
+                    }
+                }
+                li:nth-of-type(1){
+        
+                    position: relative;
+                    input{
+                        background: url(../images/runerrands/weight.png) no-repeat px2rem(10) center;
+                        background-size: px2rem(48) px2rem(48);
+                        color: #b7b7b8;
+                    }
+                    span{
+                        position: absolute;
+                        right: px2rem(28);
+                        .fs(30,2);
+                        color: #ccc;
+                    }
+                    
+                }
+                li:nth-of-type(2){
+        
+                    position: relative;
+                    input{
+                        background: url(../images/Cleaning/Cleaning1.png) no-repeat px2rem(10) center;
+                        background-size: px2rem(48) px2rem(48);
+                        color: #b7b7b8;
+                    }
+                    span{
+                        position: absolute;
+                        right: px2rem(28);
+                        .fs(30,2);
+                        color: #ccc;
+                    }
+                    
+                }
+                li:nth-of-type(3){
+                    margin-left: px2rem(45);
+                    padding-left: px2rem(87);
+                    padding-right: px2rem(50);
+                    border-bottom: px2rem(3) solid #b7b7b8;
+                    background: url(../images/Cleaning/Cleaning4.png) no-repeat px2rem(10) center;
+                    background-size: px2rem(48) px2rem(48);
+                    
+                    a{
+                        display: block;
+                        display: flex;
+                        justify-content: space-between;
+                        color: rgb(183, 183, 184);
+                        .fs(40,2);
+                        span{
+                            display: inline-block;
+                            .width(36,2);
+                            .height(34,2);
+                            background: url(../images/cleaning-right.png) no-repeat center center;
+                            background-size: px2rem(20) px2rem(34);
+                            margin-top: px2rem(40);
+                            
+                        }
+                    }
+                }
+                li:nth-of-type(4){
+                    margin-left: px2rem(45);
+                    padding-left: px2rem(87);
+                    padding-right: px2rem(50);
+                    border-bottom: px2rem(3) solid #b7b7b8;
+                    background: url(../images/Cleaning/Cleaning4.png) no-repeat px2rem(10) center;
+                    background-size: px2rem(48) px2rem(48);
+                    
+                    a{
+                        display: block;
+                        display: flex;
+                        justify-content: space-between;
+                        color: rgb(183, 183, 184);
+                        .fs(40,2);
+                        span{
+                            display: inline-block;
+                            .width(36,2);
+                            .height(34,2);
+                            background: url(../images/cleaning-right.png) no-repeat center center;
+                            margin-top: px2rem(40);
+                            
+                        }
+                    }
+                }
+                li:nth-of-type(5){
+                    .height(130,2);
+                    margin-left: px2rem(45);
+                    padding-left: px2rem(87);
+                    padding-right: px2rem(50);
+                    border-bottom: px2rem(3) solid #b7b7b8;
+                    background: url(../images/Cleaning/Cleaning2.png) no-repeat px2rem(10) center;
+                    background-size: px2rem(48) px2rem(48);
+                    
+                    a{
+                        display: block;
+                        display: flex;
+                        justify-content: space-between;
+                        color: rgb(183, 183, 184);
+                        .fs(40,2);
+                        span{
+                            display: inline-block;
+                            
+                            .height(34,2);
+                            
+                            
+                        }
+                    }
+                }
+                
+                li:nth-of-type(6){
+                    
+                    margin-left: px2rem(45);
+                    padding-left: px2rem(87);
+                    background: url(../images/Cleaning/Cleaning3.png) no-repeat px2rem(10) px2rem(74);
+                    background-size: px2rem(48) px2rem(48);
+                    border-bottom: 0;
+                    .remark{
+                        .width(920,2);
+                        .height(216,2);
+                        border: px2rem(3) solid #e6e6e8;
+                        .fs(36,2);
+                        border-radius: px2rem(30);
+                        padding: px2rem(30) px2rem(16);
+                        margin-top: px2rem(50);
+                        margin-bottom: px2rem(60);
+                        color: rgb(183, 183, 184);
+                    }
+                }
+                li:nth-of-type(7){
+                    .mt(50,2);
+                    .height(350,2);
+                    border-bottom: 1px solid #e6e6e8;
+                    .pb(40,2);
+                    img{
+                        .ml(80,2);
+                        .mt(100,2);
+                        .width(150,2);
+                        .height(150,2);
+                        
+                    }
+                }
+            }
+        }
+        .runbuy-protocol{
+            .height(461,2);
+            .width;
+            background: #fff;
+            .pt(123,2);
+            position: relative;
+            text-align: center;
+            .fs(42,2);
+            a{
+                color: #000000;
+            }
+            input{
+                position: absolute;
+                top: px2rem(70);
+                left:px2rem(250);
+                display: block;
+                .width(50,2);
+                .height(50,2);
+                border:1px solid #bfbfbf;
+                .mt(45,2);
+                .mr(40,2);
+                .form-default;
+                &:checked{
+                    background: url(../images/runerrands/duigou.png) no-repeat center;
+                    
+                }
+            }
+        }
+    }
+    .runbuyfooter{
+        a:nth-of-type(1){
+            width:80%;
+            line-height:px2rem(150);
+            .fs(35,2);
+            color: #000;
+            text-align: left;
+            .pl(60,2);
+            span{
+                color:#f4425d;
+                .fs(48,2);
+            }
+        }
+    }
+    
+    
+    
+    //  排队页面
+    
+    .map-lineupsection{
+        .run-swiper{
+            img{
+                width:100%;
+                
+            }
+        }
+        .runbuy-buttons{
+            .pt(80,2);
+            .width;
+            display: flex;
+            justify-content: space-around;
+            .pb(80,2);
+            button{
+                .width(296,2);
+                .height(98,2);
+                border: 1px solid #333;
+                .fs(43,2);
+            }
+            .active{
+                background:#f9cc55 ;
+                color: #fff;
+                border:0;
+            }  
+            
+        }
+        .runbuy-position1{
+            .pl(40,2);
+            p{  .height(120,2);
+                .pl(100,2);
+                .pr(30,2);
+                &:nth-of-type(1){
+                    background:url(../images/runerrands/run-pai.png) no-repeat left center;
+                    background-size:px2rem(100);
+                }
+               
+                input{
+                    .mt(20,2);
+                    .height(100,2);
+                    border: solid #ccc;
+                    border-width: 0 0 1px 0;
+                    .fs(36,2);
+                    &:nth-of-type(1){
+                        background: url(../images/cleaning-right.png) no-repeat px2rem(863) center;
+                        background-size:px2rem(20) px2rem(34) ;
+                    }
+                }
+            }
+        }
+        .runbuy-list{
+            .edit-content{
+                flex: 1;
+                li{
+                    .height(130,2);
+                    padding-left: px2rem(45);
+                    .fs(36,2);
+                    .lh(130,2);
+                    input{
+                        .height(126,2);
+                        border-top: none;
+                        border-left: none;
+                        border-right: none;
+                        border-bottom: px2rem(3) solid #b7b7b8;
+                        .fs(36,2);
+                        padding-left: px2rem(87);
+                        
+                    }
+                }
+                li:nth-of-type(1){
+                    margin-left: px2rem(45);
+                    padding-left: px2rem(87);
+                    padding-right: px2rem(50);
+                    border-bottom: px2rem(3) solid #b7b7b8;
+                    background: url(../images/Cleaning/Cleaning4.png) no-repeat px2rem(10) center;
+                    background-size: px2rem(48) px2rem(48);
+                    
+                    a{
+                        display: block;
+                        display: flex;
+                        justify-content: space-between;
+                        color: rgb(183, 183, 184);
+                        .fs(40,2);
+                        span{
+                            display: inline-block;
+                            .width(36,2);
+                            .height(34,2);
+                            background: url(../images/cleaning-right.png) no-repeat center center;
+                            background-size:px2rem(20) px2rem(34) ;
+                            margin-top: px2rem(40);
+                            
+                        }
+                    }
+                }
+                li:nth-of-type(2){
+                    margin-left: px2rem(45);
+                    padding-left: px2rem(87);
+                    padding-right: px2rem(50);
+                    border-bottom: px2rem(3) solid #b7b7b8;
+                    background: url(../images/Cleaning/Cleaning4.png) no-repeat px2rem(10) center;
+                    background-size: px2rem(48) px2rem(48);
+                    
+                    a{
+                        display: block;
+                        display: flex;
+                        justify-content: space-between;
+                        color: rgb(183, 183, 184);
+                        .fs(40,2);
+                        span{
+                            display: inline-block;
+                            .width(36,2);
+                            .height(34,2);
+                            background: url(../images/cleaning-right.png) no-repeat center center;
+                            background-size:px2rem(20) px2rem(34);
+                            margin-top: px2rem(40);
+                            
+                        }
+                    }
+                }
+                li:nth-of-type(3){
+                    margin-left: px2rem(45);
+                    padding-left: px2rem(87);
+                    padding-right: px2rem(50);
+                    border-bottom: px2rem(3) solid #b7b7b8;
+                    background: url(../images/Cleaning/Cleaning2.png) no-repeat px2rem(10) center;
+                    background-size: px2rem(48) px2rem(48);
+                    
+                    a{
+                        display: block;
+                        display: flex;
+                        justify-content: space-between;
+                        color: rgb(183, 183, 184);
+                        .fs(40,2);
+                        span{
+                            display: inline-block;
+                            .height(34,2);
+                            
+                            
+                        }
+                    }
+                }
+                
+                li:nth-of-type(4){
+                    .height(230,2);
+                    margin-left: px2rem(45);
+                    padding-left: px2rem(87);
+                    background: url(../images/Cleaning/Cleaning3.png) no-repeat px2rem(10) px2rem(74);
+                    background-size: px2rem(48) px2rem(48);
+                    
+                    .remark{
+                        .width(920,2);
+                        .height(216,2);
+                        border: px2rem(3) solid #e6e6e8;
+                        .fs(36,2);
+                        border-radius: px2rem(30);
+                        padding: px2rem(30) px2rem(16);
+                        margin-top: px2rem(50);
+                        margin-bottom: px2rem(60);
+                        color: rgb(183, 183, 184);
+                    }
+                }
+                li:nth-of-type(5){
+                    .mt(50,2);
+                    .height(250,2);
+                    border-bottom: 1px solid #e6e6e8;
+                    img{
+                        .ml(80,2);
+                    }
+                }
+            }
+        }
+        .runbuy-protocol{
+            .height(461,2);
+            .width;
+            background: #fff;
+            .pt(123,2);
+            position: relative;
+            text-align: center;
+            .fs(42,2);
+            a{
+                color: #000000;
+            }
+            input{
+                position: absolute;
+                top: px2rem(70);
+                left:px2rem(250);
+                display: block;
+                .width(50,2);
+                .height(50,2);
+                border:1px solid #bfbfbf;
+                .mt(45,2);
+                .mr(40,2);
+                .form-default;
+                &:checked{
+                    background: url(../images/runerrands/duigou.png) no-repeat center;
+                }
+            }
+        }
+    }
+    .runbuyfooter{
+        a:nth-of-type(1){
+            width:80%;
+            line-height:px2rem(150);
+            .fs(35,2);
+            color: #000;
+            text-align: left;
+            .pl(60,2);
+            span{
+                color:#f4425d;
+                .fs(48,2);
+            }
+        }
+    }
+    
+
+
+//任务地图
+    .runmaph{
+            background: #f9cd56;
+            color: #fff;
+            .icon-back{
+                background: url(../images/cleaning-back1.png) no-repeat center;
+                // background-size:px2rem(44) ;
+            }
+        }
+    .maptasksection{
+        .map1{
+            .width;
+            .height(1590,2);
+        }
+    }
+    .taskfoot{
+        .height(146,2);
+        line-height: px2rem(146);
+        .fs(49,2);
+        position: fixed;
+        bottom: 0;
+        .width;
+        background: #fff;
+        color:#e6454a;
+        text-align: center;
+    }
+
+//抢单成功
+
+    .runmaph{
+            background: #f9cd56;
+            color: #fff;
+            .icon-back{
+                background: url(../images/cleaning-back1.png) no-repeat center;
+                // background-size:px2rem(44) ;
+            }
+        }
+    .mapsuccesssection{
+        .map1{
+            .width;
+            .height(1100,2);
+        }
+    }
+    .tasksuccessfoot{
+        .height(686,2);
+        line-height: px2rem(146);
+        position: fixed;
+        bottom: 0;
+        .width;
+        background: #fff;
+        color:#e6454a;
+        text-align: center;
+        p:nth-of-type(1){
+            .height(120,2);
+            background: #e6454a;
+            .width;
+            .fs(46,2);
+            color: #fff;
+            line-height: px2rem(120);
+        }
+        .mapsuccessdetail{
+            .height(260,2);
+            .pl(110,2);
+            .mt(80,2);
+            .mb(80,2);
+            dl{
+                position: relative;
+                display: flex;
+                dt{
+                    .height(251,2);
+                    .width(251,2);
+                    border-radius: 50%;
+                    img{
+                        .height(251,2);
+                        .width(251,2);
+                        border-radius: 50%;
+                    }
+                }
+                dd{
+                    position: absolute;
+                    top: px2rem(-100);
+                    left:px2rem(300);
+                    ul{
+                        .height(251,2);
+                        text-align: left;
+                        li{
+                            .width;
+                            .mb(50,2);
+                            .height(45,2);
+                            //line-height:px2rem(50,2);
+                            .fs(34,2);
+                        }
+                    }
+                }
+            }
+        }
+        .mapsuccessfun{
+            ul{
+                display: flex;
+                justify-content: space-around;
+                li{
+                     border: 2px solid #919191;
+                     border-radius: 10px;
+                     .height(78,2);
+                     .width(198,2);
+                     line-height:px2rem(78);
+                     text-align: center;
+                }
+            }
+        }
+    }
+
+
+
+
+//跑腿地址
+.bg2{background:#fff;}
+.address{
+    ul{
+        li{
+            .height(130,2);
+            .fs(36,2);
+            .lh(130,2);
+            border-bottom: 1px solid #ccc;
+            padding-left: px2rem(120);
+            margin-left:px2rem(28);
+            padding-right: px2rem(38);
+        }
+        li:nth-of-type(1){
+            background: url(../images/cleaning-contact.png) no-repeat px2rem(20) center;
+            
+        }
+        li:nth-of-type(2){
+            background: url(../images/cleaning-tel.png) no-repeat px2rem(20) center;
+        }
+        li:nth-of-type(3){
+            background: url(../images/Cleaning/Cleaning1.png) no-repeat px2rem(20) center;
+                span{
+                    display: inline-block;
+                    float: right;
+                    .width(60,2);
+                    .height(60,2);
+                    // background: url(../images/moveing-right.png) no-repeat center center;
+                    padding-right:px2rem(40);
+                    img{
+                       .width(20,2);
+                       .height(30,2); 
+                    }
+                }
+        }
+        li:nth-of-type(4){
+            background: url(../images/Cleaning/Cleaning1.png) no-repeat px2rem(20) center;
+            span{
+                float: right;
+                color:#ccc;
+            }
+
+        }
+
+    }
+    .address_center{
+        text-align: center;
+            margin-top:px2rem(315);
+        .address_check{
+            margin-bottom:px2rem(70);
+            font-size: px2rem(40);
+            text-align: center;
+            line-height: px2rem(50);
+            height: px2rem(50);
+            color:#000;
+            
+            position:relative;
+            input{
+                position: absolute;
+                left:px2rem(320);
+                .width(50,2);
+                .height(50,2);
+                line-height:px2rem(50);
+                border:1px solid #f9cc55;
+                border-radius: 3px;
+
+                .form-default;
+                &:checked{
+                    background: url(../images/runerrands/duigou.png) no-repeat center;
+                    background-size: px2rem(30);
+                }
+            }
+        }
+        .address_select{
+            font-size: px2rem(40);
+            height:px2rem(90);
+            width:px2rem(404);
+            line-height:px2rem(90);
+            border: 1px solid #f9cc55;
+            border-radius: 6px;
+            display: inline-block;
+            color:#f9cc55;
+
+        }
+    }
+}

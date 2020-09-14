@@ -1,0 +1,197 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+@maintenace       :       maintenace;
+@maintenaceColor  :       #f5a93b;
+
+.@{maintenace} {
+    
+    .filter {
+
+        nav {
+            a {
+                color: @title-main;
+
+                &.active ,
+                &:active {
+                    color: @maintenaceColor;
+                }
+            }
+        }
+
+    }
+    
+    .product-item {
+        .product-info{
+            position: relative;
+            .icon-type1{
+                .pl(0);
+                background: none;
+            }
+            .raty{
+                i{
+                    .dib;
+                    .fs(30,2);
+                    font-style: normal;
+                    color: @maintenaceColor;
+                    position: relative;
+                    top: -3px;
+                    .ml(30,2);
+                }
+            }
+            .m-price{
+                position: absolute;
+                top: 65%;
+                right: px2rem(103);
+                color: #999;
+                .fs(30,2);
+            }
+            .m-distance{
+                color: @maintenaceColor;
+                background: url(../img/car/position.png) no-repeat left center;
+                background-size: px2rem(46) px2rem(46);
+                .pl(40,2);
+                position: absolute;
+                .fs(36,2);
+                .lh(42,2);
+                top: px2rem(36);
+                right: px2rem(53);
+            }
+        }
+        .label {
+            em {
+                .color( @maintenaceColor );
+            }
+        }
+
+        .tag {
+            span {
+                color: @maintenaceColor;
+                border-color: @maintenaceColor;
+            }
+        }
+
+        .control {
+            a {
+                color: @maintenaceColor;
+                border-color: @maintenaceColor;
+            }
+        }
+    }
+
+    .grab-state {
+        button {
+            color: @maintenaceColor;
+            border-color: @maintenaceColor;
+            .bc( #fff );
+        }
+    }
+
+    .grab-remarks {
+        color: @maintenaceColor;
+    }
+
+    .detail-worktime ,
+    .detail-price {
+        .active{
+            color: @maintenaceColor;
+            border:1px solid @maintenaceColor !important;
+            p{
+                color: @maintenaceColor;
+            }
+        }  
+        .test{
+            .lh(102,2);
+            .fs(34,2);
+            color: #E6454A;
+            .pl(60,2);
+        }
+        .price-content{
+            .df;
+            div{
+                .width(302,2);
+                .height(212,2);
+                .pl(22,2);
+                .pr(22,2);
+                border: 1px solid #333;
+                border-radius: px2rem(20);
+                .df;
+                flex-direction: column;
+                .mb(20,2);
+                &:not(:first-child){
+                    .ml(26,2);
+                    
+                }
+                p{
+                    text-align: center;
+                    .lh(34,2);
+                    .fs(26,2);
+                    .pr(0);
+                    &:first-child{
+                        .lh(70,2);
+                        .mb(0);
+                        .fs(35,2);
+                        .mt(32,2);
+                    }
+                    
+                }
+            }
+        }
+    }
+
+    .title {
+        span {
+            background-color: @maintenaceColor;
+        }
+    }
+
+    .detail-comment {
+        height: auto;
+        .pb(40,2);
+        .comment-content {
+            span {
+                color: @maintenaceColor;
+            }
+            .m-content{ 
+                text-indent: 2em;
+                .fs(33,2);
+                color: @title-main;
+            }
+            .m-open{
+                .db;
+                .width(160,2);
+                .height(44,2);
+                text-align: center;
+                .lh(44,2);
+                background: url(../img/feedback-bottom.png) no-repeat left center;
+                background-size: px2rem(40) px2rem(24);
+                .pl(50,2);
+                color: #464646;
+                margin: 0 auto;
+                .fs(32,2);
+            }
+        }
+        .m-around{
+            .pb(30,2);
+            p{
+                color: @title-main;
+                .lh(33,2);
+                .mb(0);
+            }
+        }
+        .m-album{
+            .df;
+//          justify-content: space-around;
+            div{
+                .height(330,2);
+                overflow: hidden;
+                padding:px2rem(15);
+            }
+        }
+    }
+    .m-padding{
+        .mb(30,2);
+    }
+}

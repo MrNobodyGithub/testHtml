@@ -1,0 +1,67 @@
+.todayHeadlines {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #fff;
+}
+.todayHeadlines .todayHeadlines-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.todayHeadlines .todayHeadlines-content .todayHeadlines-margin {
+  height: 4.25185185rem;
+  margin-top: 0.74074074rem;
+  margin-left: 0.44444444rem;
+  margin-right: 0.44444444rem;
+  border-bottom: 0.02962963rem solid #e6e6e8;
+  position: relative;
+}
+.todayHeadlines .todayHeadlines-content .todayHeadlines-margin a {
+  margin-left: 0.59259259rem;
+}
+.todayHeadlines .todayHeadlines-content .todayHeadlines-img {
+  display: block;
+  width: 3.62962963rem;
+  height: 3.62962963rem;
+}
+.todayHeadlines .todayHeadlines-content .todayHeadlines-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.todayHeadlines .todayHeadlines-content h3 {
+  font-size: 0.56296296rem;
+  color: #333333;
+}
+.todayHeadlines .todayHeadlines-content p {
+  font-size: 0.41481481rem;
+  width: 9.77777778rem;
+  line-height: 0.66666667rem;
+  color: #a6a6a6;
+  margin-top: 0.51851852rem;
+}
+.todayHeadlines .todayHeadlines-content .todayHeadlines-position {
+  position: absolute;
+  right: 0.88888889rem;
+  bottom: 0.81481481rem;
+}
+.todayHeadlines .todayHeadlines-content .todayHeadlines-position .todayHeadlines-icon {
+  display: block;
+  width: 0.51851852rem;
+  height: 0.47407407rem;
+  background: url(../img/todayHeadlines/today-icon_03.png);
+  background-size: 0.51851852rem 0.47407407rem;
+}
+.todayHeadlines .todayHeadlines-content .todayHeadlines-position span {
+  font-size: 0.41481481rem;
+  color: #a6a6a6;
+  margin-left: 0.14814815rem;
+}

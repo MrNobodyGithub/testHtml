@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+	<!--
+    	作者：suiyi
+    	时间：2017-06-24
+    	描述：version 1.0
+    -->
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>招募 触屏版</title>
+		<link rel="stylesheet" type="text/css" href="../../css/mui.css">
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet.css">
+	</head>
+
+	<body>
+		
+		
+		<!--ucenter-->
+		<header class="common-header">
+
+			<a class="icon-back mui-action-back"></a>
+			<h1>申请成为服务商</h1>
+
+		</header>
+		
+        <section class="mui-content service-ad">
+
+            <div class="service-ad-img ad">
+                <img src="../../images/ucenter/service-ad.png" alt="">
+            </div>
+
+            <a class="service-ad-link">
+                申请成为服务商
+            </a>
+
+        </section>
+		
+		<script src="../../js/hotcss.js"></script>
+		<script src="../../js/config.js"></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/common.js"></script>
+		<script type="text/javascript">
+			var $userinfo =  _.userInfo.get();
+			$('.service-ad').on('tap','a',function(e){	
+				$.ajax({
+					type:"get",
+					url:ApiUrl+"/index.php?act=check_join&op=check",
+					data:{
+						key:$userinfo.key
+					},
+					dataType:"json",
+					success:function(res){
+						console.log(JSON.stringify(res));
+						if(res.code ==200 ){
+							if(res.datas.join_info.joinin_state==10){
+								mui.alert("您已提交申请，等待审核");
+								return false;
+							}else if(res.datas.join_info.joinin_state==20){
+								mui.alert("审核成功")
+								return false;
+							}else if(res.datas.join_info.joinin_state==30){
+								mui.alert("入驻审核失败原因："+res.datas.join_info.joinin_message);
+								mui.openWindow({
+									url: 'merchantssecond.html',
+									id: 'merchantssecond.html',
+									waiting: {
+										autoShow: true
+									}
+								})
+							}else if(res.datas.join_info=="" || res.datas.join_info.joinin_state==null || res.datas.join_info.joinin_state == 0){
+								mui.openWindow({
+									url: 'merchantssecond.html',
+									id: 'merchantssecond.html',
+									waiting: {
+										autoShow: true
+									}
+								})
+							}
+						}else{
+							mui.alert("错误");
+						}
+					}
+				});
+				e.preventDefault();
+			});
+		</script>
+	</body>
+
+</html>

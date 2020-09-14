@@ -1,0 +1,516 @@
+ <!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>向日葵 触屏版</title>
+		<link rel="stylesheet" type="text/css" href="css/mui.css">
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+	</head>
+	<style>
+		.index-shop-info .index-shop-news {
+			background-image: url(images/news.png);
+		}
+		
+		.common-header .city {
+			color: #000000;
+		}
+		
+		.index .company-item .photo img {
+			width: 4.5rem;
+			height: 4.5rem;
+		}
+		.index .company-item {
+			height: 5.5rem;
+			border-bottom: 1px solid #F5F5F5;
+		}
+		.index .company-item .hot {
+			margin-top: -0.2rem;
+		}
+		
+		.index .company-item .raty {
+			margin: 0.22962963rem 0 0.39259259rem;
+		}
+		
+		.index>.index-tab a.active span {
+			border-bottom: none;
+		}
+		/*最美阿姨区域*/
+		
+		.beautiful-aunt {
+			height: auto;
+			width: 100%;
+		}
+		
+		.beautiful-aunt img {
+			height: 4.5rem;
+			width: 100%;
+			border-bottom: 3px solid #FFFFFF;
+		}
+		/*海尔电器区域*/
+		
+		.haier-electrical {
+			height: auto;
+			width: 100%;
+		}
+		
+		.haier-electrical img {
+			height: 4rem;
+			width: 100%;
+		}
+		
+		#upgrade {
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.5);
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 999999;
+			display: none;
+		}
+		
+		#upgrade .picker {
+			width: 70%;
+			height: 13rem;
+			background: #fff;
+			border-radius: 0.4rem;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+		}
+		
+		#upgrade .picker-icon {
+			width: 50%;
+			display: block;
+			margin: 1.2rem auto;
+			text-align: center;
+		}
+		
+		#upgrade p {
+			padding: 0 1rem!important;
+			font-size: 0.6rem;
+			line-height: 0.8rem;
+			margin-top: 0.6rem;
+			color: #636363;
+			font-family: "微软雅黑";
+		}
+		
+		#upgrade p a {
+			font-style: normal;
+			color: #f39801;
+		}
+		
+		#upgrade .btn {
+			display: block;
+			width: 60%;
+			height: 1.82rem;
+			margin: 0.8rem auto 0;
+			border: none;
+			background: url(images/index/border-radius@2x.png) no-repeat center center;
+			background-size: 100%;
+			text-align: center;
+			font-size: 0.7rem;
+			color: #fff;
+			font-family: "微软雅黑";
+			padding-bottom: 0.3rem;
+		}
+		/*优惠券*/
+		
+		.coupon {
+			width: 100%;
+			height: 4rem;
+			line-height: 4rem;
+			background-color: #FFFFFF;
+		}
+		
+		.coupon img {
+			height: 3rem;
+			width: 100%;
+		}
+		
+		/*客服电话*/
+		.kefu{
+			position: fixed;
+			bottom:4.5rem;
+			right:1.5rem;
+			z-index:999;
+		}
+		.kefu img{
+			width:5rem;
+		}
+		.index header{
+			border: 0;
+			height: 2.8rem;
+		}
+		.index .city{
+			font-size: 0.8rem!important;
+			line-height: 2.8rem;
+		}
+		.ban{
+			width: 100%;
+			height: auto;
+		}
+		.ban img{
+			width: 100%;
+			height: 5.5rem;
+			
+		}
+		.index .company-item .company-info{
+			height: 4.5rem;
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: space-around;
+		}
+		.index .footer-bar{
+			height: 3.3rem;
+		}
+		.index .footer-bar a{
+			font-size: 0.6rem;
+			margin-top: 0.19rem;
+		}
+		.index .footer-bar a{
+			background-size: 1.5rem!important;
+		}
+		.index .footer-bar a:last-child{
+			background-size: 1.4rem!important;
+		}
+		.footer-bar>nav a span {
+		    margin-top: 2.1rem;
+	    }
+	    .footer-bar>nav a:nth-child(3) li {
+		    width: 3.8rem;
+		    height: 3.8rem;
+		    background-color: #fbcd56;
+		    border-radius: 50%;
+		    margin-top: -2rem;
+		    border: 0.4rem solid #FFFFFF;
+		    line-height: 3rem;
+	    }
+	    #demo{
+	    	width:78%;
+	    }
+	    
+	    #demo li a{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        width:100%;
+        float:right;
+        -webkit-box-orient: vertical;
+	    }
+	    .index-shop-info .index-shop-news a{
+	    	width:20%;
+	    }
+	</style>
+
+	<body style="background: #fff;">
+		<div id="upgrade">
+			<div class="picker">
+				<div class="picker-icon">
+					<img src="images/index/xiaomifeng@2x.png" />
+				</div>
+				<p class="picker-detail">
+					向日葵来了APP现已上线苹果商店，功能全面升级，请您前往
+					<a class="jump">app store</a>下载最新版本，给您带来不便，敬请谅解。
+				</p>
+				<button class="btn jump">跳转至商店</button>
+			</div>
+		</div>
+		<div id="loading">
+			<div class="spinner">
+				<div class="rect1"></div>
+				<div class="rect2"></div>
+				<div class="rect3"></div>
+				<div class="rect4"></div>
+				<div class="rect5"></div>
+			</div>
+		</div>
+		<!--首页-->
+		<section class="mui-content index" id="container" style="display: block;">
+			<!--标题 开始-->
+			<header class="common-header mui-bar-transparent fixed-header">
+				<a class="city">青岛市</a>
+				<div class="search-form" style="padding-left: 1rem; display: none;">
+					<a><input type="search" readonly="readonly" placeholder="找服务" style="overflow:hidden;padding-top:0px; padding-bottom:0; line-height: 100%;;"></a>
+				</div>
+			</header>
+			<!--标题 结束-->
+			
+			<!--footer 开始-->
+			<footer class="footer-bar flex">
+				<nav>
+					<a class="active">
+						<span>首页</span>
+					</a>
+					
+					<a class="house">
+		            	<span>房产</span>
+		            </a>
+					<a style="z-index: 999;">
+		               <center><li><img src="images/common/add.png" style="width:1.4rem;"></li></center>
+								<span style="margin-top: 0.35rem;">下单</span>
+		            </a>
+		            <a class="reputation">
+						<span>口碑</span>
+					</a>
+					<a class="mine">
+						<span>我的</span>
+					</a>
+				</nav>
+			</footer>
+			<!--footer 结束-->
+
+			<!--轮播图 开始-->
+			<div class="mui-slider index-slide"> 
+				<div class="mui-slider-group mui-slider-loop"></div>
+				<div class="mui-slider-indicator"></div>
+			</div>
+			<script type="text/html" id="index">
+				<% if(code == 200){ %>
+				<% if(datas.banner_position_list != ''){ 
+					var data = datas.banner_position_list;
+			 		for(var i = 0; i < data.length; i++){
+					if(i == 0){
+				 %>
+					<div class="mui-slider-item mui-active">
+						<a href="javascript: void(0);">
+							<img src="<%= data[i].banner_img %>">
+						</a>
+					</div>
+				<% }else{ %>
+					<div class="mui-slider-item">
+						<a href="javascript: void(0);">
+							<img src="<%= data[i].banner_img %>">
+						</a>
+					</div>
+				<% } }}}%>
+ 			</script>
+ 			<!--轮播图 结束-->
+ 			
+ 			<script type="text/html" id="indicator">
+				<% if(code == 200){ 
+					var data = datas.banner_position_list;
+					for(var j = 0; j < data.length; j++){
+					if(j == 0){	
+				 %>
+					<div class="mui-indicator mui-active"></div>
+				<% }else{ %>
+					<div class="mui-indicator"></div>
+				<% }}} %>
+			</script>
+			
+			<!--nav-->
+			<nav class="nav1">
+
+			</nav>
+
+			<!--shop-->
+			<div class="index-shop-info" style="margin-bottom: 0.4rem !important; border-bottom: 1px solid #EEEEEE;">
+				<div class="index-shop-news flex">
+					<a class="new-list"></a>
+					<div id="demo" style="overflow:hidden;height:2.3rem;">
+						<ul id="j_silder00" class="silder00">
+						</ul>
+					</div>
+				</div>
+
+			</div>
+
+			<script type="text/html" id="index-list-news">
+				<% if(code == 200){ %>
+				<% for(var i = 0;i < datas.length;i++){ %>
+				<li news-id="<%= datas[i].article_id %>">
+					<a>
+						<%= datas[i].article_title %>
+					</a>
+				</li>
+				<% } %>
+				<% } %>
+			</script>
+			<!--首页全国广告-->
+			<div class="national-advertising ban" id="beautifulAunt" style="width: 100%; height: auto; background-color: #FFFFFF;margin-bottom: 1px;">
+
+			</div>
+			<script type="text/html" id="national">
+				<% if(code == 200){ 
+				  for(var i = 0;i < datas.banner_position_list[0].length;i++){ %>
+					<div class="national-img" data-href="<%= datas.banner_position_list[0][i].banner_url %>">
+						<img src="<%= datas.banner_position_list[0][i].banner_img %>" />
+					</div>
+				<% }} %>
+			</script>
+			 <!--首页本地广告-->
+			<div class="beautiful-aunt ban" id="beautifulAunt">
+
+			</div>
+			<script type="text/html" id="beautiful">
+				<% if(code == 200){ 
+				  for(var i = 0;i < datas.banner_position_list[0].length;i++){ %>
+					<div class="beautiful-img" data-href="<%= datas.banner_position_list[0][i].banner_url %>">
+						<img src="<%= datas.banner_position_list[0][i].banner_img %>" />
+					</div>
+				<% }} %>
+			</script>
+			
+			<!--优惠券-->
+			<div id="coupons" class="coupon ban">
+
+			</div>
+			<script type="text/html" id="coupons_img">
+				<% if(code == 200){ %>
+				<img src="<%= datas.banner_position_list[0][0].banner_img %>">
+				<% } %>
+			</script>
+
+			<!--haierElectrical 全国商城-->
+			<div class="haier-electrical ban">
+				
+			</div>
+			<script type="text/html" id="electrical">
+				<% if(code == 200){ %>
+				<div class="electrical-img">
+					<img src="<%= datas.banner_position_list[0][0].banner_img %>" />
+				</div>
+				<% } %>
+			</script>
+			<!--list-->
+			<menu class="index-tab">
+				<a class="active">
+					<span style="background: url(images/tj.png) no-repeat left center;padding-left: 2rem;background-size:1.5rem;"><strong style="line-height: 3.1rem;">优质服务商</strong></span>
+					<span class="all" style="color:#000000;float:right;margin-right: 1rem;display: none;">查看全部></span>
+				</a>
+				<!--<a>
+					<span>优惠券</span>
+				</a>-->
+			</menu>
+
+			<div class="index-tab-content">
+
+				<script type="text/html" id="index-mylove">
+					<% if(code == 200){ %>
+					<% for(var i = 0;i < datas.length; i++){ %>
+					<div class="activity-item" data-goods-id="<%= datas[i].goods_id %>" data-gc-id="<%= datas[i].gc_id %>">
+						<img src="<%= datas[i].goods_image_url %>" alt="">
+						<div class="activity-info">
+							<h3>
+                                    <strong style="color: black;"><%= datas[i].goods_name %></strong>
+                                    <div class="title">
+                                        <%= datas[i].goods_jingle %>
+                                    </div>
+                                </h3>
+							<div class="mui-clearfix">
+								<strong>￥<%= datas[i].goods_price %>元/<%= datas[i].goods_unit%></strong>
+								<span>
+									已有
+									<%if(datas[i].book_buyers == "0"){%>
+										0
+									<%}else{%>
+										<%=datas[i].book_buyers%>
+									<%}%>
+									人预定
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<% } %>
+					<% } %>
+				</script>
+
+				<!--推荐服务商-->
+
+				<div class="tab-content company-list mui-clearfix show" style="padding-bottom: 1rem;">
+
+				</div>
+				<div class="kefu">
+					<a href="tel:4006-199-991"><img src="images/kefu@2x.png"></a>
+				</div>
+				<script type="text/html" id="index-recommend">
+					<% if(code == 200){ %>
+					<% var data = datas.recommend_list %>
+					<% for(var i = 0; i < data.length; i++){ %>
+					<div class="company-item" data-store-id="<%= data[i].store_id %>">
+						<div class="photo">
+							<img src="<%= data[i].store_avatar_url %>" alt="">
+						</div>
+						<div class="company-info">
+							<h2>
+                                        <%= data[i].store_name %>
+                                    </h2>
+							<div class="raty">
+								<span>诚信等级:</span>
+								<span>
+										<i></i>
+										<i></i>
+										<i></i>
+										<i></i>
+										<i></i>
+								</span>
+							</div>
+							<div class="hot">
+								<%= data[i].store_name %>
+							</div>
+						</div>
+					</div>
+					<% } %>
+					<% } %>
+				</script>
+
+				<!--优惠活动-->
+				<script type="text/html" id="index-actor">
+					<% if(code == 200){ %>
+					<% for(var i = 0; i < datas.length; i++){ %>
+					<div class="activity-item">
+						<img src="<%= datas[i].voucher_t_customimg %>" alt="">
+						<div class="activity-info">
+							<h3>
+                                    <%= datas[i].voucher_t_title %>
+                                        <div class="title" style="height: 60px;overflow: hidden;">
+                                            购物满
+                                            <%= datas[i].voucher_t_limit %>元可用
+                                        </div>
+                                        <p style="font-size: 20px;">
+                                            <%= datas[i].voucher_t_gettype_text %>
+                                        </p>
+                                </h3>
+
+							<div class="mui-clearfix">
+								<strong><%= datas[i].voucher_t_price %>元优惠券</strong>
+								<a data-vid-id="<%= datas[i].voucher_t_id %>">
+									<%= datas[i].voucher_t_gettype_text %>
+								</a>
+							</div>
+						</div>
+					</div>
+					<% } %>
+					<% } %>
+				</script>
+			</div>
+
+		</section>
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/mui.min.js"></script>
+		<script src="js/template.js"></script>
+		<script src="js/config.js"></script>
+		<script src="js/common.js"></script>
+		<!--<script src='js/socket.io.min.js'></script>-->
+		<!--<script src="js/index_msg.js"></script>-->
+		<script src="js/index.js"></script>
+		<!--<script src="js/push.js"></script>-->
+		<!--<script src="js/upgrade.js"></script>-->
+	</body>
+
+</html>

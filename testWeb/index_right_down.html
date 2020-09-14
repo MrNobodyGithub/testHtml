@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div { 
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				transition: width 2s, height 2s;
+				-webkit-transition: width 2s, height 2s, -webkit-transform 3s;
+			}
+			
+			div:hover {
+				width: 200px;
+				height: 200px;
+				transform: rotate(180deg);
+				-moz-transform: rotate(180deg);
+				-webkit-transform: rotate(180deg); 
+			}
+			@-webkit-keyframes myfirst
+			/* Safari and Chrome */
+			{
+				from {background: red;}
+				to {background: yellow;}
+			}
+			
+			aa:lang(aa) {
+				quotes: "~------" "~";
+			}
+			
+			q:lang(no) {
+				quotes: "~------" "~"
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div>asdf
+		</div>
+		<p>文字<q lang="no">段落中的引用的文字</q>文字</p>
+		<p>asdfadsf</p>
+	</body>
+
+</html>

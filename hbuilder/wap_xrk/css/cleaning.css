@@ -1,0 +1,530 @@
+.white {
+  background-color: #fff;
+}
+.gray {
+  background-color: #f2f2f2;
+}
+.appoint {
+  background: #fff;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.appoint .appoint-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: #fff;
+  padding-bottom: 2.22222222rem;
+  padding-right: 0.44444444rem;
+}
+.appoint .appoint-content li {
+  height: 1.92592593rem;
+  padding-left: 0.66666667rem;
+  font-size: 0.53333333rem;
+  line-height: 1.92592593rem;
+}
+.appoint .appoint-content li input {
+  height: 1.86666667rem;
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 0.04444444rem solid #e6e6e8;
+  font-size: 0.53333333rem;
+  padding-left: 1.28888889rem;
+}
+.appoint .appoint-content .input1 input {
+  background: url(../images/cleaning-address.png) no-repeat 0.14814815rem center;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.appoint .appoint-content .input2 {
+  margin-left: 0.66666667rem;
+  padding-left: 1.28888889rem;
+  padding-right: 0.74074074rem;
+  border-bottom: 0.02962963rem solid #E6E6E8;
+  background: url(../images/cleaning-time.png) no-repeat 0.14814815rem center;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.appoint .appoint-content .input2 a {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #666;
+}
+.appoint .appoint-content .input6 {
+  margin-left: 0.66666667rem;
+  padding-left: 1.28888889rem;
+  padding-right: 0.74074074rem;
+  border-bottom: 0.02962963rem solid #E6E6E8;
+  background: url(../images/cleaning-time.png) no-repeat 0.14814815rem center;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.appoint .appoint-content .input6 a {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #666;
+}
+.appoint .appoint-content .input6 a span {
+  color: red;
+}
+.appoint .appoint-content .input3 input {
+  background: url(../images/cleaning-contact.png) no-repeat 0.14814815rem center;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.appoint .appoint-content .input4 input {
+  background: url(../images/cleaning-tel.png) no-repeat 0.14814815rem center;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.appoint .appoint-content .input5 {
+  margin-left: 0.66666667rem;
+  padding-left: 1.28888889rem;
+  background: url(../images/cleaning-remark.png) no-repeat 0.14814815rem 1.0962963rem;
+  background-size: 0.71111111rem 0.71111111rem;
+  height: 3.7037037rem;
+}
+.appoint .appoint-content .input5 .remark {
+  width: 13.62962963rem;
+  height: 3.2rem;
+  border: 0.04444444rem solid #e6e6e8;
+  font-size: 0.53333333rem;
+  border-radius: 0.44444444rem;
+  padding: 0.44444444rem 0.23703704rem;
+  margin-top: 0.74074074rem;
+}
+.appoint .appoint-content .input5 .remark::-webkit-input-placeholder {
+  color: #ccc;
+}
+.appoint .appoint-content .input7 {
+  margin-left: 0.66666667rem;
+  padding-left: 1.28888889rem;
+  padding-right: 0.74074074rem;
+  border-bottom: 0.02962963rem solid #E6E6E8;
+  background: url(../images/cleaning-time.png) no-repeat 0.14814815rem center;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.appoint .appoint-content .input7 a {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #666;
+}
+.appoint .appoint-content .input7 a span {
+  display: inline-block;
+  width: 0.45925926rem;
+  height: 0.45925926rem;
+  background: url(../images/42x.png) no-repeat center center;
+  margin-top: 0.59259259rem;
+  background-size: 0.45925926rem 0.45925926rem;
+}
+.appoint .appoint-next {
+  height: 2.16296296rem;
+  background-color: #e6454a;
+}
+.appoint .appoint-next a {
+  font-size: 0.62222222rem;
+  color: #fff;
+  display: block;
+  text-align: center;
+  line-height: 2.16296296rem;
+}
+.appoint-detail {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: auto;
+  background: #fff;
+}
+.appoint-detail .appoint-detail-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #f2f2f2;
+}
+.appoint-detail .appoint-detail-content ol {
+  height: auto;
+  background: url(../images/appoint-detail-border.png) repeat-x center bottom #fff;
+  margin-top: 0.2962963rem;
+  overflow: hidden;
+  padding-bottom: 1.48148148rem;
+}
+.appoint-detail .appoint-detail-content ol li {
+  font-size: 0.59259259rem;
+  height: 1.33333333rem;
+  line-height: 1.33333333rem;
+  padding-left: 1.33333333rem;
+  color: #919191;
+}
+.appoint-detail .appoint-detail-content ol li i {
+  display: inline-block;
+  width: 2.96296296rem;
+  font-style: normal;
+  text-align: right;
+}
+.appoint-detail .appoint-detail-content ol li span {
+  color: #333333;
+}
+.appoint-detail .appoint-detail-content ol li small {
+  font-size: 0.44444444rem;
+}
+.appoint-detail .appoint-detail-content ol li:first-child {
+  margin-top: 0.37037037rem;
+}
+.appoint-detail .appoint-detail-content ol li:last-child span {
+  color: #E6454A;
+}
+.appoint-detail .appoint-detail-content ol .border {
+  line-height: 0.81481481rem;
+  border-top: 1px solid red;
+  padding-top: 0.59259259rem;
+  padding-right: 1.71851852rem;
+}
+.appoint-detail .appoint-detail-content .wating-p {
+  height: 5.18518519rem;
+  background: #fff;
+  margin-bottom: 0.2962963rem;
+  overflow: hidden;
+}
+.appoint-detail .appoint-detail-content .wating-p p {
+  font-size: 0.59259259rem;
+  height: 1.33333333rem;
+  line-height: 1.33333333rem;
+  padding-left: 1.33333333rem;
+  color: #919191;
+}
+.appoint-detail .appoint-detail-content .wating-p p i {
+  display: inline-block;
+  width: 2.96296296rem;
+  font-style: normal;
+  text-align: right;
+}
+.appoint-detail .appoint-detail-content .wating-p p span {
+  color: #333333;
+}
+.appoint-detail .appoint-detail-content .wating-p p:first-child {
+  margin-top: 0.37037037rem;
+}
+.appoint-detail .appoint-detail-content ul li {
+  height: 2.16296296rem;
+  font-size: 0.62222222rem;
+  line-height: 2.16296296rem;
+  padding-left: 2.4rem;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 1.12592593rem;
+}
+.appoint-detail .appoint-detail-content ul li:nth-of-type(1) {
+  background: url(../images/appoint-detail-discount.png) no-repeat 1.11111111rem center #fff;
+  background-size: 0.81481481rem 0.54814815rem;
+}
+.appoint-detail .appoint-detail-content ul li:nth-of-type(1) a {
+  color: #919191;
+}
+.appoint-detail .appoint-detail-content ul li:nth-of-type(1) images {
+  display: inline-block;
+  width: 0.35555556rem;
+  height: 0.44444444rem;
+  margin-left: 0.44444444rem;
+}
+.appoint-detail .appoint-detail-content ul li:nth-of-type(2) {
+  background: url(../images/appoint-detail-hongbao.png) no-repeat 1.18518519rem center #fff;
+  background-size: 0.74074074rem 0.75555556rem;
+  margin-top: 0.20740741rem;
+}
+.appoint-detail .appoint-detail-content ul li:nth-of-type(2) .check {
+  display: block;
+  -webkit-appearance: none;
+  width: 1.03703704rem;
+  height: 1.03703704rem;
+  border: 1px solid #c1c1c1;
+  border-radius: 0.2962963rem;
+  margin-top: 0.56296296rem;
+}
+.appoint-detail .appoint-detail-content ul li:nth-of-type(2) .check:checked {
+  background: url(../images/appoint-detail-check.png) no-repeat center center;
+  background-size: 0.56296296rem 0.44444444rem;
+}
+.appoint-detail .appoint-detail-content ul li:nth-of-type(3) {
+  background: url(../images/appoint-detail-baoxian.png) no-repeat 1.18518519rem center #fff;
+  background-size: 0.74074074rem 0.75555556rem;
+  margin-top: 0.20740741rem;
+}
+.appoint-detail .appoint-detail-content ul li:nth-of-type(3) .check {
+  display: block;
+  -webkit-appearance: none;
+  width: 1.03703704rem;
+  height: 1.03703704rem;
+  border: 1px solid #c1c1c1;
+  border-radius: 0.2962963rem;
+  margin-top: 0.56296296rem;
+}
+.appoint-detail .appoint-detail-content ul li:nth-of-type(3) .check:checked {
+  background: url(../images/appoint-detail-check.png) no-repeat center center;
+  background-size: 0.56296296rem 0.44444444rem;
+}
+.appoint-detail .appoint-detail-content .appoint-detail-deal {
+  width: 8rem;
+  height: 0.71111111rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1.14074074rem auto;
+}
+.appoint-detail .appoint-detail-content .appoint-detail-deal .check {
+  display: inline-block;
+  -webkit-appearance: none;
+  width: 0.71111111rem;
+  height: 0.71111111rem;
+  border: 1px solid #c1c1c1;
+  border-radius: 0.14814815rem;
+}
+.appoint-detail .appoint-detail-content .appoint-detail-deal .check:checked {
+  background: url(../images/appoint-detail-check-s.png) no-repeat center center;
+  background-size: 0.42962963rem 0.34074074rem;
+}
+.appoint-detail .appoint-detail-content .appoint-detail-deal a {
+  display: inline-block;
+  height: 0.71111111rem;
+  font-size: 0.62222222rem;
+  line-height: 0.71111111rem;
+  text-decoration: underline;
+  color: #a6a6a6;
+}
+.appoint-detail .appoint-detail-next {
+  height: 2.16296296rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.appoint-detail .appoint-detail-next div {
+  width: 11.55555556rem;
+  font-size: 0.53333333rem;
+  line-height: 2.16296296rem;
+  padding-left: 1.18518519rem;
+}
+.appoint-detail .appoint-detail-next div span {
+  font-size: 0.62222222rem;
+  color: #e6454a;
+}
+.appoint-detail .appoint-detail-next a {
+  background-color: #e6454a;
+  font-size: 0.62222222rem;
+  color: #fff;
+  display: block;
+  text-align: center;
+  width: 4.44444444rem;
+  line-height: 2.16296296rem;
+}
+.appoint-detail-next {
+  background: #fff;
+  height: 2.16296296rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.appoint-detail-next div {
+  width: 11.55555556rem;
+  font-size: 0.53333333rem;
+  line-height: 2.16296296rem;
+  padding-left: 1.18518519rem;
+}
+.appoint-detail-next div span {
+  font-size: 0.62222222rem;
+  color: #ea5505;
+}
+.appoint-detail-next a {
+  background-color: #ea5505;
+  font-size: 0.62222222rem;
+  color: #fff;
+  display: block;
+  text-align: center;
+  width: 4.44444444rem;
+  line-height: 2.16296296rem;
+}
+.clean .circle-details-commentlist {
+  padding-bottom: 2.1037037rem;
+}
+.clean .circle-details-commentlist ul li {
+  height: 3.22962963rem;
+  width: 100%;
+  padding-left: 0.44444444rem;
+  padding-top: 0.32592593rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.clean .circle-details-commentlist ul li images {
+  width: 4.08888889rem;
+  height: 4.08888889rem;
+  margin-right: 0.47407407rem;
+}
+.clean .circle-details-commentlist ul li .circlecommentlist-right {
+  width: 80%;
+}
+.clean .circle-details-commentlist ul li .circlecommentlist-right b {
+  font-style: normal;
+  font-size: 0.54814815rem;
+}
+.clean .product-info {
+  position: relative;
+}
+.clean .product-info .raty i {
+  display: inline-block;
+  height: 0.44444444rem;
+  font-size: 0.41481481rem;
+  font-style: normal;
+  position: relative;
+  left: -0.51851852rem;
+  color: #555555;
+  margin-left: 0.56296296rem;
+}
+.clean .filter nav a {
+  color: #333;
+}
+.clean .filter nav a.active,
+.clean .filter nav a:active {
+  color: #f39c11;
+}
+.clean .product-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.clean .product-item .label {
+  height: 1.18518519rem;
+  position: relative;
+  line-height: 0.53333333rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.clean .product-item .label em {
+  color: #f39c11;
+}
+.clean .product-item .tag {
+  margin-top: 0.59259259rem;
+}
+.clean .product-item .tag span {
+  color: #f39c11;
+  border-color: #f39c11;
+}
+.clean .product-item .control a {
+  color: #f39c11;
+  border-color: #f39c11;
+}
+.clean .grab-state button {
+  color: #f39c11;
+  border-color: #f39c11;
+  background-color: #fff;
+}
+.clean .grab-remarks {
+  color: #f39c11;
+}
+.clean .detail-worktime {
+  padding-bottom: 0.44444444rem;
+}
+.clean .price .active {
+  color: #f39c11;
+  border: 1px solid #f39c11 !important;
+}
+.clean .price .price-content {
+  padding-bottom: 0.59259259rem;
+}
+.clean .price .price-content .active {
+  color: #f39c11;
+  border: 1px solid #f39c11 !important;
+}
+.clean .price .price-content input {
+  -webkit-appearance: none;
+  width: 0.47407407rem;
+  height: 0.47407407rem;
+  background: #fff;
+  border-radius: 0.07407407rem;
+  border: 1px solid #f39c11;
+  margin-right: 0.2962963rem;
+  margin-left: 0.07407407rem;
+}
+.clean .price .price-content input:checked {
+  background: url(../images/cleaning/checked.png) no-repeat center center;
+  background-size: 0.26666667rem 0.20740741rem;
+}
+.clean .title {
+  font-size: 0.65185185rem;
+}
+.clean .title span {
+  background-color: #f39c11;
+}
+.clean .detail-comment .comment-content span {
+  color: #F4425D;
+}
+.clean .detail-comment .comment-content .server-hour {
+  display: block;
+  background: url(../images/Nanny/date.png) no-repeat left;
+  background-size: 0.71111111rem 0.72592593rem;
+  padding-left: 0.74074074rem;
+}
+.clean .product-detail .product div {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 0.59259259rem;
+  line-height: 0.88888889rem;
+}
+.clean .product-detail .product img {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 0.44444444rem;
+}
+.clean .product-item {
+  border-top: none;
+  border-bottom: 0.01481481rem solid #e2e3e7;
+}
+.clean .mouth-white {
+  background: white;
+  height: 100%;
+}
+.footer-menu-yellow .link {
+  background-color: #f39c11;
+}

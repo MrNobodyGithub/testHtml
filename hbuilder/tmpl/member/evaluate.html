@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>订单评价 触屏版</title>
+		<link rel="stylesheet" type="text/css" href="../../css/mui.css">
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet.css">
+	</head>
+
+	<body>
+		<!--ucenter-->
+		<header class="common-header">
+
+			<h1>评价</h1>
+			<a class="icon-back mui-action-back"></a>
+
+		</header>
+
+        <!--footer-->
+        <footer class="footer-btn">
+            
+            <div class="footer-btn-check">
+                <div class="username">
+                    <input type="checkbox" class="check">
+                    <span>匿名评价</span>
+                </div>
+                <a class="send-comment mui-action-back">提交</a>
+            </div>
+
+        </footer>
+		
+        <!--body-->
+        <section class="mui-content evaluate">
+
+            <textarea name="" id="" placeholder="亲!在此输入你要评价的信息哦~"></textarea>
+            <img class="loadingimg" src="../../images/ruzhuloading.gif" style="display: none;"/>
+            
+            <!--<div class="photos">
+                <a href="" class="photo-upload"></a>
+            </div>-->
+            <div class="photos">
+            	
+            	<div class="comment-img">
+					<form id="comment-form" method="post">
+						<input type="file" class="photo-upload" name ="file" id="default_pic"/>
+						<input type="hidden" name="name" value="file" />
+						<input type="hidden" name="key" class="img-key"/>
+					</form>
+				</div>
+			</div>
+
+            <div class="status">
+                <ul>
+                    <li class="">
+                        <label>服务描述</label>
+                        <span>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </span>
+                    </li>
+                    <li>
+                        <label>服务态度</label>
+                        <span>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </span>
+                    </li>
+                    <li>
+                        <label>响应速度</label>
+                        <span>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </span>
+                    </li>
+                    <li class="store">
+                        <label>店铺评价</label>
+                        <span>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+		
+		
+		<script src="../../js/hotcss.js"></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/jquery.form.min.js" ></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/config.js"></script>
+		<script src="../../js/common.js"></script>
+		<script src="../../js/member/comment.js" ></script>
+	</body>
+
+</html>

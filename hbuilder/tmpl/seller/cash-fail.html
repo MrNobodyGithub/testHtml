@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+	   <!--
+		author: 王佃鑫
+		date: 2017-09-12   
+		version: 1.0
+	-->
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>提现订单失败详情 触屏版</title>
+		<script src="../../js/hotcss.js"></script>
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link href="../../css/stylesheet.css" rel="stylesheet" />
+		<style type="text/css">
+			/*提现失败弹窗*/
+			#cash-fail{
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.5);
+				z-index: 999991;
+				/*display: none;*/
+			}
+			#cash-fail .wrap{
+				width: 72%;
+				height: 16rem;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+			}
+			#cash-fail .coupon{
+				height: 13rem;
+				background: #fff;
+				border-radius: 5%;
+				overflow: hidden;
+			}	
+			#cash-fail .coupon img{
+				display: block;
+				margin: 1.5rem auto;
+			   width: 80%;
+			}	
+			#cash-fail p{
+				padding: 0 1rem;
+				font-size: 0.6rem;
+				line-height: 1rem;
+				color: #000;
+			}
+			#cash-fail .close{
+				width: 100%;
+				text-align: center;
+				margin: 1rem auto;
+			}	
+			#cash-fail .close img{
+				width: 2rem;
+				height: 2rem;
+			}
+			/*//重新提交样式*/
+			/*.resubmit {
+				position: fixed;
+				bottom: 0.3rem;
+				right: 0;
+				height: 1.9rem;
+				width: 100%;
+				border: 1px solid #C0C0C0;
+				text-align: center;
+				font-size: 0.7rem;
+				 color: #ea5505;
+				 background-color: #f5a93b;
+				border-radius: 1rem;
+			}*/
+			
+			
+		</style>
+	</head>
+
+	<body>
+
+		<!--ucenter-->
+		<header class="common-header">
+			<h1>提现订单失败详情</h1>
+			<a class="icon-back mui-action-back"></a>
+		</header>
+		<!--//弹出窗-->
+		<div id="cash-fail">
+			<div class="wrap">
+				<div class="coupon">
+					<img src="../../images/cash_fail@2x.png" />
+					<!--<p>由于您的信息提交不完整,请将信息填写完整,再重新提交申请</p>-->
+					<!--<p>由于您的<span class="failReason"></span>,请将信息填写完整,再重新提交申请</p>-->
+					<p class="failReason"></p>
+				</div>
+				<div class="close">
+					<img src="../../images/cash_fail_close@2x.png" />
+				</div>
+			</div>
+		</div>
+
+		<!--body-->
+		<section class="mui-content account account-my3" style="margin-top: 20px;">
+
+		</section  >
+       <script type="text/html" id="failTemplat">
+       		<ul class="list acclist" style="border: none;">
+       			<% for(var i=0;i<datas.record.length;i++){ %>
+	       				<menu style="margin-top: 0;margin-bottom: 0;">
+							<a style="height: 1.5rem!important;">
+								<span style="padding-left: 1.4rem;font-size: 0.5rem;">订单</span>
+								<span style="font-size: 0.5rem;padding-left: 100px;color: #ACACB4;"><%= datas.record[i].order_sn %></span>
+							</a>
+							<a style="height: 1.5rem!important;">
+								<span style="padding-left: 1.4rem;font-size: 0.5rem;">金额</span>
+								<span style="font-size: 0.5rem;padding-left: 100px;color: #ea5505;" ><%= datas.record[i].cash_amount %></span>
+							</a>
+							<a style="height: 1.5rem!important;">
+								<span style="padding-left: 1.4rem;font-size: 0.5rem;">审核状态</span>
+								<% if(datas.record[i].state == 0 || datas.record[i].state == 1){ %>
+								<span style="font-size: 0.5rem;padding-left: 100px;color: #ACACB4;">审核中</span>
+								<% }else if(datas.record[i].state == 2){ %>
+								<span style="font-size: 0.5rem;padding-left: 100px;color: #ACACB4;">审核通过</span>
+								<% }else if(datas.record[i].state == 3){ %>
+								<span style="font-size: 0.5rem;padding-left: 100px;color: #ACACB4;">提现成功</span>
+								<% }else if(datas.record[i].state == 4){ %>
+								<span style="font-size: 0.5rem;padding-left: 100px;color: #ACACB4;">提现失败</span>
+								<% } %>
+							</a>
+							<a style="height: 1.5rem!important;">
+								<span style="padding-left: 1.4rem;font-size: 0.5rem;">失败时间</span>
+								<span style="font-size: 0.5rem;padding-left: 100px;color: #ACACB4;"><%= datas.record[i].finished_time %></span>
+							</a>
+							<a style="height: 1.5rem!important;">
+								<span style="padding-left: 1.4rem;font-size: 0.5rem;">失败原因</span>
+								<span style="font-size: 0.5rem;padding-left: 100px;color: #ACACB4;"><%= datas.record[i].fail_reason %></span>
+							</a>
+						</menu>
+       		
+				<% } %>
+				
+			</ul>
+			 <footer class="footer-btn">
+				<div class="appoint-detail-next">
+					<div>合计：<span><%= datas.cash_amount %>元</span></div>
+					<a class="btn-orange1 resubmit">重新提现</a>
+				</div>
+			</footer>
+		</script>
+
+		<script type="text/javascript" src="../../js/hotcss.js"></script>
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/config.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/template.js"></script>
+		<!--<script src="../../js/seller/account-my3.js"></script>-->
+		<script src="../../js/seller/cash-fail.js"></script>
+	</body>
+
+</html>
+
+
+
+
+
+
+

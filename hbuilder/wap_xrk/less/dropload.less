@@ -1,0 +1,60 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+
+
+.dropload-up,.dropload-down{
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    font-size: px2rem(30);
+    color: #8E96A6;
+    /* 开启硬件加速 */
+    -webkit-transform:translateZ(0);
+    transform:translateZ(0);
+}
+.dropload-down{
+    height: px2rem(100);
+    background: #fff;
+}
+.dropload-refresh,.dropload-update,.dropload-load,.dropload-noData{
+    height: px2rem(100);
+    .lh(100,2);
+    text-align: center;
+}
+.dropload-load .loading{
+    display: inline-block;
+    .height(30,2);
+    .width(30,2);
+    border-radius: 100%;
+    margin: px2rem(10);
+    border: 4px solid #666;
+    border-bottom-color: transparent;
+    vertical-align: middle;
+    -webkit-animation: rotate 0.75s linear infinite;
+    animation: rotate 0.75s linear infinite;
+}
+@-webkit-keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,81 @@
+.run-add {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: #fff;
+}
+.run-add .wrap-add {
+  background: #e6e6e8;
+}
+.run-add .wrap-add .add-content {
+  padding: 0.63703704rem 0.44444444rem 0.2962963rem;
+  background: url(../images/run/address_03.png) no-repeat 0.44444444rem 0.74074074rem #fff;
+  background-size: 1.24444444rem 1.7037037rem;
+  border-bottom: 1px solid #E1E1E1;
+  margin-top: 0.14814815rem;
+}
+.run-add .wrap-add .add-content p {
+  font-size: 0.57777778rem;
+  padding-left: 1.77777778rem;
+  color: #464646;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 0.8rem;
+}
+.run-add .wrap-add .add-content .top {
+  border-bottom: 1px solid #E4E4E4;
+  padding-bottom: 0.59259259rem;
+}
+.run-add .wrap-add .add-content .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 0.26666667rem;
+}
+.run-add .wrap-add .add-content .bottom p {
+  margin-bottom: 0;
+  padding-left: 0.38518519rem;
+}
+.run-add .wrap-add .add-content .bottom p:first-child input {
+  display: inline-block;
+  width: 0.53333333rem;
+  height: 0.53333333rem;
+  -webkit-appearance: none;
+  border-radius: 50%;
+  margin-right: 0.22222222rem;
+  position: relative;
+  top: 0.14814815rem;
+  border: 1px solid #ACACB4;
+}
+.run-add .wrap-add .add-content .bottom p:first-child input:checked {
+  background: url(../images/run/complate.png) no-repeat center center;
+  background-size: 0.53333333rem 0.53333333rem;
+  border: 0;
+}
+.run-add .wrap-add .add-content .bottom p .edit {
+  padding-left: 0.71111111rem;
+  margin-left: 0.71111111rem;
+  color: #464646;
+  background: url(../images/run/edit.png) no-repeat left center;
+  background-size: 0.62222222rem 0.62222222rem;
+  font-size: 0.44444444rem;
+}
+.run-add .wrap-add .add-content .bottom p .del {
+  padding-left: 0.71111111rem;
+  margin-left: 0.71111111rem;
+  color: #464646;
+  background: url(../images/run/del.png) no-repeat left center;
+  background-size: 0.62222222rem 0.62222222rem;
+  font-size: 0.44444444rem;
+}
+.footer-yellow .link {
+  background-color: #f9cc55;
+  font-size: 0.77037037rem;
+}

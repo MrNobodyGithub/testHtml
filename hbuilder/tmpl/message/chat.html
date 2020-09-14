@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>在线客服</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/msg.css"/>
+		<style>
+	    	.sun-back-ico{
+	    		width: 24px;
+	    		height: 24px;
+	    		margin-left: 10px !important;
+	    		margin-top: 10px;
+	    		line-height: 100%;
+	    		background: url(../../images/cleaning-back.png) center no-repeat;
+	    		background-size: 24px 24px;
+	    	}
+	    </style>
+	</head>
+
+	<body class="white">
+		<!--ucenter-->
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon sun-back-ico mui-pull-left"></a>
+			<h1 class="mui-title" >在线客服</h1>
+		</header>
+		
+		<div class="mui-content info" style="padding-bottom: 80px;"  id="msg">
+		</div>
+
+		<footer class="footer-chat">
+			<div class="emotion"><span class="face-icon">☺</span></div>
+			<div class="footer-center">
+				<input type="text" id="saytext" class="input-text" name="saytext" placeholder="请输入内容" value="">
+			</div>
+			<label for="" class="footer-right">
+				<a href="javaScript:;" onclick="send_msg()">发送</a>
+			</label>
+		</footer>
+		
+		<script src='../../js/socket.io.min.js'></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/jquery.qqFace.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/config.js"></script>
+		<script src="../../js/common.js"></script>
+		<script src="../../js/msg.js"></script>
+
+		<script type="text/javascript">
+            console.log("key："+key);
+            var tid;
+            $(function(){
+                $('.emotion').qqFace({
+                    id : 'facebox',
+                    assign:'saytext',
+                    path:'../../arclist/'	//表情存放的路径
+                });
+				//找客服id
+                $.ajax({
+                    url: ApiUrl+'/index.php?act=msg&op=get_member',
+                    data: {
+						'key':key
+                    },
+                    async: true, // 异步 || 同步
+                    dataType: 'json',
+                    type: 'post',
+                    success: function(data) {
+						if(data.code == 200){
+							tid = data.datas.to_uid;
+							msg_list();
+						}else{
+                            mui.toast('暂无客服接待，消息将转为离线消息！',{ duration:'long', type:'div' });
+						}
+                    },
+                    error: function(xhr, type, errorThrown) {
+                        mui.toast('网络错误');
+                    }
+                });
+                
+            });
+
+			function msg_list(){
+                $.ajax({
+                    url: ApiUrl+'/index.php?act=member_msglist&op=msg_list',
+                    data: {
+                        'key':key,
+                        't_id':tid
+                    },
+                    async: true, // 异步 || 同步
+                    dataType: 'json',
+                    type: 'post',
+                    timeout: 10000,
+                    success: function(data) {
+						$.each(data.datas.msg_list,function(key,value){
+							if(data.code == 200){
+									if(value.f_id == data.datas.member_id){
+                                        var str = "<div class='mui-clearfix info-to info-item'>"+
+                                            "<img src='"+$userinfo.photo+"' class='headto' alt=''>"+
+                                            "<div class='info-detail'>"+ value.t_msg +"<i class='right_j'></i></div></div>";
+                                        $('#msg').append(str);
+									}else{
+                                        var str = "<div class='mui-clearfix info-from info-item'>"+
+                                            "<img src='"+$userinfo.photo+"' class='head' alt=''>"+
+                                            "<div class='info-detail'>"+ value.t_msg +"<i class='left_j'></i></div></div>";
+                                        $('#msg').append(str);
+									}
+							}
+						})
+						$('body').animate({scrollTop:$('.info').outerHeight()},200)
+                    },
+                    error: function(xhr, type, errorThrown) {
+                        mui.toast('网络错误');
+                    }
+                });
+			}
+            //发送消息
+            function send_msg() {
+                var str = $("#saytext").val();
+                if(str == null || str == ''){
+                	mui.toast('请输入内容');
+                	return false;
+                }
+                if(tid){
+                	$.ajax({
+                    url: ApiUrl+'/index.php?act=msg&op=send',
+                    data: {
+                        'content':replace_em(str),
+						'key':key,
+						't_id':tid
+                    },
+                    async: true, // 异步 || 同步
+                    dataType: 'json',
+                    type: 'post',
+                    timeout: 10000,
+                    success: function(data) {
+                        $("#saytext").val('');
+                        if(data.datas == 'ok'){
+                            var strs = "<div class='mui-clearfix info-to info-item'>"+
+                                "<img src='"+$userinfo.photo+"' class='headto' alt=''>"+
+                                "<div class='info-detail'>"+ replace_em(str) +"</div></div>";
+
+            console.log(strs);
+                            $('#msg').append(strs);
+							
+                            mui.toast('消息已成发送！',{ duration:'long', type:'div' });
+						}else{
+                            var strs = "<div class='mui-clearfix info-to info-item'>"+
+                                "<img src='"+$userinfo.photo+"' class='headto' alt=''>"+
+                                "<div class='info-detail'>"+ replace_em(str) +"</div></div>";
+
+            console.log(strs);
+                            $('#msg').append(strs);
+                            mui.toast('暂无客服接待，消息将转为离线消息！',{ duration:'long', type:'div' });
+						}
+							$('body').animate({scrollTop:$('.info').outerHeight()},200)
+                    },
+                    error: function(xhr, type, errorThrown) {
+                        mui.toast('网络错误');
+                    }
+                });
+                }else{
+                    mui.toast('请登录后再咨询！',{ duration:'long', type:'div' });
+                }
+            }
+
+		</script>
+		<script type="text/javascript">
+            mui.init();
+		</script>
+	</body>
+
+</html>

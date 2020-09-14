@@ -1,0 +1,113 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+// gray
+.white {
+    .bc( #fff );
+}
+.gray {
+    .bc( #f2f2f2 );
+}
+
+//保洁预约
+.appoint1{
+    background: #fff;
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    .appoint-content{
+        flex: 1;
+        li{
+            padding-left: px2rem(45);
+            .fs(36,2);
+            .lh(130,2);
+            input{
+                .width;
+                .height(126,2);
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: px2rem(3) solid #e6e6e8;
+                .fs(36,2);
+                padding-left: px2rem(87);
+            }
+        }
+
+        .time{
+            padding-left: px2rem(87);
+            padding-right: px2rem(50);
+            border-bottom: px2rem(1) solid #E6E6E8;
+            background: url(../img/cleaning/why.png) no-repeat px2rem(10) center;
+            background-size: px2rem(48) px2rem(48);
+            
+            a{
+                display: block;
+                display: flex;
+                justify-content: space-between;
+                color: #666;
+                span{
+                    display: inline-block;
+                    .width(36,2);
+                    .height(34,2);
+                    background: url(../img/cleaning-right.png) no-repeat center center;
+                    margin-top: px2rem(40);
+                }
+            }
+        }
+
+        .people{
+            padding-left: px2rem(87);
+            padding-right: px2rem(50);
+            border-bottom: px2rem(1) solid #E6E6E8;
+            background: url(../img/cleaning/Cleaning2.png) no-repeat px2rem(10) center;
+            background-size: px2rem(48) px2rem(48);
+            input{
+                .width(140,2);
+                border:none;
+                
+            }
+            a{
+                display: block;
+                display: flex;
+                justify-content: space-between;
+                color: #666;
+                span{
+                    display: inline-block;
+                }
+            }
+        }
+        .text{
+
+            padding-left: px2rem(87);
+            background: url(../img/cleaning-remark.png) no-repeat px2rem(10) px2rem(74);
+            background-size: px2rem(48) px2rem(48);
+            .remark{
+                .width(920,2);
+                .height(216,2);
+                border: px2rem(3) solid #e6e6e8;
+                .fs(36,2);
+                border-radius: px2rem(30);
+                padding: px2rem(30) px2rem(16);
+                margin-top: px2rem(50);
+            
+                &::-webkit-input-placeholder {
+                    color: #ccc;
+                }
+            }
+        }
+    }
+    .appoint-next{
+        .height(146,2);
+        background-color: #e6454a;
+        a{
+            .fs(42,2);
+            color: #fff;
+            display: block;
+            text-align: center;
+            .lh(146,2);
+        }
+    }
+}
+

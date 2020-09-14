@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/stylesheet.css" />
+	</head>
+
+	<body>
+		<header class="search-header-1">
+				<a class="back mui-action-back">
+					<img src="../../images/cleaning-back.png"/>
+				</a>
+				<div>
+					<input type="text" placeholder="阿姨" />
+					<span></span>
+				</div>
+				
+				
+		</header>
+		
+		<section class="mui-content layout clean white nanny">
+
+			<!--menu-->
+			<div class="filter">
+				<nav>
+					<a class="active">全部</a>
+					<a>月嫂</a>
+					<a>保洁</a>
+					<a>护工</a>
+				</nav>
+			</div>
+
+			<div class="product">
+
+				
+			</div>
+			<script type="text/html" id="search-1">
+				<% if(code == 200){ %>
+					<% if(datas.goods_list!=""){%>
+						<% for(var i=0;i < datas.goods_list.length;i++){ %>
+							<div class="product-item mark" data-url="<%= datas.goods_list[i].extend.app_detail_templet %>">
+								<img src="<%= datas.goods_list[i].goods_image_url %>" alt="">
+								
+								<div class="product-info ">
+									<h2 class="icon-type2"><a data-search-id="<%= datas.goods_list[i].goods_id %>"><%= datas.goods_list[i].goods_name %></a></h2>
+									<div class="raty">
+										<span class="icon-raty"></span>
+										<span class="icon-raty"></span>
+										<span class="icon-raty"></span>
+										<span class="icon-raty"></span>
+										<span class="icon-raty"></span>
+									</div>
+									<div class="label">
+										<span><%= datas.goods_list[i].goods_jingle %></span>
+										<!--<span>47岁</span>
+										<span><em>13</em>年工作</span>
+										<span>服务过<em>113</em>户</span>
+										<span>好评率<em>90</em></span>-->
+									</div>
+									<div class="tag">
+										<!--<span><%= datas.goods_list[i].goods_jingle %></span>-->
+										<!--<span>做饭好吃</span>
+										<span>人品好</span>
+										<span>有耐心</span>-->
+									</div>
+									<div class="control mui-clearfix">
+										<span><%= datas.goods_list[i].goods_price %>元/小时</span>
+										<a data-search-id="<%= datas.goods_list[i].goods_id %>" class="pull-right">预约</a>
+									</div>
+								</div>
+							</div>
+						<% } %>
+					<% }else{ %>
+						<div style="padding-top:50%;text-align:center;height:100px;font-size: 40px;background: #EEEEEE;">暂无数据</div>
+					<% } %>
+				<% } %>
+			</script>
+
+		</section>
+		
+		<script type="text/javascript" src="../../js/hotcss.js" ></script>
+		<script type="text/javascript" src="../../js/jquery.min.js" ></script>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/template.js" ></script>
+		<script type="text/javascript" src="../../js/config.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/tmpl/search1.js">
+		</script>
+	</body>
+
+</html>

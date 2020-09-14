@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>三方登录绑定手机</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../../js/hotcss.js"></script>
+        <link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/stylesheet.css" rel="stylesheet" />
+		<style type="text/css">
+			.bindform .mobilediv input{
+				padding-left: 1.3rem;
+				height: 2.14814815rem;
+			    line-height: 2.14814815rem;
+			    border: 0;
+			    font-size: 0.74074074rem;
+			}
+			.bindform .vcodediv input{
+				padding-left: 1.3rem;
+			}
+			.bindform .vcodediv input {
+			    width: 70%;
+			    height: 2.14814815rem;
+			    line-height: 2.14814815rem;
+			    border: 0;
+			    font-size: 0.74074074rem;
+			}
+			.bindform .vcodediv button {
+			    width: 25%;
+			    height: 2.14814815rem;
+			    background-size: 3.7037037rem 2.22222222rem !important;
+			    font-size: 0.44444444rem;
+			    border: 0;
+			    background: #ccc;
+			    color: #fff;
+			}
+			.bindform .submitdiv {
+			    margin-top: 1.68888889rem;
+			    margin-left: 0.8rem;
+			}
+			.bindform .submitdiv button {
+			    width: 14.4rem;
+			    height: 2.04444444rem;
+			    line-height: 2.04444444rem;
+			    text-align: center;
+			    background: #ea5505;
+			    color: #fff;
+			    font-size: 0.71111111rem;
+			    border-radius: 0.2962963rem;
+			}
+		</style>
+	</head>
+
+	<body style="background: #efeff4;">
+		<!--ucenter-->
+		<header class="common-header">
+			<a class="icon-back mui-action-back"></a>
+			<h1>绑定手机</h1>
+		</header>
+		
+        <section class="mui-content bindform">
+		<div class="mobilediv">
+			<input type="text" name="mobile" id="mobile" value="" placeholder="手机号" autocomplete="off"/>
+		</div>
+		<div class="vcodediv">
+			<input type="text" name="vcode" id="vcode" value="" placeholder="验证码" autocomplete="off"/>
+			<button id="yzm">点击获取验证码</button>
+		</div>
+		<div class="submitdiv">
+			<button id="submit">确定绑定</button>
+		</div>
+        </section>
+		
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/config.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script src="../../js/simple-plugin.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+			_.getConfirmmsg('mobile','4');
+			function registerPush() {
+		        //注册个推信息到服务器
+		        var info = plus.push.getClientInfo();
+		        _.debug(info);
+		        //提交用户id到服务器
+		        $.ajax({
+		            type: "post",
+		            url: ApiUrl + '/index.php?act=push&op=registerPush',
+		            data: {
+		                key: _.userInfo.getKey(),
+		                client_id: info.clientid
+		            },
+		            dataType: 'json',
+		            success: function(data) {
+		                _.debug(data);
+		            }
+		        })
+		    }
+
+			mui.plusReady(function() {
+				var $client = plus.os.name.toLowerCase();
+				var self = plus.webview.currentWebview();
+				var $user_info = self.user_info;	
+				var $kind = self.kind;
+				console.log($user_info);
+				$("#submit").on("tap",function(){
+					//先校验
+					var validparams = {
+						rules: {
+							mobile: {
+								required: true,
+								mobile: true
+							},
+							vcode: {
+								required: true,
+								length: 6,
+								digits:true
+							}
+						},
+						messages: {
+							mobile: {
+								required: "请填写绑定的手机号",
+								mobile: "手机号格式不正确"
+							},
+							vcode: {
+								required: "请填写短信验证码",
+								length: "短信验证码长度为6位数字",
+								digits: "短信验证码长度为6位数字"
+							}
+						},
+						breakOnError: true, //首个错误就退出！
+						callback: function(isError, errorMsg) {
+							if(isError) {
+								mui.toast(errorMsg);
+							}
+						}
+					}
+					$.sValid.init(validparams);
+					if(!$.sValid()){
+						return false;
+					}
+					var btnArray = ['确定', '取消'];
+		        	mui.confirm('是否确定绑定？', '向日葵来了', btnArray, function(e) {
+		            	if (e.index == 0) {
+		            		w=plus.nativeUI.showWaiting();
+		            		$.ajax({
+								type:"post",
+								url:ApiUrl+"/index.php?act=connect_app&op=third_bind_mobile",
+								dataType:"json",
+								data:{
+									client:$client,
+									kind:$kind,
+									user_info:$user_info,
+									mobile:$("#mobile").val(),
+									vcode:$("#vcode").val()
+								},
+								success:function(ret){
+									w&&w.close();w=null;
+									if(ret.code == 200){
+										//正常登陆
+			            				var member_info = ret.datas;
+			            				console.log("用户信息：" + JSON.stringify(member_info));
+					                    _.ST.cls();
+					                    _.userInfo.set(member_info);
+					                    _.storeInfo.set(member_info);
+					                    //注册推送id
+				                        registerPush();
+				                        //找到首页，执行连接通讯服务js
+				                        var indexpage = plus.webview.getLaunchWebview();
+				                        indexpage && mui.fire(indexpage, 'connect_chatServer');
+				                        var member_Page = plus.webview.getWebviewById('member');
+				                        if (member_Page) {
+				                            mui.fire(member_Page, 'loaddata');
+				                        }
+				                        //登录成功，跳转的页面应该根据条件来跳转。
+				                        console.log(JSON.stringify(_.storeInfo.get()));
+				                        var storeInfo = _.storeInfo.get();
+				                        var openw = null;
+				                        if (storeInfo && storeInfo.storeId) {
+				                            openw = mui.openWindow({
+				                                url: '../seller/seller.html',
+				                                id: 'seller',
+				                                waiting: {
+				                                    autoShow: true
+				                                }
+				                            });
+				                        } else {
+				                            openw = plus.webview.getLaunchWebview()
+				                            openw.show();
+				                        }
+				                        openw.addEventListener('show', function() {
+							                self.close('none');
+    										plus.webview.close('login');
+							            }, false);
+				                        //关闭当前窗口，如果直接关闭会造成loading动画不关闭
+				                        //但是关闭会先露出登录界面
+				                        //最好的方法是在打开窗口的show事件中关闭要关闭的窗口
+				                        //或者openw.open('none',0,function(){在这里回调处理关闭})
+				                        /*setTimeout(function(){
+										    self.close('none');
+										}, 100);*/
+				                        //
+				                        
+									}else{
+										mui.toast(ret.datas.error);
+									}
+								},
+								error:function(){
+									w&&w.close();w=null;
+									mui.toast('服务器开小差了');
+								}
+							});
+		            	}
+		            })	
+				})
+			})
+		</script>
+
+	</body>
+
+</html>

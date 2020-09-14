@@ -1,0 +1,77 @@
+.form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 2.01481481rem;
+  border-bottom: 2px solid #e6e6e8;
+  transition: all .3s;
+}
+.form-group .must {
+  position: absolute;
+  font-size: 0.74074074rem;
+  color: red;
+}
+.form-group label {
+  font-size: 0.59259259rem;
+  color: #181818;
+  padding-left: 0.42962963rem;
+  width: auto;
+}
+.form-status-error {
+  box-shadow: 6px 5px 2px rgba(255, 0, 0, 0.3);
+}
+.form-control {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+  position: relative;
+}
+.form-control a,
+.form-control input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 0.53333333rem;
+  color: #181818;
+  border: 0;
+  outline: 0;
+}
+.form-control a::-webkit-input-placeholder,
+.form-control input::-webkit-input-placeholder {
+  color: #b8b8c4;
+}
+.form-control i {
+  display: inline-block;
+  width: 0.45925926rem;
+  height: 0.45925926rem;
+  background: url(../image/ucenter/star2.png) center no-repeat;
+  background-size: cover;
+  margin-left: 0.19259259rem;
+}
+.form-control .form-control-reset {
+  width: 1.27407407rem;
+  padding: 0 0.2962963rem;
+  background: url(../image/icon/input-reset.png) center no-repeat;
+  background-size: 0.68148148rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.form-icon-arrow {
+  padding-right: 0.74074074rem;
+  background: url(../image/ucenter/form-icon-arrow.png) 99% center no-repeat;
+  background-size: 0.28148148rem 0.47407407rem;
+}
+.form-upload {
+  padding-top: 0.66666667rem;
+  padding-bottom: 0.66666667rem;
+}
+.form-upload img {
+  vertical-align: middle;
+  border-radius: 50%;
+}

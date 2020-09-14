@@ -1,0 +1,214 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+
+@hosList   :      hospital-list;
+@hosListColor  :      #a1d66a;
+@anotherColor  :       #ff5000;
+
+//陪练
+.@{hosList} {
+    position: relative;
+    .yuyue{        
+        position: fixed;
+        bottom:px2rem(50);
+        right: px2rem(50);
+        
+        img{
+            .width(148,2);
+            .height(148,2);
+        }
+    }
+    .icon-type2{
+            margin-top: 10px;}
+            .mui-clearfix{
+            span{
+                margin-top: -20px;
+            }
+        }
+        .raty{
+            span{
+                margin-bottom: -10px;
+            }}
+    .filter {
+
+        nav {
+            a {
+                color: @title-main;
+
+                &.active ,
+                &:active {
+                    color: @hosListColor;
+                }
+            }
+        }
+
+    }
+
+ .product-item {
+        img{
+            width:270px;
+            height:270px;
+        }
+        .label {
+            display:block;
+        
+         
+                overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+
+            em {
+                .color( @hosListColor );
+            }
+        }
+
+        .tag {
+            span {
+                color: @hosListColor;
+                border-color: @hosListColor;
+            }
+        }
+
+        .control {
+            a {
+                color: @hosListColor;
+                border-color: @hosListColor;
+                .fs(30,2);
+            }
+        }
+    }
+
+    .grab-state {
+        button {
+            color: @hosListColor;
+            border-color: @hosListColor;
+            .bc( #fff );
+        }
+    }
+
+    .grab-remarks {
+        color: @hosListColor;
+    }
+
+    .detail-worktime ,
+    .detail-price {
+        .active{
+            color: @hosListColor;
+            border:1px solid @hosListColor !important;
+        }  
+    }
+
+    .title {
+        span {
+            background-color: @hosListColor;
+        }
+    }
+
+    .detail-comment {
+        .comment-content {
+            span {
+                color: @hosListColor;
+            }
+        }
+    }
+
+
+
+//陪练
+.@{hosList}{
+    .filter1{
+        nav{
+            .df;
+            align-items: center;
+            justify-content: space-around;
+            li{
+                flex: 1;
+                text-align: center;
+                border-top: 1px solid #e6e6e6;
+            }
+            a{
+                display: inline-block;
+                .height(126,2);
+                .lh(126,2);
+                .fs(37,2);
+                color: @title-main;
+            }
+            .active1{
+                border-bottom: 1px solid @hosListColor;
+//              background: red;
+                color: @hosListColor;
+            }
+        }
+    }
+    .product-item{
+        .photo{
+            position: relative;
+            overflow: hidden;
+            border-radius: px2rem(20);
+            p{
+                .width;
+                .height(48,2);
+                background: rgba(0,0,0,0.5);
+                color: #fff;
+                .fs(30,2);
+                .lh(48,2);
+                .mb(0);
+                text-align: center;
+                position: absolute;
+                bottom: 0;
+            }
+            
+        }
+        .product-info{
+            .pt(30,2);
+            h2.icon-type1 {
+                background-image: none;
+                .pl(0);
+                span{
+                    color: #c0c0c0;
+                }
+            }
+            p{
+                .fs(30,2);
+                margin-top: px2rem(40);
+            }
+            .raty{
+                i{
+                    .dib;
+                    .height(30,2);
+                    .fs(30,2);
+                    font-style: normal;
+                    position: relative;
+                    top: -3px;
+                    color: @hosListColor;
+                    .ml(38,2);
+                }
+            }
+            .control{
+                span{
+                    .fs(30,2);
+                    
+                    i{
+                        font-style: normal;
+                        .fs(30,2);
+                        color: @anotherColor;
+                    }
+                }
+                small{
+                    .fr;
+                    .lh(52,2);
+                    color: #a0a0a0;
+                    .fs(30,2);
+                }
+            }
+        }
+        
+    } 
+} 
+}

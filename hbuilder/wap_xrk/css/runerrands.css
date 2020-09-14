@@ -1,0 +1,924 @@
+.mapsection #l-map {
+  height: 14.96296296rem;
+  width: 100%;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+.mapsection #r-result {
+  width: 100%;
+  background: #e6e6e8;
+  text-align: center;
+  height: 1.77777778rem;
+  line-height: 1.77777778rem;
+}
+.mapsection #r-result input {
+  width: 15.11111111rem;
+  height: 1.18518519rem;
+  border-radius: 50px;
+  padding-left: 1.33333333rem;
+  background: url(../images/runerrands/search.png) no-repeat center #fff;
+  background-size: 0.88888889rem;
+  background-position-x: 0.44444444rem;
+  font-size: 0.44444444rem;
+}
+.mapsection .map-list ul {
+  width: 100%;
+}
+.mapsection .map-list ul li {
+  width: 100%;
+  height: 3.11111111rem;
+  padding-left: 2.34074074rem;
+  background: url(../images/runerrands/mapposi1.png) no-repeat center;
+  background-size: 1.24444444rem 1.65925926rem;
+  background-position-x: 0.44444444rem;
+  overflow: hidden;
+}
+.mapsection .map-list ul li span {
+  margin-top: 0.2962963rem;
+  color: #ed6a00 ;
+  font-size: 0.53333333rem;
+  line-height: 1.48148148rem;
+  display: block;
+  height: 1.48148148rem;
+}
+.mapsection .map-list ul li p {
+  font-size: 0.53333333rem;
+  height: 0.88888889rem;
+  line-height: 0.88888889rem;
+}
+.map-buysection .run-swiper img {
+  width: 100%;
+}
+.map-buysection .runbuy-buttons {
+  padding-top: 1.18518519rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 1.18518519rem;
+}
+.map-buysection .runbuy-buttons button {
+  width: 4.38518519rem;
+  height: 1.45185185rem;
+  border: 1px solid #333;
+  font-size: 0.63703704rem;
+}
+.map-buysection .runbuy-buttons .active {
+  background: #f9cc55 ;
+  color: #fff;
+  border: 0;
+}
+.map-buysection .runbuy-position1 {
+  padding-left: 0.59259259rem;
+}
+.map-buysection .runbuy-position1 p {
+  height: 1.77777778rem;
+  padding-left: 1.48148148rem;
+  padding-right: 0.44444444rem;
+}
+.map-buysection .runbuy-position1 p:nth-of-type(1) {
+  background: url(../images/runerrands/runbuy-mai.png) no-repeat left center;
+  background-size: 1.48148148rem;
+}
+.map-buysection .runbuy-position1 p:nth-of-type(2) {
+  background: url(../images/runerrands/runbuy-shou.png) no-repeat left center;
+  background-size: 1.48148148rem;
+}
+.map-buysection .runbuy-position1 p input {
+  margin-top: 0.2962963rem;
+  height: 1.48148148rem;
+  border: solid #ccc;
+  border-width: 0 0 1px 0;
+  font-size: 0.53333333rem;
+}
+.map-buysection .runbuy-position1 p input:nth-of-type(1) {
+  background: url(../images/cleaning-right.png) no-repeat 12.78518519rem center;
+  background-size: 0.2962963rem 0.5037037rem;
+}
+.map-buysection .runbuy-list .edit-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.map-buysection .runbuy-list .edit-content li {
+  height: 1.92592593rem;
+  padding-left: 0.66666667rem;
+  font-size: 0.53333333rem;
+  line-height: 1.92592593rem;
+}
+.map-buysection .runbuy-list .edit-content li input {
+  height: 1.86666667rem;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 0.04444444rem solid #b7b7b8;
+  font-size: 0.53333333rem;
+  padding-left: 1.28888889rem;
+}
+.map-buysection .runbuy-list .edit-content li:nth-of-type(1) {
+  position: relative;
+}
+.map-buysection .runbuy-list .edit-content li:nth-of-type(1) input {
+  background: url(../images/runerrands/weight.png) no-repeat 0.14814815rem center;
+  background-size: 0.71111111rem 0.71111111rem;
+  color: #b7b7b8;
+}
+.map-buysection .runbuy-list .edit-content li:nth-of-type(1) span {
+  position: absolute;
+  right: 0.41481481rem;
+  font-size: 0.44444444rem;
+  color: #ccc;
+}
+.map-buysection .runbuy-list .edit-content li:nth-of-type(2) {
+  position: relative;
+}
+.map-buysection .runbuy-list .edit-content li:nth-of-type(2) input {
+  background: url(../images/Cleaning/Cleaning1.png) no-repeat 0.14814815rem center;
+  background-size: 0.71111111rem 0.71111111rem;
+  color: #b7b7b8;
+}
+.map-buysection .runbuy-list .edit-content li:nth-of-type(2) span {
+  position: absolute;
+  right: 0.41481481rem;
+  font-size: 0.44444444rem;
+  color: #ccc;
+}
+.map-buysection .runbuy-list .edit-content li:nth-of-type(3) {
+  margin-left: 0.66666667rem;
+  padding-left: 1.28888889rem;
+  padding-right: 0.74074074rem;
+  border-bottom: 0.04444444rem solid #b7b7b8;
+  background: url(../images/Cleaning/Cleaning4.png) no-repeat 0.14814815rem center;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.map-buysection .runbuy-list .edit-content li:nth-of-type(3) a {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #b7b7b8;
+  font-size: 0.59259259rem;
+}
+.map-buysection .runbuy-list .edit-content li:nth-of-type(3) a span {
+  display: inline-block;
+  width: 0.53333333rem;
+  height: 0.5037037rem;
+  background: url(../images/cleaning-right.png) no-repeat center center;
+  margin-top: 0.59259259rem;
+}
+.map-buysection .runbuy-list .edit-content li:nth-of-type(4) {
+  margin-left: 0.66666667rem;
+  padding-left: 1.28888889rem;
+  padding-right: 0.74074074rem;
+  border-bottom: 0.04444444rem solid #b7b7b8;
+  background: url(../images/Cleaning/Cleaning2.png) no-repeat 0.14814815rem center;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.map-buysection .runbuy-list .edit-content li:nth-of-type(4) a {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #b7b7b8;
+  font-size: 0.59259259rem;
+}
+.map-buysection .runbuy-list .edit-content li:nth-of-type(4) a span {
+  display: inline-block;
+  height: 0.5037037rem;
+}
+.map-buysection .runbuy-list .edit-content li:nth-of-type(5) {
+  height: 3.40740741rem;
+  margin-left: 0.66666667rem;
+  padding-left: 1.28888889rem;
+  background: url(../images/Cleaning/Cleaning3.png) no-repeat 0.14814815rem 1.0962963rem;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.map-buysection .runbuy-list .edit-content li:nth-of-type(5) .remark {
+  width: 13.62962963rem;
+  height: 3.2rem;
+  border: 0.04444444rem solid #e6e6e8;
+  font-size: 0.53333333rem;
+  border-radius: 0.44444444rem;
+  padding: 0.44444444rem 0.23703704rem;
+  margin-top: 0.74074074rem;
+  margin-bottom: 0.88888889rem;
+  color: #b7b7b8;
+}
+.map-buysection .runbuy-list .edit-content li:nth-of-type(6) {
+  margin-top: 0.74074074rem;
+  height: 3.7037037rem;
+  border-bottom: 1px solid #e6e6e8;
+}
+.map-buysection .runbuy-list .edit-content li:nth-of-type(6) img {
+  margin-left: 1.18518519rem;
+}
+.map-buysection .runbuy-protocol {
+  height: 6.82962963rem;
+  width: 100%;
+  background: #fff;
+  padding-top: 1.82222222rem;
+  position: relative;
+  text-align: center;
+  font-size: 0.62222222rem;
+}
+.map-buysection .runbuy-protocol a {
+  color: #000000;
+}
+.map-buysection .runbuy-protocol input {
+  position: absolute;
+  top: 1.03703704rem;
+  left: 3.7037037rem;
+  display: block;
+  width: 0.74074074rem;
+  height: 0.74074074rem;
+  border: 1px solid #bfbfbf;
+  margin-top: 0.66666667rem;
+  margin-right: 0.59259259rem;
+  -webkit-appearance: none;
+}
+.map-buysection .runbuy-protocol input:checked {
+  background: url(../images/runerrands/duigou.png) no-repeat center;
+}
+.runbuyfooter a:nth-of-type(1) {
+  width: 80%;
+  line-height: 2.22222222rem;
+  font-size: 0.51851852rem;
+  color: #000;
+  text-align: left;
+  padding-left: 0.88888889rem;
+}
+.runbuyfooter a:nth-of-type(1) span {
+  color: #f4425d;
+  font-size: 0.71111111rem;
+}
+.map-gosection .run-swiper img {
+  width: 100%;
+}
+.map-gosection .runbuy-buttons {
+  padding-top: 1.18518519rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 1.18518519rem;
+}
+.map-gosection .runbuy-buttons button {
+  width: 4.38518519rem;
+  height: 1.45185185rem;
+  border: 1px solid #333;
+  font-size: 0.63703704rem;
+}
+.map-gosection .runbuy-buttons .active {
+  background: #f9cc55 ;
+  color: #fff;
+  border: 0;
+}
+.map-gosection .runbuy-position1 {
+  padding-left: 0.59259259rem;
+}
+.map-gosection .runbuy-position1 p {
+  height: 1.77777778rem;
+  padding-left: 1.48148148rem;
+  padding-right: 0.44444444rem;
+}
+.map-gosection .runbuy-position1 p input {
+  margin-top: 0.2962963rem;
+  height: 1.48148148rem;
+  border: solid #ccc;
+  border-width: 0 0 1px 0;
+  font-size: 0.53333333rem;
+}
+.map-gosection .runbuy-position1 p input:nth-of-type(1) {
+  background: url(../images/cleaning-right.png) no-repeat 12.78518519rem center;
+  background-size: 0.2962963rem 0.5037037rem;
+}
+.map-gosection .runbuy-position1 .run-ji {
+  background: url(../images/runerrands/runbuy-ji.png) no-repeat left center;
+  background-size: 1.48148148rem;
+}
+.map-gosection .runbuy-position1 .run-shou {
+  background: url(../images/runerrands/runbuy-shou.png) no-repeat left center;
+  background-size: 1.48148148rem;
+}
+.map-gosection .runbuy-list .edit-content1 li {
+  height: 1.92592593rem;
+  font-size: 0.53333333rem;
+  line-height: 1.92592593rem;
+  margin-left: 0.66666667rem;
+  padding-left: 1.28888889rem;
+  padding-right: 0.74074074rem;
+  border-bottom: 0.01481481rem solid #b7b7b8;
+  background: url(../images/runerrands/thing.png) no-repeat 0.14814815rem center;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.map-gosection .runbuy-list .edit-content1 li a {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #b7b7b8;
+  font-size: 0.59259259rem;
+}
+.map-gosection .runbuy-list .edit-content1 li a span {
+  display: inline-block;
+  width: 0.53333333rem;
+  height: 0.5037037rem;
+  background: url(../images/cleaning-right.png) no-repeat center center;
+  background-size: 0.2962963rem 0.5037037rem;
+  margin-top: 0.59259259rem;
+}
+.map-gosection .runbuy-list .edit-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.map-gosection .runbuy-list .edit-content li {
+  height: 1.92592593rem;
+  padding-left: 0.66666667rem;
+  font-size: 0.53333333rem;
+  line-height: 1.92592593rem;
+}
+.map-gosection .runbuy-list .edit-content li input {
+  height: 1.86666667rem;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 0.04444444rem solid #b7b7b8;
+  font-size: 0.53333333rem;
+  padding-left: 1.28888889rem;
+}
+.map-gosection .runbuy-list .edit-content li:nth-of-type(1) {
+  position: relative;
+}
+.map-gosection .runbuy-list .edit-content li:nth-of-type(1) input {
+  background: url(../images/runerrands/weight.png) no-repeat 0.14814815rem center;
+  background-size: 0.71111111rem 0.71111111rem;
+  color: #b7b7b8;
+}
+.map-gosection .runbuy-list .edit-content li:nth-of-type(1) span {
+  position: absolute;
+  right: 0.41481481rem;
+  font-size: 0.44444444rem;
+  color: #ccc;
+}
+.map-gosection .runbuy-list .edit-content li:nth-of-type(2) {
+  position: relative;
+}
+.map-gosection .runbuy-list .edit-content li:nth-of-type(2) input {
+  background: url(../images/Cleaning/Cleaning1.png) no-repeat 0.14814815rem center;
+  background-size: 0.71111111rem 0.71111111rem;
+  color: #b7b7b8;
+}
+.map-gosection .runbuy-list .edit-content li:nth-of-type(2) span {
+  position: absolute;
+  right: 0.41481481rem;
+  font-size: 0.44444444rem;
+  color: #ccc;
+}
+.map-gosection .runbuy-list .edit-content li:nth-of-type(3) {
+  margin-left: 0.66666667rem;
+  padding-left: 1.28888889rem;
+  padding-right: 0.74074074rem;
+  border-bottom: 0.04444444rem solid #b7b7b8;
+  background: url(../images/Cleaning/Cleaning4.png) no-repeat 0.14814815rem center;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.map-gosection .runbuy-list .edit-content li:nth-of-type(3) a {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #b7b7b8;
+  font-size: 0.59259259rem;
+}
+.map-gosection .runbuy-list .edit-content li:nth-of-type(3) a span {
+  display: inline-block;
+  width: 0.53333333rem;
+  height: 0.5037037rem;
+  background: url(../images/cleaning-right.png) no-repeat center center;
+  background-size: 0.2962963rem 0.5037037rem;
+  margin-top: 0.59259259rem;
+}
+.map-gosection .runbuy-list .edit-content li:nth-of-type(4) {
+  margin-left: 0.66666667rem;
+  padding-left: 1.28888889rem;
+  padding-right: 0.74074074rem;
+  border-bottom: 0.04444444rem solid #b7b7b8;
+  background: url(../images/Cleaning/Cleaning4.png) no-repeat 0.14814815rem center;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.map-gosection .runbuy-list .edit-content li:nth-of-type(4) a {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #b7b7b8;
+  font-size: 0.59259259rem;
+}
+.map-gosection .runbuy-list .edit-content li:nth-of-type(4) a span {
+  display: inline-block;
+  width: 0.53333333rem;
+  height: 0.5037037rem;
+  background: url(../images/cleaning-right.png) no-repeat center center;
+  margin-top: 0.59259259rem;
+}
+.map-gosection .runbuy-list .edit-content li:nth-of-type(5) {
+  height: 1.92592593rem;
+  margin-left: 0.66666667rem;
+  padding-left: 1.28888889rem;
+  padding-right: 0.74074074rem;
+  border-bottom: 0.04444444rem solid #b7b7b8;
+  background: url(../images/Cleaning/Cleaning2.png) no-repeat 0.14814815rem center;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.map-gosection .runbuy-list .edit-content li:nth-of-type(5) a {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #b7b7b8;
+  font-size: 0.59259259rem;
+}
+.map-gosection .runbuy-list .edit-content li:nth-of-type(5) a span {
+  display: inline-block;
+  height: 0.5037037rem;
+}
+.map-gosection .runbuy-list .edit-content li:nth-of-type(6) {
+  margin-left: 0.66666667rem;
+  padding-left: 1.28888889rem;
+  background: url(../images/Cleaning/Cleaning3.png) no-repeat 0.14814815rem 1.0962963rem;
+  background-size: 0.71111111rem 0.71111111rem;
+  border-bottom: 0;
+}
+.map-gosection .runbuy-list .edit-content li:nth-of-type(6) .remark {
+  width: 13.62962963rem;
+  height: 3.2rem;
+  border: 0.04444444rem solid #e6e6e8;
+  font-size: 0.53333333rem;
+  border-radius: 0.44444444rem;
+  padding: 0.44444444rem 0.23703704rem;
+  margin-top: 0.74074074rem;
+  margin-bottom: 0.88888889rem;
+  color: #b7b7b8;
+}
+.map-gosection .runbuy-list .edit-content li:nth-of-type(7) {
+  margin-top: 0.74074074rem;
+  height: 5.18518519rem;
+  border-bottom: 1px solid #e6e6e8;
+  padding-bottom: 0.59259259rem;
+}
+.map-gosection .runbuy-list .edit-content li:nth-of-type(7) img {
+  margin-left: 1.18518519rem;
+  margin-top: 1.48148148rem;
+  width: 2.22222222rem;
+  height: 2.22222222rem;
+}
+.map-gosection .runbuy-protocol {
+  height: 6.82962963rem;
+  width: 100%;
+  background: #fff;
+  padding-top: 1.82222222rem;
+  position: relative;
+  text-align: center;
+  font-size: 0.62222222rem;
+}
+.map-gosection .runbuy-protocol a {
+  color: #000000;
+}
+.map-gosection .runbuy-protocol input {
+  position: absolute;
+  top: 1.03703704rem;
+  left: 3.7037037rem;
+  display: block;
+  width: 0.74074074rem;
+  height: 0.74074074rem;
+  border: 1px solid #bfbfbf;
+  margin-top: 0.66666667rem;
+  margin-right: 0.59259259rem;
+  -webkit-appearance: none;
+}
+.map-gosection .runbuy-protocol input:checked {
+  background: url(../images/runerrands/duigou.png) no-repeat center;
+}
+.runbuyfooter a:nth-of-type(1) {
+  width: 80%;
+  line-height: 2.22222222rem;
+  font-size: 0.51851852rem;
+  color: #000;
+  text-align: left;
+  padding-left: 0.88888889rem;
+}
+.runbuyfooter a:nth-of-type(1) span {
+  color: #f4425d;
+  font-size: 0.71111111rem;
+}
+.map-lineupsection .run-swiper img {
+  width: 100%;
+}
+.map-lineupsection .runbuy-buttons {
+  padding-top: 1.18518519rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 1.18518519rem;
+}
+.map-lineupsection .runbuy-buttons button {
+  width: 4.38518519rem;
+  height: 1.45185185rem;
+  border: 1px solid #333;
+  font-size: 0.63703704rem;
+}
+.map-lineupsection .runbuy-buttons .active {
+  background: #f9cc55 ;
+  color: #fff;
+  border: 0;
+}
+.map-lineupsection .runbuy-position1 {
+  padding-left: 0.59259259rem;
+}
+.map-lineupsection .runbuy-position1 p {
+  height: 1.77777778rem;
+  padding-left: 1.48148148rem;
+  padding-right: 0.44444444rem;
+}
+.map-lineupsection .runbuy-position1 p:nth-of-type(1) {
+  background: url(../images/runerrands/run-pai.png) no-repeat left center;
+  background-size: 1.48148148rem;
+}
+.map-lineupsection .runbuy-position1 p input {
+  margin-top: 0.2962963rem;
+  height: 1.48148148rem;
+  border: solid #ccc;
+  border-width: 0 0 1px 0;
+  font-size: 0.53333333rem;
+}
+.map-lineupsection .runbuy-position1 p input:nth-of-type(1) {
+  background: url(../images/cleaning-right.png) no-repeat 12.78518519rem center;
+  background-size: 0.2962963rem 0.5037037rem;
+}
+.map-lineupsection .runbuy-list .edit-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.map-lineupsection .runbuy-list .edit-content li {
+  height: 1.92592593rem;
+  padding-left: 0.66666667rem;
+  font-size: 0.53333333rem;
+  line-height: 1.92592593rem;
+}
+.map-lineupsection .runbuy-list .edit-content li input {
+  height: 1.86666667rem;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 0.04444444rem solid #b7b7b8;
+  font-size: 0.53333333rem;
+  padding-left: 1.28888889rem;
+}
+.map-lineupsection .runbuy-list .edit-content li:nth-of-type(1) {
+  margin-left: 0.66666667rem;
+  padding-left: 1.28888889rem;
+  padding-right: 0.74074074rem;
+  border-bottom: 0.04444444rem solid #b7b7b8;
+  background: url(../images/Cleaning/Cleaning4.png) no-repeat 0.14814815rem center;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.map-lineupsection .runbuy-list .edit-content li:nth-of-type(1) a {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #b7b7b8;
+  font-size: 0.59259259rem;
+}
+.map-lineupsection .runbuy-list .edit-content li:nth-of-type(1) a span {
+  display: inline-block;
+  width: 0.53333333rem;
+  height: 0.5037037rem;
+  background: url(../images/cleaning-right.png) no-repeat center center;
+  background-size: 0.2962963rem 0.5037037rem;
+  margin-top: 0.59259259rem;
+}
+.map-lineupsection .runbuy-list .edit-content li:nth-of-type(2) {
+  margin-left: 0.66666667rem;
+  padding-left: 1.28888889rem;
+  padding-right: 0.74074074rem;
+  border-bottom: 0.04444444rem solid #b7b7b8;
+  background: url(../images/Cleaning/Cleaning4.png) no-repeat 0.14814815rem center;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.map-lineupsection .runbuy-list .edit-content li:nth-of-type(2) a {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #b7b7b8;
+  font-size: 0.59259259rem;
+}
+.map-lineupsection .runbuy-list .edit-content li:nth-of-type(2) a span {
+  display: inline-block;
+  width: 0.53333333rem;
+  height: 0.5037037rem;
+  background: url(../images/cleaning-right.png) no-repeat center center;
+  background-size: 0.2962963rem 0.5037037rem;
+  margin-top: 0.59259259rem;
+}
+.map-lineupsection .runbuy-list .edit-content li:nth-of-type(3) {
+  margin-left: 0.66666667rem;
+  padding-left: 1.28888889rem;
+  padding-right: 0.74074074rem;
+  border-bottom: 0.04444444rem solid #b7b7b8;
+  background: url(../images/Cleaning/Cleaning2.png) no-repeat 0.14814815rem center;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.map-lineupsection .runbuy-list .edit-content li:nth-of-type(3) a {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #b7b7b8;
+  font-size: 0.59259259rem;
+}
+.map-lineupsection .runbuy-list .edit-content li:nth-of-type(3) a span {
+  display: inline-block;
+  height: 0.5037037rem;
+}
+.map-lineupsection .runbuy-list .edit-content li:nth-of-type(4) {
+  height: 3.40740741rem;
+  margin-left: 0.66666667rem;
+  padding-left: 1.28888889rem;
+  background: url(../images/Cleaning/Cleaning3.png) no-repeat 0.14814815rem 1.0962963rem;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.map-lineupsection .runbuy-list .edit-content li:nth-of-type(4) .remark {
+  width: 13.62962963rem;
+  height: 3.2rem;
+  border: 0.04444444rem solid #e6e6e8;
+  font-size: 0.53333333rem;
+  border-radius: 0.44444444rem;
+  padding: 0.44444444rem 0.23703704rem;
+  margin-top: 0.74074074rem;
+  margin-bottom: 0.88888889rem;
+  color: #b7b7b8;
+}
+.map-lineupsection .runbuy-list .edit-content li:nth-of-type(5) {
+  margin-top: 0.74074074rem;
+  height: 3.7037037rem;
+  border-bottom: 1px solid #e6e6e8;
+}
+.map-lineupsection .runbuy-list .edit-content li:nth-of-type(5) img {
+  margin-left: 1.18518519rem;
+}
+.map-lineupsection .runbuy-protocol {
+  height: 6.82962963rem;
+  width: 100%;
+  background: #fff;
+  padding-top: 1.82222222rem;
+  position: relative;
+  text-align: center;
+  font-size: 0.62222222rem;
+}
+.map-lineupsection .runbuy-protocol a {
+  color: #000000;
+}
+.map-lineupsection .runbuy-protocol input {
+  position: absolute;
+  top: 1.03703704rem;
+  left: 3.7037037rem;
+  display: block;
+  width: 0.74074074rem;
+  height: 0.74074074rem;
+  border: 1px solid #bfbfbf;
+  margin-top: 0.66666667rem;
+  margin-right: 0.59259259rem;
+  -webkit-appearance: none;
+}
+.map-lineupsection .runbuy-protocol input:checked {
+  background: url(../images/runerrands/duigou.png) no-repeat center;
+}
+.runbuyfooter a:nth-of-type(1) {
+  width: 80%;
+  line-height: 2.22222222rem;
+  font-size: 0.51851852rem;
+  color: #000;
+  text-align: left;
+  padding-left: 0.88888889rem;
+}
+.runbuyfooter a:nth-of-type(1) span {
+  color: #f4425d;
+  font-size: 0.71111111rem;
+}
+.runmaph {
+  background: #f9cd56;
+  color: #fff;
+}
+.runmaph .icon-back {
+  background: url(../images/cleaning-back1.png) no-repeat center;
+}
+.maptasksection .map1 {
+  width: 100%;
+  height: 23.55555556rem;
+}
+.taskfoot {
+  height: 2.16296296rem;
+  line-height: 2.16296296rem;
+  font-size: 0.72592593rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  color: #e6454a;
+  text-align: center;
+}
+.runmaph {
+  background: #f9cd56;
+  color: #fff;
+}
+.runmaph .icon-back {
+  background: url(../images/cleaning-back1.png) no-repeat center;
+}
+.mapsuccesssection .map1 {
+  width: 100%;
+  height: 16.2962963rem;
+}
+.tasksuccessfoot {
+  height: 10.16296296rem;
+  line-height: 2.16296296rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  color: #e6454a;
+  text-align: center;
+}
+.tasksuccessfoot p:nth-of-type(1) {
+  height: 1.77777778rem;
+  background: #e6454a;
+  width: 100%;
+  font-size: 0.68148148rem;
+  color: #fff;
+  line-height: 1.77777778rem;
+}
+.tasksuccessfoot .mapsuccessdetail {
+  height: 3.85185185rem;
+  padding-left: 1.62962963rem;
+  margin-top: 1.18518519rem;
+  margin-bottom: 1.18518519rem;
+}
+.tasksuccessfoot .mapsuccessdetail dl {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.tasksuccessfoot .mapsuccessdetail dl dt {
+  height: 3.71851852rem;
+  width: 3.71851852rem;
+  border-radius: 50%;
+}
+.tasksuccessfoot .mapsuccessdetail dl dt img {
+  height: 3.71851852rem;
+  width: 3.71851852rem;
+  border-radius: 50%;
+}
+.tasksuccessfoot .mapsuccessdetail dl dd {
+  position: absolute;
+  top: -1.48148148rem;
+  left: 4.44444444rem;
+}
+.tasksuccessfoot .mapsuccessdetail dl dd ul {
+  height: 3.71851852rem;
+  text-align: left;
+}
+.tasksuccessfoot .mapsuccessdetail dl dd ul li {
+  width: 100%;
+  margin-bottom: 0.74074074rem;
+  height: 0.66666667rem;
+  font-size: 0.5037037rem;
+}
+.tasksuccessfoot .mapsuccessfun ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.tasksuccessfoot .mapsuccessfun ul li {
+  border: 2px solid #919191;
+  border-radius: 10px;
+  height: 1.15555556rem;
+  width: 2.93333333rem;
+  line-height: 1.15555556rem;
+  text-align: center;
+}
+.bg2 {
+  background: #fff;
+}
+.address ul li {
+  height: 1.92592593rem;
+  font-size: 0.53333333rem;
+  line-height: 1.92592593rem;
+  border-bottom: 1px solid #ccc;
+  padding-left: 1.77777778rem;
+  margin-left: 0.41481481rem;
+  padding-right: 0.56296296rem;
+}
+.address ul li:nth-of-type(1) {
+  background: url(../images/cleaning-contact.png) no-repeat 0.2962963rem center;
+}
+.address ul li:nth-of-type(2) {
+  background: url(../images/cleaning-tel.png) no-repeat 0.2962963rem center;
+}
+.address ul li:nth-of-type(3) {
+  background: url(../images/Cleaning/Cleaning1.png) no-repeat 0.2962963rem center;
+}
+.address ul li:nth-of-type(3) span {
+  display: inline-block;
+  float: right;
+  width: 0.88888889rem;
+  height: 0.88888889rem;
+  padding-right: 0.59259259rem;
+}
+.address ul li:nth-of-type(3) span img {
+  width: 0.2962963rem;
+  height: 0.44444444rem;
+}
+.address ul li:nth-of-type(4) {
+  background: url(../images/Cleaning/Cleaning1.png) no-repeat 0.2962963rem center;
+}
+.address ul li:nth-of-type(4) span {
+  float: right;
+  color: #ccc;
+}
+.address .address_center {
+  text-align: center;
+  margin-top: 4.66666667rem;
+}
+.address .address_center .address_check {
+  margin-bottom: 1.03703704rem;
+  font-size: 0.59259259rem;
+  text-align: center;
+  line-height: 0.74074074rem;
+  height: 0.74074074rem;
+  color: #000;
+  position: relative;
+}
+.address .address_center .address_check input {
+  position: absolute;
+  left: 4.74074074rem;
+  width: 0.74074074rem;
+  height: 0.74074074rem;
+  line-height: 0.74074074rem;
+  border: 1px solid #f9cc55;
+  border-radius: 3px;
+  -webkit-appearance: none;
+}
+.address .address_center .address_check input:checked {
+  background: url(../images/runerrands/duigou.png) no-repeat center;
+  background-size: 0.44444444rem;
+}
+.address .address_center .address_select {
+  font-size: 0.59259259rem;
+  height: 1.33333333rem;
+  width: 5.98518519rem;
+  line-height: 1.33333333rem;
+  border: 1px solid #f9cc55;
+  border-radius: 6px;
+  display: inline-block;
+  color: #f9cc55;
+}

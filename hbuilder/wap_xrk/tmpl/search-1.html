@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+	<!--
+	作者：13706342556@163.com
+	时间：2017-06-24
+	描述：搜索列表页
+-->
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>搜索列表页</title>
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+		<style type="text/css">
+			.search-header-1 {
+				position: fixed;
+				width: 100%;
+				background-color: #FFFFFF;
+				z-index: 9999;
+				border-bottom: 1px solid #CCCCCC;
+			}
+			
+			.search-header-1 .mui-action-back img {
+				width: 0.9rem;
+				height: 0.9rem;
+			}
+			
+			.mui-content {
+				margin-top: 1.98518519rem;
+			}
+		</style>
+	</head>
+
+	<body style="background-color: #FFFFFF;">
+		<header class="search-header-1">
+			<a class="back mui-action-back">
+				<img src="../images/cleaning-back.png" />
+			</a>
+			<div>
+				<input type="text" class="searchText" />
+				<span></span>
+			</div>
+
+		</header>
+
+		<section class="mui-content layout clean white nanny">
+
+			<!--menu-->
+			<div class="filter" style="display: none;">
+				<nav>
+					<a class="active">全部</a>
+					<a>月嫂</a>
+					<a>保洁</a>
+					<a>护工</a>
+				</nav>
+			</div>
+
+			<div class="product ">
+
+			</div>
+			<script type="text/html" id="search-1">
+				<% if(code == 200){ %>
+					<% if(datas.goods_list !="" ){ %>
+						<% for(var i=0;i < datas.goods_list.length;i++){ %>
+							<div class="product-item mark" data-url="<%= datas.goods_list[i].extend.app_detail_templet %>">
+								<img src="<%= datas.goods_list[i].goods_image_url %>" alt="">
+			
+								<div class="product-info ">
+									<h2 class="icon-type2"><a data-search-id="<%= datas.goods_list[i].goods_id %>"><%= datas.goods_list[i].goods_name %></a></h2>
+									<div class="raty">
+										<span class="icon-raty"></span>
+										<span class="icon-raty"></span>
+										<span class="icon-raty"></span>
+										<span class="icon-raty"></span>
+										<span class="icon-raty"></span>
+									</div>
+									<div class="label">
+										<span><%= datas.goods_list[i].goods_jingle %></span>
+										<!--<span>47岁</span>
+													<span><em>13</em>年工作</span>
+													<span>服务过<em>113</em>户</span>
+													<span>好评率<em>90</em></span>-->
+									</div>
+									<div class="tag">
+										<!--<span><%= datas.goods_list[i].goods_jingle %></span>-->
+										<!--<span>做饭好吃</span>
+													<span>人品好</span>
+													<span>有耐心</span>-->
+									</div>
+									<div class="control mui-clearfix">
+										<span><%= datas.goods_list[i].goods_price %>元/小时</span>
+										<a data-search-id="<%= datas.goods_list[i].goods_id %>" class="pull-right" style="display: none;">预约</a>
+									</div>
+								</div>
+							</div>
+						<% } %>
+					<% }%>
+				<% } %>
+			</script>
+
+		</section>
+
+		<script type="text/javascript" src="../js/hotcss.js"></script>
+		<script type="text/javascript" src="../js/config.js"></script>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<script type="text/javascript" src="../js/template.js"></script>
+		<script type="text/javascript" src="../js/tmpl/search1.js"></script>
+
+</body>
+
+</html>

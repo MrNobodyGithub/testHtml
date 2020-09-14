@@ -1,0 +1,93 @@
+.account {
+  background-color: #f5f5f5;
+}
+.account header {
+  position: relative;
+  background: linear-gradient(to bottom, #f07149 0%, #e85354 100%);
+  width: 100%;
+  height: 7.80740741rem;
+}
+.account header h2,
+.account header small {
+  display: block;
+}
+.account header h2 {
+  padding-top: 0.82962963rem;
+  padding-left: 2.07407407rem;
+  color: #ffffff;
+}
+.account header h2 em {
+  font-size: 1.54074074rem;
+  font-style: normal;
+}
+.account header h2 sub {
+  font-size: 1.0962963rem;
+  bottom: 0;
+}
+.account header small {
+  font-size: 0.59259259rem;
+  color: rgba(255, 255, 255, 0.58);
+  padding-top: 3.05185185rem;
+  padding-left: 2.20740741rem;
+}
+.account header a {
+  font-size: 0.53333333rem;
+  width: 3.39259259rem;
+  height: 1.24444444rem;
+  line-height: 1.24444444rem;
+  text-align: center;
+  margin-top: 0.97777778rem;
+  position: absolute;
+  top: 50%;
+  right: 0.74074074rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: block;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  border-radius: 0.60740741rem;
+}
+.account menu,
+.account nav,
+.account .list {
+  background-color: #fff;
+}
+.account menu,
+.account nav {
+  margin-bottom: 0.22222222rem;
+}
+.account menu a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2.01481481rem;
+  font-size: 0.71111111rem;
+  color: #333;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.account menu a:not(:first-child) {
+  border-bottom: 2px solid #e6e6e8;
+}
+.account menu a i {
+  display: block;
+}
+.account menu a i.icon-history {
+  width: 0.75555556rem;
+  height: 0.8rem;
+  background: url(../img/acount/icon-pay3.png) center;
+  background-size: cover;
+}
+.account menu a span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.account .list {
+  border-top: 1px solid #e6e6e8;
+}
+.account .list li {
+  height: 2.63703704rem;
+  border-bottom: 1px solid #e6e6e8;
+}

@@ -1,0 +1,194 @@
+.appoint-header {
+  height: 1.95555556rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 0.6962963rem;
+  border-bottom: 0.02962963rem solid #e6e6e8;
+  position: relative;
+  z-index: 99999;
+}
+.appoint-header div {
+  font-size: 0.6962963rem;
+  line-height: 1.95555556rem;
+}
+.appoint-header div img {
+  width: 1.00740741rem;
+  height: 1.00740741rem;
+}
+.appoint-header div:nth-of-type(1) {
+  margin-top: 0.2962963rem;
+}
+.appoint-header div:nth-of-type(3) {
+  padding-left: 0.74074074rem;
+  background: url(../images/cleaning-help.png) no-repeat left center;
+}
+.appoint-header div:nth-of-type(3) a {
+  font-size: 0.59259259rem;
+}
+.common-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 1.95555556rem;
+  z-index: 99999;
+  background-color: #ffffff;
+  padding: 0 0.44444444rem;
+  border-bottom: 0.02962963rem solid #e6e6e8;
+}
+.common-header ~ .mui-content {
+  padding-top: 1.95555556rem;
+}
+.common-header h1 {
+  position: absolute;
+  top: 0;
+  left: 1.97037037rem;
+  right: 1.97037037rem;
+  line-height: 1.95555556rem;
+  text-align: center;
+  font-size: 0.6962963rem;
+  z-index: 2;
+}
+.common-header a {
+  position: relative;
+  z-index: 11;
+}
+.common-header .icon-back,
+.common-header .icon-back-white {
+  float: left;
+  width: 1.97037037rem;
+  height: 100%;
+}
+.common-header .icon-back {
+  background: url(../images/cleaning-back.png) center no-repeat;
+  background-size: 1.00740741rem;
+}
+.common-header .icon-back-white {
+  background: url(../images/cleaning-back-w.png) center no-repeat;
+  background-size: 1.00740741rem;
+}
+.common-header .icon-link {
+  float: right;
+  line-height: 1.97037037rem;
+  font-size: 0.59259259rem;
+  margin-right: 0.5037037rem;
+  color: #ea5404;
+}
+.common-header .icon-share {
+  float: right;
+  width: 1.97037037rem;
+  height: 100%;
+  background: url(../images/today-icon3_03.png) center no-repeat;
+  background-size: 1.00740741rem;
+}
+.common-header .icon-tel {
+  float: right;
+  width: 2.22222222rem;
+  height: 100%;
+  background: url(../images/cleaning-help.png) center no-repeat;
+  background-size: 0.44444444rem;
+  position: relative;
+}
+.common-header .icon-tel span {
+  position: absolute;
+  top: 0.74074074rem;
+  right: -0.07407407rem;
+  font-size: 0.44444444rem;
+  padding-left: 0.44444444rem;
+}
+.common-header .city {
+  float: right;
+  min-width: 1.77777778rem;
+  color: #fff;
+  font-size: 0.47407407rem;
+  line-height: 1.95555556rem;
+  text-align: left;
+  padding-right: 0.77037037rem;
+  margin-right: 0.44444444rem;
+  background: url(../images/icon-city.png) right center no-repeat;
+  background-size: 0.5037037rem 0.28148148rem;
+}
+.common-header.fixed-header {
+  border-bottom: 0;
+  background: rgba(255, 255, 255, 0);
+}
+.common-header.fixed-header ~ .mui-content {
+  padding-top: 0;
+}
+.common-header.fixed-header h1 {
+  color: #fff;
+}
+.common-header.fixed-header .icon-back {
+  background: url(../images/cleaning-back-w.png) center no-repeat;
+  background-size: 1.00740741rem;
+}
+.common-header.fixed-header .city {
+  float: left;
+  transition: all .3s;
+}
+.common-header.fixed-header .search-form {
+  position: absolute;
+  top: 0.4rem;
+  left: 2.51851852rem;
+  right: 2.51851852rem;
+  height: 1.15555556rem;
+  line-height: 1.15555556rem;
+}
+.common-header.fixed-header .search-form input {
+  text-align: left;
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #8e96a6;
+  font-size: 0.44444444rem;
+  border-radius: 0.57777778rem;
+  padding-left: 1.21481481rem;
+  background: #fff url(../images/index-search.png) 0.2962963rem center no-repeat;
+  background-size: 0.57777778rem;
+}
+.common-header.fixed-header .classify {
+  float: right;
+  height: 100%;
+  line-height: 1.95555556rem;
+  font-size: 0.44444444rem;
+  color: #fff;
+  padding-left: 0.66666667rem;
+  transition: all .3s;
+  background: url(../images/icon-classify.png) left center no-repeat;
+  background-size: 0.5037037rem 0.41481481rem;
+}
+.common-header.mui-active {
+  border-bottom: 2px solid #e6e6e8;
+}
+.common-header.mui-active .city {
+  color: #000;
+  background: url(../images/icon-city-b.png) right center no-repeat;
+  background-size: 0.5037037rem 0.28148148rem;
+}
+.common-header.mui-active .search-form input {
+  border: 1px solid #ccc;
+}
+.common-header.mui-active .classify {
+  color: #000;
+  background: url(../images/icon-classify-b.png) left center no-repeat;
+  background-size: 0.5037037rem 0.41481481rem;
+}
+.common-header[class*=common-header-] h1 {
+  color: #fff;
+}
+.common-header[class*=common-header-] .icon-back {
+  background: url(../images/cleaning-back-w.png) center no-repeat;
+  background-size: 1.00740741rem;
+}
+.common-header.common-header-yellow {
+  background-color: #f5a93b;
+}
+.common-header.common-header-pink {
+  background-color: #f8cade;
+}
+.common-header.common-header-green {
+  background-color: #a1d66a;
+}

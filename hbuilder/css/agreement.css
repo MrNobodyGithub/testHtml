@@ -1,0 +1,154 @@
+.hospital-list {
+  position: relative;
+}
+.hospital-list .yuyue {
+  position: fixed;
+  bottom: 0.74074074rem;
+  right: 0.74074074rem;
+}
+.hospital-list .yuyue img {
+  width: 2.19259259rem;
+  height: 2.19259259rem;
+}
+.hospital-list .icon-type2 {
+  margin-top: 10px;
+}
+.hospital-list .mui-clearfix span {
+  margin-top: -20px;
+}
+.hospital-list .raty span {
+  margin-bottom: -10px;
+}
+.hospital-list .filter nav a {
+  color: #333;
+}
+.hospital-list .filter nav a.active,
+.hospital-list .filter nav a:active {
+  color: #a1d66a;
+}
+.hospital-list .product-item img {
+  width: 270px;
+  height: 270px;
+}
+.hospital-list .product-item .label {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.hospital-list .product-item .label em {
+  color: #a1d66a;
+}
+.hospital-list .product-item .tag span {
+  color: #a1d66a;
+  border-color: #a1d66a;
+}
+.hospital-list .product-item .control a {
+  color: #a1d66a;
+  border-color: #a1d66a;
+  font-size: 0.44444444rem;
+}
+.hospital-list .grab-state button {
+  color: #a1d66a;
+  border-color: #a1d66a;
+  background-color: #fff;
+}
+.hospital-list .grab-remarks {
+  color: #a1d66a;
+}
+.hospital-list .detail-worktime .active,
+.hospital-list .detail-price .active {
+  color: #a1d66a;
+  border: 1px solid #a1d66a !important;
+}
+.hospital-list .title span {
+  background-color: #a1d66a;
+}
+.hospital-list .detail-comment .comment-content span {
+  color: #a1d66a;
+}
+.hospital-list .hospital-list .filter1 nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.hospital-list .hospital-list .filter1 nav li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+}
+.hospital-list .hospital-list .filter1 nav a {
+  display: inline-block;
+  height: 1.86666667rem;
+  line-height: 1.86666667rem;
+  font-size: 0.54814815rem;
+  color: #333;
+}
+.hospital-list .hospital-list .filter1 nav .active1 {
+  border-bottom: 1px solid #a1d66a;
+  color: #a1d66a;
+}
+.hospital-list .hospital-list .product-item .photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.2962963rem;
+}
+.hospital-list .hospital-list .product-item .photo p {
+  width: 100%;
+  height: 0.71111111rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 0.44444444rem;
+  line-height: 0.71111111rem;
+  margin-bottom: 0;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+.hospital-list .hospital-list .product-item .product-info {
+  padding-top: 0.44444444rem;
+}
+.hospital-list .hospital-list .product-item .product-info h2.icon-type1 {
+  background-image: none;
+  padding-left: 0;
+}
+.hospital-list .hospital-list .product-item .product-info h2.icon-type1 span {
+  color: #c0c0c0;
+}
+.hospital-list .hospital-list .product-item .product-info p {
+  font-size: 0.44444444rem;
+  margin-top: 0.59259259rem;
+}
+.hospital-list .hospital-list .product-item .product-info .raty i {
+  display: inline-block;
+  height: 0.44444444rem;
+  font-size: 0.44444444rem;
+  font-style: normal;
+  position: relative;
+  top: -3px;
+  color: #a1d66a;
+  margin-left: 0.56296296rem;
+}
+.hospital-list .hospital-list .product-item .product-info .control span {
+  font-size: 0.44444444rem;
+}
+.hospital-list .hospital-list .product-item .product-info .control span i {
+  font-style: normal;
+  font-size: 0.44444444rem;
+  color: #ff5000;
+}
+.hospital-list .hospital-list .product-item .product-info .control small {
+  float: right;
+  line-height: 0.77037037rem;
+  color: #a0a0a0;
+  font-size: 0.44444444rem;
+}

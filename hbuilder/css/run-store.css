@@ -1,0 +1,110 @@
+.run-store {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: #fff;
+}
+.run-store .tagname {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 1.18518519rem 0.71111111rem;
+}
+.run-store .tagname li {
+  padding: 0.34074074rem 0.59259259rem;
+  border: 1px solid #919191;
+  font-size: 0.47407407rem;
+}
+.run-store .tagname li.active {
+  color: #fff;
+  background: #f9cc55;
+  border: 0;
+}
+.run-store .msg-list {
+  padding-left: 0.59259259rem;
+}
+.run-store .msg-list li {
+  background-repeat: no-repeat;
+  background-size: 0.71111111rem 0.71111111rem;
+  background-position-x: left;
+}
+.run-store .msg-list .edit {
+  padding-left: 1.03703704rem;
+  padding-right: 0.59259259rem;
+  background-image: url(../images/cleaning-remark.png);
+  background-position-y: 0.2962963rem;
+  border-bottom: 2px solid #e6e6e8;
+}
+.run-store .msg-list .edit textarea {
+  width: 100%;
+  height: 3.15555556rem;
+  border: 1px solid #E4E4E4;
+  border-radius: 0.2962963rem;
+  font-size: 0.51851852rem;
+}
+.run-store .msg-list .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 1.8962963rem;
+  border-bottom: 1px solid #E4E4E4;
+  padding-right: 0.59259259rem;
+  padding-left: 1.27407407rem;
+  background-position-y: center;
+}
+.run-store .msg-list .list span {
+  font-size: 0.59259259rem;
+  line-height: 1.8962963rem;
+}
+.run-store .msg-list .list input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: right;
+  width: 2.96296296rem;
+  font-size: 0.59259259rem;
+  border: 0;
+}
+.run-store .msg-list .list input::-webkit-input-placeholder {
+  color: #E4E4E4;
+}
+.run-store .msg-list .list.money {
+  background-image: url(../images/cleaning/Cleaning2.png);
+}
+.run-store .msg-list .list.address {
+  background-image: url(../images/cleaning-address.png);
+}
+.run-store .msg-list .list.address .select input {
+  -webkit-appearance: none;
+  width: 0.51851852rem;
+  height: 0.51851852rem;
+  border-radius: 50%;
+  margin-right: 0.2962963rem;
+  vertical-align: middle;
+  background: url(../images/run/complate-no.png) no-repeat center center;
+  background-size: 0.51851852rem 0.51851852rem;
+}
+.run-store .msg-list .list.address .select input:checked {
+  background: url(../images/run/complate.png) no-repeat center center;
+  background-size: 0.51851852rem 0.51851852rem;
+}
+.run-store .msg-list .list.address .select span {
+  margin-right: 0.37037037rem;
+  margin-top: 0.68148148rem;
+  font-size: 0.56296296rem;
+  vertical-align: middle;
+}
+.run-store .msg-list .list.current a {
+  color: #464646;
+  padding-top: 0.6962963rem;
+  padding-right: 0.59259259rem;
+  background: url(../images/cleaning/jiantou.png) no-repeat right center;
+  background-size: 0.2962963rem 0.5037037rem;
+  vertical-align: middle;
+  font-size: 0.53333333rem;
+}

@@ -1,0 +1,149 @@
+.wedding .filter nav a {
+  color: #333;
+}
+.wedding .filter nav a.active,
+.wedding .filter nav a:active {
+  color: #f5a93b;
+}
+.wedding .product-item .label em {
+  color: #f5a93b;
+}
+.wedding .product-item .tag span {
+  color: #f5a93b;
+  border-color: #f5a93b;
+}
+.wedding .product-item .control a {
+  color: #f5a93b;
+  border-color: #f5a93b;
+}
+.wedding .grab-state button {
+  color: #f5a93b;
+  border-color: #f5a93b;
+  background-color: #fff;
+}
+.wedding .grab-remarks {
+  color: #f5a93b;
+}
+.wedding .detail-worktime .active,
+.wedding .detail-price .active {
+  color: #f5a93b;
+  border: 1px solid #f5a93b !important;
+}
+.wedding .title span {
+  background-color: #f5a93b;
+}
+.wedding .detail-comment .comment-content span {
+  color: #f5a93b;
+}
+.footer-menu-yellow .link {
+  background-color: #f5a93b;
+}
+.footer-menu-yellow .wedding-link {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.footer-menu-yellow .wedding-link.w-color {
+  background-color: #ea5404!important;
+}
+.wedding .wedding-info {
+  height: auto;
+  position: relative;
+  padding-left: 0;
+}
+.wedding .wedding-info .product-item {
+  padding-left: 0.74074074rem;
+}
+.wedding .wedding-info .product-item .product-info .icon-type1 {
+  background-image: none;
+  padding-left: 0;
+  line-height: 1.03703704rem;
+}
+.wedding .wedding-info .product-item .product-info .label {
+  margin-bottom: 0;
+  margin-top: 0.2962963rem;
+}
+.wedding .wedding-info .info-price {
+  position: absolute;
+  right: 1.74814815rem;
+  top: 2.11851852rem;
+}
+.wedding .wedding-info .info-price span:nth-of-type(1) {
+  color: #ef2b43;
+  font-size: 0.78518519rem;
+}
+.wedding .wedding-info .info-price span:nth-of-type(2) {
+  color: #a0a0a0;
+  font-size: 0.44444444rem;
+}
+.wedding .wedding-info .wedding-bottom {
+  padding-top: 0.44444444rem;
+  border-top: 1px solid #bdbdbd;
+}
+.wedding .wedding-info .wedding-bottom p {
+  padding-left: 0.78518519rem;
+  font-size: 0.44444444rem;
+  line-height: 0.74074074rem;
+  padding-bottom: 0;
+  color: #464646;
+}
+.wedding .wedding-info .wedding-bottom p:first-child {
+  color: #EF2B43;
+  line-height: 0.93333333rem;
+}
+.wedding .detail-process {
+  height: 8.11851852rem;
+}
+.wedding .detail-process .pending-process {
+  padding-left: 0.63703704rem;
+  padding-right: 0.94814815rem;
+}
+.wedding .detail-process .pending-process p {
+  line-height: 0.8rem;
+  font-size: 0.48888889rem;
+  color: #282828;
+  margin-bottom: 0;
+}
+.wedding .detail-price .one {
+  display: inline-block;
+  padding: 0.32592593rem 0.96296296rem;
+  border: 1px solid #333;
+  font-size: 0.48888889rem;
+  border-radius: 0.2962963rem;
+  margin-top: 0.81481481rem;
+  margin-bottom: 1.00740741rem;
+}
+.wedding .detail-price .one:not(:first-child) {
+  margin-top: 0.42962963rem;
+}
+.wedding .detail-price .price-content {
+  padding: 1.25925926rem 0.81481481rem;
+}
+.wedding .detail-price .price-content table {
+  width: 100%;
+  height: 100%;
+  line-height: 1.40740741rem;
+  text-align: center;
+  font-size: 0.56296296rem;
+  border-color: #ccc;
+}
+.wedding .detail-price .price-content table th {
+  background: #f1f2f6;
+}
+.wedding .pending-ready {
+  height: 12.88888889rem;
+}
+.wedding .pending-ready dl {
+  padding-left: 1.15555556rem;
+  font-size: 0.47407407rem;
+}
+.wedding .pending-ready dl dt {
+  line-height: 0.97777778rem;
+}
+.wedding .pending-ready dl dd {
+  margin-left: 0;
+  line-height: 0.77037037rem;
+}
+.wedding .pending-join {
+  margin-bottom: 0.37037037rem;
+}

@@ -1,0 +1,90 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+@cleaningColor  :       #f9cc55;
+.run-add{
+    flex: 1;
+    background: #fff;
+    .wrap-add{
+        background: #e6e6e8;
+        .add-content{
+            padding: px2rem(43) px2rem(30) px2rem(20);
+            background: url(../images/run/address_03.png) no-repeat px2rem(30) px2rem(50) #fff;
+            background-size: px2rem(84) px2rem(115);
+            border-bottom: 1px solid #E1E1E1;
+            .mt(10,2);
+            p{
+                .fs(39,2);
+                padding-left:px2rem(120) ;
+                color: #464646;
+                .df;
+                justify-content: space-between;
+                .lh(54,2);
+            }
+            .top{
+                border-bottom: 1px solid #E4E4E4;
+                .pb(40,2);
+            }
+            .bottom{
+                .df;
+                justify-content: space-between;
+                .pt(18,2);
+                p{
+                    .mb(0);
+                    .pl(26,2);
+                    &:first-child{
+                        input{
+                            .dib;
+                            .square(36,2);
+                            .form-default;
+                            border-radius: 50%;
+//                          background: red;
+                            .mr(15,2);
+                            position: relative;
+                            top: px2rem(10);
+                            border: 1px solid #ACACB4;
+                            
+                            &:checked{
+                                  background: url(../images/run/complate.png) no-repeat center center;
+                                  background-size: px2rem(36) px2rem(36);
+                                  border: 0;
+                            }
+                            
+                        }
+                    }
+                    .edit{
+                        .pl(48,2);
+                        .ml(48,2);
+                        color: #464646;
+                        background: url(../images/run/edit.png) no-repeat left center;
+                        background-size: px2rem(42) px2rem(42);
+                        .fs(30,2);
+                    } 
+                    .del{
+                        .pl(48,2);
+                        .ml(48,2);
+                        color: #464646;
+                        background: url(../images/run/del.png) no-repeat left center;
+                        background-size: px2rem(42) px2rem(42);
+                        .fs(30,2);
+                    }                            
+                }
+            }
+        }
+        
+    }
+}
+
+
+
+
+
+
+.footer-yellow {
+    .link {
+        .bc( @cleaningColor );
+        .fs(52,2);
+    }
+}

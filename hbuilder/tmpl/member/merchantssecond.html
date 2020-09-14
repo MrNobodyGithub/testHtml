@@ -1,0 +1,308 @@
+<!doctype html>
+<html>
+<!--
+	作者：yrp
+	时间：2017-06-23
+	描述：
+-->
+<head>
+	<meta charset="UTF-8">
+	<title>商家入驻</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="../../css/mui.min.css"/>
+	<link href="../../css/wap/wap.css" rel="stylesheet" />
+	<style>
+		#codetype {
+			float: right;
+			width: auto;
+			padding-left: 3rem;
+			height: 100%;
+			font-size: .53333333rem;
+			color: #3333;
+		}
+
+		.page {
+			display: none;
+			min-height: 100%;
+		}
+
+		.active {
+			display: block;
+		}
+
+
+		.layer-up-select span{
+			font-size: .7rem !important;
+		}
+
+		.layui-m-layerbtn span {
+			font-size: .5rem !important;
+			line-height: 60px;
+		}
+		.merchantssecond-form .form-group label span{
+			color:red;
+			font-size: .7rem;
+		}
+
+	body{
+		max-width: none !important;
+	}
+
+	</style>
+</head>
+
+<body class="bg1">
+	<section class="page page-form active">
+		<header class="common-header merchantssecondh">
+			<a class="icon-back mui-action-back"></a>
+			<h1>商家入驻</h1>
+		</header>
+		<section class="mui-content merchantssecond-section">
+			<div class="merchantssecond-title">
+				<dl>
+					<dt>1</dt>
+					<dd>基础信息</dd>
+				</dl>
+				<dl>
+					<dt>2</dt>
+					<dd>附件信息</dd>
+				</dl>
+				<dl>
+					<dt>3</dt>
+					<dd>收款信息</dd>
+				</dl>
+				<span class="wire"></span>
+			</div>
+			<div class="merchants-type">
+				<h2>商家类型</h2>
+				<p class="index-tab"><a href="javascript:void(0);" class="active">企业</a><a href="javascript:void(0);">个人</a></p>
+			</div>
+
+			<div class="merchantssecond-form tab-content show is_pos">
+				<div class="form-group">
+					<label>开通城市<span>*</span></label>
+					<div class="form-control form-icon-arrow">
+						<input type="text" placeholder="请输入开通城市" area_id="224" name="businessLicenceaddress" value="青岛市" readonly class="city0 required">
+					</div>
+				</div>
+				<div class="form-group">
+					<label>公司名称<span>*</span></label>
+					<div class="form-control ">
+						<input type="text" placeholder="请输入公司名称"name="companyName" class="companyName0 required">
+					</div>
+				</div>
+				<div class="form-group">
+					<label>服务项目<span>*</span></label>
+					<div class="form-control">
+						<input type="text" placeholder="请输入服务项目" name="fircategory" readonly class="merserver0 required">
+					</div>
+				</div>
+				<div class="form-group">
+					<label>公司网址</label>
+					<div class="form-control ">
+						<input type="text" placeholder="请输入公司网址" class="companyweb0">
+					</div>
+				</div>
+				<div class="form-group">
+					<label>注册地址<span>*</span></label>
+					<div class="form-control">
+						<input type="text" placeholder="请输入详细地址" name="companyAddress" class="companyaddress0 required">
+					</div>
+				</div>
+				<div class="form-group">
+					<label>法人姓名<span>*</span></label>
+					<div class="form-control ">
+						<input type="text" placeholder="请输入姓名" name="legalpersonName" class="legalpersonName0 required">
+					</div>
+				</div>
+				<div class="form-group">
+					<label>法人证件类型<span>*</span></label>
+					<div class="form-control form-icon-arrow">
+						<input type="text" placeholder="请输入类型" name="legalpersonCodetype" value="身份证" id="commonpicker1" readonly class="legalpersonCodetype0 required">
+					</div>
+				</div>
+				<div class="form-group">
+					<label>法人证件号码<span>*</span></label>
+					<div class="form-control ">
+						<input type="text" placeholder="请输入号码" name="legalpersonCode" class="legalpersonCode0 required">
+					</div>
+				</div>
+				<div class="form-group">
+					<label>联系电话<span>*</span></label>
+					<div class="form-control">
+						<input type="text" placeholder="请输入联系电话" name="tel" class="tel0 required">
+					</div>
+				</div>
+				<div class="address_center">
+					<input type="checkbox" class="arguementcheck company" name="checkbox"  value="checkbox">
+					<p class="address_check">同意向日葵平台《服务商合作协议》</p>
+				</div>
+			</div>
+
+			<div class="merchantssecond-form tab-content company">
+				<div class="form-group form-icon-arrow">
+					<label>开通城市<span>*</span></label>
+					<div class="form-control ">
+						<input type="text" placeholder="请输入开通城市" name="businessLicenceaddress" area_id="224" value="青岛市" class="city1 required"  readonly>
+					</div>
+				</div>
+				<div class="form-group">
+					<label>姓名<span>*</span></label>
+					<div class="form-control ">
+						<input type="text" placeholder="请输入姓名" name="personname" class="name1 required">
+					</div>
+				</div>
+				<div class="form-group">
+					<label>服务项目<span>*</span></label>
+					<div class="form-control form-icon-arrow">
+						<input type="text" placeholder="请输入服务项目" name="fircategory" class="fircategory1 required" readonly>
+					</div>
+				</div>
+				<div class="form-group">
+					<label>证件类型<span>*</span></label>
+					<div class="form-control form-icon-arrow">
+						<input type="text" placeholder="请输入类型" value="身份证" name="cardkind" value="身份证" readonly id="commonpicker" class="cardkind1 required">
+					</div>
+				</div>
+				<div class="form-group">
+					<label>证件号码<span>*</span></label>
+					<div class="form-control">
+						<input type="text" placeholder="请输入号码" name="cardnumber" class="cardnumber1 required">
+					</div>
+				</div>
+				<div class="form-group">
+					<label>联系电话<span>*</span></label>
+					<div class="form-control">
+						<input type="text" placeholder="请输入联系电话" name="tel" class="tel1 required">
+					</div>
+				</div>
+				<div class="form-group">
+					<label>居住地址</label>
+					<div class="form-control">
+						<input type="text" placeholder="请输入地址" name="address" class="address1">
+					</div>
+				</div>
+				<div class="form-group">
+					<label>邮箱</label>
+					<div class="form-control">
+						<input type="text" placeholder="请输入邮箱" name="email" class="email1">
+					</div>
+				</div>
+				<div class="address_center">
+					<input type="checkbox" class="arguementcheck personal" name="checkbox" value="checkbox">
+					<p class="address_check">同意向日葵平台《服务人员合作协议》</p>
+				</div>
+			</div>
+		</section>
+
+		<footer class="merchantssecond-footer">
+			<button>下一步</button>
+		</footer>
+	</section>
+
+	<!--选择城市-->
+	<section class="page page-city">
+
+		<header class="common-header">
+			<h1>选择开通城市</h1>
+			<a class="icon-back"></a>
+		</header>
+		<section class="mui-content regionchose-section">
+			
+			<div class="regionchose-leftlist"></div>
+			<script type="text/html" id="regison">
+				<% if(code == 200){ %>
+					<% for (var i=0;i<datas.area_list.length;i++ ){ %>
+						<a>
+							<%= datas.area_list[i].area_name %>
+						</a>
+					<% } %>
+				<% } %>
+			</script>
+			<div class="regionchose-rightlist"></div>
+			<script type="text/html" id="regison2">
+				<% if(code == 200){ %>
+					<% for (var x=0;x<datas.area_list.length;x++ ){ %>
+						<dl>
+							<dt>
+								<%= datas.area_list[x].area_name %>
+							</dt>
+							<dd>
+								<ol>
+									<% for (var y=0;y<datas.area_list[x].city_list.length;y++ ){ %>
+										<li city_id = "<%= datas.area_list[x].city_list[y].area_id %>">
+											<%= datas.area_list[x].city_list[y].area_name %>
+										</li>
+									<% } %>
+								</ol>
+							</dd>
+						</dl>
+						<% } %>
+					<% } %>
+			</script>
+		</section>
+		<footer class="merchantsthird-footer">
+			<button>确定</button>
+		</footer>
+
+	</section>
+
+	<!--选择行业-->
+
+	<section class="page page-service">
+		<header class="common-header merchantsfirst-categoryh">
+
+			<a class="icon-back"></a>
+			<h1>选择服务项目</h1>
+			<a class="icon-link">保存</a>
+		</header>
+		<section class="mui-content merchantsfirst-category-section">
+
+		</section>
+
+		<script type="text/html" id="comkind">
+			<% if(code == 200){ %>
+				<div class="merchantsfirst-form-category">
+					<% for(var i = 0; i < datas.class_list.length; i++){ %>
+						<div class="form-check" data-com="<%= datas.class_list[i].commis_rate %>" data-id="<%= datas.class_list[i].gc_id %>">
+							<span><%= datas.class_list[i].gc_name %></span>
+							<input type="radio" name = "checkradio"  data-com="<%= datas.class_list[i].commis_rate %>" />
+						</div>
+						<% } %>
+				</div>
+				<% } %>
+		</script>
+	</section>
+
+	<section class="mask">
+		<div class="layer-up-select">
+			<span class="no">取消</span>
+		</div>
+	</section>
+	<!--选择协议-->
+	<section class="page page-agreement person0">
+		<header class="common-header">
+			<a class="icon-back"></a>
+			<h1>服务商合作协议</h1>
+		</header>
+		<section class="mui-content layout agreement">
+			<div class="agreement-text">
+				<p></p>
+			</div>	
+		</section>
+	</section>
+
+
+	<script src="../../js/hotcss.js"></script>
+	<script src="../../js/config.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/jquery.min.js"></script>
+	<script src="../../js/template.js"></script>
+	<script src="../../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/member/merchantsfirst-category.js"></script>
+	<script src="../../js/member/merchantssecond.js"></script>
+	<script type="text/javascript" src="../../js/member/agreement.js"></script>
+
+</body>
+
+</html>

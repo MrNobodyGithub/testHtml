@@ -1,0 +1,129 @@
+.nodata span,
+.nodata a {
+  display: block;
+}
+.nodata-order .nohave,
+.nodata-bid .nohave {
+  display: block;
+  margin: 5.28888889rem auto 1.98518519rem;
+  padding-top: 4.42962963rem;
+  height: 0.44444444rem;
+  background: url(../img/ucenter/nodata-error.png) top center no-repeat;
+  background-size: 4.81481481rem 4.42962963rem;
+  text-align: center;
+  font-size: 0.44444444rem;
+  color: #949494;
+}
+.nodata-order .make,
+.nodata-bid .make {
+  display: block;
+  margin: 2rem auto;
+  width: 5.58518519rem;
+  height: 1.31851852rem;
+  line-height: 1.31851852rem;
+  text-align: center;
+  font-size: 0.62222222rem;
+  color: #ec4556;
+  border-radius: 0.66666667rem;
+  border: 2px solid #ec4556;
+}
+.nodata-order .history,
+.nodata-bid .history {
+  background: #fff;
+  border-bottom: 1px solid #F2F2F2;
+  width: 100%;
+  height: 3.97037037rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.nodata-order .history .history-one,
+.nodata-bid .history .history-one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 0.91851852rem;
+}
+.nodata-order .history .history-one h1,
+.nodata-bid .history .history-one h1 {
+  padding-top: 0.85925926rem;
+  font-size: 0.71111111rem;
+}
+.nodata-order .history .history-one small,
+.nodata-bid .history .history-one small {
+  font-size: 0.53333333rem;
+  color: #959494;
+}
+.nodata-order .biao,
+.nodata-bid .biao {
+  background: #fff;
+  width: 100%;
+  height: 1.77777778rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+  border-bottom: 1px solid #F2F2F2;
+}
+.nodata-order .biao strong,
+.nodata-bid .biao strong {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 0.59259259rem;
+  font-size: 0.51851852rem;
+  font-style: normal;
+  font-weight: normal;
+}
+.nodata-order .biao strong small,
+.nodata-bid .biao strong small {
+  height: 0.59259259rem;
+  width: 0.04444444rem;
+  background: #F2F2F2;
+  position: absolute;
+  top: 0.59259259rem;
+  left: 3.55555556rem;
+  display: block;
+  font-size: 0.59259259rem;
+  color: #959494;
+}
+.nodata-order .biao strong h1,
+.nodata-bid .biao strong h1 {
+  font-size: 0.59259259rem;
+}
+.nodata-order .biao .jian,
+.nodata-bid .biao .jian {
+  background: url(../img/ucenter/jiantou.png) no-repeat 1.03703704rem 0.74074074rem;
+  background-size: 0.37037037rem 0.20740741rem;
+  padding-right: 0.59259259rem;
+  font-size: 0.44444444rem;
+  color: #000000;
+}
+.nodata-order .biao .active,
+.nodata-bid .biao .active {
+  border-bottom: 1px solid #ea5404;
+  width: 3.77777778rem;
+  color: #ea5404;
+}
+.nodata-order .biao .no,
+.nodata-bid .biao .no {
+  color: #979797;
+}

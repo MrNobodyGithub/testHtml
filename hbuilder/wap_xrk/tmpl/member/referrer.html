@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../css/mui.css">
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet.css">
+	</head>
+	<style type="text/css">
+		.referrer {
+			width: 100%;
+			height: 100%;
+			background-color: #fff;
+		}
+		
+		.referrer_content {
+			height: 2rem;
+			line-height: 2.255555555555rem;
+			background: url(../../images/adddianyuantel.png) no-repeat 0.5962963rem center;
+			background-size: 0.6rem 0.7rem;
+			padding-left: 1.3rem;
+			margin-left: 0.3rem;
+			border-bottom: 1px solid #ccc;
+		}
+		
+		#referrer {
+			background-color: transparent;
+			height: 1.3rem !important;
+			font-size: .5444444rem !important;
+			border: 0 !important;
+			margin: 15px 15px;
+			padding: 0 !important;
+			line-height: 1.3rem !important;
+		}
+		
+		.configa {
+			display: block;
+			margin: 0 auto;
+			width: 14.4rem;
+			height: 2.01481481rem;
+			line-height: 2.01481481rem;
+			background-color: #FFCC77;
+			border-radius: 5px;
+			margin-top: 0.8rem;
+			text-align: center;
+			color: #fff;
+			font-size: 0.71111111rem;
+		}
+		
+		.pel {
+			background-color: transparent;
+			height: 1.3rem !important;
+			font-size: .6888888rem !important;
+			border: 0 !important;
+			margin: 15px 15px;
+			padding-left: .8rem !important;
+			line-height: 1.3rem !important;
+		}
+		
+		#tel {
+			background-color: transparent;
+			height: 1.3rem !important;
+			font-size: .688888888888rem !important;
+			border: 0 !important;
+			margin: 15px 15px;
+			padding: 0 !important;
+			line-height: 1.3rem !important;
+		}
+	</style>
+
+	<body style="background: #fff;">
+		<!--ucenter-->
+		<header class="common-header">
+
+			<a class="icon-back mui-action-back"></a>
+			<h1>推荐人</h1>
+
+		</header>
+
+		<div class="mui-content referrer">
+		</div>
+
+		<script src="../../js/hotcss.js"></script>
+		<script src="../../js/config.js"></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/common.js"></script>
+		<script src="../../js/seller/evaluate-seller.js" type="text/javascript" charset="utf-8"></script>
+		<script src="">
+		</script>
+		<script type="text/javascript">
+			var $userinfo = _.userInfo.get();
+
+			$.ajax({
+				type: "post",
+				url: ApiUrl + "/index.php?act=member_inviter&op=add_inviter",
+				data: {
+					key: $userinfo.key,
+					inviter_phone: ''
+				},
+				dataType: "json",
+				success: function(data) {
+					console.log(JSON.stringify(data));
+					if(data.code == 200) {
+						if(data.datas.mobile != 0) {
+							$('.referrer').html('<span class="pel">您的推荐人手机号为：</span><span id="tel">' + data.datas.mobile + '</span>')
+						} else {
+							$('.referrer').html('<div class="referrer_content"><input id="referrer" type="number"  placeholder="填写您的推荐人手机号" maxlength="11"/></div><a class="configa">确认</a>')
+
+							var ref = document.querySelector('#referrer')
+							$('.referrer').on('tap', '.configa', function(e) {
+								var $inviter_phone = ref.value
+								console.log($inviter_phone)
+
+								if($inviter_phone == "") {
+									mui.alert("手机号不能为空！");
+								} else {
+									var re = /^1[3|4|5|7|8][0-9]{9}$/;
+									if(re.exec($inviter_phone)) {
+										$.ajax({
+											type: "post",
+											url: ApiUrl + "/index.php?act=member_inviter&op=add_inviter",
+											data: {
+												key: $userinfo.key,
+												inviter_phone: $inviter_phone
+											},
+											dataType: "json",
+											success: function(data) {
+												console.log(JSON.stringify(data));
+												if(data.code == 200) {
+													mui.toast(JSON.stringify(data.datas))
+													window.location.reload()
+
+												} else {
+													mui.toast(JSON.stringify(data.datas.error))
+												}
+											},
+											error: function(data) {
+												console.log('错误')
+											}
+										});
+									} else {
+										mui.alert("手机号格式错误！");
+									}
+								}
+							})
+
+						}
+					} else {
+						mui.alert(data.datas.error);
+					}
+				},
+
+				error: function(data) {
+
+				}
+			});
+
+			//			function num() {
+			//				this.value = this.value.replace(/\D/g, '')
+			//			}
+		</script>
+	</body>
+
+</html>

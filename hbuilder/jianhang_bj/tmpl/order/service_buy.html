@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>服务购买-预约确认-付款</title>
+		<link rel="stylesheet" type="text/css" href="../../css/mui.css">
+		<link rel="stylesheet" type="text/css" href="../../css/server_buy.css" />
+		<script type="text/javascript" src="../../js/order/order_payment.js" ></script>
+		<style>
+			.common-header{
+				position: fixed;
+				top: 0;
+				width: 100%;
+				height: 1.95555556rem;
+				z-index: 99999;
+				background-color: #fff!important;
+				padding: 0 0.44444444rem;
+				border-bottom: 0.02962963rem solid #e6e6e8;
+			}
+			.common-header .icon-back {
+				display: block;
+				width: 2rem;
+				height: 2rem;
+			    background: url(../../images/cleaning-back.png) center no-repeat;
+			    background-size: 1.00740741rem;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<header class="common-header">
+			<a class="icon-back mui-action-back"></a>
+			<h1>订单确认</h1>
+		</header>
+		
+		<footer class="footer-btnn">
+			<div class="appoint-detail-next">
+				<div><i style="font-style:normal" id="type_model">合计</i>：<span id="order_amount"></span>元</div>
+				<a href="javascript:void(0);" class="btn-yellow">去支付</a>
+			</div>
+		</footer>
+		
+		<section class="page">
+			<div class="mui-slider">
+				<div class="mui-slider-group" onclick="closeimg();">
+
+				</div>
+			</div>
+			<script type="text/html" id="swiper-img">
+				<%  for (var i = 0; i < labelparam.length;i++){
+					if( labelparam[i].label=='图片' ){
+						for(var j = 0;j < labelparam[i].value.length; j++){
+				%>
+				<div class="mui-slider-item" onclick="closeimg();">
+					<img src="<%= labelparam[i].value[j] %>" />
+				</div>
+				<% }} } %>
+			</script>
+			<div class="mui-content appoint-detail" style="height:92vh">
+				<div class="appoint-detail-content">
+					<ol>
+
+					</ol>
+					<script type="text/html" id="order-info">
+						<% 
+						for (var i = 0; i < labelparam.length;i++){
+							if( labelparam[i].label=='图片' ){    
+						%>
+						<li>
+							<i><%= labelparam[i].label %>：</i>
+
+							<div style="width:65%;">
+
+								<% for(var m = 0; m < labelparam[i].value.length; m++){ %>
+								<div class="greata"><img onclick="bigImg();" src="<%= labelparam[i].value[m] %>"></div>
+								<% } %>
+
+							</div>
+						</li>
+						<% 
+							}else{
+						%>
+						<li><i><%= labelparam[i].label %>：</i><span><%= labelparam[i].value %></span></li>
+						<%
+					        } 
+						}
+						%>
+					</script>
+					<div class="appoint-detail-deal">
+						<input type="checkbox" classs="check" name="" id="agreement" value="" checked="checked" style="display: none;" />
+						<a style="display:none ;">请阅读协议书内容并同意</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script src="../../js/hotcss.js"></script>
+		<script src="../../js/config.js"></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/template.js"></script>
+		<script src="../../js/common.js"></script>
+		<script src="../../js/order/order.js"></script>
+	</body>
+
+</html>

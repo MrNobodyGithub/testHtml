@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+	<!--
+    	作者：13706342556@163.com
+    	时间：2017-06-23
+    	描述：新闻列表
+    -->
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>新闻列表</title>
+		<link rel="stylesheet" type="text/css" href="../css/mui.css">
+		<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+	</head>
+	<style>
+		img {
+			max-width: 3.62962963rem !important;
+		}
+		
+		.todayHeadlines .todayHeadlines-content .todayHeadlines-img img {
+			width: 3.62962963rem !important;
+			height: 3.62962963rem !important;
+		}
+		
+		.todayHeadlines .todayHeadlines-content .todayHeadlines-position .todayHeadlines-icon {
+			background: url(../images/todayHeadlines/today-icon_03.png) no-repeat;
+		}
+		/*修改标题显示样式*/
+		
+		.todayHeadlines .todayHeadlines-content h3 {
+			font-size: 0.56296296rem;
+			color: #333333;
+			white-space: normal;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
+		}
+	</style>
+
+	<body>
+		<!--ucenter-->
+		<header class="common-header common-header-yellow">
+
+			<a class="icon-back mui-action-back"></a>
+			<h1>今日头条</h1>
+
+		</header>
+
+		<div class="todayHeadlines mui-content">
+			<div class="newes-box" style="background: #fff;">
+				<div class="todayHeadlines-content mui-clearfix">
+
+				</div>
+			</div>
+
+		</div>
+		<script type="text/html" id="news-list">
+			<% if(code == 200){ %>
+			<% for(var i=0;i<datas.length;i++){ %>
+			<div class="todayHeadlines-margin" data-news-id="<%= datas[i].article_id %>">
+				<div class="todayHeadlines-img mui-pull-left">
+					<img src="<%= datas[i].article_image %>" alt="">
+				</div>
+				<a class="mui-pull-left">
+					<h3><%= datas[i].article_title %></h3>
+					<p>
+						<%= datas[i].article_abstract %>
+					</p>
+
+				</a>
+				<div class="todayHeadlines-position">
+					<div class="todayHeadlines-icon mui-pull-left"></div>
+					<span class="mui-pull-left"><%= datas[i].article_comment_count%></span>
+				</div>
+
+			</div>
+			<% } %>
+			<% } %>
+		</script>
+
+		<script type="text/javascript" src="../js/hotcss.js"></script>
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/template.js"></script>
+		<script type="text/javascript" src="../js/dropload.min.js"></script>
+		<script type="text/javascript" src="../js/config.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<script src="../js/tmpl/news-list.js"></script>
+	</body>
+
+</html>

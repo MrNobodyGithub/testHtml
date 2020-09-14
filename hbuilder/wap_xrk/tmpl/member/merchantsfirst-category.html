@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<!--
+	作者：yrp
+	时间：2017-06-23
+	描述：
+-->
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/stylesheet.css" rel="stylesheet"  />
+		
+	</head>
+
+	<body>
+		<header class="common-header merchantsfirst-categoryh">
+
+			<a class="icon-back mui-action-back"></a>
+
+			<h1>服务项目</h1>
+		</header>
+		<section class="mui-content merchantsfirst-category-section">
+			
+		</section>
+		
+		
+		
+		
+		<script src="../../js/hotcss.js"></script>
+		<script src="../../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/template.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/html" id="comkind">
+			<% if(code == 200){ %>
+				<div class="merchantsfirst-form-category">
+					<% for(var i = 0; i < datas.class_list.length; i++){ %>
+						<div class="form-check" data-id="<%= datas.class_list[i].gc_id %>">
+		                    <span><%= datas.class_list[i].gc_name %></span>
+		                    <input type="checkbox" />
+		                </div>
+					<% } %>	
+				</div>
+			<% } %>
+		</script>
+		<script type="text/javascript" src="../../js/member/merchantsfirst-category.js"></script>
+		
+	</body>
+
+</html>

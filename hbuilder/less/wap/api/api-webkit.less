@@ -1,0 +1,63 @@
+// 
+// webkit私有属性
+// 
+
+// css3滤镜
+// Android > 4.3  IOS > 5.1
+
+// blur             模糊      =>       固定值/px
+// brightness       高亮      =>       0 ~ 10
+// saturate         饱和度    =>       0 ~ 10
+// grayscale        灰度      =>       0 ~ 1
+// contrast         对比      =>       0 ~ 10
+// opacity          透明      =>       0 ~ 1
+// sepia            褐色      =>       0 ~ 1
+// invert           反色      =>       0 ~ 1
+// drop-shadow      阴影      =>       =box-shadow
+// hue-rotate       色相      =>       0 ~ 360deg
+
+.filter( @param: blur( 10px ) ) {
+    -webkit-filter: @param;
+}
+
+// 文本填充
+.fill( @param: transparent ) {
+    -webkit-text-fill-color: @param;
+}
+
+// none: 重置IOS下表单元素渲染差异
+.form-default( @param: none ) {
+    -webkit-appearance: @param;
+}
+
+// 禁用系统菜单
+.menu-default( @param: none ) {
+    -webkit-touch-callout: @param;
+}
+
+// 禁用点击高亮
+.tap-default( @param: transparent ) {
+    -webkit-tap-highlight-color: @param;
+}
+
+// 弹性滚动
+.scroll-default( @param: touch ) {
+    -webkit-overflow-scrolling: @param;
+}
+
+// 字体抗锯齿/禁止字体缩放
+.font-default( @param: none ) {
+    -webkit-font-smoothing: @param;
+    -webkit-text-size-adjust: @param;
+}
+
+// 盒模型
+.box-default( @param: border-box ) {
+    box-sizing: @param;
+}
+
+// 文字选择
+.user-default( @param: none ) {
+    user-select: @param;
+}
+

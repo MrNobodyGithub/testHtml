@@ -1,0 +1,96 @@
+.kind-header {
+  background: #fff;
+}
+.server2 {
+  height: 100%;
+}
+.comkind {
+  height: 100%;
+  background-color: #f1f2f6;
+}
+.comkind li {
+  list-style-type: none;
+}
+.comkind li:nth-child(1) .icon {
+  width: 0.63703704rem;
+  height: 0.63703704rem;
+  background: url(../image/kind/kind_01.jpg) no-repeat center center;
+  background-size: 0.63703704rem 0.63703704rem;
+}
+.comkind li:nth-child(2) .icon {
+  width: 0.78518519rem;
+  height: 0.77037037rem;
+  background: url(../image/kind/kind_02.jpg) no-repeat center center;
+  background-size: 0.78518519rem 0.77037037rem;
+}
+.comkind li:nth-child(3) .icon {
+  width: 0.56296296rem;
+  height: 0.81481481rem;
+  background: url(../image/kind/kind_03.jpg) no-repeat center center;
+  background-size: 0.56296296rem 0.81481481rem;
+}
+.comkind li:nth-child(4) .icon {
+  width: 0.63703704rem;
+  height: 0.63703704rem;
+  background: url(../image/kind/kind_04.jpg) no-repeat center center;
+  background-size: 0.63703704rem 0.63703704rem;
+}
+.comkind li:nth-child(5) .icon {
+  width: 0.63703704rem;
+  height: 0.63703704rem;
+  background: url(../image/kind/kind_05.jpg) no-repeat center center;
+  background-size: 0.63703704rem 0.63703704rem;
+}
+.comkind li:nth-child(6) .icon {
+  width: 0.63703704rem;
+  height: 0.63703704rem;
+  background: url(../image/kind/kind_06.jpg) no-repeat center center;
+  background-size: 0.63703704rem 0.63703704rem;
+}
+.comkind li:nth-child(7) .icon {
+  width: 0.63703704rem;
+  height: 0.63703704rem;
+  background: url(../image/kind/kind_07.jpg) no-repeat center center;
+  background-size: 0.63703704rem 0.63703704rem;
+}
+.comkind li:nth-child(8) .icon {
+  width: 0.63703704rem;
+  height: 0.63703704rem;
+  background: url(../image/kind/kind_08.png) no-repeat center center;
+  background-size: 0.63703704rem 0.63703704rem;
+}
+.comkind .comkind-list {
+  padding: 0 0.59259259rem;
+}
+.comkind .mui-table-view-cell {
+  margin-top: 0.51851852rem;
+  background-color: #fff;
+  padding: 0.51851852rem;
+  border-radius: 0.22222222rem;
+}
+.comkind .mui-navigate-right {
+  display: block;
+}
+.comkind .mui-navigate-right .icon,
+.comkind .mui-navigate-right .text {
+  display: inline-block;
+  vertical-align: middle;
+}
+.comkind .mui-navigate-right .text {
+  font-size: 0.53333333rem;
+  color: #333;
+}
+.comkind .mui-collapse-content {
+  display: none;
+  font-size: 0;
+  margin-top: 0.44444444rem;
+}
+.comkind .mui-collapse-content i {
+  display: inline-block;
+  font-size: 0.47407407rem;
+  font-style: normal;
+  padding: 0.38518519rem 0.81481481rem;
+  background-color: #f3f3f3;
+  border-radius: 0.74074074rem;
+  color: #5c5c5c;
+}

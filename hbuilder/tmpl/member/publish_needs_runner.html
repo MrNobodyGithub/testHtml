@@ -1,0 +1,614 @@
+<!doctype html>
+<html>
+<!--
+	作者：qdsft@163.com
+	时间：2017-06-23
+	描述：发布需求第二步-跑腿需求表单
+-->
+	<head>
+		<meta charset="UTF-8">
+		<title>发布需求-跑腿</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/stylesheet.css" rel="stylesheet"  />
+		<link rel="stylesheet" type="text/css" href="../../css/mui.picker.min.css"  />
+		<!--<link href="../../css/fields.css" rel="stylesheet"  />-->
+		<style>
+			.common-header{
+				position: fixed;
+                top: 0;
+                width: 100%;
+                height: 2.5rem;
+                z-index: 99999;
+                background-color: #ffffff;
+                padding: 0 0.44444444rem;
+                border-bottom: 0.02962963rem solid #e6e6e8;
+			}
+			.common-header .icon-back{
+				background: url(../../images/cleaning-back.png) center no-repeat;
+                background-size: 1.4rem;
+			}
+			.common-header h1 {
+                position: absolute;
+                top: 0.3rem;
+                left: 1.97037037rem;
+                right: 1.97037037rem;
+                line-height: 1.95555556rem;
+                text-align: center;
+                font-size: 1.0rem;
+                z-index: 2;
+            }
+            .map-gosection .runbuy-buttons .active {
+                background: #f9cc55;
+                color: #fff;
+                border: 0;
+            }
+            .map-gosection .runbuy-buttons button{
+            	width: 6.38518519rem;
+                height: 2rem;
+                border: 0.5px solid #333;
+                font-size: 0.83703704rem;
+            }
+            .runbuy-address .runbuy-address-item{
+            	height: 2.5rem;
+                padding-left: 2rem;
+                border-bottom: 1px solid #e6e6e8;
+                position: relative;
+                background-repeat: no-repeat;
+                background-position: left center;
+                background-size: 1.48148148rem;
+            }
+            .runbuy-address .runbuy-address-item.form{
+            	background-image: url(../../images/runerrands/runbuy-ji.png);
+            	background-size: 2.2rem;
+            }
+            .runbuy-address .runbuy-address-item.to{
+            	background-image: url(../../images/runerrands/runbuy-shou.png);
+            	background-size: 2.2rem;
+            }
+            
+			.mui-dtpicker {
+				-webkit-transform: translateY(500px);
+						transform: translateY(500px);
+			}
+			.mui-picker-list li {
+				font-size: .5rem;
+			}
+
+			.runbuy-list .runbuy-image li input {
+				opacity: 0;
+				width: 2.92222222rem;
+				height: 2.92222222rem;
+				position: absolute;
+				z-index: 10;
+				left: 0px;
+				top: 0px;
+			}
+			.mui-numbox .mui-input-numbox, .mui-numbox .mui-numbox-input{
+				line-height: 20px !important;
+				width:1.95rem !important;
+				margin-left:-0.8rem;
+				z-index: 999;
+				height:1.7rem !important;
+			}
+			.mui-numbox .mui-btn-numbox-minus, .mui-numbox .mui-numbox-btn-minus{
+				width:1.2rem;
+				border-top-left-radius: 1px;
+			    border-bottom-left-radius: 1px;
+			}
+			.mui-numbox .mui-btn-numbox-plus, .mui-numbox .mui-numbox-btn-plus{
+				width:1.2rem;
+			}
+			#map {
+				display: none;
+				width:0px;
+				height:0px;
+			}
+			.run-disabled{
+				background-color:#b7b7b8;
+			}
+			.runbuy-list .runbuy-item{
+				display: flex;
+			    height: 2.5rem;
+			    line-height: 2rem;
+			    overflow: hidden;
+			    border-bottom: 1px solid #e6e6e8;
+			}
+			.runbuy-list .runbuy-item[class*='icon-run-']{
+				padding-left: 1.4rem;
+			    background-size: 1.2rem 1.2rem;
+			    background-repeat: no-repeat;
+			    background-position: .3rem center;
+			}
+			.runbuy-list .runbuy-item span{
+				display: block;
+			    width: auto;
+			    font-size: 0.8rem;
+			    margin-left: 0.3rem;
+			}
+			.runbuy-list .runbuy-item{
+				line-height: 2.5rem;
+			}
+			.runbuy-list .runbuy-item small{
+				color: #333;
+			    font-size: .8rem;
+			    padding-right: .4rem;
+			}
+			
+			.runbuy-list .runbuy-item input{
+				-webkit-box-flex: 1;
+				flex: 1;
+			    height: 2.5rem;
+			    line-height: 2.5rem;
+			    font-size: .8rem !important;
+			}
+			.runbuy-list .runbuy-item.icon-arrow:after{
+				width: 1rem;
+			    height: 2.4rem;
+			    display: block;
+			    background: url(../../images/cleaning-right.png) no-repeat center;
+			    background-size: 0.4962963rem 0.8037037rem;
+			    padding-right: .25rem;
+			}
+			.mui-numbox{
+				width: 5.5rem !important;
+			    height: 1.8rem !important;
+			    float: right;
+			    margin-top: .3rem;
+			    border: 1px solid #ccc !important;
+			    margin-right: 0.5rem;
+			}
+			.mui-numbox [class*=numbox-btn]{
+			 	height:1.7rem !important;
+			 	width:1.7rem;
+			 	font-size: 1rem !important;
+			 }
+			 .mui-numbox [class*=numbox-btn][disabled]{
+			 	font-size: 1.5rem !important;
+			 }
+			.runbuy-address .runbuy-address-item:after{
+				content: '';
+			    width: 1rem;
+			    position: absolute;
+			    top: 0;
+			    bottom: 0;
+			    right: .05rem;
+			    background: url(../../images/cleaning-right.png) no-repeat center;
+			    background-size: 0.4962963rem 0.8037037rem;
+			}
+			.runbuy-list .runbuy-text textarea{
+				height: 5rem;
+			    padding: .5rem;
+			    font-size: .5rem;
+			    line-height: 1.3;
+			    width:94%;
+			    margin-left: 0.4rem;
+			    font-size: 0.8rem;
+			}
+			.runbuy-list .icon-run-text{
+				background-image:url(../../images/cleaning/Cleaning3.png);
+			}
+			.runbuy-list .runbuy-text{
+				margin: .5rem 0;
+			    padding-left: 1.4rem;
+			    background-size: 1.3rem 1.3rem;
+			    background-repeat: no-repeat;
+			    background-position: .3rem center;
+			}
+			.runbuy-address .runbuy-address-item h5{
+				margin-left: 0.8rem;
+				margin-top: 0.6rem;
+				font-size: 0.8rem;
+				line-height: 0.3rem;
+			}
+			.runbuy-address .runbuy-address-item p{
+				margin-left:0.8rem;
+				margin-top: 0.8rem;
+				font-size: 0.6rem;
+			}
+			.runbuy-list .runbuy-image li.upload{
+				background: url(../../images/my/photo-upload2.jpg) center no-repeat #f1f1f1;
+				background-size: 1.8rem;
+				width:4rem;
+				height:4rem;
+				border:none;
+			}
+			.send-server .form-image .upload-img .default{
+				background: url(../../images/my/photo-upload2.jpg) no-repeat #F1F1F1 center;
+			    width: 2.99999rem;
+			    height: 2.999999rem;
+			    flex: none;
+			    margin-left: 1rem;
+			}
+			.mui-dtpicker .mui-dtpicker-header{
+				height:2.5rem;
+			}
+			.mui-dtpicker .mui-dtpicker-header button{
+				width:3rem;
+				height:1.8rem;
+				font-size: 0.8rem;
+			}
+			.mui-dtpicker-title{
+				height:1.5rem;
+			}
+			.mui-dtpicker .mui-dtpicker-title h5{
+				font-size: 0.7rem;
+			}
+			footer[class*='footer-']{
+				height:2.5rem;
+			}
+			.footer-menu-yellow .link{
+				line-height: 2.5rem;
+				width:4rem;
+				font-size: 0.8rem;
+				background-size:4rem;
+			}
+			.runbuyfooter a:nth-of-type(1){
+				font-size: 0.8rem;
+			}
+			.map-gosection .runbuy-protocol{
+				font-size: 0.8rem;
+			}
+			.map-gosection .runbuy-protocol input{
+				position: absolute;
+			    top: 1.15703704rem;
+			    left: 5.7037037rem;
+			    display: block;
+			    width: 0.84074074rem;
+			    height: 0.84074074rem;
+			    border: 1px solid #bfbfbf;
+			    margin-top: 0.66666667rem;
+			    margin-right: 0.59259259rem;
+			    -webkit-appearance: none;
+			}
+			.runbuy-item .sun-required{
+				color:red;
+			}
+			.map-gosection .runbuy-protocol input:checked{
+				background-size:0.6rem 0.6rem;
+			}
+			.map-gosection .runbuy-protocol{
+				height:4rem;
+			}
+			.map-gosection .runbuy-Price{
+				width:100%;
+				height:5rem;
+				font-size: 0.8rem;
+				text-align: center;
+				text-decoration: underline;
+				line-height:1rem;
+			}
+			.runbuyfooter a:nth-of-type(1){
+				width:65%;
+			}
+			.runbuy-list .runbuy-image li{
+				width:4rem;
+				height:4rem;
+			}
+		</style>
+	</head>
+
+	<body style="background: #fff;">
+		
+		<header class="common-header">
+			<h1>跑腿</h1>
+			<a class="icon-back mui-action-back"></a>
+		</header>
+		<div id="map"></div>
+		<!--
+        	代送
+        -->
+		<section id = "runner_daisong" class="mui-content map-gosection white">
+			<div class="run-swiper">
+				
+			</div>
+			<div class="runbuy-buttons">
+				<a href="#runner_daisong"><button type_model="1" gc_id="3" class="active">代送</button></a>
+				<a href="#runner_paidui"><button type_model="2" gc_id="4" class="run-disabled">排队</button></a>
+				<a href="#runner_daimai"><button type_model="3" gc_id="5" class="run-disabled">代买</button></a>
+			</div>
+
+			<!--
+				寄取地址
+			-->
+			<form id="daisong_form">
+			<div class="runbuy-address">
+
+				<div class="runbuy-address-item form" eventName="fill_address_from_daisong">
+					<h5>
+						<span id="true_name_from_daisong_txt"> </span>
+						<small id ="mob_phone_from_daisong_txt"></small>
+						<input data-label="寄件联系人" type="hidden" id="true_name_from_daisong" name="true_name_from">
+						<input data-label="寄件人手机" type="hidden" id="mob_phone_from_daisong" name="mob_phone_from">
+					</h5>
+					<p id="address_from_daisong_txt"></p>
+					<input data-label="寄件地址" type="hidden" id="address_from_daisong" name="address_from">
+				</div>
+
+				<div class="runbuy-address-item to" eventName="fill_address_to_daisong">
+					<h5>
+						<span id="true_name_to_daisong_txt"></span> 
+						<small id ="mob_phone_to_daisong_txt"></small>
+						<input data-label="收件联系人" type="hidden" id="true_name_to_daisong" name="true_name_to">
+						<input data-label="收件人手机" type="hidden" id="mob_phone_to_daisong" name="mob_phone_to">
+					</h5>
+					<p id="address_to_daisong_txt"></p>
+					<input data-label="收件地址" type="hidden" id="address_to_daisong" name="address_to">
+				</div>
+
+			</div>
+
+			<!--
+				form
+			-->
+			<div class="form-list runbuy-list">
+				
+				<div class="runbuy-item icon-arrow icon-run-type">
+					<span>物品类型</span>
+					<input data-label="物品类型" type="text" id="needs_goods_kind_daisong" name="needs_goods_kind" placeholder="请选择物品类型" readonly value="其他" />
+				</div>
+
+				<div class="runbuy-item icon-run-weight">
+					<span>重量</span><span class="sun-required">*</span>
+					<div class="runbuy-control">
+						<div class="mui-numbox" data-numbox-min="1" data-numbox-max="8">
+							<button class="mui-btn mui-numbox-btn-minus"type="button">-</button>
+							<input data-label="重量" type="number" class="mui-numbox-input" id="needs_weight_daisong" name = "needs_weight" value="1">
+							<button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+						</div>
+					</div>
+					<small>千克</small>
+				</div>
+
+				<div class="runbuy-item icon-run-range">
+					<span>距离</span><span class="sun-required">*</span>
+					<input data-label="距离" id="needs_distance_daisong" name="needs_distance" type="text" placeholder="跑腿距离" readonly value="0"/>
+					<small>公里</small>
+				</div>
+				
+				<div class="runbuy-item timerpicker icon-arrow icon-run-time" data-format="datetime">
+					<span>下单时间</span><span class="sun-required">*</span>
+					<input data-label="下单时间" id="needs_time_from_daisong" name="needs_time_from" type="text" value="" readonly>
+				</div>
+
+				<!--<div class="runbuy-item timerpicker icon-arrow icon-run-time" data-format="datetime">
+					<span>送达时间</span><span class="sun-required">*</span>
+					<input data-label="送达时间" id="needs_time_to_daisong" name="needs_time_to" type="text" value="" readonly>
+				</div>-->
+
+				<div class="runbuy-item icon-run-price">
+					<span>小费</span>
+					<input data-label="订单价格" type="hidden" id="needs_price_daisong" name="needs_price" value="0">
+					<div class="runbuy-control">
+						<div class="mui-numbox" data-numbox-min="0">
+							<button class="mui-btn mui-numbox-btn-minus"type="button">-</button>
+							<input data-label="小费" data-label="小费" type="number" class="mui-numbox-input" id="needs_fee_daisong"  name = "needs_fee" value="0">
+							<button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+						</div>
+					</div>
+					<input data-label="订单金额" type="hidden" id="needs_amount_daisong" name="needs_amount" value="0">
+				</div>
+
+				<div class="runbuy-text icon-run-text" style="border-bottom: 1px solid #E4E4E4!important;">
+					<textarea data-label="需求描述" id="needs_description_daisong" name="needs_description" class="remark" placeholder="请描述您的要求" style="margin-bottom: 0;"></textarea>
+					<!--后台配置的需求描述-->
+					<p class="mui-tips" style="color: #A0A0A0;font-size: 0.7rem;width: 100%;line-height: 1rem;word-wrap:break-word;padding-right: 0.8rem;"></p>
+				</div>
+				
+				<div class="runbuy-image">
+					<ul>
+						<li class="upload">
+							<input type="file" name="file" id="file" accept="image/*" capture="true" multiple="">
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+			</form>
+			<center>
+			<div class="runbuy-protocol" style="width: 90%;">
+				<input type="checkbox" id="agreement_daisong" value="" style="left:0;"/>
+				<a href="#">请阅读<span style="color:#0062CC;text-decoration: underline;right:0;">《向日葵跑腿雇主服务说明》</span>内容并同意</a>
+			</div>
+			</center>
+			<div class="runbuy-Price">
+				<!--<a href="#">价格说明</a>-->
+			</div>
+		</section>
+		<!--
+        	排队
+        -->
+		<section id = "runner_paidui" class="mui-content map-lineupsection white mui-hidden">
+			<div class="run-swiper">
+				<img src="../../images/runerrands/runbanner1.png"/>
+			</div>
+			<div class="runbuy-buttons">
+				<a href="#runner_daisong"><button type_model="1">代送</button></a>
+				<a href="#runner_paidui"><button type_model="2" class="active">排队</button></a>
+				<a href="#runner_daimai"><button type_model="3">代买</button></a>
+			</div>
+			<form id="paidui_form">
+			<div class="runbuy-address">
+				<div class="runbuy-address-item pai" eventName="fill_address_to_paidui">
+					<h5>
+						<span id="true_name_to_paidui_txt"> </span>
+						<small id ="mob_phone_to_paidui_txt"></small>
+						<input data-label="联系人" type="hidden" id="true_name_to_paidui" name="true_name_to">
+						<input data-label="手机" type="hidden" id="mob_phone_to_paidui" name="mob_phone_to">
+					</h5>
+					<p id="address_to_paidui_txt"></p>
+					<input data-label="排队地址" type="hidden" id="address_to_paidui" name="address_to">
+				</div>
+			</div>
+
+			<div class="form-list runbuy-list">
+				
+				<div class="runbuy-item timerpicker icon-arrow icon-run-time" data-format="datetime">
+					<span>排队时间</span>
+					<input data-label="排队时间" id="needs_time_from_paidui" name="needs_time_from" type="text" value="" readonly>
+				</div>
+
+				<div class="runbuy-item timerpicker icon-arrow icon-run-time" data-format="datetime">
+					<span>交接时间</span>
+					<input data-label="交接时间" id="needs_time_to_paidui" name="needs_time_to" type="text" value="" readonly>
+				</div>
+
+				<div class="runbuy-item icon-run-price">
+					<span>小费</span>
+					<input data-label="订单价格" type="hidden" id="needs_price_paidui" name="needs_price" value="0">
+					<div class="runbuy-control">
+						<div class="mui-numbox" data-numbox-min="0">
+							<button class="mui-btn mui-numbox-btn-minus"type="button">-</button>
+							<input data-label="小费" type="number" class="mui-numbox-input" id="needs_fee_paidui" name = "needs_fee" value="0">
+							<button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+						</div>
+					</div>
+					<input data-label="订单金额" type="hidden" id="needs_amount_paidui" name="needs_amount" value="0">
+				</div>
+
+				<div class="runbuy-text icon-run-text">
+					<textarea data-label="需求描述" id="needs_description_paidui" name="needs_description" class="remark" placeholder="请描述您的要求"></textarea>
+				</div>
+
+				<div class="runbuy-image">
+					<ul>
+						<li class="upload">
+							<input type="file" name="file" id="file" accept="image/*" capture="true" multiple="">
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+			</form>
+			<div class="runbuy-protocol">
+				<input type="checkbox" id="agreement_paidui" value="" />
+				<a href="#">请阅读《协议内容》并同意</a>
+			</div>
+		</section>
+		<!--
+        	代买
+        -->
+		<section id="runner_daimai" class="mui-content map-buysection white mui-hidden">
+			<div class="run-swiper">
+				<img src="../../images/runerrands/runbanner1.png"/>
+			</div>
+			<div class="runbuy-buttons">
+				<a href="#runner_daisong"><button type_model="1">代送</button></a>
+				<a href="#runner_paidui"><button type_model="2">排队</button></a>
+				<a href="#runner_daimai"><button type_model="3" class="active">代买</button></a>
+			</div>
+			<form id="daimai_form">
+			<div class="runbuy-address">
+
+				<div class="runbuy-address-item mai" eventName="fill_goods_daimai">
+					<h5>
+						<span id="needs_goods_kind_txt"></span> 
+						<small id ="needs_goods_money_txt"></small>
+						<input data-label="商品类型" type="hidden" id="needs_goods_kind" name="needs_goods_kind">
+						<input data-label="购买商品描述" type="hidden" id="needs_goods_description" name="needs_goods_description">
+						<input data-label="预计商品费用" type="hidden" id="needs_goods_money" name="needs_goods_money">
+					</h5>
+					<p id="address_from_daimai_txt"></p>
+					<input data-label="指定地址" type="hidden" id="needs_address_kind" name="needs_address_kind">
+					<input data-label="购买地址" type="hidden" id="address_from_daimai" name="address_from">
+				</div>
+
+				<div class="runbuy-address-item to" eventName="fill_address_to_daimai">
+					<h5>
+						<span id="true_name_to_daimai_txt"></span> 
+						<small id ="mob_phone_to_daimai_txt"></small>
+						<input data-label="收件联系人" type="hidden" id="true_name_to_daimai" name="true_name_to">
+						<input data-label="收件人手机" type="hidden" id="mob_phone_to_daimai" name="mob_phone_to">
+					</h5>
+					<p id="address_to_daimai_txt"></p>
+					<input data-label="收件地址" type="hidden" id="address_to_daimai" name="address_to">
+				</div>
+
+			</div>
+
+
+			<div class="form-list runbuy-list">
+				
+				<div class="runbuy-item icon-run-weight">
+					<span>重量</span><span class="sun-required">*</span>
+					<div class="runbuy-control">
+						<div class="mui-numbox" data-numbox-min="1">
+							<button class="mui-btn mui-numbox-btn-minus"type="button">-</button>
+							<input data-label="重量" type="number" class="mui-numbox-input" id="needs_weight_daimai" name = "needs_weight" value="1">
+							<button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+						</div>
+					</div>
+					<small>千克</small>
+				</div>
+
+				<div class="runbuy-item icon-run-range">
+					<span>距离</span><span class="sun-required">*</span>
+					<input data-label="距离" id="needs_distance_daimai" name="needs_distance" type="text" placeholder="代买距离" readonly value="0"/>
+					<small>公里</small>
+				</div>
+
+				<!--<div class="runbuy-item timerpicker icon-arrow icon-run-time" data-format="datetime">
+					<span>送达时间</span><span class="sun-required">*</span>
+					<input data-label="送达时间" id="needs_time_to_daimai" name="needs_time_to" type="text" value="" readonly>
+				</div>-->
+
+				<div class="runbuy-item icon-run-price">
+					<span>小费</span>
+					<input data-label="订单价格" type="hidden" id="needs_price_daimai" name="needs_price" value="0">
+					<div class="runbuy-control">
+						<div class="mui-numbox" data-numbox-min="0">
+							<button class="mui-btn mui-numbox-btn-minus"type="button">-</button>
+							<input data-label="小费" type="number" class="mui-numbox-input" id="needs_fee_daimai" name = "needs_fee" value="0">
+							<button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+						</div>
+					</div>
+					<input data-label="订单金额" type="hidden" id="needs_amount_daimai" name="needs_amount" value="0">
+				</div>
+
+				<div class="runbuy-text icon-run-text">
+					<textarea data-label="需求描述" id="needs_description_daimai" name="needs_description" class="remark" placeholder="请描述您的要求"></textarea>
+				</div>
+
+				<div class="runbuy-image">
+					<ul>
+						<li class="upload">
+							<input type="file" name="file" id="file" accept="image/*" capture="true" multiple="">
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+			</form>
+			<div class="runbuy-protocol">
+				<input type="checkbox" id="agreement_daimai" value=""/>
+				<a href="javascript:void(0)">请阅读《协议内容》并同意</a>
+			</div>
+			<div class="runbuy-Price" >
+				<input type="checkbox" id="agreement_daimai" value=""/>
+				<a href="javascript:void(0)">价格说明</a>
+			</div>
+		</section>
+		<footer id="runner_daisong_footer" class="footer-menu footer-menu-yellow runbuyfooter">
+			<a href="javascript:void(0)">服务费：<span id="daisong_amount">0</span>元</a>
+			<a href="javascript:void(0)" class="link" >马上下单</a>
+		</footer>
+		<footer id="runner_paidui_footer" class="footer-menu footer-menu-yellow runbuyfooter mui-hidden">
+			<a href="javascript:void(0)">服务费：<span id="paidui_amount">0</span>元</a>
+			<a href="javascript:void(0)" class="link">马上下单</a>
+		</footer>
+		<footer id="runner_daimai_footer" class="footer-menu footer-menu-yellow runbuyfooter mui-hidden">
+			<a href="javascript:void(0)">服务费：<span id="daimai_amount">0</span>元</a>
+			<a href="javascript:void(0)" class="link">马上下单</a>
+		</footer>
+		<!--<script src="../../js/hotcss.js"></script>-->
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/mui.picker.min.js"></script>
+		<script src="../../js/template.js"></script>
+		<script src="../../js/config.js"></script>
+		<script src="../../js/common.js"></script>
+		<script src="../../js/simple-plugin.js"></script>
+		<script src="../../js/member/publish_needs_runner.js"></script>
+	</body>
+
+</html>

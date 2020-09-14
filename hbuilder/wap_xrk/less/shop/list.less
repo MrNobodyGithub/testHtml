@@ -1,0 +1,131 @@
+@import '../config.less';
+@import '../api/api-webkit.less';
+@import '../api/api-common.less';
+@import '../api/api-size.less';
+
+
+@pay1    :   selected;
+
+//保洁
+    
+.shop-list{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    background:#fff;
+     
+    .filter {
+        border-bottom: 1px solid #ccc;
+
+        a {
+            .color( @title-main );
+
+            &.active {
+                color: #f60;
+            }
+        }
+    }
+
+    .list-content{
+        flex: 1;
+        
+            .list-a{
+                position: relative;
+                margin-top: px2rem(44);
+                a{
+                    color: rgb(51, 51, 51);
+                    .fs(32,2);
+                }
+                a:nth-of-type(1){                    
+                     color: rgb(234, 85, 5);
+                     margin-left: px2rem(94);
+                }
+                a:nth-of-type(2){
+                    margin-left: px2rem(244);
+                }
+                a:nth-of-type(3){
+                    margin-left: px2rem(244);
+                }
+                a:nth-of-type(4){
+                    .db;
+                    .width(42,2);
+                    .height(44,2);
+                    background: url(../img/list/list-icon_03.png) ;
+                    background-size: px2rem(42) px2rem(44);
+                    margin-right: px2rem(60);
+                }
+                span{
+                    .width(3,2);
+                    .height(80,2);
+                    background-color: red;
+                    .db;
+                    position: absolute;
+                    right: px2rem(165);
+                    top:px2rem(-20);
+                }
+            }
+            
+            .list-margin{
+               .height(287,2);
+               margin-top: px2rem(50);  
+               margin-left: px2rem(30);
+               margin-right: px2rem(30);
+               border-bottom: px2rem(2) solid #e6e6e8;
+               position: relative;
+               
+               a{
+                   margin-left: px2rem(40);
+                   
+               }
+            }
+            
+            .list-img{
+                .db;
+                .width(245,2);
+                .height(245,2);
+
+                img {
+                    .db;
+                    .square( 245,2 );
+                }
+            }
+
+            .list-span{
+                position: absolute;
+                top: px2rem(0);
+                left: px2rem(0);
+                .width(66,2);
+                .height(72,2);
+                background: url(../img/list/hot.png) no-repeat center center;
+                background-size: px2rem(66) px2rem(72);
+            }
+            
+            h3{
+                .fs(38,2);
+                color: rgb(70, 70, 70);
+                .width(660,2);
+                .lh(60,2);
+            }
+            
+            p:nth-of-type(1){
+               .fs(38,2);
+               .width(660,2);
+               .lh(45,2);
+                color: rgb(234, 84, 4); 
+                margin-top: px2rem(35); 
+            }
+            
+            p:nth-of-type(2){
+                .fs(30,2);
+                color: rgb(160, 160, 160);
+            }
+            
+            
+            
+            
+            
+        }
+
+      }
+
+

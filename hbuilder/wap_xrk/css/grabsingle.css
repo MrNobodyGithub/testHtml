@@ -1,0 +1,111 @@
+.grabsingleh {
+  background: #f5a93b;
+  color: #fff;
+  font-size: 0.66666667rem;
+}
+.grabsingleh .grab-back {
+  font-size: 1.18518519rem;
+  margin-top: 0.2962963rem;
+  color: #fff;
+}
+.grabsection .grabsinglebanner img {
+  width: 100%;
+}
+.grabsection .grab-state {
+  margin-top: 0.22222222rem;
+  margin-bottom: 0.22222222rem;
+  margin-left: 0.34074074rem;
+  margin-right: 0.34074074rem;
+  background: #fff;
+  height: 6.16296296rem;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+}
+.grabsection .grab-state h3 {
+  margin-top: 1.03703704rem;
+  font-size: 0.81481481rem;
+  margin-bottom: 0.4rem;
+}
+.grabsection .grab-state span {
+  font-size: 0.66666667rem;
+}
+.grabsection .grab-state button {
+  margin-top: 0.77037037rem;
+  width: 3.85185185rem;
+  height: 1.34814815rem;
+  font-size: 0.66666667rem;
+}
+.grabsection .grab-list {
+  width: 100%;
+}
+.grabsection .grab-list ul {
+  padding: 0;
+  margin: 0 auto;
+  background: #fff;
+  padding-left: 0.17777778rem;
+  padding-right: 0.44444444rem;
+}
+.grabsection .grab-list ul li {
+  height: 5.67407407rem;
+  border-bottom: 1px solid #F2F2F2;
+  width: 100%;
+  list-style: none;
+  padding-top: 0.26666667rem;
+}
+.grabsection .grab-list ul li dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.grabsection .grab-list ul li dl dt {
+  margin-right: 0.47407407rem;
+}
+.grabsection .grab-list ul li dl dt img {
+  width: 4.08888889rem;
+  height: 4.08888889rem;
+}
+.grabsection .grab-list ul li dl dd h4 {
+  font-size: 0.56296296rem;
+  margin-top: 0.14814815rem;
+  margin-bottom: 0.25185185rem;
+}
+.grabsection .grab-list ul li dl dd p:nth-of-type(2) {
+  margin-top: 0.44444444rem;
+  font-size: 0.44444444rem;
+}
+.grabsection .grab-list ul li dl dd p:nth-of-type(2) span {
+  color: #f5a93b;
+}
+.grabsection .grab-list ul li dl dd p:nth-of-type(3) {
+  margin-top: 0.32592593rem;
+  margin-bottom: 0.62222222rem;
+}
+.grabsection .grab-list ul li dl dd p:nth-of-type(3) button {
+  width: 2.04444444rem;
+  height: 0.74074074rem;
+  margin-right: 0.07407407rem;
+  font-size: 0.38518519rem;
+}
+.grabsection .grab-list ul li dl dd p:nth-of-type(4) {
+  font-size: 0.53333333rem;
+}
+.grabsection .grab-list ul li dl dd p:nth-of-type(4) span {
+  margin-right: 4.51851852rem;
+}
+.grabsection .grab-list ul li dl dd p:nth-of-type(4) button {
+  height: 1.12592593rem;
+  width: 3.2rem;
+  border-radius: 60px;
+  font-size: 0.53333333rem;
+  margin-top: -0.44444444rem;
+}
+.grabsection .grab-remarks {
+  height: 5.15555556rem;
+  width: 100%;
+  background: #fff;
+  padding-top: 1.0962963rem;
+  padding-left: 0.47407407rem;
+  font-size: 0.53333333rem;
+  color: #f5a93b;
+}

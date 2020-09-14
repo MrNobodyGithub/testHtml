@@ -1,0 +1,286 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+//需求库 头部
+.demand-header{
+    .height(132,2);
+    display:flex;
+    justify-content: space-between;
+    padding: 0 px2rem(47);
+    border-bottom: px2rem(2) solid #e6e6e8;
+    background: #f9cc55;
+    
+    div{
+        .fs(47,2);
+        .lh(132,2);
+        img{
+            .width(68,2);
+            .height(68,2);
+        }
+    }
+    div:nth-of-type(1){
+//      margin-top: px2rem(20);
+    } 
+    div:nth-of-type(3){
+        .width(80,2);
+        .height(134,2);
+        a{
+            display: block;
+            .height(134,2);
+            background: red;
+            background: url(../img/jiantou.png) no-repeat center center;
+        }
+    } 
+}
+
+//需求库
+.demand{
+    flex: 1;
+    background: #f1f2f6;
+    padding: 0 px2rem(30);
+    overflow: auto;
+    .search{
+        display: block;
+        .height(78,2);
+        border-radius: px2rem(40);
+        .mt(23,2);
+        background: url(../img/search.png) no-repeat px2rem(25) center #fff;
+        background-size: px2rem(42) px2rem(42);
+        .pl(87,2);
+        .pt(10,2);
+        .fs(36,2);
+        &::-webkit-input-placeholder{
+            .fs(30,2);
+        }
+    }
+    .demand-list{
+        height: auto;
+        .mt(23,2);
+        dl{
+            background: #fff;
+            padding: px2rem(21) px2rem(15);
+            .mb(0);
+            display: flex;
+            dt{
+                .width(240,2);
+                .height(240,2);
+                img{
+                    .width(240,2);
+                    .height(240,2);
+                }
+            }
+            dd{
+                .ml(50,2);
+                flex: 1;
+                p:nth-of-type(1){
+                    .fs(37,2);
+                    color: #464646;
+                    .lh(76,2);
+                }
+                P:nth-of-type(2){
+                    .lh(54,2);
+                    color: #929292;
+                    .fs(30,2);
+                    .width(576,2);
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                p:nth-of-type(3){
+                    .lh(78,2);
+                    .fs(44,2);
+                    color: #f47e4c;
+                    .mt(25,2);
+                    position: relative;
+                    i{
+                        display: inline-block;
+                        font-style: normal;
+                        .fs(27,2);
+                    }
+                    a{
+                        color: #f47e4c;
+                        display: inline-block;
+                        .width(216,2);
+                        .height(76,2);
+                        border: 1px solid #f47e4c;
+                        border-radius: px2rem(40);
+                        text-align: center;
+                        .lh(76,2);
+                        .fs(30,2);
+                        position: absolute;
+                        right: 0;
+                    }
+                }
+            }
+        }
+        .bottom{
+            .width(970,2);
+            .height(106,2);
+            margin: 0 auto;
+            background: #e5e4e4;
+            padding: px2rem(12) px2rem(42);
+            display: flex;
+            justify-content: space-between;
+            div{
+                display: flex;
+                i{
+                    .db;
+                    img{
+                        .square(78,2);
+                    }
+                }
+                span{
+                    .db;
+                    .lh(86,2);
+                    .fs(28,2);
+                    .pl(25,2);
+                }
+            }
+            div:nth-of-type(2){
+                i{
+                    .lh(80,2);
+                    .db;
+                    img{
+                        .square(37,2);
+                    }
+                }
+            }
+            
+        }
+    }
+}
+//育儿嫂 投标详情
+.demand-checked-header{
+    background: #F5A93B;
+    color: white;
+    .icon-back{
+        background: url(../img/icon-back-left.png) no-repeat center center;
+        .bs( px2rem(68) );
+    }
+}
+.wrap-demand-check{
+    flex: 1;
+    background: #fff;
+    .demand-checked{
+        .demand-top{
+            .demand-album{
+                .height(577,2);
+                img{
+                    .width;
+                    .height(577,2);
+                }
+            }
+            .demand-perInfo{
+                border-bottom: 1px solid #e2e2e2;
+                .height(312,2);
+                p{
+                    .lh(84,2);
+                    .fs(35,2);
+                    padding: 0 px2rem(103);
+                    i{
+                        display: inline-block;
+                        font-style: normal;
+                        .width(212,2);
+                        text-align: right;
+                    }
+                    span{
+                        color:#464646;
+                    }
+                    &:nth-of-type(1){
+                        .mt(30,2);
+                    }
+                }
+            }
+            .demand-ident{
+                .height(128,2);
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding-left: px2rem(74);
+                border-bottom: px2rem(20) solid #f1f2f6;
+                li{
+                    .width(346,2);
+                    .height(74,2);
+                    .lh(74,2);
+                    color: #919191;
+                    .fs(31,2);
+                    border-right: 1px solid #919191;
+                    padding-left: px2rem(130);
+                    &:nth-of-type(1){
+                        background: url(../img/demand/demand-checked-icon1.png) no-repeat px2rem(50) center;
+                        background-size: px2rem(50) px2rem(44);
+                    }
+                    &:nth-of-type(2){
+                        background: url(../img/demand/demand-checked-icon2.png) no-repeat px2rem(70) center;
+                        background-size: px2rem(44) px2rem(44);
+                    }
+                    &:nth-of-type(3){
+                        background: url(../img/demand/demand-checked-icon3.png) no-repeat px2rem(80) center;
+                        background-size: px2rem(37) px2rem(48);
+                        border-right: 0;
+                    }
+                }
+            }
+        }
+        
+        .demand-bottom{
+            div{
+                .height(42,2);
+                .lh(42,2);
+                .fs(40,2);
+                color: #474747;
+                border-left: 6px solid #ee6a00;
+                .mt(70,2);
+                .ml(44,2);
+                .pl(36,2);
+            }
+            p{
+                color: #474747;
+                .fs(34,2);
+                .lh(120,2);
+                .pl(100,2);
+            }
+        }
+        
+    }
+}
+//投标成功
+.demand-success-header{
+    background: #fff;
+}
+.demand-success{
+    flex: 1;
+    background: url(../img/demand/earth.png) no-repeat center px2rem(320) #EFEFF4;
+    background-size: px2rem(754) px2rem(509);
+    .success-content{
+        .pt(810,2);
+        p{
+            text-align: center;
+            .lh(100,2);
+            .fs(38,2);
+            color: #333333;
+            span{
+                display: inline-block;
+                color: #ff4752;
+                .fs(46,2);
+            }
+            &:last-child{
+                color: #919191;
+            }
+        }
+        .btn{
+            display: block;
+            margin: 0 auto;
+            .width(960,2);
+            .height(126,2);
+            background: #f9cc55;
+            .fs(46,2);
+            color: #fff;
+            border-radius: px2rem(20);
+            .mt(147,2);
+            border: none;
+        }
+    }
+}

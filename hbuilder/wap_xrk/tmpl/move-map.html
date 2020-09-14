@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/stylesheet.css" rel="stylesheet"  />
+		<script src="../../js/hotcss.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=meIt8u4M01eiAtOVMX5lgTlBWt6U94Rp"></script>
+	</head>
+
+	<body>
+		<header class="common-header runmaph common-header-yellow">
+			<h1>地图</h1>
+			<a href="" class="icon-back mui-action-back"></a>
+			<a href="" class="city">青岛</a>
+		</header>
+		<section class="mui-content mapsection  white">
+			<div id="r-result"><input type="text" id="suggestId" size="20" placeholder="请输入小区名称或者首字母进行查找" /></div>
+			<div id="searchResultPanel" style="border:1px solid #C0C0C0;width:150px;height:auto; display:none;"></div>
+			<div id="l-map"></div>
+			<div class="map-list">
+				<ul>
+					
+				</ul>
+			</div>
+		</section>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/config.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				swipeBack:true
+			});
+			
+		</script>
+		
+		
+		<script type="text/javascript">
+			// 百度地图API功能
+			function G(id) {
+				return document.getElementById(id);
+			}
+		
+			var map = new BMap.Map("l-map");
+			map.centerAndZoom("青岛市市南区",18);                   // 初始化地图,设置城市和地图级别。
+		
+			var ac = new BMap.Autocomplete(    //建立一个自动完成的对象
+				{"input" : "suggestId"
+				,"location" : map
+			});
+		
+			ac.addEventListener("onhighlight", function(e) {  //鼠标放在下拉列表上的事件
+			var str = "";
+				var _value = e.fromitem.value;
+				var value = "";
+				if (e.fromitem.index > -1) {
+					value = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+				}    
+				str = "FromItem<br />index = " + e.fromitem.index + "<br />value = " + value;
+				
+				value = "";
+				if (e.toitem.index > -1) {
+					_value = e.toitem.value;
+					value = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+				}    
+				str += "<br />ToItem<br />index = " + e.toitem.index + "<br />value = " + value;
+				G("searchResultPanel").innerHTML = str;
+			});
+		
+			var myValue;
+			ac.addEventListener("onconfirm", function(e) {    //鼠标点击下拉列表后的事件
+			var _value = e.item.value;
+				myValue = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+				G("searchResultPanel").innerHTML ="onconfirm<br />index = " + e.item.index + "<br />myValue = " + myValue;
+				
+				setPlace();
+			});
+		
+			function setPlace(){
+				map.clearOverlays();    //清除地图上所有覆盖物
+				function myFun(){
+					var pp = local.getResults().getPoi(0).point;    //获取第一个智能搜索的结果
+					map.centerAndZoom(pp, 18);
+					map.addOverlay(new BMap.Marker(pp));    //添加标注
+				}
+				var local = new BMap.LocalSearch(map, { //智能搜索
+				  onSearchComplete: myFun
+				});
+				local.search(myValue);
+			}
+			
+			//添加里节点
+			var options = {
+				onSearchComplete: function(results){
+					// 判断状态是否正确
+					if (local.getStatus() == BMAP_STATUS_SUCCESS){
+						var list="";
+						for (var i = 0; i < 3; i ++){
+							list+='<a href="runaddress1.html"><li><span>'+results.getPoi(i).title + '</span><p>' + results.getPoi(i).address+'</p></li></a>';
+						}
+						$(".map-list ul").html(list);
+					}
+				}
+			};
+			
+			
+			var local = new BMap.LocalSearch(map, options);
+			
+			local.search("福州路12");
+			
+			
+		</script>
+	</body>
+
+</html>

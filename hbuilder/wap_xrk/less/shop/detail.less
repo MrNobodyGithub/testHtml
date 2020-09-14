@@ -1,0 +1,272 @@
+@import '../config.less';
+@import '../api/api-webkit.less';
+@import '../api/api-common.less';
+@import '../api/api-size.less';
+
+
+@pay1    :   selected;
+
+menu {
+   .margin(0);
+   .padding(0);
+}
+
+body{
+   
+    display: flex;
+    flex-direction:column ;
+}
+
+
+@detail     :       detail;
+
+.@{detail} {
+    
+    
+    .@{detail}-swiper {
+        
+        img {
+            
+        }    
+    }
+    
+    .@{detail}-name {
+        background:#fff;
+        .width;
+        .height(330,2);
+        position: relative;
+        border-bottom: px2rem(2) solid #F2F2F2;
+        
+        h3 {
+            .fs(38,2);
+            color: rgb(70, 70, 70);
+            .width(647,2);
+            margin-left: px2rem(50);
+            padding-top: px2rem(50);
+        }
+        
+        strong , span {
+            .db; 
+            margin-left: px2rem(50);
+            margin-top: px2rem(30);
+        }
+        
+        strong {
+            .fs(40,2);
+             color: rgb(234, 84, 4);
+        }
+        
+        span {
+            .fs(32,2);
+            color: rgb(116, 116, 116);
+            padding-right: px2rem(30);
+            
+            .detail-ping{
+                background: url(../img/details/detail-ping.png) center right no-repeat;
+                background-size: px2rem(27) px2rem(27);
+            }
+            
+            .detail-gao{
+                background: url(../img/details/detail-gao.png) center right no-repeat;
+                background-size: px2rem(27) px2rem(27);
+            }
+            
+        }
+        
+        small {
+            .dib;
+             padding-right: px2rem(40);
+             
+        }
+        
+        .share{
+            .db;
+            .width(63,2);
+            .height(59,2);
+            background: url(../img/today-icon3_03.png) center right no-repeat;
+            background-size: px2rem(63) px2rem(59);
+            position: absolute;
+            top:px2rem(70);
+            right: px2rem(100);
+        }
+        
+        
+    }
+    
+    
+    .@{detail}-parameter {
+        background:#fff;
+        .width;
+        .height(120,2);
+        position: relative;
+        overflow: hidden;
+        margin-bottom: px2rem(20);
+        
+        a{
+            .fs(32,2);
+            color: rgb(51, 51, 51);
+
+            
+            .left-can{
+                margin-left: px2rem(62s);
+                margin-top: px2rem(40);
+                .db;
+            }
+            
+            .right-icon{
+                .db;
+                .width(19,2);
+                .height(32,2);
+                background: url(../img/Cleaning/jiantou.png) center right no-repeat;
+                background-size: px2rem(19) px2rem(32);
+                position: absolute;
+                top: px2rem(40);
+                right: px2rem(40);
+            }
+        }
+        
+        
+    }
+    
+    .@{detail}-detail {
+        background:#fff;
+        .width;
+        .height(120,2);
+        position: relative;
+        overflow: hidden;
+        border-bottom: px2rem(2) solid #F2F2F2;
+        
+        a{
+            .fs(43,2);
+            color: rgb(70, 70, 70);
+
+            
+            .left-detail{
+                margin-left: px2rem(62s);
+                margin-top: px2rem(40);
+                .db;
+            }
+            
+            
+        }
+        
+        
+    }
+    
+    .@{detail}-img {
+        background:#fff;
+        .width;
+        .height(1624,2);
+        padding-bottom: px2rem(50);
+        padding-top: px2rem(50);
+        padding-left:px2rem(20);
+        padding-right: px2rem(20);
+        margin-bottom: px2rem(30);
+        
+        img{
+            .db;
+            .width(1045,2);
+            
+        }
+    }  
+    
+    .@{detail}-speak {
+        background:#fff;
+        .width;
+        .height(764,2);
+        
+        .@{detail}-say {
+                    margin-bottom: px2rem(50);
+                    
+                    
+                    .detail-comment{
+                        
+                        .fs(42,2);
+                        color: rgb(70, 70, 70);
+                        margin-top: px2rem(50);
+                        margin-left: px2rem(66);
+                    }
+                    .detail-look{
+                        .fs(40,2);
+                        color: rgb(70, 70, 70);
+                        margin-right: px2rem(60);
+                        margin-top: px2rem(50);
+                    }
+                }
+                
+        .@{detail}-people {
+                    background:#fff;
+                    border-top: px2rem(2) solid #F2F2F2;
+                    margin-bottom: px2rem(20);
+                    
+                    .detail-float{
+                        .huang{
+                            .fs(42,2);
+                            color: rgb(244, 66, 93);
+                            margin-top: px2rem(50);
+                            margin-left: px2rem(80);
+                        }
+                        .pinglun{
+                            .fs(40,2);
+                            color: rgb(70, 70, 70);
+                            margin-left: px2rem(80);
+                        } 
+                    }
+                    
+                    p{
+                        .fs(32,2);
+                        color: rgb(184, 184, 196);
+                        margin-top: px2rem(50);
+                        margin-right: px2rem(90);
+                    }
+                    
+    
+                } 
+                
+        }     
+}
+
+
+
+.footer-btn{
+    .height(134,2);
+    .cleaning-footer{
+        display: flex;
+        justify-content: space-between;
+        .left{
+            background: #fff;
+            .width(547,2);
+            display: flex;
+            a{
+                display: block;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                .mt(25,2);
+                img{
+                    display: block;
+                    .width(56,2);
+                    .height(52,2);
+                    margin: 0 auto;
+                }
+                span{
+                    .fs(23,2);
+                    .lh(55,2);
+                    color: #464646;
+                    text-align: center;
+                }
+                &:first-child{
+                    border-right: 1px solid #e1e1e1;
+                }
+            }
+        }
+        .right{
+            background: #f9cc55;
+            .width(547,2);
+            color: #fff;
+            text-align: center;
+            .lh(134,2);
+            .fs(38,2);
+        }
+    }
+}

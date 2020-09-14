@@ -1,0 +1,377 @@
+<!doctype html>
+<html>
+	<!--
+	作者：张馨元
+	时间：2017-06-23 
+	描述：公告
+-->
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>公告</title>
+		<link rel="stylesheet" type="text/css" href="../../css/mui.css">
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet.css">
+	</head>
+	<style>
+		body {
+			font-size: 0.5rem;
+		}
+		
+		.contact-btn {
+			position: relative;
+			width: 100%;
+			height: 2rem;
+			line-height: 2rem;
+			text-align: center;
+		}
+		
+		.contact-btn button {
+			width: 100%;
+			height: 2rem;
+			line-height: 2rem;
+			font-size: 0.6962963rem;
+			border: 0;
+			padding: 0;
+			background-color: #fbcd56;
+			color: #FFFFFF;
+		}
+		
+		.phone {
+			height: 1.6rem;
+			line-height: 1.6rem;
+			width: 100%;
+			padding: 0 0.5rem;
+			background-color: #fff;
+			border-bottom: 0.02962963rem solid #e6e6e8;
+		}
+		
+		.phone .phone-text {
+			width: 10%;
+			display: inline-block;
+			float: left;
+		}
+		
+		.phone .phone-num {
+			width: 88%;
+			height: 1.55555555rem;
+			line-height: 1.55555555rem;
+			border: 0;
+			float: right;
+			text-align: right;
+			font-size: 0.5rem;
+		}
+		
+		.reason {
+			height: 1.6rem;
+			line-height: 1.6rem;
+			width: 100%;
+			padding: 0 0.5rem;
+			background-color: #fff;
+		}
+		
+		.reason .reason-text {
+			width: 25%;
+			display: inline-block;
+			float: left;
+		}
+		
+		.reason .reason-num {
+			width: 73%;
+			height: 1.6rem;
+			line-height: 1.6rem;
+			border: 0;
+			float: right;
+			text-align: right;
+			font-size: 0.5rem;
+		}
+		
+		.block {
+			display: block;
+		}
+		
+		.reason .reason-num span {
+			width: 90%;
+			display: block;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			float: left;
+		}
+		
+		.textarea textarea {
+			font-size: 0.5rem;
+			height: 4.4rem;
+			padding: 0.5rem;
+			line-height: 0.8rem;
+		}
+		/*弹出菜单区域*/
+		
+		.mui-popover-arrow {
+			display: none;
+		}
+		
+		.mui-popover {
+			bottom: 0 !important;
+			top: inherit !important;
+			width: 100%;
+			left: 0 !important;
+			border-radius: 0;
+			background-color: #FFFFFF;
+		}
+		
+		.mui-popover .mui-table-view {
+			max-height: none;
+		}
+		
+		.mui-popover .delivery {
+			height: 2rem;
+			line-height: 2rem;
+			text-align: center;
+			font-size: 0.59999999rem;
+		}
+		
+		.mui-popover ul li {
+			height: 2rem;
+			line-height: 1.5rem;
+			text-align: center;
+			font-size: 0.59999999rem;
+			background-color: #FFFFFF;
+		}
+		
+		.mui-popover .bottom {
+			height: 50px;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			line-height: 50px;
+			text-align: center;
+			color: #FFFFFF;
+			background-color: #FF6B00;
+			font-size: 18px;
+		}
+		
+		.addimg {
+			background: url(../../images/add_photo_plus.png) no-repeat center;
+			background-size: 5.02222222rem;
+			width: 5.02222222rem;
+			height: 5.02222222rem;
+			margin-top: 0;
+			border: 1px solid gray;
+			position: relative;
+			margin-bottom: .3rem;
+			margin-left: .3rem;
+			overflow: hidden;
+		}
+		
+		.addimg input {
+			border: 0;
+			opacity: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+			position: absolute;
+			left: 0;
+			right: 0;
+		}
+		.img2{
+			width: 5.02222222rem;
+			height: 5.02222222rem;
+		}
+	</style>
+
+	<body>
+		<header class="common-header">
+			<a class="icon-back mui-action-back"></a>
+			<h1>问题反馈</h1>
+		</header>
+
+		<section class="mui-content feedback">
+			<div class="phone">
+				<span class="phone-text">手机号</span>
+				<input id="j_input" class="phone-num" type="number" />
+			</div>
+			<div class="reason">
+				<a href="#bottomPopover" class="block">
+					<span class="reason-text">请选择问题类型</span>
+					<div class="reason-num">
+						<span id="content"></span>
+						<img class="cleaning-right" src="../../images/cleaning-right.png" />
+					</div>
+				</a>
+			</div>
+			<div class="textarea">
+				<textarea rows="3" id="mark" placeholder="添加备注说明"></textarea>
+			</div>
+			<div class="addimg">
+				<form id="form2" method="post">
+					<input type="file" class="addimg2" name="default_pic" id="default_pic2" />
+					<input type="hidden" name="name" value="default_pic" />
+					<img class="img2" />
+				</form>
+			</div>
+		</section>
+		<div id="j_btn" class="contact-btn">
+			<button>提交反馈</button>
+		</div>
+
+		<!--弹出菜单-->
+
+		<div id="bottomPopover" class="mui-popover">
+			<div class="mui-popover-arrow"></div>
+			<ul class="mui-table-view  aapopover">
+				<!--<li class="mui-table-view-cell mui-radio mui-right" data="1">
+					测试数据一
+				</li>
+				<li class="mui-table-view-cell mui-radio mui-right" data="2">
+					测试数据二
+				</li>
+				<li class="mui-table-view-cell mui-radio mui-right" data="3">
+					测试数据三
+				</li>
+				<li class="mui-table-view-cell mui-radio mui-right" data="4">
+					测试数据四
+				</li>-->
+				<script type="text/html" id="order-item">
+					<% for(var i = 0; i< datas.length; i++ ){ %>
+					<li class="mui-table-view-cell mui-radio mui-right" data="<%= datas[i].content_type_id%>">
+						<%= datas[i].content  %>
+					</li>
+					<% } %>
+				</script>
+			</ul>
+		</div>
+
+		<script type="text/javascript" src="../../js/hotcss.js"></script>
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../js/template.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/config.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			//底弹窗点击事件
+			var $reason_id = 0;
+			var $reason_info = 0;
+			mui("#bottomPopover").on('tap', 'li', function() {
+				$reason_id = $(this).attr('data');
+				$reason_info = $(this).text();
+				console.log($reason_info);
+				$('#content').html($reason_info);
+				mui('#bottomPopover').popover('toggle'); //关闭弹出菜单
+			});
+			//获取手机号
+			var mobile = _.userInfo.get().phone;
+			console.log("手机号   " + mobile);
+			$('#j_input').val(mobile);
+			//获取反馈原因
+			var $key = _.userInfo.getKey();
+			console.log("key  " + $key);
+			$.ajax({
+				type: "post",
+				url: ApiUrl + "/index.php?act=service_feedback&op=get_service_feedback",
+				data: {
+					key: $key
+				},
+				success: function(res) {
+					var data = JSON.parse(res);
+					if(data.code == 200) {
+						var $list = template.render('order-item', data);
+						$('#bottomPopover .aapopover').html($list);
+					} else {
+						mui.alert("内容获取失败");
+					}
+				}
+			});
+
+			//上传 图片
+			function ProcessFile(e) {
+				var file = document.getElementsByClassName('addimg2')[0].files[0];
+				console.log(JSON.stringify(file));
+				if(file) {
+					var reader = new FileReader();
+					reader.onload = function(event) {
+						var txt = event.target.result;
+						$(".img2").attr("src", txt)
+					};
+				}
+				reader.readAsDataURL(file);
+			}
+			function contentLoaded() {
+				document.getElementsByClassName('addimg2')[0].addEventListener('change', ProcessFile, false);
+			}
+			contentLoaded();
+			
+			
+			
+			//提交反馈的点击事件
+			var num = 0;
+			$('#j_btn').on('tap', function() {
+				if(num < 1) {
+					if($('#j_input').val() == '') {
+						mui.alert('请输入手机号');
+						return false;
+					}
+
+					if($('#content').html() == '') {
+						mui.alert('请输入反馈原因');
+						return false;
+					}
+
+					if($('#mark').val() == '') {
+						mui.alert('请填写备注说明');
+						return false;
+					}
+					$key = _.userInfo.getKey();
+					
+					
+					var txt1 = $(".img2").attr("src")
+					console.log(txt1)
+					console.log("图片" + encodeURIComponent(txt1));
+
+					var j_input = $('#j_input').val(),
+						content = $('#content').html(),
+						mark = $('#mark').val();
+					member_id = _.userInfo.get().member_id;
+					console.log("shoujihao  " + j_input);
+					$.ajax({
+						type: "post",
+						url: ApiUrl + "/index.php?act=service_feedback&op=set_service_feedback",
+						async: true,
+						data: {
+							key: $key,
+							member_mobile: j_input,
+							type: 1,
+							mark: mark,
+							content_type_id: $reason_id,
+							url_img: encodeURIComponent(txt1),
+							content: $reason_info,
+						},
+						success: function(res) {
+							var data = JSON.parse(res);
+							console.log(data.code);
+							if(data.code == '200') {
+								mui.toast("提交成功");
+								console.log(data.datas)
+								setTimeout(function() {
+									plus.webview.currentWebview().close();
+								}, 2000);
+							} else {
+								mui.toast("提交失敗");
+							}
+						}
+					});
+					num++;
+				}
+			})
+		</script>
+	</body>
+
+</html>

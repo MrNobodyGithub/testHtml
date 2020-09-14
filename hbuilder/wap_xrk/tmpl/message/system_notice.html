@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>客服消息 触屏版</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/msg.css" rel="stylesheet" />
+	</head>
+
+	<body class="white">
+	<!--ucenter-->
+	<header class="mui-bar mui-bar-nav">
+
+		<a class="mui-action-back mui-icon icon-back"></a>
+
+		<h1 class="mui-title">客服消息</h1>
+
+	</header>
+
+	<div class="mui-content">
+		<ul class="mui-table-view" id="msg_list">
+			
+
+		</ul>
+	</div>
+	<script src='../../js/socket.io.min.js'></script>
+	<script src="../../js/jquery.min.js"></script>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/config.js"></script>
+	<script src="../../js/common.js"></script>
+	<script src="../../js/msg.js"></script>
+
+	<script type="text/javascript">
+        mui.init();
+        console.log("key："+key);
+        $.ajax({
+            url: ApiUrl+'/index.php?act=member_msglist&op=msg_notice',
+            data: {
+                'key':key
+            },
+            async: true, // 异步 || 同步
+            dataType: 'json',
+            type: 'post',
+            timeout: 10000,
+            success: function(data) {
+        			console.log(data.datas.notice_list);
+                $.each(data.datas.notice_list,function(key,value){
+                    if(data.code == 200){
+                        var str = "<li class='mui-table-view-cell mui-media'>"+
+							"<a href='javascript:;' class='mui-navigate-right' onclick='send("+value.member_id+")'>"+
+								"<img class='mui-media-object mui-pull-left' src='../../images/Chat/Chat-3.png'>"+
+								"<div class='mui-media-body'>"+
+										value.member_name+
+									"<p class='mui-ellipsis'>"+value.msg.t_msg+"</p>"+
+									"</div></a></li>"
+                        $('#msg_list').append(str);
+                    }
+                })
+            },
+            error: function(xhr, type, errorThrown) {
+                // 请求失败
+        			console.log("失败！");
+            }
+        });
+        function send(obj){
+        	 mui.openWindow({
+                url: 'system_chat.html?id='+obj,
+                id: 'message_chat_system',
+                waiting: {
+                    autoShow: true, //自动显示等待框，默认为true
+                    title: '正在加载...' //等待对话框上显示的提示内
+                }
+            })
+        }
+	</script>
+	</body>
+
+</html>

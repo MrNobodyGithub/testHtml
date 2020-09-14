@@ -1,0 +1,233 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+
+@weedingList       :       weeding-list;
+@weedingColor  :       #f5a93b;
+@anotherColor  :       #f4415e;
+
+
+.@{weedingList} {
+    .filter {
+
+        nav {
+            a {
+                color: @title-main;
+
+                &.active ,
+                &:active {
+                    color: @weedingColor;
+                }
+            }
+        }
+
+    }
+
+    .product-item {
+
+        .label {
+            em {
+                .color( @weedingColor );
+            }
+        }
+
+        .tag {
+            span {
+                color: @weedingColor;
+                border-color: @weedingColor;
+            }
+        }
+
+        .control {
+            a {
+                color: @weedingColor;
+                border-color: @weedingColor;
+            }
+        }
+    }
+
+    .grab-state {
+        button {
+            color: @weedingColor;
+            border-color: @weedingColor;
+            .bc( #fff );
+        }
+    }
+
+    .grab-remarks {
+        color: @weedingColor;
+    }
+
+    .detail-worktime ,
+    .detail-price {
+        .active{
+            color: @weedingColor;
+            border:1px solid @weedingColor !important;
+        }  
+    }
+
+    .title {
+        span {
+            background-color: @weedingColor;
+        }
+    }
+
+    .detail-comment {
+        .comment-content {
+            span {
+                color: @weedingColor;
+            }
+        }
+    }
+}
+
+
+//婚车租赁
+.@{weedingList}{
+    .carserver-list{
+        .product-item{
+            .product-info{
+                 .control{
+                     span{
+                        color: @anotherColor;
+                    }
+                 } 
+            }
+            .list2-order{
+                position: absolute;
+                top:65%;
+            }
+        } 
+    } 
+}
+
+
+
+
+
+
+.weeding-footer{
+    .df;
+    justify-content: space-between;
+    .pl(30,2);
+    align-items: center;   
+    border-top: 1px solid @anotherColor;
+    .cart{
+        .df;
+        align-items: center;
+        .width(307,2);
+        justify-content: space-between;
+        a{
+            .dib;
+            .square(90,2);
+            background: url(../images/car/weeding-car.png) no-repeat center center;
+            background-size: px2rem(90) px2rem(90);
+            position: relative;
+            .badge{
+                .db;
+                .square(52,2);
+                background-color: @anotherColor;
+                border-radius: 50%;
+                color: #fff;
+                text-align: center;
+                .lh(54,2);
+                position: absolute;
+                top: px2rem(-20);
+                right: px2rem(-20);
+            }
+            
+        }
+        
+    }
+    .price{
+        .width(456,2);
+        text-align: center;   
+        .fs(35,2);
+        span{
+            color: @anotherColor;
+        }
+    }
+    .pay{
+        flex: 1;
+        .db;
+        background: @weedingColor;
+        .height(146,2);
+        text-align: center;
+        color: #fff;
+        .lh(146,2);
+        .fs(40,2);
+    }
+}
+
+
+.@{weedingList}{
+    .filter1{
+        nav{
+            .df;
+            align-items: center;
+            justify-content: space-around;
+            li{
+                flex: 1;
+                text-align: center;
+                border-top: 1px solid #e6e6e6;
+            }
+            a{
+                display: inline-block;
+                .height(126,2);
+                .lh(126,2);
+                .fs(37,2);
+                color: @title-main;
+            }
+            .active1{
+                border-bottom: 1px solid @weedingColor;
+//              background: red;
+                color:@weedingColor;
+            }
+        }
+    }
+    .carserver-list{
+        .product-item{
+            position: relative;
+            .product-info{
+                .icon-type1{
+                    background-image: none;
+                    .pl(0);
+                    .lh(70,2);
+                }
+                .control{
+                    .pt(0);
+                    span{
+                        .fs(36,2);
+                        .mr(17,2);
+                        color: #464646;
+                    }
+                    del{
+                        .dib;
+                        .lh(65,2);
+                        color: #c4c3c3;
+                        .fs(30,2);
+                    }
+                }
+                .label{
+                    .mt(15,2);
+                }
+                .raty{
+                    .pb(23,2);
+                }
+            }
+            .order{
+                .db;
+                position: absolute;
+                right: px2rem(30);
+                top: 35%;
+                padding: px2rem(23) px2rem(45);
+                border: 1px solid @weedingColor;
+                color: @weedingColor;
+                border-radius: px2rem(40);
+                .fs(30,2);
+            }
+        }
+    }
+}

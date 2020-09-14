@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<!--
+	作者：yrp
+	时间：2017-06-24
+	描述：
+-->
+	<head>
+		<meta charset="UTF-8">
+		<title>address</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/stylesheet.css" />
+		<style type="text/css">
+			.page {
+				display: none;
+				min-height: 100%;
+			}
+	
+			.active {
+				display: block;
+			}
+		</style>
+	</head>
+
+	<body class="bg2">
+	<section class="page page-form active">
+			<header class="common-header ">
+				<a class="icon-back mui-action-back"></a>
+				<h1>地址</h1>
+			</header>
+	
+			<footer class="footer-btn">
+				<a  class="btn-yellow">确定</a>
+			</footer>
+	
+			<div class="mui-content address clean white">
+				<ul class=" mui-clearfix">
+					<li><input type="text" placeholder="联系人" outline class="addman" style="height: 1.3rem; font-size: .5rem;border: 0;"/></li>
+					<li><input type="text" placeholder="联系电话" outline class="addtel" style="height: 1.3rem; font-size: .5rem;border: 0;" /></li>
+					<li>
+						<a style="color: #333;" class="add-li">
+							<input type="text" class="cityadd" outline style="height: 1.3rem; font-size: .5rem;border: 0;width:80%;" placeholder="区域地址"/><span><img src="../images/cleaning-right.png"/></span>
+						</a>
+					</li>
+					<li>详细信息<span><input type="text" class="detailadd" placeholder="请输入具体楼栋门牌号" outline style="color:#000000; height: 1.3rem;width: 10rem; font-size: .6rem; border: 0;"/></span></li>
+				</ul>
+				<div class="address_center">
+					<p class="address_check">
+		            	<!-- <input type="checkbox"/> -->
+		            	<input type="checkbox" name="checkbox" class="addcheck" value="checkbox" style="zoom:280%;">
+						设为默认地址
+					</p>
+	
+					<a class="address_select">从我的地址中选择</a>
+				</div>
+			</div>
+		</section>
+		<!--选择城市-->
+		<section class="page page-city">
+			<header class="common-header">
+				<h1>选择开通城市</h1>
+				<a class="icon-back"></a>
+			</header>
+			<section class="mui-content regionchose-section">
+				
+				<div class="regionchose-leftlist"></div>
+				<script type="text/html" id="regison">
+					<% if(code == 200){ %>
+						<% for (var i=0;i<datas.area_list.length;i++ ){ %>
+							<a>
+								<%= datas.area_list[i].area_name %>
+							</a>
+						<% } %>
+					<% } %>
+				</script>
+				<div class="regionchose-rightlist"></div>
+				<script type="text/html" id="regison2">
+					<% if(code == 200){ %>
+						<% for (var x=0;x<datas.area_list.length;x++ ){ %>
+							<dl>
+								<dt>
+									<%= datas.area_list[x].area_name %>
+								</dt>
+								<dd>
+									<ol>
+										<% for (var y=0;y<datas.area_list[x].city_list.length;y++ ){ %>
+											<li>
+												<%= datas.area_list[x].city_list[y].area_name %>
+											</li>
+											<% } %>
+									</ol>
+								</dd>
+							</dl>
+							<% } %>
+						<% } %>
+				</script>
+			</section>
+			<footer class="merchantsthird-footer">
+				<button>确定</button>
+			</footer>
+		</section>
+
+
+
+
+		<script type="text/javascript" src="../js/hotcss.js" ></script>
+		<script src="../js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/template.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../js/move-addressedit.js"></script>
+		
+	</body>
+
+</html>

@@ -1,0 +1,209 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+//婚车详情
+@wedding       :       wedding;
+@weddingColor  :       #f5a93b;
+
+.@{wedding} {
+
+    .filter {
+
+        nav {
+            a {
+                color: @title-main;
+
+                &.active ,
+                &:active {
+                    color: @weddingColor;
+                }
+            }
+        }
+
+    }
+
+    .product-item {
+
+        .label {
+            em {
+                .color( @weddingColor );
+            }
+        }
+
+        .tag {
+            span {
+                color: @weddingColor;
+                border-color: @weddingColor;
+            }
+        }
+
+        .control {
+            a {
+                color: @weddingColor;
+                border-color: @weddingColor;
+            }
+        }
+    }
+
+    .grab-state {
+        button {
+            color: @weddingColor;
+            border-color: @weddingColor;
+            .bc( #fff );
+        }
+    }
+
+    .grab-remarks {
+        color: @weddingColor;
+    }
+
+    .detail-worktime ,
+    .detail-price {
+        .active{
+            color: @weddingColor;
+            border:1px solid @weddingColor !important;
+        }  
+    }
+
+    .title {
+        span {
+            background-color: @weddingColor;
+        }
+    }
+
+    .detail-comment {
+        .comment-content {
+            span {
+                color: @weddingColor;
+            }
+        }
+    }
+}
+
+.footer-menu-yellow {
+    .link {
+        .bc( @weddingColor );
+    }
+    .wedding-link{
+        flex: 1;
+        &.w-color{
+            background-color: #ea5404!important;
+        }
+    }
+}
+
+
+.@{wedding}{
+    .wedding-info{
+        height: auto;
+        position: relative;
+        .pl(0);
+        .product-item{
+            .pl(50,2);
+            .product-info{
+                .icon-type1{
+                    background-image: none;
+                    .pl(0);
+                    .lh(70,2);
+                }
+                .label{
+                    .mb(0);
+                    .mt(20,2);
+                }
+            }
+        }
+        
+        .info-price{
+            position: absolute;
+            right: px2rem(118);
+            top: px2rem(143);
+            span:nth-of-type(1){
+                color: #ef2b43;
+                .fs(53,2);
+            }
+            span:nth-of-type(2){
+                color: #a0a0a0;
+                .fs(30,2);
+            }
+        }
+        .wedding-bottom{
+            .pt(30,2);
+            border-top: 1px solid #bdbdbd;
+            p{
+                
+                .pl(53,2);
+                .fs(30,2);
+                .lh(50,2);
+                .pb(0);
+                color: #464646;
+            }
+            p:first-child{
+                color: #EF2B43;
+                .lh(63,2);
+            }
+        }
+    }
+    
+    .detail-process{
+        .height(548,2);
+        .pending-process{
+            .pl(43,2);
+            .pr(64,2);
+            p{
+                .lh(54,2);
+                .fs(33,2);
+                color: #282828;
+                .mb(0);
+            }
+        }
+    }
+    .detail-price{
+        
+        .one{
+            .dib;
+            padding: px2rem(22) px2rem(65);
+            border: 1px solid @title-main;
+            .fs(33,2);
+            border-radius: px2rem(20);
+            .mt(55,2);
+            .mb(68,2);
+            &:not(:first-child){
+                .mt(29,2);
+            }
+        }
+        .price-content{
+            padding: px2rem(85) px2rem(55);
+            table{
+                .width;
+                .height;
+                .lh(95,2);
+                text-align: center;
+                .fs(38,2);
+                border-color: #ccc;
+                th{
+                    background: #f1f2f6;
+                }
+            }
+        }
+        
+    }
+    .pending-ready{
+        height: px2rem(870);
+        dl{
+            .pl(78,2);
+            .fs(32,2);
+            dt{
+                .lh(66,2);
+            }
+            dd{
+                .ml(0);
+                .lh(52,2);
+            }
+        }
+    }
+    .pending-join{
+        .mb(25,2);
+    }
+}

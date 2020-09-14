@@ -1,0 +1,198 @@
+<!doctype html>
+  <!--
+		author: 王佃鑫
+		date: 2017-09-12   
+		version: 1.0
+	-->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>已冻结金额详情 触屏版</title>
+		<script src="../../js/hotcss.js"></script>
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link href="../../css/stylesheet.css" rel="stylesheet" />			
+		<style type="text/css">
+			section {
+			  padding-top: 2.2rem!important;
+			  margin-bottom: 1.98518519rem;
+			}
+			section menu {
+			  margin-bottom: 0 !important;
+			}
+			section menu > a {
+			  font-size: 0.5rem!important;
+			  display: inline-block;
+			  width: 100%;
+			  height: 1.4rem !important;
+			  padding-left: 1.0rem;
+			}
+			section menu > a strong {
+			  color: #ea5505;
+			}
+			section menu > a > :first-child span {
+			  width: 50%;
+			  font-size: 0.5rem;
+			}
+			section menu > a > :last-child span {
+			  width: 50%;
+			  font-size: 0.5rem;
+			  padding-left: 1rem;
+			  color: #ACACB4;
+			}
+			.frozenFooter {
+			  background-color: #ccc;
+			  height: 0 !important;
+			}
+			.frozenTotal {
+			  border-radius: 1rem;
+			  border: 1px solid pink;
+			  background-color: #f5a93b;
+			  position: fixed;
+			  width: 100%;
+			  bottom: 16px;
+			  height: 1.9rem!important;
+			  text-align: center;
+			  font-size: 0.7rem;
+			  line-height: 2.22222222rem;
+			}
+			.frozenTotal strong,
+			.frozenTotal .yen {
+			  color: #ea5505 !important;
+			}
+			/*//温馨提示*/
+			.prompt {
+				position: fixed;
+				bottom:2.1rem ;
+				text-align: center;
+				width: 100%;
+				background-color: #efeff4;
+			}
+			.prompt .promptBox {
+				width: 70%;
+				margin: auto auto;
+				border: 1px solid #efefd0;
+				border-radius: 1rem;
+				background-color:#efefd0;
+				padding: 0.5rem;			
+			}
+			.prompt .promptBox p:first-child{
+				font-size: 0.9rem!important;
+				line-height: 1.2rem!important;
+			}
+			.prompt .promptBox p:last-child {
+				font-size: 0.5rem;
+				line-height: 0.6rem;
+				
+			}
+		</style>
+	</head>
+
+	<body class="zccount-frozen">
+
+		<!--ucenter-->
+		<header class="common-header">
+			<h1>已冻结金额详情</h1>
+			<a class="icon-back mui-action-back"></a>
+		</header>
+
+		<!--body-->
+		<section class="mui-content frozen account account-my3" style="padding-bottom: 2.0rem;" >
+			<!--<menu>
+				<a>
+					<span >会员名</span>
+					<span>小蜜蜂</span>
+				</a>
+				<a >
+					<span >订单号</span>
+					<span>111111111111111</span>
+				</a>
+				<a >
+					<span >冻结金额</span>	
+					<span class="frozenAmount">&yen;:<strong>1000.00 </strong>元</span>
+				</a>
+				
+				<a>
+					<span>预计解冻时间:</span>
+					<span>2017/9/3</span>
+				</a>
+				
+			</menu>-->
+			
+		
+			 <!--<p style="text-align: center; font-size: 0.7rem; padding: 1rem; background-color: #fff;">已冻结总金额合计: <span style="font-size: 0.6rem;">&yen;:</span><strong style="color: pink; font-size: 0.8rem;">1000.00 元</strong></span>
+				</a>
+			 </p>
+			 -->
+			 <!--//温馨提示区-->
+			<!--<div class="mui-content prompt">
+				<div class="promptBox">
+					<p class="proptm-title">温馨提示:</p>
+					<p >
+						陈咏 - 霸王情歌作词：余恒锋作词：余恒锋r作词：余恒锋作词：余恒锋作词：余恒锋作词：
+						陈咏 - 霸王情歌作词：余恒锋作词：余恒锋r作词：余恒锋作词：余恒锋作词：余恒锋作词：
+						陈咏 - 霸王情歌作词：余恒锋作词：余恒锋r作词：余恒锋作词：余恒锋作词：余恒锋作词：
+					</p>
+				</div>
+			</div>-->
+			
+			
+
+		</section>		
+		<!--<footer class="frozenFooter">
+			<div class="frozenTotal">
+				<span>冻结总金额</span>
+				<span class="yen" >&yen;</span>
+				<strong class="money" style="color: ##ea5505!important;"> 0 </strong>元
+			</div>
+		</footer>-->
+	 
+		<script type="text/html" id="frozenTemplat">
+			<% for(var i = 0; i < freeze_order_list.length; i++){ %>	
+				<menu style="margin-bottom: 0;">
+					<!--<a>
+						<span >会员名</span>
+						<span><%= freeze_order_list[i].buyer_name %></span>
+					</a>-->
+					<a >
+						<span >订单</span>
+						<span><%= freeze_order_list[i].order_sn %></span>
+					</a>
+					<a >
+						<span >金额</span>	
+						<span class="frozenAmount"><strong class="money" ><%= freeze_order_list[i].cash_amount %> </strong>元</span>
+					</a>					
+					<a>
+						<span>预计解冻时间</span>
+						<span ><%= freeze_order_list[i].freeze_date %></span>
+					</a>
+					
+				</menu>
+				
+			<% } %>
+			 <footer class="footer-btn">
+				<div class="appoint-detail-next " style="width: 100%;">
+					<div style="width: 100%; text-align: center; padding-left: 0;">合计：<span class="frozenTotalMoney" >0</span>元</div>
+				</div>
+			</footer>
+		</script>
+
+
+		
+		<script type="text/javascript" src="../../js/hotcss.js"></script>
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/config.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/template.js"></script>
+		<script src="../../js/seller/account-frozen.js"></script>
+	</body>
+
+</html>

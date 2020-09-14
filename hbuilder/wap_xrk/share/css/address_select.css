@@ -1,0 +1,239 @@
+body {
+    line-height: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: #fff;
+}
+a {
+    color: #000000;
+}
+ul, ol, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+h1, h2, h3 {
+    margin: 0;
+    font-weight: normal;
+}
+.common-header .icon-back {
+    background: url(../img/cleaning-back.png) center no-repeat;
+    background-size: 1.00740741rem;
+}
+.common-header .icon-back, .common-header .icon-back-white {
+    float: left;
+    width: 1.97037037rem;
+    height: 100%;
+}
+.common-header a {
+    position: relative;
+    z-index: 11;
+}
+.common-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 1.95555556rem;
+    z-index: 99999;
+    background-color: #ffffff;
+    padding: 0 0.44444444rem;
+    border-bottom: 0.02962963rem solid #e6e6e8;
+}
+.common-header h1 {
+    position: absolute;
+    top: 0;
+    left: 1.97037037rem;
+    right: 1.97037037rem;
+    line-height: 1.95555556rem;
+    text-align: center;
+    font-size: 0.6962963rem;
+    z-index: 2;
+}
+
+
+footer[class*='footer-']:not(.footer-ad) {
+    background-color: #fff;
+}
+footer[class*='footer-'] {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 99;
+    box-shadow: 0px -2px 2px #e4e4e4;
+}
+.footer-btn {
+    height: 1.98518519rem;
+}
+
+.footer-btn {
+    position: relative;
+    height: 1.98518519rem;
+}
+.footer-btn a:not(.order-link) {
+    font-size: 0.59259259rem;
+    color: #fff;
+    text-align: center;
+    line-height: 1.98518519rem;
+}
+
+.footer-btn .btn-yellow {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: block;
+    background-color: #f5a93b;
+}
+
+.common-header~.mui-content {
+    padding-top: 1.95555556rem;
+}
+.white {
+    background-color: #fff;
+}
+
+
+.address ul li {
+    height: 1.92592593rem;
+    font-size: 0.53333333rem;
+    line-height: 1.92592593rem;
+    border-bottom: 1px solid #ccc;
+    padding-left: 1.77777778rem;
+    margin-left: 0.41481481rem;
+    padding-right: 0.56296296rem;
+}
+.address ul li:nth-of-type(1) {
+    background: url(../img/cleaning-contact.png) no-repeat 0.2962963rem center;
+}
+.address ul li:nth-of-type(2) {
+    background: url(../img/cleaning-tel.png) no-repeat 0.2962963rem center;
+}
+.address ul li:nth-of-type(3) {
+    background: url(../img/Cleaning1.png) no-repeat 0.2962963rem center;
+}
+.address ul li:nth-of-type(4) {
+    background: url(../img/Cleaning1.png) no-repeat 0.2962963rem center;
+}
+.address .address_center {
+    text-align: center;
+    margin-top: 4.66666667rem;
+}
+.address .address_center .address_check {
+    margin-bottom: 1.03703704rem;
+    font-size: 0.59259259rem;
+    text-align: center;
+    line-height: 0.74074074rem;
+    height: 0.74074074rem;
+    color: #000;
+    position: relative;
+}
+.address .address_center .address_select {
+    font-size: 0.59259259rem;
+    height: 1.33333333rem;
+    width: 5.98518519rem;
+    line-height: 1.33333333rem;
+    border: 1px solid #f9cc55;
+    border-radius: 6px;
+    display: inline-block;
+    color: #f9cc55;
+}
+.address .address_center .address_check input {
+    position: absolute;
+    left: 4.74074074rem;
+    width: 0.74074074rem;
+    height: 0.74074074rem;
+    line-height: 0.74074074rem;
+    border: 1px solid #f9cc55;
+    border-radius: 3px;
+    -webkit-appearance: none;
+}
+.mui-input-row label {
+	margin-top: 0.5rem;
+	width: 26%;
+}
+.mui-input-row input {
+	float: left!important;
+}
+.mui-input-row .mui-switch {
+	margin-top: 0.7rem;
+}
+
+.mui-switch-mini {
+	width: 1.5rem;
+	height: 0.7rem;
+}
+
+.mui-switch .mui-switch-handle {
+	/*width:0.6rem;*/
+	height: 0.6rem;
+}
+.mui-input-row .sun-select-btn {
+    font-size: 1rem;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    right: 0px;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    color: #999;
+}
+.address ul li:nth-of-type(3) span{
+	padding-right: 1.2rem;
+	padding-top: 0.3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

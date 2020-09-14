@@ -1,0 +1,325 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+//帮助与反馈首页
+.feedback{
+    flex: 1;
+    background: red;
+    background: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    .notice{
+        .width(1040,2);
+//      .height(594,2);
+        background: #fff;
+        margin: px2rem(20) auto;
+        border-radius: px2rem(25);
+        h3{
+            .width(960,2);
+            .height(100,2);
+            border-bottom: 1px solid #e6e6e8;
+            text-align: center;
+            .fs(40,2);
+            .lh(100,2);
+            margin: 0 auto;
+        }
+        li:nth-of-type(1){
+            margin-top: px2rem(25);
+        }
+        a{
+            display: block;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 px2rem(36);
+            .height(85,2);
+            .lh(85,2);
+            .color( #525a66 );
+            span{
+                .fs(36,2);
+            }
+            images{
+                .width(16,2);
+                .height(27,2);
+                position: relative;
+                top: px2rem(30);
+            }
+        }
+        .last{
+            position: relative;
+            top: 2px;
+            a{
+                display: block;
+                .width(34,2);
+                .height(19,2);  
+                background: url(../images/feedback-bottom.png) no-repeat center center;
+                margin:40px auto;
+                background-size: px2rem(34) px2rem(19);
+            }
+            
+        }
+    }
+    .problem{
+        .height(814,2);
+        background: #fff;
+        padding: 0 px2rem(75);
+        margin-bottom: px2rem(20);
+        position: relative;
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            li{
+                flex: 0 0 50%;
+                .height(272,2);
+                display: flex;
+                align-items: center;
+                a{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .width(284,2);
+                    .height(185,2);
+                    color: #525a66;
+                    margin: 0 auto;
+                    i{
+                        display: block;
+                        .width(110,2);
+                        .height(110,2);
+                        background: url(../images/feedback-problem-pay.png) no-repeat center center;
+                        background-size: px2rem(110) px2rem(110);
+                       
+                    }
+                    span{
+                        display: block;
+                        .lh(36,2);
+                        .fs(36,2);
+                        margin-top: px2rem(35);
+                    }
+                }
+            }
+            .empty{
+                width: 100%;                
+                .height(40,2);
+                background: #fff;
+                position: absolute;
+                left: 0;
+                
+            }
+            .p-top{
+                top: 0;
+            }
+            .p-bottom{
+                bottom: 0;
+                
+            }
+            li:nth-of-type(3){
+                i{
+                    background: url(../images/feedback-problem-contact.png) no-repeat center center;
+                    background-size: cover;
+                }
+            }
+            li:nth-of-type(2){
+                border-right: 2px solid #e6e6e8;
+                
+            }
+            li:nth-of-type(6){
+                border-right: 2px solid #e6e6e8;
+                i{
+                    background: url(../images/feedback-problem-send.png) no-repeat center center;
+                    background-size: cover;
+                }
+            }
+            li:nth-of-type(4){
+                border: 2px solid #e6e6e8;
+                border-left: none;
+                i{
+                    background: url(../images/feedback-problem-order.png) no-repeat center center;
+                    background-size: cover;
+                }
+            }
+            li:nth-of-type(5){
+                border: 2px solid #e6e6e8;
+                border-left: none;
+                border-right: none;
+                i{
+                    background: url(../images/feedback-problem-confirm.png) no-repeat center center;
+                    background-size: cover;
+                }
+            }
+            li:nth-of-type(7){
+                i{
+                    background: url(../images/feedback-problem-reimburse.png) no-repeat center center;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+    .contact{
+        flex: 1;
+        .por;
+        ul{
+            .poa;
+            .bottom;
+            .left;
+            .right;
+            .bc( @white );
+
+            li{
+                a{
+                    display: block;
+                    .height(120,2);
+                    padding: 0 px2rem(36) 0 px2rem(136);
+                    .lh(120,2);
+                    .fs(36,2);
+                    color: #525a66;
+                    background: url('../images/cleaning-right.png') 96% center no-repeat;
+                    background-size: px2rem(16) px2rem(27);
+                }
+                &:not(first-child){
+                    border-top: 2px solid #e6e6e8;
+                }
+                
+            }
+            li:first-child{
+                background: url(../images/feedback-online.png) no-repeat px2rem(52) center;
+                background-size: px2rem(42) px2rem(34);
+            }
+            li:last-child{
+                background: url(../images/feedback-phone.png) no-repeat px2rem(52) center;
+                background-size: px2rem(42) px2rem(34);
+            }
+        }
+    }
+    
+}
+
+
+
+//公告列表
+.feedback-notice{
+    background: #fff;
+    flex: 1;
+    .notice-list{
+        li{
+            .height(120,2);
+            border-bottom: 1px solid #e6e6e8;
+            a{
+                display: block;
+                .width;
+                .height(120,2);
+                .lh(120,2);
+                .fs(39,2);
+                color: #333333;
+                .pl(46,2);
+                background: url(../images/cleaning-right.png) no-repeat px2rem(1020) center;
+                background-size: px2rem(19) px2rem(34);
+            }
+        }
+    }
+}
+//公告详情
+.feedback-notice-detail{
+    .bc( #fff );
+    .padding( 0 px2rem(60) );
+    flex: 1;
+    h3{
+        .lh(218,2);
+        text-align: center;
+        .fs(37,2);
+    }
+    p{
+        .fs(35,2);
+        .lh(48,2);
+        text-indent: 2em;
+    }
+    p:not(:first-child){
+        .mt(48,2);
+    }
+}
+//支付问题
+.feedback-problem-pay{
+    flex: 1;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    .mui-table-view{
+        margin-top: 0;
+    }
+    .mui-table-view-cell{
+        padding: px2rem(30) px2rem(32);
+        .mui-collapse-content{
+            padding: px2rem(30) px2rem(32);
+            p{
+               .fs(36,2); 
+            }
+        }
+        a{
+            .fs(36,2);
+            display: flex;
+            .badge{
+                .display;
+                .width(46,2);
+                .height(46,2);
+                background: #f4415e;
+                border-radius: 50%;
+                color: #fff;
+                text-align: center;
+                .lh(48,2);
+                margin-right: px2rem(27);
+            }
+            .text{
+                display: block;
+                .lh(46,2);
+            }
+        }
+        
+        
+    }
+    .mui-table-view-cell.mui-active{
+            background-color: #fff;
+        }
+    .wrap-problem-solve{
+        background: #f5f7fa;
+        .oh;
+        .height(378,2);
+        .problem-solve{
+            .height(358,2);
+            .mt(20,2);
+            background: #fff;
+            p{
+                .lh(146,2);
+                .width(1000,2);
+                border-bottom: 1px solid #e9ecf1;
+                .margin;
+                .fs(39,2);
+                color: #333;
+            }
+            div{
+                display: flex;
+                justify-content: space-around;
+                padding: 0 px2rem(30);
+                a{
+                    display: block;
+                    .width(458,2);
+                    .height(98,2);
+                    border: 1px solid #bdc6d2;
+                    border-radius: px2rem(20);
+                    .fs(31,2);
+                    text-align: center;
+                    .lh(98,2);
+                    color: #333;
+                    .mt(50,2);
+                }
+                a:first-child{
+                    background: url(../images/feedback-online.png) no-repeat px2rem(112) center;
+                    background-size: px2rem(42) px2rem(34);
+                }
+                a:last-child{
+                    background: url(../images/feedback-phone.png) no-repeat px2rem(112) center;
+                    background-size: px2rem(42) px2rem(34);
+                }
+            }
+        }
+    }
+}

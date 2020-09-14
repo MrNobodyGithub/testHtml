@@ -1,0 +1,139 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+
+
+//首页搜索
+.search-header{
+    .height(134,2);
+    .pl(40,2);
+    background: #fff;
+    
+    div{
+        .dib;
+        .width(89%);
+        position: relative;
+        input{
+            .width;
+            .height(78,2);
+            .lh(78,2);
+            .pl(82,2);
+            .fs(30,2);
+            border: 0;
+            border-radius: px2rem(40);
+            background: url(../images/search.png) no-repeat px2rem(20) center #f8f8f8;
+            background-size: px2rem(39) px2rem(39);
+        }
+        span{
+            .db;
+            .width(35,2);
+            .height(35,2);
+            background: url(../images/my/guanbi.png) no-repeat center center;
+            background-size: px2rem(35) px2rem(35);
+            position: absolute;
+            right: px2rem(30);
+            top: px2rem(20);
+        }
+    }
+    img{
+        .db;
+        .width(68,2);
+        .height(68,2);
+    }
+    
+    em{
+        .dib;
+        .ml(15,2);
+        .fs(31,2);
+        .lh(134,2);
+        font-style: normal;
+        color: #000000;
+    }
+}
+.search-header-1{
+    .height(134,2);
+    .pl(30,2);
+    background: #fff;
+    padding-top: px2rem(30);
+    div{
+        .dib;
+        .width(89%);
+        position: relative;
+        input{
+            .width;
+            .height(78,2);
+            .lh(78,2);
+            .pl(82,2);
+            .fs(30,2);
+            border: 0;
+            border-radius: px2rem(40);
+            background: url(../images/search.png) no-repeat px2rem(20) center #f8f8f8;
+            background-size: px2rem(39) px2rem(39);
+        }
+        span{
+            .db;
+            .width(35,2);
+            .height(35,2);
+            background: url(../images/my/guanbi.png) no-repeat center center;
+            background-size: px2rem(35) px2rem(35);
+            position: absolute;
+            right: px2rem(30);
+            top: px2rem(20);
+        }
+    }
+    img{
+        display: inline-block;
+        .width(68,2);
+        .height(68,2);
+        .mr(10,2);
+    }   
+}
+
+.search-icon{
+    flex: 1;
+    background: #fff;
+    .pl(49,2);
+    .pt(28,2);
+    h4{
+        font-weight: 400;
+        .fs(39,2);
+        .lh(102,2);
+        color: #333;
+    }
+    .hoticon,.hisicon{
+        position: relative;
+        strong{
+            position: absolute;
+            right: px2rem(60);
+            top: px2rem(30);
+            background: url(../images/my/del1.png);
+            background-size: px2rem(28) px2rem(35);
+            .width(28,2);
+            .height(35,2);
+        }
+        div{
+            .df;
+            flex-wrap: wrap;
+            span{
+                display: inline-block;
+                padding: px2rem(19) px2rem(39);
+                border: 1px solid #e6e6e8;//ea5404
+                border-radius: px2rem(40);
+                .fs(29,2);
+                color: #333;
+                .mt(20,2);
+                .mr(23,2);
+            }
+            .active{
+                border-color: #e6454a;
+                color: #e6454a;
+            }
+        }
+        
+    }
+    .hisicon{
+        .mt(55,2);
+    }
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>代买选商品</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet.css"/>
+	</head>
+
+	<body>
+		<header class="common-header">
+			<a class="icon-back mui-action-back"></a>
+			<h1>商品信息</h1>
+
+		</header>
+		<footer class="footer-menu footer-yellow">
+			<a href="javascrip:void(0)" class="link">确认</a>
+		</footer>
+		
+		<section class="mui-content run-store">
+			<ul class="tagname">
+				<li>烟酒</li>
+				<li>美食</li>
+				<li>果蔬</li>
+				<li>药品</li>
+				<li>超市用品</li>
+				<li class="active">其他</li>
+			</ul>
+			<ul class="msg-list">
+				<li class="edit"><textarea id="needs_goods_description" name="needs_goods_description" placeholder="如果没有你想要的，请填写"></textarea></li>
+				<li class="list money">
+					<span>预期商品费用</span><span style="color:red">*</span>
+					<input id="needs_goods_money" name="needs_goods_money" placeholder="元" />
+				</li>
+				<li class="list address">
+					<span>购买地址</span>
+					<div class="select">
+						<input type="radio" name="needs_address_kind" value="1"/>
+						<span>指定地址</span>
+						<input type="radio" name="needs_address_kind" value="0" checked="true"/>
+						<span>不指定地址</span>
+					</div>
+					
+				</li>
+				<li id="area_info_li" class="list current mui-hidden">
+					<span>购买地址</span>
+					<a href="javscript:void(0)"></a>
+					<input type="text" id="area_info" name="area_info" readonly="true">
+				</li>
+				<li id="address_li" class="list current mui-hidden">
+					<span>详细信息</span>
+					<input type="text" id="address" name="address">
+				</li>
+			</ul>
+		</section>
+		<script src="../../js/hotcss.js" ></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/config.js"></script>
+		<script src="../../js/common.js"></script>
+		<script src="../../js/simple-plugin.js"></script>
+		<script src="../../js/member/publish_needs_select_goods.js"></script>
+	</body>
+
+</html>

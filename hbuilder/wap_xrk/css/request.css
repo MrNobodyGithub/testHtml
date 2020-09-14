@@ -1,0 +1,115 @@
+.white {
+  background-color: #fff;
+}
+.gray {
+  background-color: #f2f2f2;
+}
+.appoint1 {
+  background: #fff;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.appoint1 .appoint-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.appoint1 .appoint-content li {
+  padding-left: 0.66666667rem;
+  font-size: 0.53333333rem;
+  line-height: 1.92592593rem;
+}
+.appoint1 .appoint-content li input {
+  width: 100%;
+  height: 1.86666667rem;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 0.04444444rem solid #e6e6e8;
+  font-size: 0.53333333rem;
+  padding-left: 1.28888889rem;
+}
+.appoint1 .appoint-content .time {
+  padding-left: 1.28888889rem;
+  padding-right: 0.74074074rem;
+  border-bottom: 0.01481481rem solid #E6E6E8;
+  background: url(../img/cleaning/why.png) no-repeat 0.14814815rem center;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.appoint1 .appoint-content .time a {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #666;
+}
+.appoint1 .appoint-content .time a span {
+  display: inline-block;
+  width: 0.53333333rem;
+  height: 0.5037037rem;
+  background: url(../img/cleaning-right.png) no-repeat center center;
+  margin-top: 0.59259259rem;
+}
+.appoint1 .appoint-content .people {
+  padding-left: 1.28888889rem;
+  padding-right: 0.74074074rem;
+  border-bottom: 0.01481481rem solid #E6E6E8;
+  background: url(../img/cleaning/Cleaning2.png) no-repeat 0.14814815rem center;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.appoint1 .appoint-content .people input {
+  width: 2.07407407rem;
+  border: none;
+}
+.appoint1 .appoint-content .people a {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #666;
+}
+.appoint1 .appoint-content .people a span {
+  display: inline-block;
+}
+.appoint1 .appoint-content .text {
+  padding-left: 1.28888889rem;
+  background: url(../img/cleaning-remark.png) no-repeat 0.14814815rem 1.0962963rem;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.appoint1 .appoint-content .text .remark {
+  width: 13.62962963rem;
+  height: 3.2rem;
+  border: 0.04444444rem solid #e6e6e8;
+  font-size: 0.53333333rem;
+  border-radius: 0.44444444rem;
+  padding: 0.44444444rem 0.23703704rem;
+  margin-top: 0.74074074rem;
+}
+.appoint1 .appoint-content .text .remark::-webkit-input-placeholder {
+  color: #ccc;
+}
+.appoint1 .appoint-next {
+  height: 2.16296296rem;
+  background-color: #e6454a;
+}
+.appoint1 .appoint-next a {
+  font-size: 0.62222222rem;
+  color: #fff;
+  display: block;
+  text-align: center;
+  line-height: 2.16296296rem;
+}

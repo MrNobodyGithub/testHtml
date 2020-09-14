@@ -1,0 +1,123 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+// gray
+.white {
+    .bc( #fff );
+}
+.gray {
+    .bc( #f2f2f2 );
+}
+
+
+
+@tutoring       :       tutor;
+@tutoringColor  :       #f8cade;
+
+.@{tutoring} {
+
+    .filter {
+
+        nav {
+            a {
+                color: @title-main;
+
+                &.active ,
+                &:active {
+                    color: @tutoringColor;
+                }
+            }
+        }
+
+    }
+   .product-detail .product{
+        width:100%;
+        margin: 0 auto;
+        .fs(40,2);
+        .lh(80,2);
+    }
+    .product-item {
+        
+        position: relative;
+        .tutor-text{
+            position:absolute;
+            right: px2rem(72);
+            bottom:px2rem(100);
+            .fs(38,2);
+            color:#929292;
+        }
+        .product-title{
+            padding-left: 0;
+        }
+        .label {
+            em {
+                .color( @tutoringColor );
+            }
+        }
+
+        .tag {
+            span {
+                color: @tutoringColor;
+                border-color: @tutoringColor;
+            }
+        }
+
+        .control {
+            a {
+                color: #f4415e;
+                border-color: #f4415e;
+            }
+        }
+    }
+
+    .grab-state {
+        button {
+            color: @tutoringColor;
+            border-color: @tutoringColor;
+            .bc( #fff );
+        }
+    }
+
+    .grab-remarks {
+        color: @tutoringColor;
+    }
+
+    .detail-worktime ,
+    .detail-price {
+        .active{
+            color: @tutoringColor;
+            border:1px solid @tutoringColor !important;
+        }  
+    }
+    .detail-worktime{
+        .worktime-content{
+            ol{
+                .ml(52,2);
+            }
+        }
+    }
+    
+    .title {
+        span {
+            background-color: @tutoringColor;
+        }
+    }
+
+    .detail-comment {
+        .comment-content {
+            span {
+                color: @tutoringColor;
+            }
+        }
+    }
+}
+.common-header-pink{
+    background: @tutoringColor;
+}
+.footer-menu-pink{
+    .link {
+        .bc( @tutoringColor );
+    }
+}

@@ -1,0 +1,368 @@
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+@import 'api/api-webkit.less';
+.form-login ,
+.form-register {
+    .oh;
+
+    h1 {
+        .fs( 0 );
+        .square( 284,2 );
+        .bp( center );
+        .br( no-repeat );
+        .bs;
+    }
+}
+
+.box {
+
+    .width( 768,2 );
+    .margin( 0 auto);
+
+    .form-group {
+        .height( 136,2 );
+        .lh( 136,2 );
+        border-bottom: 1px solid transparent;
+        
+        input {
+            .fs( 36,2 );
+            .pl( 130,2 );
+            .bc( #f9f9f9 );
+            .color( #333 );
+            border-radius: px2rem(10);
+
+            &::-webkit-input-placeholder {
+                color: #bbb;
+            }
+        }
+
+    }
+
+    .box-button {
+        .db;
+        .width;
+        .height( 136,2 );
+        .lh( 136,2 );
+        .bc( #ea5404 );
+        .color( #fff );
+        .fs( 52,2 );
+        letter-spacing: px2rem(30);
+        border-radius: px2rem(10);
+        border: 0;
+        box-shadow: 0 3px 10px 3px rgba(234,84,4,0.65);
+    }
+
+    .form-reglink {
+        .tac;
+        .fs( 36,2 );
+
+        a {
+            .pl( 52,2 );
+            .fs( 36,2 );
+            .color( #ea5404 );
+        }
+    }
+}
+
+.form-login {
+    .background( url(../image/form/login-back.png) bottom center no-repeat );
+    .bs( contain );
+
+    h1 {
+        .bi( url(../image/form/login-img.png) );
+        .margin( px2rem(217) auto px2rem(81) );
+    }
+
+    .form-group {
+        &:not(:last-child) {
+            .mb( 28,2 );
+        }
+    }
+
+    .form-forget {
+        .tar;
+        .mt( 31,2 );
+        .mb( 63,2 );
+        .height( 42,2 );
+
+        a {
+            .fr;
+            .width( auto );
+            .pr( 39,2 );
+            .pl( 46,2 );
+            .fs( 36,2 );
+            .lh( 1 );
+            .color( #333 );
+            .background( url(../image/icon/icon-qa.png) left center no-repeat );
+            .bs( px2rem(36) );
+        }
+    }
+
+    .login-ohter {
+        .mt( 79,2 );
+
+        h3 {
+            .por;
+            .tac;
+            .height( 36,2 );
+            .fw( normal );
+
+            &:after {
+                .content;
+                .poa;
+                .left;
+                .top( 50% );
+                .width;
+                .height( 1px );
+                .bc( #e5e2e1 );
+                transform: translateY(-50%);
+            }
+
+            small {
+                .db;
+                .por;
+                .zi( 11 );
+                .fs( 36,2 );
+                .width( 280,2 );
+                .margin;
+                .color( #7d7d7d );
+                .bc( #fff );
+            }
+        }
+
+        menu {
+            .oh;
+            .mt( 69,2 );
+            
+            a {
+                .fl;
+                .square( 166,2 );
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: px2rem(166);
+
+                &:not(:first-child) {
+                    .ml( 135,2 );
+                }
+
+                &.icon-wx {
+                    background-image: url(../image/form/type-wx.png);
+                }
+                &.icon-qq {
+                    background-image: url(../image/form/type-qq.png);
+                }
+                &.icon-wb {
+                    background-image: url(../image/form/type-wb.png);
+                }
+            }
+        }
+
+    }
+
+    .form-reglink {
+        .mt( 64,2 );
+    }
+
+}
+
+.form-register {
+
+    h1 {
+        .bi( url(../image/form/login-img.png) );
+        .margin( px2rem(188) auto px2rem(88) );
+    }
+
+    .form-group {
+        .por;
+        .mb( 19,2 );
+    }
+
+    .yzm {
+        .db;
+        .height;
+        .padding( 0 px2rem(60) );
+        .fs( 36,2 );
+        .color( #ea5404 );
+        border: 0;
+        outline: 0;
+        background: #f9f9f9;
+
+        &:disabled {
+            color: #333;
+        }
+    }
+
+    .form-check {
+        .fs( 36,2 );
+        .pl( 48,2 );
+        .color( #333 );
+        .padding( px2rem(31) 0 px2rem(50) px2rem(48) );
+
+        input , 
+        span {
+            .dib;
+            .vam;
+        }
+
+        input[type="checkbox"] {
+            .square( 38,2 );
+            outline: 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+
+            &:checked {
+                background: url(../image/icon/icon-check.png) center no-repeat;
+                .bs;
+            }
+        }
+    }
+
+    .form-reglink {
+        .mt( 100,2 );
+    }
+
+}
+
+// 用到的icon
+
+.form-login ,
+.form-register {
+    input[class*='icon-'] {
+        .br;
+        .bp( px2rem(49) center );
+    }
+}
+
+.icon-username ,
+.icon-password {
+    .bs( px2rem(39) px2rem(58) );
+}
+
+.icon-username {
+    .bi( url(../image/icon/icon-username.png) );
+}
+
+.icon-password {
+    .bi( url(../image/icon/icon-password.png) );
+}
+
+.icon-email {
+    .bi( url(../image/icon/icon-email.png) );
+    .bs( px2rem(53) px2rem(58) );
+}
+
+.icon-password2 {
+    .bi( url(../image/icon/icon-pwd2.png) );
+    .bs( px2rem(48) px2rem(50) );
+}
+
+
+
+
+//忘记密码
+.reg-form1{
+    .bc( #fff );
+    
+       
+    .reg-user-img{
+        .width(413, 2);
+        .height( 327 , 2 );
+        border-radius: 50%;
+        background: url(../image/word.png) no-repeat center center;
+        background-size:px2rem(413) px2rem(327);
+//      border: 1px solid #9a8fff;
+        margin: px2rem(188) auto px2rem(67);
+
+    }
+    .reg-content{
+//      .width(900, 2);
+        margin:auto px2rem(55);
+        position: relative;
+
+        .form-control {
+            .por;
+            border-bottom-width: 0;
+
+            &:not(:last-child) {
+                .mt( 20,2 );
+            }
+            
+            span{
+                .fs(36,2);
+            } 
+        }
+
+        input {
+            display: inline-block;
+            .width(720,2);
+            .height(136, 2);
+            border-radius: px2rem(20);
+            font-size: px2rem(36);
+            padding-left: px2rem(20);
+            margin-top: px2rem(20);
+            margin-left: px2rem(50);
+            border: none;
+        }
+        .icon-tel {
+            background: #F9F9F9;
+//          background-size: px2rem(39) px2rem(52);
+        }
+        .icon-confirm{
+            background:#F9F9F9;
+            .width(450,2);
+//          background-size: px2rem(52) px2rem(41);
+        }
+        .icon-pass{
+            background:#F9F9F9;
+//          background-size: px2rem(37) px2rem(48);
+        }
+        .icon-pass1{
+            background:#F9F9F9;
+//          background-size: px2rem(49) px2rem(48);
+        }
+        .submit{
+            .width(970,2);
+            .height(136, 2);
+            color: #FFFFFF;
+            background: #ea5404;
+            padding-left: px2rem(30);
+            .fs(52, 2);
+            letter-spacing: px2rem(30);
+            .mt( 96,2 );
+            box-shadow: 4px 4px 4px #f8bc98, -4px -4px 4px #f8bc98;
+            margin-left: px2rem(-8);
+        }
+        .reg-get{
+            position: absolute;
+            .right(25,2);
+            .top( 50% );
+            .fs(36,2);
+            transform: translateY(-50%);
+            color: #EA5404;
+            border-width: 1px;
+            border-color: rgb(234, 84, 4);
+            border-style: solid;
+            border-radius: 10px;
+            .width(215,2);
+            .lh(115,2);
+            .height(118, 2);
+            .tac;
+        }
+    }
+    .reg-already{
+        .width(372, 2);
+        .height(60, 2);
+        margin: px2rem(75) auto;
+        display: flex;
+        justify-content: space-between;
+        a,span{
+            display: block;
+            .height(60,2);
+            .fs(35, 2);
+            .lh(60,2);
+        }
+        a{
+            color: #EA5404;
+        }
+    }
+}

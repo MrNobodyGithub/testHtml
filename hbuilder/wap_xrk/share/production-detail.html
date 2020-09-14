@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+	<!--
+		作者：wangmin
+		时间：2017-12-27
+		描述：车服务详情	
+	-->
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>车服务 触屏版</title>
+		<link rel="stylesheet" type="text/css" href="css/mui.css">
+		<link rel="stylesheet" type="text/css" href="css/production-detail.css" />
+	</head>
+
+	<header class="common-header">
+		<a class="icon-back mui-action-back"></a>
+		<h1>服务详情</h1>
+	</header>
+
+	<footer class="footer-menu footer-menu-yellow">
+		<a id="j_btn" class="link apot">立即预约</a>
+	</footer>
+	<!--<div style=" height: 100%;width: 100%;background: rgba(0,0,0,0); position: fixed;display: flex; z-index: 999999;bottom: 1.92592593rem;"></div>-->
+
+	<section class="mui-content layout pending-list contentDetail"></section>
+
+	<script type="text/html" id="contentDetailTpl">
+		<% if(code == 200){ %>
+		<!--swiper-->
+
+		<div class="swiper">
+			<%var img = datas.goods_image%>
+			<%var imgUrl = img.split(",")%>
+			<img src="<%= imgUrl[0] %>" alt="">
+		</div>
+
+		<div class="detail-info pending-info" data-goodsId="<%= datas.goods_info.goods_id %>" data-gcId="<%= datas.goods_info.gc_id %>">
+			<div class="product-item">
+				<div class="product-info">
+					<% if(datas.store_info.is_person == 1){ %>
+					<!--个人-->
+					<h2 class="icon-type2"><%= datas.goods_info.goods_name %></h2>
+					<% }else if(datas.store_info.is_person == 0){ %>
+					<!--企业-->
+					<h2 class="icon-type1"><%= datas.goods_info.goods_name %></h2>
+					<% } %>
+					<div class="raty">
+						<!--<i>花匠之星</i>-->
+						<% for(var i=0;i<datas.goods_info.evaluation_good_star;i++){ %>
+						<span class="icon-raty"></span>
+						<% } %>
+					</div>
+					<div class="label">
+						<span>已售<em><%= datas.goods_info.goods_salenum %></em>单</span>
+						<span>好评率<em><%= datas.goods_evaluate_info.good_percent %>%</em></span>
+					</div>
+					<div class="tag"></div>
+					<% if(datas.store_info.store_credit != ''){ %>
+					<div class="description">
+						<%= datas.store_info.store_credit.store_desccredit.text %>
+						<small class="detail-ping"><%= datas.store_info.store_credit.store_desccredit.credit %></small>
+						<span><%= datas.store_info.store_credit.store_servicecredit.text %></span>
+						<small class="detail-ping"><%= datas.store_info.store_credit.store_servicecredit.credit %></small>
+						<span><%= datas.store_info.store_credit.store_deliverycredit.text %></span>
+						<small class="detail-gao"><%= datas.store_info.store_credit.store_deliverycredit.credit %></small>
+					</div>
+					<% }else{ %>
+					<div class="description">
+
+					</div>
+					<% } %>
+				</div>
+			</div>
+		</div>
+
+		<!--修改规格-->
+		<div class="detail-price">
+			<p class="title"><span></span>价格</p>
+			<div class="price-content">
+				<span class="one active">6年以下（80元）</span>
+				<span class="one">6年及6年以上（400元）</span>
+			</div>
+			<p class="goods_price" data-goodsAmount="<%= datas.goods_info.goods_price %>">金额：<span style="color: #f5a93b;">￥<%= datas.goods_info.goods_price %></span></p>
+		</div>
+		<div class="detail-worktime product-detail">
+			<p class="title"><span></span>服务详情</p>
+			<div class="worktime-check mui-clearfix product">
+
+			</div>
+		</div>
+
+		<!--评论隐藏-->
+		<div class="detail-comment">
+			<p class="title">
+				<span></span>评论（
+				<%= datas.eval_count   %>）
+				<a class="mui-pull-right" style="margin-top: -1.5rem;">查看更多</a>
+			</p>
+			<div class="comment-content">
+				<% if(datas.goods_eval_list != '' && datas.goods_eval_list.length < 2){ %>
+				<% for(var i = 0;i < datas.goods_eval_list.length;i++){ %>
+				<div class="evaluate-my-content-item">
+					<div class="item-header">
+						<img src="<%= datas.goods_eval_list[i].member_avatar %>" alt="">
+						<h2><%= datas.goods_eval_list[i].geval_frommembername  %></h2>
+					</div>
+					<p>
+						<%= datas.goods_eval_list[i].geval_content  %>
+						<% if(datas.goods_eval_list[i].geval_content_again  != ''){ %>
+						<div class="add">
+							<span>追加评价:<lable><%= datas.goods_eval_list[i].geval_content_again %></lable></span>
+						</div>
+						<% } %>
+					</p>
+				</div>
+				<% } %>
+				<% }else if(datas.goods_eval_list != '' && datas.goods_eval_list.length >= 2){  %>
+				<% for(var i = 0;i < 2;i++){ %>
+				<div class="evaluate-my-content-item">
+					<div class="item-header">
+						<img src="<%= datas.goods_eval_list[i].member_avatar %>" alt="">
+						<h2><%= datas.goods_eval_list[i].geval_frommembername  %></h2>
+					</div>
+					<p>
+						<%= datas.goods_eval_list[i].geval_content  %>
+						<% if(datas.goods_eval_list[i].geval_content_again  != ''){ %>
+						<div class="add">
+							<span>追加评价:<lable><%= datas.goods_eval_list[i].geval_content_again %></lable></span>
+						</div>
+						<% } %>
+					</p>
+				</div>
+				<% } %>
+				<% }else{ %>
+				<div style="text-align: center; margin: 0 auto;width: 100%;padding-top:60px;"><img src="../img/nodata-error.png" style="margin: auto;" /></div>
+				<div style="text-align:center;font-size: 0.5rem;padding-bottom: 40px;">暂无数据</div>
+				<% } %>
+			</div>
+		</div>
+
+		<div class="detail-server">
+			<p class="titles"><span></span>服务优势</p>
+			<div class="server-content">
+				<dl class="one">
+					<div><img src="../img/icon-service-1.png" /></div>
+					<dt>严格筛选 安全认证</dt>
+					<dd>身份证认证，无犯罪记录。100%健康证审核，健康可靠。</dd>
+				</dl>
+				<dl class="two">
+					<dt><img src="../img/service-1.jpg" /></dt>
+					<dd>
+						<h5>身份证实名认证</h5>
+						<p>扫描验证身份证信息内容，确保真实性，无犯罪记录。</p>
+					</dd>
+				</dl>
+				<dl class="two">
+					<dt><img src="../img/service-2.jpg" /></dt>
+					<dd>
+						<h5>严格健康检查</h5>
+						<p>100%健康审核，保障您和家人的健康。</p>
+					</dd>
+				</dl>
+				<dl class="one">
+					<div><img src="../img/icon-service-2.png" /></div>
+					<dt>专业服务 快速响应</dt>
+					<dd>1对1顾问，按需匹配，用心服务。</dd>
+				</dl>
+				<dl class="two big-img" style="height:0rem!important;">
+					<dd>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="detail" style="background:#ffffff;">
+			<img src="../img/car.png" style="width:100%; margin-top: -1rem;" />
+		</div>
+
+		<% } %>
+		<div class="detail-join pending-join">
+			<div>
+				<p>欢迎致电向日葵之家</p>
+			</div>
+			<div class="join-color cellphone">
+				<span style="width:3rem !important;height:0.8rem !important;font-size: 0.5rem !important;">电话咨询</span>
+			</div>
+		</div>
+	</script>
+	<script type="text/html" id="tel">
+		<p>
+			<a href="tel:<%=datas[0].value%>">
+				<%=datas[0].value%>
+			</a>
+		</p>
+	</script>
+	<script src="js/hotcss.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/mui.min.js"></script>
+	<script src="js/template.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/production-detail.js"></script>
+	</body>
+
+</html>

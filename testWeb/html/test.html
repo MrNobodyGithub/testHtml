@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+	<style>
+		.penguin {
+			--penguin-skin: gray;
+			--peng-belly: white;
+			--penguin-beak: orange;
+			position: relative;
+			margin: auto;
+			display: block;
+			margin-top: 5%;
+			width: 300px;
+			height: 300px;
+			background: cyan !important;
+			opacity: 0.99;
+		}
+		
+		.panguin-bottom {
+			top: 40%;
+			left: 23.5%;
+			background: var(--penguin-skin, gray);
+			width: 53%;
+			height: 45%;
+			border-radius: 70% 70% 100% 100%;
+		}
+		
+		body {
+			background: #c6faf1;
+		}
+		
+		.penguin * {
+			position: absolute;
+		}
+		
+		.right-feet {
+			top: 85%;
+			left: 60%;
+			background: var(--penguin-beak, orange);
+			width: 15%;
+			height: 30%;
+			border-radius: 50%;
+			transform: rotate(-80deg);
+			z-index: -2222;
+		}
+		
+		.left-feet {
+			top: 85%;
+			right: 60%;
+			background: var(--penguin-beak, orange);
+			width: 15%;
+			height: 30%;
+			border-radius: 50%;
+			transform: rotate(80deg);
+			z-index: -1;
+		}
+		
+		.right-hand {
+			top: 0%;
+			left: -5%;
+			background: var(--penguin-skin, gray);
+			width: 30%;
+			height: 60%;
+			border-radius: 30% 30% 100% 30%;
+			transform: rotate(45deg);
+			z-index: -1;
+		}
+		
+		.left-hand {
+			top: 0%;
+			right: -5%;
+			background: var(--penguin-skin, gray);
+			width: 30%;
+			height: 60%;
+			border-radius: 30% 30% 30% 100%;
+			transform: rotate(-45deg);
+			z-index: -1;
+		}
+		
+		.penguin-top {
+			top: 10%;
+			left: 25%;
+			background: var(--penguin-skin, gray);
+			width: 50%;
+			height: 45%;
+			border-radius: 70% 70% 65% 65%;
+		}
+		/*// 肚子 belly*/
+		
+		.belly {
+			top: 60%;
+			left: 2.5%;
+			width: 95%;
+			height: 100%;
+			background: white;
+			border-radius: 100% 100% 80% 80%;
+		}
+		/*左脸*/
+		
+		.left-cheek {
+			top: 15%;
+			left: 5%;
+			width: 60%;
+			height: 70%;
+			background: white;
+			border-radius: 70% 70% 60% 60%;
+		}
+		
+		.right-cheek {
+			top: 15%;
+			right: 5%;
+			width: 60%;
+			height: 70%;
+			background: white;
+			border-radius: 70% 70% 60% 60%;
+		}
+		/*// 左右眼*/
+		
+		.left-eye {
+			top: 45%;
+			left: 25%;
+			width: 18%;
+			height: 18%;
+			border-radius: 100%;
+			background: black;
+		}
+		
+		.right-eye {
+			top: 45%;
+			right: 25%;
+			width: 18%;
+			height: 18%;
+			border-radius: 100%;
+			background: black;
+		}
+		/*// 闪光 sparkle*/
+		
+		.sparkle {
+			top: 30%;
+			left: 10%;
+			width: 40%;
+			height: 40%;
+			background: white;
+			border-radius: 100%;
+		}
+		/*// 🐦*/
+		/*鸟嘴*/
+		
+		.beak-top {
+			left: 40%;
+			top: 60%;
+			background: orange;
+			width: 20%;
+			height: 10%;
+			border-radius: 50%;
+		}
+		
+		.beak-down {
+			left: 42%;
+			top: 65%;
+			background: orange;
+			width: 16%;
+			height: 10%;
+			border-radius: 50%;
+		}
+		/*//blush 脸红😳*/
+		
+		.left-blush {
+			top: 66%;
+			left: 15%;
+			background: pink;
+			width: 16%;
+			height: 10%;
+			border-radius: 45%;
+		}
+		
+		.right-blush {
+			top: 66%;
+			right: 15%;
+			background: pink;
+			width: 16%;
+			height: 10%;
+			border-radius: 45%;
+		}
+	</style>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div class="penguin">
+			<div class="panguin-bottom">
+				<div class="right-feet"></div>
+				<div class="left-feet"></div>
+				<div class="right-hand"></div>
+				<div class="left-hand"></div>
+			</div>
+			<div class="penguin-top">
+				<div class="belly"></div>
+				<div class="left-cheek"></div>
+				<div class="right-cheek"></div>
+				<div class="left-eye">
+					<div class="sparkle"></div>
+				</div>
+				<div class="right-eye">
+					<div class="sparkle"></div>
+				</div>
+				<div class="beak-top"></div>
+				<div class="beak-down"></div>
+				<div class="left-blush"></div>
+				<div class="right-blush"></div>
+			</div>
+		</div>
+
+		<div style="background: green; width: 200px; height: 200px;">
+			<div style="display: flex;align-items: center;justify-content: center; background: red; width: 20px;height: 20px;">
+			</div>
+ 		</div>
+
+	</body>
+
+</html>

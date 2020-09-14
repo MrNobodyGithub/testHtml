@@ -1,0 +1,87 @@
+.sparring-list .filter nav a {
+  color: #333;
+}
+.sparring-list .filter nav a.active,
+.sparring-list .filter nav a:active {
+  color: #f5a93b;
+}
+.sparring-list .product-item .label em {
+  color: #f5a93b;
+}
+.sparring-list .product-item .tag span {
+  color: #f5a93b;
+  border-color: #f5a93b;
+}
+.sparring-list .product-item .control a {
+  color: #f5a93b;
+  border-color: #f5a93b;
+  font-size: 0.44444444rem;
+}
+.sparring-list .grab-state button {
+  color: #f5a93b;
+  border-color: #f5a93b;
+  background-color: #fff;
+}
+.sparring-list .grab-remarks {
+  color: #f5a93b;
+}
+.sparring-list .detail-worktime .active,
+.sparring-list .detail-price .active {
+  color: #f5a93b;
+  border: 1px solid #f5a93b !important;
+}
+.sparring-list .title span {
+  background-color: #f5a93b;
+}
+.sparring-list .detail-comment .comment-content span {
+  color: #f5a93b;
+}
+.sparring-list .filter1 nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.sparring-list .filter1 nav li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+}
+.sparring-list .filter1 nav a {
+  display: inline-block;
+  height: 1.86666667rem;
+  line-height: 1.86666667rem;
+  font-size: 0.54814815rem;
+  color: #333;
+}
+.sparring-list .filter1 nav .active1 {
+  border-bottom: 1px solid #f5a93b;
+  color: #f5a93b;
+}
+.sparring-list .product-item .product-info h2.icon-type1 {
+  background-image: none;
+  padding-left: 0;
+}
+.sparring-list .product-item .product-info .raty i {
+  display: inline-block;
+  height: 0.44444444rem;
+  font-size: 0.41481481rem;
+  font-style: normal;
+  position: relative;
+  top: -3px;
+  color: #f5a93b;
+  margin-left: 0.56296296rem;
+}
+.sparring-list .product-item .product-info .control span {
+  font-size: 0.38518519rem;
+}
+.sparring-list .product-item .product-info .control span i {
+  font-style: normal;
+  font-size: 0.44444444rem;
+}

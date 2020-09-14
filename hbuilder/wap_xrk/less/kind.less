@@ -1,0 +1,124 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+//分类
+.kind-header{
+    background: #fff;
+}
+.comkind{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    .mui-table-view{
+        margin-top: 0!important;
+        .width(1030,2);
+        margin: 0 auto;
+        background: transparent;
+    }
+    .mui-table-view-cell{
+        padding: px2rem(33) px2rem(32);
+        border-radius: px2rem(20);
+        background: #fff;
+        .mt(24,2);
+        .mui-collapse-content{
+            padding: px2rem(30) px2rem(-20);
+
+            .active{
+                color: #ea5404;
+                border: 1px solid #ea5404;
+                background: none;
+            }
+            i{
+                .dib;
+                .fs(29,2);
+                color: #5c5c5c;
+                border-radius: px2rem(50);
+                font-style: normal;
+                padding: px2rem(26) px2rem(55);
+                background: #f3f3f3;
+                &:not(:first-child){
+                    .ml(15,2);
+                }
+            }
+        }
+        a{
+            .fs(36,2);
+            display: flex;
+            .icon{
+                .display;
+                .width(53,2);
+                .height(65,2);
+                margin-right: px2rem(27);
+                
+            }
+            .text{
+                display: block;
+                .lh(50,2);
+            }
+        }
+        &:nth-of-type(1){
+            .icon{
+                background:url(../images/kind/kind_01.jpg) no-repeat center center;
+                background-size: px2rem(43) px2rem(43);
+            }
+            
+        }
+        &:nth-of-type(2){
+            .icon{
+                background:url(../images/kind/kind_02.jpg) no-repeat center center;
+                background-size: px2rem(53) px2rem(52);
+            }    
+        }
+        &:nth-of-type(3){
+            .icon{
+                background:url(../images/kind/kind_03.jpg) no-repeat center center;
+                background-size: px2rem(38) px2rem(55);
+            }
+            .text{
+                .lh(55,2);
+            }    
+        }
+        &:nth-of-type(4){
+            .icon{
+                background:url(../images/kind/kind_04.jpg) no-repeat center center;
+                background-size: px2rem(43) px2rem(43);
+            }    
+        }
+        &:nth-of-type(5){
+            .icon{
+                background:url(../images/kind/kind_05.jpg) no-repeat center center;
+                background-size: px2rem(43) px2rem(43);
+            }    
+        }
+        &:nth-of-type(6){
+            .icon{
+                background:url(../images/kind/kind_06.jpg) no-repeat center center;
+                background-size: px2rem(43) px2rem(43);
+            }    
+        }
+        &:nth-of-type(7){
+            .icon{
+                background:url(../images/kind/kind_07.jpg) no-repeat center center;
+                background-size: px2rem(43) px2rem(43);
+            }    
+        }
+        &:nth-of-type(8){
+            .icon{
+                background:url(../images/kind/kind_08.png) no-repeat center center;
+            }    
+        }
+        &:after{
+            background-color: transparent;
+        }
+    }
+    .mui-collapse.mui-active{
+            margin-top: px2rem(24);
+        }
+    .mui-table-view-cell.mui-active{
+        background-color: #fff;
+        
+    }
+    
+}

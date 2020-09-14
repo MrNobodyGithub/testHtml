@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*//属性选择器*/
+			
+			[zpro] {
+				color: red;
+			}
+			
+			[zpro=hhh] {
+				color: blue;
+			}
+			/*包含 zcontain 将执行下面属性选择器*/
+			
+			[zpro~=zcontain] {
+				color: orange;
+			}
+			
+			[zpro|=zaccc] {
+				color: mediumspringgreen;
+			}
+			
+			/*^$* 开头 结尾 包含*/
+			
+		</style>
+		<script type="text/javascript">
+			function btnActionZ() {
+				if(typeof(Storage) !== "undefined") {
+					if(localStorage.clickcount) {
+						localStorage.clickcount = Number(localStorage.clickcount) + 1;
+					} else {
+						localStorage.clickcount = 1;
+					}
+					document.getElementById("result").innerHTML = "click count = " + localStorage.clickcount;
+				} else {
+					document.getElementById("result").innerHTML = "sorry the browser is not support"
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<p><button onclick=" btnActionZ()" type="button">请点击这里！</button></p>
+		<div id="result"></div>
+		<p zpro>请点击按钮使计数器递增。</p>
+		<p zpro="hhh">请关闭浏览器或标签页，然后再试一次，计数器将继续计数（不会重置）。</p>
+
+		<p zpro="zcontains balabala">包含指定值的 title 属性的所有元素设置样式。适用于由空格分隔的属性值 </p>
+	<p zpro="zaccc-jjj">
+		为带有包含指定值的  属性的所有元素设置样式。适用于由连字符分隔的属性值：
+	</p>
+	</body>
+
+</html>

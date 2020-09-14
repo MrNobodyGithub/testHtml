@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<!--
+	作者：yrp
+	时间：2017-06-23
+	描述：
+-->
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		
+        <link href="../../css/mui.css" rel="stylesheet" />
+		<link href="../../css/stylesheet.css" rel="stylesheet" />
+	</head>
+<style>
+	.authentication {
+  padding-bottom: 8.71851852rem !important;
+}
+</style>
+	<body>
+		
+		
+		<!--ucenter-->
+		<header class="common-header">
+
+			<h1>实名认证</h1>
+			<a class="icon-back mui-action-back"></a>
+			
+		</header>
+
+		
+        <!--body-->
+        <section class="mui-content authentication">
+
+            <p class="example">
+				说明：您上传的身份信息仅用做实名认证，将被严格保密，不会展示给用户或作为它用。
+            </p>
+
+			<div class="form">
+				
+				<div class="form-control">
+					<label>姓名</label>
+					<div class="form-group">
+						<input type="text" class="padding" style="margin-top:.38rem" placeholder="请填写身份证上的姓名">
+					</div>
+				</div>
+				
+				<div class="form-control">
+					<label>身份证号</label>
+					<div class="form-group">
+						<input type="text" class="padding1" style="margin-top:.38rem" placeholder="请准确填写身份证号码">
+					</div>
+				</div>
+
+			</div>
+			<!--
+            	作者：zhaoyangyue
+            	时间：2017-07-26
+            	描述：实名认证不需要上传身份证证件照片
+            -->
+			<!--<h3>上传证件照片</h3>
+			<p class="photo">
+				提示：请手持身份证拍照上传，并确保人脸和证件
+				信息清楚可见。注：只拍摄身份证将无法通过审核哦~
+			</p>
+
+			<div class="example">
+				<img src="../../images/ucenter/authen.jpg" alt="">
+				<span>参考款例</span>
+			</div>
+
+			<div class="file">
+				<input type="file" name="" id="" value="" class="headportrait1" style="margin-bottom: 5rem;"/>
+				<img class="headportrait"/>
+			</div>-->
+
+        </section>
+        <footer class="footer-btn">
+			<a class="btn-orange">保存</a>
+		</footer>
+		<script src="../../js/hotcss.js"></script>
+		<script src="../../js/config.js"></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/common.js"></script>
+		<script type="text/javascript">
+			
+			function ProcessFile( e ) { 
+	            var file = document.getElementsByClassName('headportrait1')[0].files[0];
+	            console.log(file)
+	            if (file) {
+	                var reader = new FileReader();
+	                reader.onload = function ( event ) { 
+	                    var txt = event.target.result;
+	                    $(".headportrait").attr("src",txt)
+	                };
+	            }
+	            reader.readAsDataURL( file );
+	        }
+	        function contentLoaded () {
+	            document.getElementsByClassName('headportrait1')[0].addEventListener( 'change' ,ProcessFile , false );
+	        }
+//	        window.addEventListener( "DOMContentLoaded" , contentLoaded , false );
+			
+			
+//		var $userinfo = _.userInfo.get();
+			
+		var  key = _.userInfo.getKey();
+		console.log("key=="+key);
+		mui.init({
+			swipeBack:true
+		});
+		mui.plusReady(function(){
+			
+			$(".btn-orange").on("tap",function(){
+				//姓名验证
+				if($(".padding").val()==""){
+					mui.confirm("姓名不能为空");
+					return false;
+				}
+				//身份证验证
+				var reg = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;  
+				   var card = $(".padding1").val();
+				   if(reg.test(card) == false){  
+				       mui.confirm("身份证输入不合法");  
+				       return  false;  
+				   } else if( !card.length >= 1 ) {
+				   		mui.confirm("请填写证件号码")
+				   		return false;
+				   }
+				   //上传图片验证
+//				 if($(".headportrait1").val()==""){
+//					mui.confirm("请上传照片");
+//					return false;
+//				}
+				
+				var $inp1 = $(".padding").val(),
+				    $inp2 = $(".padding1").val();
+//			    var txt2 = $(".headportrait").attr("src");
+//				console.log(txt2);
+				$.ajax({
+					url: ApiUrl+"/index.php?act=member_verify&op=upload",
+					type: "post",
+					data:{
+						key:key,
+						member_truename:$inp1,
+						member_idcard:$inp2,
+//						pic:encodeURIComponent(txt2)
+					},
+					success: function(res){
+						console.log(res)
+						var data = $.parseJSON(res);
+						if(data.code != 200){
+							mui.confirm(data.datas.error);
+							return false;
+						}else if(data.code == 200){
+							mui.toast("保存成功");
+							mui.openWindow({
+								url: "member.html",
+								id: _.pageName.member,
+								waiting: {
+									autoShow: true,
+									title: '正在加载...'
+								}
+							})
+						}
+					}
+				})
+			})
+		})	
+		</script>
+	</body>
+
+</html>

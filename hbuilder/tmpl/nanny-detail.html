@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>保洁详情页</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/stylesheet.css" />
+	</head>
+
+	<body id="month-detail">
+		<header class="common-header">
+
+			<a class="icon-back mui-action-back"></a>
+			<h1>服务详情</h1>
+			<a class="icon-share"></a>
+		</header>
+
+		<footer class="footer-menu footer-menu-pink">
+			<a  class="kf">在线咨询</a>
+			<a class="like">收藏</a>
+			<a class="link apot">立即预约</a>
+		</footer>
+
+		<section class="mui-content layout contentDetail">
+			
+			
+		</section>
+		<script type="text/html" id="contentDetailTpl">
+			<% if(code == 200){ %>
+				<!--swiper-->
+			<div class="swiper">
+				<%var img = datas.goods_image%>
+				<%var imgUrl = img.split(",")%>
+				<img src="<%= imgUrl[0] %>" alt="">
+			</div>
+
+			<div class="detail-info">
+				<div class="product-item">
+					<div class="product-info">
+						<h2 class="icon-type1"><%= datas.goods_info.goods_name %></h2>
+						<div class="raty">
+							<i>花之神匠</i>
+							<% for(var i=0;i<datas.goods_info.evaluation_good_star;i++){ %>
+							<span class="icon-raty"></span>
+							<% } %>
+						</div>
+						<div class="label">
+							<span><%= datas.member_info.member_age %>岁</span>
+							<span><em><%= datas.member_info.member_workyears %></em>年工作</span>
+							<span>已售<em><%= datas.goods_info.goods_salenum %></em>单</span>
+							<span>好评率<em><%= datas.goods_evaluate_info.good_percent %></em></span>
+						</div>
+						<div class="tag">
+							<!--<span>做饭好吃</span>
+							<span>人品好</span>
+							<span>有耐心</span>-->
+						</div>
+						<div class="description">
+							<%= datas.store_info.store_credit.store_desccredit.text %>
+							<small class="detail-ping"><%= datas.store_info.store_credit.store_desccredit.credit %></small>
+								<span><%= datas.store_info.store_credit.store_servicecredit.text %></span>	
+							<small class="detail-ping"><%= datas.store_info.store_credit.store_servicecredit.credit %></small>
+								<span><%= datas.store_info.store_credit.store_deliverycredit.text %></span>
+							<small class="detail-gao"><%= datas.store_info.store_credit.store_deliverycredit.credit %></small>
+						</div>	
+						<p class="share">￥<%= datas.goods_info.goods_price %>/月</p>				
+					</div>
+				</div>
+				<div class="bottom">
+					<a>查看服务商资料</a>
+				</div>
+			</div>
+
+			<div class="detail-price">
+				<p class="title"><span></span>服务类型</p>
+				<div class="price-content">
+					<dl class="server-kind">
+						
+						<!--<% if(datas.goods_info.spec_value != null){ %>
+						<dd data-spac-id="<%= datas.spec_list[17] %>"><%= datas.goods_info.spec_value[2][17] %></dd>
+						<dd data-spac-id="<%= datas.spec_list[18] %>"><%= datas.goods_info.spec_value[2][18] %></dd>
+						<dd data-spac-id="<%= datas.spec_list[19] %>"><%= datas.goods_info.spec_value[2][19] %></dd>
+						<% }else{ %>
+							<dd class="active">￥<%= datas.goods_info.goods_price %>/月</dd>
+						<% } %>-->
+					</dl>
+					<dl class="work-time">
+						
+					</dl>
+				</div>
+				<p class="money">金额：<span>￥<%= datas.goods_info.goods_price %></span></p>
+			</div>
+			
+			<div class="detail-comment">
+				<p class="title"><span></span>评论（<%= datas.goods_eval_list.geval_content ? datas.goods_eval_list.geval_content : 0%>）<a class="mui-pull-right">查看更多</a></p>
+				<div class="comment-content">					
+					<!--<div class="evaluate-my-content-item">	                    
+	                    <div class="item-header">
+	                        <img src="../../images/common/demo.png" alt="">
+	                        <h4>W***7</h4>
+	                    </div>	
+	                    <p>活做的非常仔细，服务态度非常好</p>                   
+	                </div>-->
+	                <div style="text-align:center;font-size: 30px;margin-top: 50px;">暂无数据</div>
+				</div>
+			</div>
+			<!--<div class="detail-worktime">
+				<p class="title"><span></span>工作档期</p>
+				<div class="worktime-content pink">
+					<input type="hidden" class="date" />
+				</div>
+				<p>注：粉色为已被预约</p>
+			</div>-->
+			<div class="detail-worktime">
+				<p class="title"><span></span>工作范围</p>
+				<div class="worktime-check work-around mui-clearfix">
+					<ul class="left">
+						<!--<li>做家务</li>
+						<li>营养师</li>
+						<li>催乳</li>
+						<li>按摩</li>
+						<li>婴儿看护</li>
+						<li>月子护理</li>-->
+					</ul>
+				</div>
+			</div>
+			
+			<div class="detail-worktime product-detail">
+				<p class="title"><span></span>产品详情</p>
+				<div class="worktime-check mui-clearfix product"></div>
+			</div>		
+			
+			<div class="detail-server">
+				<p class="titles"><span></span>服务优势</p>
+				<div class="server-content">
+					<dl class="one">
+						<div><img src="../../images/Nanny/renzheng.png" /></div>
+						<dt>严格筛选 安全认证</dt>
+						<dd>身份证认证，无犯罪记录。100%健康证审核，健康可靠。</dd>
+					</dl>
+					<dl class="two">
+						<dt><img src="../../images/common/service-1.jpg" /></dt>
+						<dd>
+							<h5>身份证实名认证</h5>
+							<p>
+								扫描验证身份证信息内容，确保真实性，无犯罪记录。
+							</p>
+						</dd>
+					</dl>
+					<dl class="two">
+						<dt><img src="../../images/common/service-2.jpg" /></dt>
+						<dd>
+							<h5>严格健康检查</h5>
+							<p>
+								100%健康审核，保障您和家人的健康。
+							</p>
+						</dd>
+					</dl>
+					<dl class="one">
+						<div><img src="../../images/Nanny/huangguan.png" /></div>
+						<dt>专业服务 快速响应</dt>
+						<dd>1对1顾问，按需匹配，用心服务。</dd>
+						
+					</dl>
+					<dl class="two big-img">
+						<dt>扫描验证身份证信息内容，确保真实性，无犯罪记录。</dt>
+						<dd>
+							<img src="../../images/Nanny/big-img.jpg"/>
+						</dd>
+					</dl>
+					<dl class="one">
+						<div><img src="../../images/Nanny/renzhen.png" /></div>
+						<dt>贴心售后 安全保障</dt>
+						<dd>服务期内不限次更换。</dd>
+					</dl>
+					<dl class="two">
+						<dt><img src="../../images/common/service-3.jpg" /></dt>
+						<dd>
+							<h5>贴心售后</h5>
+							<p>
+								服务期内不限次数免费更换
+							</p>
+						</dd>
+					</dl>
+					<!--<dl class="two">
+						<dt><img src="../../images/common/service-4.jpg" /></dt>
+						<dd>
+							<h5>安全保障</h5>
+							<p>
+								签约即送平安保险保单
+							</p>
+							<a>保险明细>></a>
+						</dd>
+					</dl>-->
+				</div>
+			</div>
+			<div class="detail-join">
+				<div>
+					<p>欢迎致电向日葵之家</p>
+					<p>应聘保洁</p>
+				</div>
+				<div class="cellphone">
+					<span>电话咨询</span>
+					<!--<p>400-400-400</p>-->
+					
+				</div>
+			</div>
+			<div class="detail-process">
+				<p class="titles"><span></span>服务流程</p>
+				<ul>
+					<li>
+						<img src="../../images/pipei@2x.png" />
+						<b>匹配保洁</b>
+						<span>筛选最合适保洁</span>
+					</li>
+					<li class="">&gt;</li>
+					<li>
+						<img src="../../images/qianyue@2x.png" />
+						<b>预约面试</b>
+						<span>筛选最合适保洁</span>
+					</li>
+					<li class="">&gt;</li>
+					<li>
+						<img src="../../images/pipei@2x.png" />
+						<b>签约上门</b>
+						<span>筛选最合适保洁</span>
+					</li>
+					<li class="">&gt;</li>
+					<li>
+						<img src="../../images/shouhou@2x.png" />
+						<b>售后跟踪</b>
+						<span>筛选最合适保洁</span>
+					</li>
+				</ul>
+			</div>
+			<% } %>
+			</script>
+			<script type="text/html" id="tel">
+				<p><%=datas[0].value%></p>
+			</script>
+	<script src="../js/hotcss.js"></script>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/mui.min.js"></script>
+	<script src="../js/template.js"></script>
+	<script src="../js/config.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/jquery.zdatepicker.js"></script>
+	<script src="../js/tmpl/common-detail.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,290 @@
+<!doctype html>
+<html>
+<!--
+		author: suiyi  date: 2017-06-23 11:21:29  version: 1.0
+	-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <title>个人中心 触屏版</title>
+    <link rel="stylesheet" type="text/css" href="../../css/mui.css">
+    <link rel="stylesheet" type="text/css" href="../../css/stylesheet.css">
+    <style>
+        select {
+            width: 3.2rem;
+            direction: rtl;
+            font-size: .45rem;
+            float: right;
+            height: 2.19259259rem;
+            line-height: 2.19259259rem;
+            font-size: 0.53333333rem;
+            color: #181818;
+        }
+        
+        .ucenter-header {
+            background: url(../../images/ucenter/banner.jpeg) !important;
+        }
+        
+        .my_refund {
+            background-image: url(../../images/ucenter/menu6.png);
+            background-size: 0.75555556rem 0.72592593rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!--ucenter-->
+    <!--<header class="mui-bar header-bar">
+		</header>-->
+
+    <div id="loading">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+
+	<footer class="footer-bar flex">
+		<nav>
+			<a>
+				<span>首页</span>
+			</a>
+			<a class="house">
+		            	<span>房产</span>
+		            </a>
+			
+			<a style="z-index: 999;">
+               <center><li><img src="../../images/common/add.png" style="width:0.8rem;"></li></center>
+						<span style="margin-top: 0.35185185rem;">下单</span>
+            </a>
+            <a class="reputation">
+						<span>口碑</span>
+					</a>
+			<a class="active">
+				<span>我的</span>
+			</a>
+		</nav>
+	</footer>
+	<section class="page page-member page-show">
+
+        <section class="mui-content ucenter" id="memberInfo">
+
+            <!--header-->
+            <header class="ucenter-header">
+                <!--icons-->
+                <a href="javascript:void(0);" class="ucenter-config"></a>
+
+                <a class="ucenter-ident" style="margin-top:0.8rem">未提交</a>
+
+                <a class="ucenter-box">
+                    <img src="../../images/ucenter/photo.jpg" alt="">
+                    <div class="ucenter-info">
+                        <h2>请登录</h2>
+                        <!--
+                                <span>
+                                    会员等级
+                                    <small>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                    </small>
+                                </span>    
+                            -->
+                    </div>
+                </a>
+
+            </header>
+
+            <div class="person active">
+
+                <!--nav-->
+                <!--2017.7.1 张文君隐藏<nav class="ucenter-nav">
+                        <a>
+                            <span>0</span>
+                            <small>余额</small>
+                        </a>
+                        <a class="icon-coupon">
+                            <span></span>
+                            <small>优惠券及红包</small>
+                        </a>
+                        <a>
+                            <span>0</span>
+                            <small>我的积分</small>
+                        </a>
+                    </nav>结束-->
+
+                <!--order-->
+                <!--<div class="ucenter-order">
+                        <h2>我的订单</h2>
+                        
+                        <menu class="flex" style="display: flex; justify-content: space-around;">
+                            <a data-status="1">
+                                <span>待付款</span>
+                            </a>
+                            <a data-status="2">
+                                <span>服务中</span>
+                            </a>
+                            <a data-status="3">
+                                <span>待评价</span>
+                            </a>
+                            <a data-status="4" style="display: none;">
+                                <span>退款售后</span>
+                            </a>
+                            <a data-status="0">
+                                <span>全部订单</span>
+                            </a>
+                        </menu>
+                    </div>-->
+
+					<!--type-->
+					<div class="ucenter-type">
+						<menu class="flex">
+							<a class="my_order">
+								<span>我的订单</span>
+							</a>
+							<a class="my_collect">
+								<span>我的收藏</span>
+							</a>
+							<a class="no-checkin">
+								<span>帮助与反馈</span>
+							</a>
+							<a class="join_service">
+								<span>申请成为服务商</span>
+							</a>
+							<a class="invite_award" style="display: none;">
+								<span>推荐有奖</span>
+							</a>
+							<a class="my_coupon">
+								<span>优惠券</span>
+							</a>
+							<a class="my_refund" id="refund" style="display: none;">
+								<span>退款售后</span>
+							</a>
+							<a class="message">
+								<span>消息</span>
+							</a>
+							<a class="referrer">
+								<span>推荐人手机号</span>
+							</a>
+							<a class="config">
+								<span>设置</span>
+							</a>
+						</menu>
+					</div>
+
+            </div>
+        </section>
+    </section>
+
+    <!--个人资料-->
+    <section class="page page-info page-hide">
+        <!--ucenter-->
+        <header class="common-header">
+
+            <h1>个人信息</h1>
+            <a class="icon-back"></a>
+            <a class="icon-link">保存</a>
+
+        </header>
+
+        <!--body-->
+        <section class="mui-content person form">
+
+            <div class="person-form">
+
+                <div class="form-control form-upload form-icon-arrow">
+                    <label>头像</label>
+                    <div class="form-group">
+                        <div class="upload-img">
+                            <input type="file" class="file-person" id="" value="" />
+                            <img src="../../images/ucenter/photo.png" alt="" class="person-img">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <label>名称</label>
+                    <div class="form-group">
+                        <input type="text" name="name" class="usernamemax" placeholder="20个字符以上，支持中英文、数字">
+                    </div>
+                </div>
+
+                <div class="form-control form-icon-arrow user_lv">
+                    <label>用户等级</label>
+                    <div class="form-group">
+                        <span data-article-id="45" class="member_lv" style="font-size: 0.5rem;color: orange;"></span>
+                    </div>
+                </div>
+
+                <div class="form-control form-icon-arrow">
+                    <label>性别</label>
+                    <div class="form-group">
+                        <select name="sex" id="sex">
+								<option class="secret" value="0">保密</option>
+								<option class="male" value="1">男</option>
+								<option class="famale" value="2">女</option>
+							</select>
+                    </div>
+                </div>
+
+                <div class="form-control form-icon-arrow">
+                    <label>生日</label>
+                    <div class="form-group">
+                        <input type="text" name="birth" placeholder="选择" readonly>
+                    </div>
+                </div>
+
+                <div class="form-control form-icon-arrow" id="nation-item">
+                    <label>民族</label>
+                    <div class="form-group">
+                        <select name="national" id="national"></select>
+                    </div>
+                </div>
+
+                <div class="form-control form-icon-arrow">
+                    <label>婚姻状况</label>
+                    <div class="form-group">
+                        <select name="marriage" id="marriage">
+                                <option class="unmarried" value="0">未婚</option>
+                                <option class="married" value="1">已婚</option>
+                                <option class="secret2" value="2">保密</option>
+                            </select>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="person-form">
+                <div class="form-control">
+                    <label>手机号</label>
+                    <div class="form-group">
+                        <input type="tel" name="tel" readonly value="">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </section>
+
+    <!--实名认证-->
+
+    <script src="../../js/hotcss.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/mui.min.js"></script>
+    <script src="../../js/config.js"></script>
+    <script src="../../js/template.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/member/member.js"></script>
+</body>
+
+</html>

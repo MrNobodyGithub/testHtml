@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>今日头条详情</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/stylesheet.css" />
+    <style>
+        .upvoteActive {
+            background: url(../images/todayHeadlines/today-all_active.png) no-repeat center center!important;
+            background-size: 2.5rem 2.5rem!important;
+        }
+    </style>
+</head>
+
+<body>
+    <!--ucenter-->
+    <header class="common-header header-color">
+
+        <a class="icon-back mui-action-back"></a>
+        <h1>详情</h1>
+    </header>
+
+    <!-- <footer class="footer-btn">
+        <div class="comment">
+            <input type="text" class="" placeholder="写点什么">
+            <button class="send">发送</button>
+        </div>
+    </footer> -->
+
+    <section class="todayHeadlines-all mui-content" style="overflow-x: hidden;">
+        <div class="todayHeadlines-all-content mui-clearfix">
+            <div class="todayHeadlines-detail"></div>
+            <script type="text/html" id="today-news">
+                <%if(code==200){%>
+                    <div class="news-title mui-clearfix">
+                        <h2>
+                            <%= datas.article_title %>
+                        </h2>
+                        <% var time = datas.article_publish_time %>
+                            <small><%=datas.article_publish_time%></small>
+                    </div>
+                    <div class="news-article">
+                        <p style="text-indent: 2em;">
+                                <%=# datas.article_content %>
+                        </p>
+
+                    </div>
+                    <!--
+                        	作者：zhaoyangyue
+                        	时间：2017-07-25
+                        	描述：点赞
+                        -->
+                    <div class="news-img" id="upvote" class=""></div>
+                    <p class="news-img-desc">已有
+                        <i style="font-style: normal;" id="dianzan"><%= datas.article_dianzan ? datas.article_dianzan : 0 %></i>人</p>
+
+                    <!-- <div class="todayHeadlines-all-say mui-clearfix">
+                        <span class="mui-pull-left"></span>
+                        <span class="mui-pull-left">评论(<%=datas.article_comment_count%>)</span>
+                        <%if(datas.article_comment_count > 0){%>
+                            <span class="mui-pull-right">查看更多</span>
+                            <%}%>
+                    </div> -->
+                    <div class="news-comment">
+
+                    </div>
+                    <%}%>
+            </script>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="../js/hotcss.js"></script>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/mui.min.js"></script>
+    <script type="text/javascript" src="../js/config.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/template.js"></script>
+    <script type="text/javascript" src="../js/tmpl/news-detail.js"></script>
+
+</body>
+
+</html>

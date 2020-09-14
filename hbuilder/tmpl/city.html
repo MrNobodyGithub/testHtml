@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>城市列表 触屏版</title>
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link href="../css/stylesheet.css" rel="stylesheet" />
+		<style type="text/css">
+			.city-list dl {
+				padding: 0.35555556rem 0.6962963rem;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<header class="common-header city-header">
+			<h1>当前城市</h1>
+			<a class="icon-close mui-action-back icon-back"></a>
+		</header>
+
+		<section class="mui-content city">
+
+			<!--导航menu-->
+			<aside></aside>
+
+			<!--城市列表-->
+			<div class="city-list">
+
+				<dl>
+					<dt>定位城市</dt>
+					<dd class="location_area">
+						<span>正在定位...</span>
+					</dd>
+				</dl>
+
+				<dl class="hotcity">
+					<dt>其他城市</dt>
+					<dd style="display: none;">
+
+					</dd>
+				</dl>
+
+				<ul></ul>
+
+			</div>
+
+		</section>
+
+		<script src="../js/hotcss.js"></script>
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/pinyin_dict_firstletter.js"></script>
+		<script src="../js/pinyinUtil.js"></script>
+		<script src="../js/config.js"></script>
+		<script src="../js/common.js"></script>
+		<script src="../js/tmpl/city.js"></script>
+
+	</body>
+
+</html>

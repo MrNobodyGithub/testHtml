@@ -1,0 +1,322 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+@import 'mixins/mixins.less';
+
+
+//圈子主页
+
+    .circleh{
+        background: #fff;
+        color:#000;
+    }
+    .circlesection{
+        background: #fff;
+        .threeRankedBox{
+            .mt(12,2);
+            .pt(10,2);
+            .pl(32,2);
+            .pr(20,2);
+            border-top: 1px solid #ccc;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-around;
+            background: #fff;
+            ul{
+                .width(333,2);
+                .mr(15,2);
+                li{
+                    border:1px solid #e6e6e8;
+                    .mb(10,2);
+                    .pt(15,2);
+                    .pr(20,2);
+                    .pb(15,2);
+                    .pl(20,2);
+                    img{
+                        width:100%;
+                    }
+                    b{
+                        display: block;
+                        .mt(20,2);
+                        .mb(15,2);
+                        .fs(36,2);
+                    }
+                    p{ 
+                       .fs(22,2);
+                       .pt(20,2);
+                       border-top: 1px solid #ddd;
+                    }
+                }
+            }
+            ul:nth-of-type(3){
+                margin-right: 0;
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+//话题页  circletopic
+.circletopicsection{
+    .pr(25,2);
+    .pl(25,2);
+    background: #fff;
+    ul{
+        li{
+            .height(534,2);
+            .pt(36,2);
+            .pb(36,2);
+            border-bottom:1px solid #e5e5e6;
+            p:nth-of-type(1){
+                .pt(35,2);
+               
+                img{
+                    .width(332,2);
+                    .height(271,2);
+                    .mr(10,2);
+                }
+                img:nth-of-type(3){
+                    margin-right: 0;
+                }
+            }
+            p:nth-of-type(2){
+                display: flex;
+                .mt(30,2);
+                .fs(30,2);
+                img:nth-of-type(1){
+                    .mr(20,2);
+                }
+                span{
+                    .mt(20,2);
+                    .mr(30,2)
+                }
+                i{
+                    .mt(15,2);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//话题详情
+        .circletopicdetailsh {
+                background: #fff;
+                color: #000;
+                .fs(45,2);
+                .height(132,2);
+                .position( fixed );
+                .top;
+                .width;
+                display: flex;
+                .padding( 0 px2rem(40) );
+                text-align: center;
+                border-bottom: px2rem(2) solid #e6e6e8;
+                img{
+                   .width(68,2);
+                   .height(68,2);
+                   .mt(30,2);
+                }
+                h1{
+                    .width(790,2);
+                    text-align: center;
+                    .height(132,2);
+                    line-height: px2rem(132);
+                    .fs(50,2)
+                }
+                span{
+                    img{
+                        .width(53,2);
+                        .height(13,2);
+                        .mt(60,2);
+                    }
+                }
+                & ~ .mui-content {
+                    .pt( 132,2 )
+                }
+           }
+           .circletopicdetailssection{
+               background: #fff;
+               .pb(142,2);
+               .circletopicdetailstitle{
+                   background: #fff;
+                   .pl(30,2);
+                   .mt(40,2);
+                   
+                   .height(384,2);
+                   .width;
+                   p:nth-of-type(1){
+                       display: flex;
+                       .mb(65,2);
+                       img{
+                           .height(105,2);
+                           .width(105,2);
+                           .mr(40,2);
+                       }
+                       span{
+                           .mt(30,2);
+                           .fs(42,2);
+                           .mr(690,2);
+                       }
+                       i{
+                           .mt(30,2);
+                           .fs(45,2);
+                       }
+                   }
+                   h3{
+                       .fs(49,2);
+                       .mb(38,2);
+                   }
+                   p:nth-of-type(2){
+                       .fs(30,2);
+                       span{
+                           color:#135ab1;
+                           .fs(34,2);
+                       }
+                   }
+               }
+               .circletopicdetailstext{
+                   .pl(54,2);
+                   .pr(80,2);
+                   p{
+                       line-height:px2rem(58);
+                       text-indent: 2;
+                       color:#000000;
+                       .fs(36,2);
+                   }
+               }
+               .circle-details-space{
+                   .mt(100,2);
+                   .height(22,2);
+                   background: #edeef1;
+                   border-top: 2px solid #ccd1db;
+               }
+               .circle-details-commenttitle{
+                   .height(102,2);
+                   //line-height: px2rem(102);
+                   .width;
+                   border-bottom: 1px solid #e2e3e7;
+                   h3{ 
+                       .ml(32,2);
+                       .fs(35,2);
+                       color:#ffb800;
+                       text-align: center;
+                       .width(140,2);
+                       line-height: px2rem(90);
+                       border-bottom: 1px solid #ffb800;
+                       z-index: 2;
+                       
+                   }
+               }
+               .circle-details-commentlist{
+                   ul{
+                       li{
+                           .height(218,2);
+                           .width;
+                           .pl(30,2);
+                           .pt(22,2);
+                           display: flex;
+                           img{
+                               .width(105,2);
+                               .height(105,2);
+                               .mr(32,2);
+                           }
+                           .circlecommentlist-right{
+                               .height;
+                               .width;
+                               border-bottom:1px solid #e4e4e8;
+                               p:nth-of-type(1){
+                                   .fs(39,2);
+                                   .mb(26,2);
+                               }
+                               b{  
+                                   font-style: normal;                                 
+                                   .fs(37,2);                                   
+                               }
+                               p:nth-of-type(2){
+                                   .mt(26,2);
+                                   span{
+                                       .fs(32,2);
+                                   }
+                                   span:nth-of-type(1){
+                                       .mr(520,2);
+                                       color:#5b5b5b;
+                                   }
+                                   img{
+                                       .width(32,2);
+                                       .height(32,2);
+                                       margin-right: 0;
+                                       .ml(20,2);
+                                   }
+                               }
+                           }
+                       }
+                   }
+               }
+           }
+           .circle-detailsf{
+               .width;
+               .height(142,2);
+               border-top: 2px solid #ccd1db;
+               background: #edeef1;
+               .position(fixed);
+               bottom: 0;
+               .pr(31,2);
+               .pt(22,2);
+               .pl(31,2);
+               input{
+                   border:0;
+                   .fs(36,2);
+                   border-radius: 10px;
+                   .height(94,2);
+               }
+               span{
+                   position:fixed;
+                   color:#9c9c9c;
+                   bottom:px2rem(58);
+                   right:px2rem(77);
+                   .fs(36,2);
+               }
+           }
+    
+
+
+
+
+
+

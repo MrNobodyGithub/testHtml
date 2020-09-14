@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+<!--
+	作者：yrp
+	时间：2017-06-23
+	描述：
+-->
+	<head>
+		<meta charset="UTF-8">
+		<title>个人信息上传</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/wap/wap.css" rel="stylesheet"  />	
+	</head>
+<style>
+	body{
+		max-width: none !important;
+	}
+</style>
+	<body class="bg1">
+		<header class="common-header merchantsperson">
+			<a class="icon-back mui-action-back"></a>
+			<h1>个人入驻</h1>
+		</header>
+		<section class="mui-content merchantsperson-section">
+			<img class="loadingimg" src="../../images/ruzhuloading.gif"/>
+			<div class="merchantssecond-title">
+				<dl>
+					<dt>1</dt>
+					<dd>基础信息</dd>
+				</dl>
+				<dl>
+					<dt>2</dt>
+					<dd>附件信息</dd>
+				</dl>
+				<dl>
+					<dt>3</dt>
+					<dd>收款信息</dd>
+				</dl>
+				<span class="wire"></span>
+			</div>
+			<div class="merchantsenterlist">
+				<h3><span>*</span>上传身份证正面</h3>
+				<p>请确保证件<span>完整，编号、文字、照片</span>均清楚可见</p>
+				<div>
+					<img src="../../images/ruzhu2.jpg" class="sample"/>
+					<div class="addimg">
+						<form id="form2" method="post">
+							<input type="file" class="addimg2" name ="default_pic" id="default_pic2"/>
+							<input type="hidden" name="name" value="default_pic" />
+							<img class="img2"/>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="merchantsenterlist">
+				<h3><span>*</span>上传身份证背面</h3>
+				<p>请确保证件<span>完整，编号、文字、照片</span>均清楚可见</p>
+				<div>
+					<img src="../../images/ruzhu3.jpg" class="sample"/>
+					<div class="addimg">
+						<form id="form3" method="post">
+							<input type="file" class="addimg3" name ="default_pic" id="default_pic3"/>
+							<input type="hidden" name="name" value="default_pic" />
+							<img class="img3"/>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="merchantsenterlist">
+				<h3><span>*</span>上传经营者手持身份证照</h3>
+				<p>请手持证件、免冠确保<span>五官和证件信息</span>均清楚可见</p>
+				<div>
+					<img src="../../images/ruzhu4.jpg" class="sample"/>
+					<div class="addimg">
+						<form id="form4" method="post">
+							<input type="file" class="addimg4" name ="default_pic" id="default_pic4"/>
+							<input type="hidden" name="name" value="default_pic" />
+							<img class="img4"/>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="merchantsenterlist3">
+				<h3>上传其他资质</h3>
+				<p>请上传其他资质信息，例如：驾驶证、健康证、资质证、服务人员明细表等</p>
+				<div class = "perdiv">
+					<div class="addimg addimgother1">
+						<form id="form7" method="post">
+							<input type="file" class="addimg7" name ="default_pic" id="default_pic7"/>
+							<input type="hidden" name="name" value="default_pic" />
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="merchantsdetails-section">
+			
+			<table border="1" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>
+						服务商分类
+					</td>
+					<td>
+						所需资料
+					</td>
+				</tr>
+				<tr>
+					<td>
+						护工
+					</td>
+					<td rowspan="3">
+						身份证正反面及手持身份证照片。
+					</td>
+				</tr>
+				<tr>
+					<td>
+						跑腿
+					</td>
+				</tr>
+				<tr>
+					<td>
+						笔杆子
+					</td>
+				</tr>
+				<tr>
+					<td>
+						家教
+					</td>
+					<td>
+						1、身份证正反面及手持身份证照片；<span style="color:red;">2、学生证或者教师资格证或相关资格证书。</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						保洁
+					</td>
+					<td>
+						1、身份证正反面及手持身份证照片；<span style="color:red;">2、健康证。</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						月嫂保姆
+					</td>
+					<td>
+						1、身份证正反面及手持身份证照片；<span style="color:red;">2、健康证；3、资格证。</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						维修
+					</td>
+					<td>
+						1、身份证正反面及手持身份证照片；
+					</td>
+				</tr>
+				<tr>
+					<td>
+						车服务代审车
+					</td>
+					<td>
+						1、身份证正反面及手持身份证照片；<span style="color:red;">2、驾驶证。</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						车服务驾驶陪练
+					</td>
+					<td>
+						1、身份证正反面及手持身份证照片；<span style="color:red;">2、驾驶证；3、教练证。</span>
+					</td>
+				</tr>
+			</table>
+			<!-- <table border="1" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>类目</td>
+					<td colspan="2">服务</td>
+					<td>许可资质证明</td>
+				</tr>
+				<tr>
+					<td rowspan="4">养儿</td>
+					<td colspan="2">月嫂</td>
+					<td>健康证<br/>月嫂证</td>
+				</tr>
+				<tr>
+					
+					<td colspan="2">育婴师</td>
+					<td>健康证<br/>育婴师证</td>
+				</tr>
+				<tr>
+					
+					<td colspan="2">保姆</td>
+					<td>健康证<br/>家政人员从业资格证</td>
+				</tr>
+				<tr>
+					
+					<td colspan="2">家教</td>
+					<td>学生证<br/>教师资格证</td>
+				</tr>
+				<tr>
+					<td rowspan="2">养老</td>
+					<td colspan="2">医院护工</td>
+					<td rowspan="2">健康证<br/><br/><br/>护工证</td>
+				</tr>
+				<tr>
+					
+					<td colspan="2">专家专栏</td>
+					
+				</tr>
+				<tr>
+					<td rowspan="7">养家</td>
+					<td colspan="2" rowspan="2">保洁</td>
+					<td rowspan="2">健康证<br/><br/>行业执业资格证</td>
+				</tr>
+				<tr>
+					
+					
+					
+				</tr>
+				<tr>
+					
+					<td colspan="2">跑腿</td>
+					<td>具有行业服务精神</td>
+				</tr>
+				<tr>
+					<td rowspan="4">车服务</td>
+					<td>汽车维修</td>
+					<td>
+						商标为"注册申请受理"状态<br/>
+						(即"TM"商标)，注册申请时间须满6个月
+					</td>
+				</tr>
+				<tr>
+					
+					<td>代审车</td>
+					<td>两年以上服务经验</td>
+				</tr>
+				<tr>
+					
+					<td>婚车租赁</td>
+					<td>两年以上服务</td>
+				</tr>
+				<tr>
+					
+					<td>陪练</td>
+					<td>两年以上驾龄</td>
+				</tr>
+				
+			</table> -->
+		</div>	
+
+		</section>	
+		
+		<footer class="merchantsperson-footer">
+			<a><button style="z-index: 200;">下一步</button></a>
+		</footer>
+		
+		
+		<script src="../../js/hotcss.js"></script>
+		<script src="../../js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/jquery.form.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/member/merchantspersonannex.js"></script>
+	
+	</body>
+
+</html>

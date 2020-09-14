@@ -1,0 +1,310 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>优惠券</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="../../js/hotcss.js"></script>
+    <link href="../../css/mui.min.css" rel="stylesheet" />
+    <link href="../../css/stylesheet.css" rel="stylesheet" />
+    <style type="text/css">
+        .coupon-list2 .coupon-normal {
+            height: 5rem;
+        }
+        
+        #gife {
+            height: 4rem;
+            background: url(../../images/gife3.png) no-repeat center;
+            background-size: 14.5rem 4rem;
+        }
+        #gife p{
+        	font-size: 0.6rem;
+        	float:right;
+        	margin-top: 1rem;
+        	margin-right: 1.25rem;
+        	color:#FFFFFF;
+        }
+        
+        .coupon-item-info i {
+            font-size: 0.55rem !important;
+        }
+        
+        .coupon-item-info span {
+            margin-top: 0.6rem !important;
+        }
+        /*修改优惠券的样式*/
+        
+        .coupon-list .coupon-item {
+            height: 5.17777778rem;
+        }
+        
+        .prompt {
+            height: 1rem;
+            line-height: 1rem;
+            text-align: center;
+            font-size: 0.43333333rem;
+            margin-top: 1.7rem;
+        }
+        .coupon-list{
+        	padding-left: 0;
+        	padding-bottom: 2.5rem;
+        }
+        .coupon-history{
+        	position: fixed;
+        	bottom:0;
+        	padding-bottom: 0.5rem;
+        	padding-top: 0.5rem;
+        	background:#ffffff;
+        	width:100%;
+        	z-index: 999;
+        }
+        .coupon-history a{
+        	width:6rem;
+        	height:1.3rem;
+        	font-size: 0.6rem;
+        	line-height: 1.3rem;
+        	margin:0 auto;
+        }
+        .coupon-normal{
+        	margin-left:0.8888888rem;
+        	position: relative;
+        	bottom: 3rem;
+        	top:0.1rem;
+        }
+        
+    </style>
+</head>
+
+<body style="background: #f8f8f8;">
+
+
+    <!--ucenter-->
+    <header class="common-header">
+
+        <a class="icon-back mui-action-back"></a>
+        <h1>优惠券</h1>
+
+    </header>
+    <menu class="tab first">
+        <a href="javascript:void(0);" class="active"><span>优惠券</span></a>
+        <a href="javascript:void(0);"><span>礼品卡</span></a>
+    </menu>
+    <section class="mui-content coupon">
+		<!--优惠券列表 -->
+        <div class="coupon-list coupon-list1"></div>
+        <script type="text/html" id="coupon1">
+            <% if(code == 200 && datas.voucher_list != null){ 
+					 for(var i = 0;i<datas.voucher_list.length;i++){ %>
+
+                <div class="coupon-item coupon-normal">
+                	<!--
+                		voucher_state:  1  未使用      2已使用      3已过期
+                	-->
+                    <% if(datas.voucher_list[i].voucher_state==1){ %>
+                        <div class="coupon-item-info">
+                            <h3>
+                                <%= datas.voucher_list[i].voucher_title %>
+                            </h3>
+                            <small>满<span><%= datas.voucher_list[i].voucher_limit %></span>元抵<span><%= datas.voucher_list[i].voucher_price %></span>元</small>
+                            <strong>
+		                            <sup>￥</sup>
+		                            <%= datas.voucher_list[i].voucher_price %>
+		                        </strong>
+                            <p class="prompt">不可叠加，不找零，过期作废，一旦下单使用，不可退回。</p>
+                        </div>
+                        <% }else if(datas.voucher_list[i].voucher_state==2){ %>
+                            <div class="coupon-item-info" style="background:url(../../images/gife7-01.png) center right no-repeat;background-size: 100%;">
+                                <h3>
+                                    <%= datas.voucher_list[i].voucher_title %>
+                                </h3>
+                                <small>满<span><%= datas.voucher_list[i].voucher_limit %></span>元抵<span><%= datas.voucher_list[i].voucher_price %></span>元</small>
+                                <strong>  
+		                            <sup>￥</sup>
+		                            <%= datas.voucher_list[i].voucher_price %>
+		                        </strong>
+                                <p class="prompt">不可叠加，不找零，过期作废，一旦下单使用，不可退回。</p>
+                            </div>
+                        <% }else if(datas.voucher_list[i].voucher_state==3){ %>
+                        	<div class="coupon-item-info" style="background:url(../../images/gife7.png) left center no-repeat;background-size: 100%;">
+                                <h3>
+                                    <%= datas.voucher_list[i].voucher_title %>
+                                </h3>
+                                <small>满<span><%= datas.voucher_list[i].voucher_limit %></span>元抵<span><%= datas.voucher_list[i].voucher_price %></span>元</small>
+                                <strong>  
+		                            <sup>￥</sup>
+		                            <%= datas.voucher_list[i].voucher_price %>
+		                        </strong>
+                                <p class="prompt">不可叠加，不找零，过期作废，一旦下单使用，不可退回。</p>
+                            </div>
+                        
+                        <% } %>
+                        <div class="coupon-item-date">
+                            <%= datas.voucher_list[i].voucher_start_date_text %> -
+                                <%= datas.voucher_list[i].voucher_end_date_text %>
+                                    <!--<span style=""></span>-->
+                        </div>
+                </div>
+                <% }  } %>
+                    <div class="coupon-history">
+                        <a style="border:3px solid #ea5404">
+                            <span style="color: #EA5404;" class="coupon6">领大礼包</span>
+                            <i></i>
+                        </a>
+                    </div>
+        </script>
+        <!--充值卡列表-->
+    	<div class="coupon-list coupon-list2" style="display: none;"></div>
+        <script type="text/html" id="coupon2">
+        	<!-- state   0可用       1已用          2已删-->
+            <% if(code == 200 && datas.rcb_list != null){
+					for(var i = 0;i<datas.rcb_list.length;i++){ %>
+                <div class="coupon-item coupon-normal coupon-state" state-id="<%= datas.rcb_list[i].enddate %>" data-status="<%= datas.rcb_list[i].state %>" style="position: relative;">
+                    <div class="coupon-item-info" id="gife" style="padding-top: 0.7rem;">
+                        <i style="display:block;font-style:normal;font-size: .5rem;color:#fff;margin-top: 0.3rem;">卡号：<%= datas.rcb_list[i].sn %></i>  
+                        <span style="display: inline-block;margin-top: 0.7rem;padding-left: 0.3rem;font-size: 0.9rem;font-weight: 900;color: #fff;"><%= datas.rcb_list[i].batchflag %></span>
+                        <strong>
+		                            <sup>￥</sup>
+		                            <%= datas.rcb_list[i].denomination %>
+		                        </strong>
+		                        <p class="available_balance">余额：<i style="font-style: normal;"><%= datas.rcb_list[i].available_balance %></i></p>
+                    </div>
+                    <span class="gife101" style="display:inline-block;width:3rem;height:3rem;position:absolute;right:0;top:3rem;background: url(../../images/gife8.png);"></span>
+ 
+                        <div class="coupon-item-date">
+                        <%= datas.rcb_list[i].tsused_text %> -
+                            <%= datas.rcb_list[i].enddate_text %>
+                    </div>
+                </div>
+                <% } } %>
+                <div class="coupon-history">
+		            <a style="border:3px solid #ea5404">
+		                <span style="color: #EA5404;" class="coupon7">绑定新卡</span>
+		                <i></i>
+		            </a>
+		        </div>
+        </script>
+        
+
+
+
+
+    </section>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/mui.min.js"></script>
+    <script src="../../js/template.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/config.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    //			返回刷新页面的方法   与message_list.html相对应
+			mui.init({
+				beforeback: function() {　　　　 //获得父页面的webview
+					var list = plus.webview.currentWebview().opener();　　　　 //触发父页面的自定义事件(refresh),从而进行刷新
+					mui.fire(list, 'refresh');
+					//返回true,继续页面关闭逻辑
+					return true;
+				}
+			});
+
+    
+    
+        mui.plusReady(function() {
+                plus.webview.close("addnewCard");
+                plus.webview.close("addCode");
+            })
+            //点击切换列表
+        $('.first a').on('tap', function() {
+                var $this = $(this),
+                    $index = $this.index();
+                //orderList($index);
+
+                $this.addClass('active').siblings().removeClass('active');
+                $('.coupon .coupon-list').eq($index).show().siblings('.coupon-list').hide();
+            })
+            //加载优惠券、代金券列表
+
+        //获取key
+        var $key = _.userInfo.getKey();
+        console.log($key)
+
+        $.ajax({
+            type: "post",
+            url: ApiUrl + "/index.php?act=member_voucher&op=voucher_list2",
+            dataType: "json",
+            data: {
+                key: $key //'63552521d49849e1fd30c0dea936981a'
+            },
+            success: function(res) {
+                console.log("测试12123"+JSON.stringify(res))
+                var html = template('coupon1', res);
+                $('.coupon-list1').html(html);
+
+            }
+        });
+
+        //加载充值卡列表
+        $.ajax({
+            type: "post",
+            url: ApiUrl + "/index.php?act=member_fund&op=rcblist",
+            dataType: "json",
+            data: {
+                key: $key,   // '63552521d49849e1fd30c0dea936981a',
+                page: 200
+            },
+            success: function(res) {
+                console.log(JSON.stringify(res));
+                var html = template('coupon2', res);
+                $('.coupon-list2').html(html);
+                //coupon-state
+                var myDate = new Date();
+                console.log(myDate.getTime());
+                console.log($(".coupon-state").length);
+                
+//              for (var i = 0; i < $(".coupon-state").length; i++) {
+//                  if ($(".coupon-state").eq(i).attr("state-id") * 1000 < myDate.getTime()) {
+//                      console.log(myDate.getTime());
+//                      console.log($(".coupon-state").eq(i).attr("state-id"));
+//                      $(".coupon-state").eq(i).find("#gife").css("background", "url(../../images/gife1.png) no-repeat center");
+//                      
+//                     }
+//                  
+//              }
+                
+                for (var i = 0; i < $(".coupon-state").length; i++) {
+                	console.log($(".coupon-state").eq(i).find('.available_balance').text());
+                	var available = $(".coupon-state").eq(i).find('.available_balance i').text();
+                	var overtime = $(".coupon-state").attr('data-status');
+                	if(overtime == 2 || available == '0.00' || available == 0){
+                        $(".coupon-state").eq(i).find("#gife").css({"background": "url(../../images/gife01.png) no-repeat center center", "background-size": "100%"});
+                        $(".coupon-state").eq(i).find(".gife101").css("background", "url(../../images/gife9.png)");
+                    }
+                }
+            }
+        });
+        //跳转 添加优惠券
+        $("body").on("tap", ".coupon6", function() {
+            mui.openWindow({
+                url: 'addCode.html',
+                id: 'addCode',
+                waiting: {
+                    autoShow: true,
+                    title: '正在加载...'
+                }
+            })
+        });
+        //跳转 添加冲充值卡
+        $('body').on("tap", ".coupon7", function() {
+            mui.openWindow({
+                url: 'addnewCard.html',
+                id: 'addnewCard',
+                waiting: {
+                    autoShow: true,
+                    title: '正在加载...'
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,408 @@
+/**
+ * 自定义字段样式
+ */
+::-webkit-input-placeholder {
+	text-align: right;
+}
+
+::-moz-placeholder {
+	text-align: right;
+}
+
+::-ms-input-placeholder {
+	text-align: right;
+}
+
+textarea::-webkit-input-placeholder {
+	text-align: left !important;
+	padding: 0rem 0rem;
+	/*需求描述文字位置*/
+	padding-top: 0rem;
+}
+
+textarea::-moz-placeholder {
+	text-align: left !important;
+}
+
+textarea::-ms-input-placeholder {
+	text-align: left !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none !important;
+	margin: 0;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+#fieldscontent input[type="text"] {
+	text-align: right;
+	font-family: "微软雅黑";
+}
+
+.mui-btn button[type="button"] {
+	background-color: #FFFFFF;
+	height:2.5rem;
+}
+
+.sun-field-icon {
+	background-size: 0.8rem 0.8rem;
+	/*cover;*/
+	background-position: center;
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 0.9rem;
+	width: 0.9rem;
+	height: 0.9rem;
+	/*background: #00FF00 url(bgimage.gif) no-repeat fixed top;*/
+}
+
+.mui-table-view-cell .mui-right-text,
+.mui-input-row .mui-right-text {
+	/*请选择*/
+	position: absolute;
+	font-size: 0.8rem;
+	height: 0.5rem;
+	line-height: 0.8rem;
+	right: 40px;
+	top:1.7rem;
+	margin-top: -8px;
+}
+.mui-navigate-right:after, .mui-push-right:after{
+				top:1.6rem;
+				}
+.mui-input-row>label {/*左*/
+				padding-top: 0.15rem;
+				line-height: 3.0rem;
+				font-family: "微软雅黑";
+				font-size: 0.8rem;
+			}
+
+.mui-navigate-right {
+	/*左 选择*/
+	font-size: 0.8rem;
+	font-family: "微软雅黑";
+}
+
+.mui-input-row>input {
+	font-size: 0.8rem;
+	float: right;
+	padding-right: 2.5rem;
+}
+
+.mui-content>.mui-table-view:first-child {
+	margin-top: 0rem !important;
+}
+
+
+/*
+某些通用
+*/
+
+.sun-text-left {
+	text-align: left;
+}
+
+.sun-text-right {
+	text-align: right;
+}
+
+.sun-text-center {
+	text-align: center;
+}
+
+.sun-required{
+	color:red;
+}
+/*
+多图上传
+*/
+
+.sun-photo-group {
+	padding: 0.5rem 1.0rem;
+	position: relative;
+}
+
+.sun-photo-group h3 {
+	font-size: 1.2rem;
+	padding-bottom: 1.8rem;
+	margin: 0rem;
+}
+
+.sun-photo-group ul {
+	font-size: 0;
+	padding-left: 0;
+}
+
+.sun-photo-group li {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	list-style-type: none;
+	width: 5.0rem;
+	height: 5.0rem;
+	background: #f6f6f6;
+	border: 1px solid #ccc;
+	font-size: 24px;
+	margin-left: 1.0rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.sun-photo-group .sun-photo-simp {
+	background-color: #fff;
+}
+
+.sun-photo-group .sun-photo-simp .sun-photo-close {
+	position: absolute;
+	width: 1.5rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	border-radius: 50%;
+	top: -0.5rem;
+	right: -0.3rem;
+	color: #fff;
+}
+
+.sun-photo-group .sun-photo-simp .sun-photo-close:before {
+	display: block;
+	text-align: center;
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+.sun-photo-group li img {
+	width: 4.9rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 4.9rem;
+}
+
+.sun-photo-group .sun-photo-add {
+	position: relative;
+}
+
+.sun-photo-group .sun-photo-add:before {
+	display: block;
+	font-size: 70px;
+	text-align: center;
+	line-height: 80px;
+	color: #ccc;
+}
+
+.sun-photo-group .sun-photo-add input {
+	opacity: 0;
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	z-index: 10;
+	left: 0px;
+	top: 0px;
+}
+
+
+/*上传进度条*/
+
+.sun-photo-group .sun-photo-add .upload-loading {
+	position: absolute;
+	z-index: 4;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#3FFFFFFF', endColorstr='#3FFFFFFF');
+	background: rgba(255, 255, 255, 0.25);
+	border-radius: 0.1rem;
+}
+
+.sun-photo-group .sun-photo-add .upload-loading i {
+	display: block;
+	width: 100%;
+	height: 5%;
+	margin: 93% 0 2% 0;
+	background: #4FC0E8;
+	animation: optionLoading 0.5s ease-in-out;
+	-webkit-animation: optionLoading 1s ease-in-out;
+}
+
+.mui-numbox {
+	/*加减*/
+	width: 100px;
+	height: 30px;
+	right: 10px;
+	top: 2px;
+	border: none;
+}
+
+.mui-input-group .mui-input-row:after {
+	right: 15px;
+}
+
+.mui-numbox-input {
+	margin: 20px;
+}
+li .mui-input-row .mui-btn .mui-numbox-btn-minus {
+	padding-top: 20px;
+}
+.sun-photo-group h5 {
+	/*隐藏图片标题*/
+	display: none;
+}
+.mui-input-group h5 {
+	/*隐藏测试自动*/
+	display: none;
+}
+
+/*.sun-photo-group */
+.mui-bar {
+	background-color: #FFFFFF;
+	border-bottom: #8F8F8F solid 1px;
+	height: 50px;
+}
+.mui-bar .mui-title {
+	font-family: "微软雅黑";
+	font-size: 17px;
+	color: #333333;
+}
+.mui-bar .mui-action-back img {
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-top: 0;
+}
+.mui-bar .mui-icon {
+	color: #333333;
+	font-family: "微软雅黑";
+	font-size: 1.0rem;
+	margin-top: 0.3rem;
+}
+.textarea {
+	background-color: #E8E8E8;
+}
+.mui-tips {
+	line-height: 1.5;
+	margin: 0.4rem;
+	font-size: 0.8rem;
+}
+.mui-radio input[type=radio] {
+	width: 6rem;
+}
+.mui-bar {
+	box-shadow: none;
+}
+.sun-photo-group {
+	padding: 0.5rem 1.0rem;
+	position: relative;
+}
+.sun-photo-group h3 {
+	font-size: 1.2rem;
+	padding-bottom: 1.8rem;
+	margin: 0rem;
+}
+.sun-photo-group ul {
+	font-size: 0;
+	padding-left: 0;
+}
+.sun-photo-group li {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	list-style-type: none;
+	width: 5.0rem;
+	height: 5.0rem;
+	background: #f6f6f6;
+	border: 1px solid #ccc;
+	font-size: 24px;
+	margin-left: 1.0rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+.sun-photo-group .sun-photo-simp {
+	background-color: #fff;
+}
+.sun-photo-group .sun-photo-simp .sun-photo-close {
+	position: absolute;
+	width: 1.5rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	border-radius: 50%;
+	top: -0.5rem;
+	right: -0.3rem;
+	color: #fff;
+}
+.sun-photo-group .sun-photo-simp .sun-photo-close:before {
+	display: block;
+	text-align: center;
+	width: 1.5rem;
+	height: 1.5rem;
+}
+.sun-photo-group li img {
+	width: 3.0rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	max-height: 100%;
+	transform: translate(-50%, -50%);
+}
+.sun-photo-group .sun-photo-add {
+	position: relative;
+}
+.sun-photo-group .sun-photo-add:before {
+	display: block;
+	font-size: 70px;
+	text-align: center;
+	line-height: 80px;
+	color: #ccc;
+}
+.sun-photo-group .sun-photo-add input {
+	opacity: 0;
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	z-index: 10;
+	left: 0px;
+	top: 0px;
+}
+.mui-input-group {
+	padding-top: 6px;
+}
+.mui-radio input[type=radio]:before {}
+.mui-checkbox input[type=checkbox]:checked:before,
+.mui-radio input[type=radio]:checked:before {
+	background-color: #FFFFFF;
+	color: #EF742C;
+}
+.mui-content label {
+	font-family: "微软雅黑";
+	font-size: 14px;
+	margin-top: -5px;
+}
+.mui-table-view-cell:after{
+	right:15px;
+}
+.mui-icon-info:before{
+	font-size: 18px;
+}
+.runbuy-list .runbuy-image li.upload{
+	background:url(../images/my/photo-upload2.jpg) no-repeat #F1F1F1 center;
+	border:none;
+	width:2.9999rem;
+	height:2.99999rem;
+}
+.mui-input-row .sun-select-btn {
+    font-size: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    right: 0px;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    color: #999;
+}

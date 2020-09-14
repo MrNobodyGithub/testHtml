@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>选择地图</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/stylesheet.css" rel="stylesheet"  />
+		
+	</head>
+<style>
+	.common-header.common-header-yellow{
+		height:2.8rem;
+	}
+	.common-header[class*=common-header-] .icon-back{
+		background-size:1.5rem;
+	}
+	.common-header h1{
+		font-size: 1.0rem;
+		padding-top: 0.5rem;
+	}
+	.common-header .city{
+		font-size: 0.8rem;
+		padding-top: 0.5rem;
+		background-size: 0.8rem;
+	}
+	.mui-search{
+		margin-top: 0.85rem;
+		height:2.5rem;
+	}
+	.map-list{
+		height:16rem;
+		overflow: auto;
+	}
+	input[type=search]{
+		height:2.5rem;
+	}
+
+	/* 自定义搜索框样式，mui-search会导致魅族键盘闪现 */
+	.own-search{
+		margin-top: 0.85rem;
+		height:2.5rem;
+	}
+	.own-search input{
+		padding-left: 2.2em;
+		text-align: left;
+		background: #eee url(../../images/index-search.png) no-repeat left;
+		background-size: 1.24444444rem 1.24444444rem;
+		background-position-x: 0.44444444rem;
+	}
+</style>
+	<body style="background: #fff;">
+		<header class="common-header runmaph common-header-yellow">
+			<h1>地图</h1>
+			<a class="icon-back mui-action-back"></a>
+			<a class="city">青岛市</a>
+		</header>
+		<section class="mui-content mapsection  white">
+			<!-- 不使用mui搜索组件以解决魅族等手机键盘闪现问题-->
+			<!-- <div class="mui-input-row mui-search "> -->
+			<div class="mui-input-row own-search">
+			    <form><input type="search" id="suggestId" class="mui-input-speech mui-input-clear" placeholder="请输入小区名称或者首字母进行查找"></form>
+			</div>
+			<div id="l-map" style="text-align: center;vertical-align: middle; display: none;">地图加载中...</div>
+			<div class="map-list" style="min-height: 600px;">
+				<ul>
+					
+				</ul>
+			</div>
+		</section>
+		<!--<script src="../../js/hotcss.js"></script>-->
+		<!--<script src="http://api.map.baidu.com/api?v=2.0&ak=meIt8u4M01eiAtOVMX5lgTlBWt6U94Rp"></script>
+		-->
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/config.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script src="../../js/common/address_select_map.js"></script>
+	</body>
+
+</html>

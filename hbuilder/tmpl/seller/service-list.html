@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<!--
+	作者：hwh
+	时间：2017-08-04
+	描述：服务商服务列表
+-->
+	<head>
+		<meta charset="UTF-8">
+		<title>发布服务列表</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/stylesheet.css" />
+		<style type="text/css">
+			.send_list h4{
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				max-width: 9rem;
+			}
+		</style>
+	</head>
+
+	<body style="background: #084179;">
+		<header class="common-header common-header-blue">
+			<h1>我发布的</h1>
+			<a class="icon-back mui-action-back"></a>
+		</header>
+		<section class="mui-content my-send" id="pullrefresh" style="padding-bottom: 0.8rem;">
+			<div class="send_list"></div>
+			<a class="footer-img" style="z-index: 999;"><img src="../../images/send.png"/></a>
+		</section>
+		<script type="text/html" id="server-list">
+			<% if(code == 200){ %>
+				<% for(var i = 0 ;i<datas.goods_list.length;i++){ %>
+					<div class="send-list send-success">
+						<a>
+							<dl>
+								<i></i>
+								<dd style="margin-left: 0;">
+									<h4><%= datas.goods_list[i].goods_name %></h4>
+									<p style="width:8rem;overflow: hidden;height:1.42222222rem;"><%= datas.goods_list[i].goods_jingle %></p>
+									<p>￥<%= datas.goods_list[i].goods_price %>/<%= datas.goods_list[i].goods_unit %></p>
+								</dd>
+								<dt><img src="<%= datas.goods_list[i].goods_image_url %>" /></dt>
+							</dl>
+						</a>
+						
+						<p class="bottom">
+							<a  class="edit" commonid = "<%= datas.goods_list[i].goods_commonid %>">可编辑</a>
+							<a class="sendser-del" commonid = "<%= datas.goods_list[i].goods_commonid %>" style="padding: 0.26666667rem 0; border:1px solid #797979;border-radius: 0.59259259rem;width:2rem;text-align: center;">下架</a>
+							<% if(datas.goods_list[i].goods_verify=="1"){ %>
+								<span>已发布</span>
+							<% } else if(datas.goods_list[i].goods_verify=="10"){ %>
+								<span>待审核</span>
+							<% } else { %>
+								<span>已拒绝</span>
+							<% } %>
+						</p>
+					</div>
+				<% } %>
+			<% } %>
+		</script>
+
+		<script src="../../js/hotcss.js" ></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/template.js"></script>
+		<script src="../../js/config.js"></script>
+		<script src="../../js/common.js"></script>
+		<script src="../../js/seller/service-list.js"></script>
+	</body>
+</html>

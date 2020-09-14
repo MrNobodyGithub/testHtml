@@ -1,0 +1,27 @@
+.more .form {
+  background: #fff;
+}
+.more .form .form-control {
+  min-height: 1.62962963rem;
+}
+.more .form .form-control label {
+  margin-left: 0.65185185rem;
+  font-size: 0.59259259rem;
+  width: 50%;
+}
+.more .form .form-control .h1 {
+  font-size: 0.71111111rem;
+}
+.more .form-group {
+  margin-right: 0.65185185rem;
+}
+.more .form-group input {
+  text-align: right;
+  font-size: 0.59259259rem;
+  height: 1.48148148rem;
+  line-height: 1.48148148rem;
+  overflow: hidden;
+}
+.more .form-top {
+  margin-top: 0.44444444rem;
+}

@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>评价列表</title>
+        <link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/stylesheet.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		
+		
+		<!--ucenter-->
+		<header class="common-header">
+
+			<h1>我的评价</h1>
+			<a class="icon-back mui-action-back"></a>
+
+		</header>
+
+		
+        <!--body-->
+        <section class="mui-content evaluate">
+
+        </section>
+		
+		<script type="text/html" id="store_commentinfo">
+			<% if(code == 200){ %>
+			 <div class="evaluate-my-header">
+                <div class="evaluate-raty">
+                    <span>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </span>
+                    <strong>
+                      	  好评率：<em><%= datas.store_evaluate.store_credit_percent %>%</em>
+                    </strong>
+                    <small>
+                        ( <i><%= datas.all_count %></i>人评价 )
+                    </small>
+                </div>
+
+                <ul>
+                    <li>
+                        <span><%= datas.store_credit.store_desccredit.text %>:</span>
+                        <small>
+                        	<% var score = datas.store_credit.store_desccredit.credit %>
+                        	<% for(var i=0;i<score;i++){ %>
+                            	<i></i>
+                            <%}%>
+                        </small>
+                    </li>
+                    <li>
+                        <span><%= datas.store_credit.store_servicecredit.text %>:</span>
+                        <small>
+                            <% var score = datas.store_credit.store_servicecredit.credit %>
+                        	<% for(var i=0;i<score;i++){ %>
+                            	<i></i>
+                            <%}%>
+                        </small>
+                    </li>
+                    <li>
+                        <span><%= datas.store_credit.store_deliverycredit.text %>:</span>
+                        <small>
+                            <% var score = datas.store_credit.store_deliverycredit.credit %>
+                        	<% for(var i=0;i<score;i++){ %>
+                            	<i></i>
+                            <%}%>
+                        </small>
+                    </li>
+                </ul>
+
+            </div>
+
+            <menu class="evaluate-my-tab">
+                <a class="active" data-type='0'>
+                    <span>全部</span>
+                    <small><%= datas.all_count %></i></small>
+                </a>
+                <a data-type = '1'>
+                    <span>好评</span>
+                    <small><%= datas.good_count %></i></small>
+                </a>
+                <a data-type='2'>
+                    <span>中评</span>
+                    <small><%= datas.normal_count %></i></small>
+                </a>
+                <a data-type='3'>
+                    <span>差评</span>
+                    <small><%= datas.bad_count %></i></small>
+                </a>
+            </menu>
+            <div class="evaluate-my-content">
+            	<% var list = datas.service_evallist %>
+                <% for(var i= 0;i < list.length;i++){ %>
+                <div class="evaluate-my-content-item">
+                    
+                    <div class="item-header">
+                        <img src="<%= list[i].geval_memberavatar_url %>" alt="">
+                        <h4><%= list[i].geval_frommembername %></h4>
+                    </div>
+
+                    <p><%= list[i].geval_content %></p>
+
+                    <div class="item-info">
+                        <img src="<%= list[i].geval_goodsimage_url %>" alt="">
+                        <div class="item-info-detail">
+                            <h5><%= list[i].geval_goodsname %></h5>
+                            <span>￥<%= list[i].geval_goodsprice %>元</span> 
+                            <small>已好评</small>
+                        </div>
+                    </div>
+
+                    <div class="mui-clearfix">
+                        <a href="">写追评</a>
+                    </div>
+
+                </div>
+                <% } %>
+            </div>
+            <% } %>
+		</script>
+		
+		
+		<script type="text/html" id="store_commentlist">
+                <% if(code == 200){ %>
+                <% for(var i= 0;i < datas.length;i++){ %>
+                <div class="evaluate-my-content-item">
+                    
+                    <div class="item-header">
+                    	<img src="<%= datas[i].geval_memberavatar_url %>" alt="">
+                        <!--<img src="<%= datas[i].geval_goodsimage_url %" alt="">-->
+                        <h4><%= datas[i].geval_frommembername %></h4>
+                    </div>
+
+                    <p><%= datas[i].geval_content %></p>
+
+                    <div class="item-info">
+                        <img src="<%= datas[i].geval_goodsimage_url %>" alt="">
+                        <div class="item-info-detail">
+                            <h5><%= datas[i].geval_goodsname %></h5>
+                            <span>￥<%= datas[i].geval_goodsprice %>元</span> 
+                            <small>已好评</small>
+                        </div>
+                    </div>
+
+                    <div class="mui-clearfix">
+                        <a href="">写追评</a>
+                    </div>
+
+                </div>
+                <% } %>
+				<% } %>
+		</script>
+		
+		<script type="text/javascript" src="../../js/hotcss.js" ></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/template.js" ></script>
+		<script type="text/javascript" src="../../js/dropload.min.js" ></script>
+		<script type="text/javascript" src="../../js/config.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/seller/evaluate-my.js" ></script>
+		
+	</body>
+
+</html>

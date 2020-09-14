@@ -1,0 +1,233 @@
+<!doctype html>
+<html>
+<!--
+	作者：yrp
+	时间：2017-06-23
+	描述：
+-->
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/wap/wap.css" rel="stylesheet"  />
+		<link rel="stylesheet" type="text/css" href="../../css/mui.min.css"/>
+		
+	</head>
+<style>
+	body{
+		max-width: none !important;
+	}
+</style>
+	<body class="bg1">
+		<header class="common-header merchantsenter">
+			<a class="icon-back mui-action-back"></a>
+			<h1>商家入驻</h1>
+		</header>
+		<section class="mui-content merchantsenter-section">
+			<img class="loadingimg" src="../../images/ruzhuloading.gif"/>
+			<div class="merchantssecond-title">
+				<dl>
+					<dt>1</dt>
+					<dd>经营信息</dd>
+				</dl>
+				<dl>
+					<dt>2</dt>
+					<dd>附件信息</dd>
+				</dl>
+				<dl>
+					<dt>3</dt>
+					<dd>收款信息</dd>
+				</dl>
+				<span class="wire"></span>
+			</div>
+			<div class="merchantsenterlist">
+				<h3><span>*</span>上传营业证照片</h3>
+				<p>请确保证件<span>完整，编号、印章、文字、照片</span>均清楚可见</p>
+				<div>
+					<img src="../../images/ruzhu1.jpg" class="sample"/>
+					<div class="addimg">
+						<form method="post" id="form1">
+							<input type="file" class="addimg1" name ="default_pic" id="default_pic1"/>
+							<input type="hidden" name="name" value="default_pic" />
+							<img class="img1"/>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="merchantsenterlist">
+				<h3><span>*</span>上传身份证正面</h3>
+				<p>请确保证件<span>完整，编号、文字、照片</span>均清楚可见</p>
+				<div>
+					<img src="../../images/ruzhu2.jpg" class="sample"/>
+					<div class="addimg">
+						<form id="form2" method="post">
+							<input type="file" class="addimg2" name ="default_pic" id="default_pic2"/>
+							<input type="hidden" name="name" value="default_pic" />
+							<img class="img2"/>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="merchantsenterlist">
+				<h3><span>*</span>上传身份证背面</h3>
+				<p>请确保证件<span>完整，编号、文字、照片</span>均清楚可见</p>
+				<div>
+					<img src="../../images/ruzhu3.jpg" class="sample"/>
+					<div class="addimg">
+						<form id="form3" method="post">
+							<input type="file" class="addimg3" name ="default_pic" id="default_pic3"/>
+							<input type="hidden" name="name" value="default_pic" />
+							<img class="img3"/>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="merchantsenterlist">
+				<h3><span>*</span>上传经营者手持身份证照</h3>
+				<p>请手持证件、免冠确保<span>五官和证件信息</span>均清楚可见</p>
+				<div>
+					<img src="../../images/ruzhu4.jpg" class="sample"/>
+					<div class="addimg">
+						<form id="form4" method="post">
+							<input type="file" class="addimg4" name ="default_pic" id="default_pic4"/>
+							<input type="hidden" name="name" value="default_pic" />
+							<img class="img4"/>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="enter-text">
+				<span>点击查看许可资质证明上传要求<i class="mui-icon mui-icon-arrowdown"></i></span>
+			</div> -->
+			<div class="merchantsenterlist2">
+				<h3>公司授权书&许可资质证明</h3>
+				<p>请按需求添加，支持上传多张</p>
+				<p>点击查看<span>授权书示例</span>，请自行打印，填写盖章后拍照上传</p>
+				<div class = "perdiv">
+						<div class="perimg">
+							<img src="../../images/ruzhu5.jpg" />
+						</div>
+						<div class="addimg addimgother">
+							<form id="form6" method="post">
+								<input type="file" class="addimg6" name ="default_pic" id="default_pic6"/>
+								<input type="hidden" name="name" value="default_pic" />
+							</form>
+						</div>
+				</div>
+			</div>
+			<div class="merchantsenterlist3">
+				<h3>上传其他资质</h3>
+				<p>请上传其他资质信息，例如：驾驶证、健康证、资质证、服务人员明细表等</p>
+				<div class = "perdiv">
+					<div class="addimg addimgother1">
+						<form id="form7" method="post">
+							<input type="file" class="addimg7" name ="default_pic" id="default_pic7"/>
+							<input type="hidden" name="name" value="default_pic" />
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="merchants-enterclaim">
+				<span>点击查看许可资质证明上传要求</span>
+			</div> -->
+			
+			<div class="merchantsdetails-section">
+			<table border="1" cellspacing="0" cellpadding="0" >
+					<tr>
+						<td>
+							服务商分类
+						</td>
+						<td>
+							所需资料
+						</td>
+					</tr>
+					<tr>
+						<td>
+							护工
+						</td>
+						<td rowspan="8">
+							1、营业执照；2、法人身份证正反面及手持身份证照片（委托他人，需要有加盖公章的委托书）；3、加盖公章的团队服务人员名单。
+						</td>
+					</tr>
+					<tr>
+						<td style="color:red;">
+							保洁
+						</td>
+					</tr>
+					<tr>
+						<td>
+							跑腿
+						</td>
+					</tr>
+					<tr>
+						<td>
+							车服务驾驶陪练
+						</td>
+					</tr>
+					<tr>
+						<td>
+							车服务代审车
+						</td>
+					</tr>
+					<tr>
+						<td style="color:red;">
+							月嫂保姆
+						</td>
+					</tr>
+					<tr>
+						<td>
+							家教
+						</td>
+					</tr>
+					<tr>
+						<td>
+							笔杆子
+						</td>
+					</tr>
+					<tr>
+						<td>
+							车服务汽车租赁
+						</td>
+						<td rowspan="2">
+							1、营业执照；2、法人身份证正反面及手持身份证照片（委托他人，需要有加盖公章的委托书）；3、加盖公章的团队服务人员名单
+						</td>
+					</tr>
+					<tr>
+						<td>
+							车服务汽车维修保养
+						</td>
+					</tr>
+					<tr>
+						<td>
+							搬家
+						</td>
+						<td>
+							1、营业执照；2、法人身份证正反面及手持身份证照片（委托他人，需要有加盖公章的委托书）；3、提供加盖公章的人员名单
+						</td>
+					</tr>
+					<tr>
+						<td>
+							维修
+						</td>
+						<td>
+							1、营业执照；2、法人身份证正反面及手持身份证照片（委托他人，需要有加盖公章的委托书）；3、加盖公章的团队服务人员名单；<span style="color:red;">4、电路业务需要电工证，开锁业务需要资质证书。</span>
+						</td>
+					</tr>
+			</table>
+		</div>	
+			
+		</section>	
+		
+		<footer class="merchantsenter-footer">
+			<a><button style="z-index: 200;">下一步</button></a>
+		</footer>
+		<script src="../../js/hotcss.js"></script>
+		<script src="../../js/config.js"></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/jquery.form.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/common.js"></script>
+		<script src="../../js/member/merchantsenterpriseannex.js"></script>
+	</body>
+
+</html>

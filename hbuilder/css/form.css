@@ -1,0 +1,389 @@
+.form-login,
+.form-register {
+  overflow: hidden;
+}
+.form-login h1,
+.form-register h1 {
+  font-size: 0;
+  width: 4.20740741rem;
+  height: 4.20740741rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box {
+  width: 11.37777778rem;
+  margin: 0 auto;
+}
+.box .form-group {
+  height: 2.01481481rem;
+  line-height: 2.01481481rem;
+  border-bottom: 1px solid transparent;
+}
+.box .form-group input {
+  font-size: 0.53333333rem;
+  padding-left: 1.92592593rem;
+  background-color: #f9f9f9;
+  color: #333;
+  border-radius: 0.14814815rem;
+}
+.box .form-group input::-webkit-input-placeholder {
+  color: #bbb;
+}
+.box .box-button {
+  display: block;
+  width: 100%;
+  height: 2.01481481rem;
+  line-height: 2.01481481rem;
+  background-color: #ea5404;
+  color: #fff;
+  font-size: 0.77037037rem;
+  letter-spacing: 0.44444444rem;
+  border-radius: 0.14814815rem;
+  border: 0;
+  box-shadow: 0 0 15px 3px rgba(234, 84, 4, 0.75);
+}
+.box .form-reglink {
+  text-align: center;
+  font-size: 0.53333333rem;
+}
+.box .form-reglink a {
+  padding-left: 0.77037037rem;
+  font-size: 0.53333333rem;
+  color: #ea5404;
+}
+.form-login {
+  background: url(../images/form/login-back.png) bottom center no-repeat;
+  background-size: contain;
+}
+.form-login h1 {
+  background-image: url(../images/form/login-img.png);
+  margin: 3.21481481rem auto 1.2rem;
+}
+.form-login .form-group:not(:last-child) {
+  margin-bottom: 0.41481481rem;
+}
+.form-login .form-forget {
+  text-align: right;
+  margin-top: 0.45925926rem;
+  margin-bottom: 0.93333333rem;
+  height: 0.62222222rem;
+}
+.form-login .form-forget a {
+  float: right;
+  width: auto;
+  padding-right: 0.57777778rem;
+  padding-left: 0.68148148rem;
+  font-size: 0.53333333rem;
+  line-height: 1;
+  color: #333;
+  background: url(../images/icon/icon-qa.png) left center no-repeat;
+  background-size: 0.53333333rem;
+}
+.form-login .login-ohter {
+  margin-top: 1.17037037rem;
+}
+.form-login .login-ohter h3 {
+  position: relative;
+  text-align: center;
+  height: 0.53333333rem;
+  font-weight: normal;
+}
+.form-login .login-ohter h3:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: #e5e2e1;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.form-login .login-ohter h3 small {
+  display: block;
+  position: relative;
+  z-index: 11;
+  font-size: 0.53333333rem;
+  width: 4.14814815rem;
+  margin: 0 auto;
+  color: #7d7d7d;
+  background-color: #fff;
+}
+.form-login .login-ohter menu {
+  overflow: hidden;
+  margin-top: 1.02222222rem;
+}
+.form-login .login-ohter menu a {
+  float: left;
+  width: 2.45925926rem;
+  height: 2.45925926rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 2.45925926rem;
+}
+.form-login .login-ohter menu a:not(:first-child) {
+  margin-left: 2rem;
+}
+.form-login .login-ohter menu a.icon-wx {
+  background-image: url(../images/form/type-wx.png);
+}
+.form-login .login-ohter menu a.icon-qq {
+  background-image: url(../images/form/type-qq.png);
+}
+.form-login .login-ohter menu a.icon-wb {
+  background-image: url(../images/form/type-wb.png);
+}
+.form-login .form-reglink {
+  margin-top: 0.94814815rem;
+}
+.form-register h1 {
+  background-image: url(../images/form/login-img.png);
+  margin: 2.78518519rem auto 1.3037037rem;
+}
+.form-register .form-group {
+  position: relative;
+  margin-bottom: 0.28148148rem;
+}
+.form-register .yzm {
+  display: block;
+  height: 100%;
+  padding: 0 0.88888889rem;
+  font-size: 0.53333333rem;
+  color: #ea5404;
+  border: 0;
+  outline: 0;
+  background: #f9f9f9;
+}
+.form-register .yzm:disabled {
+  color: #333;
+}
+.form-register .form-check {
+  font-size: 0.53333333rem;
+  padding-left: 0.71111111rem;
+  color: #333;
+  padding: 0.45925926rem 0 0.74074074rem 0.71111111rem;
+}
+.form-register .form-check input,
+.form-register .form-check span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.form-register .form-check input[type="checkbox"] {
+  width: 0.56296296rem;
+  height: 0.56296296rem;
+  outline: 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.form-register .form-check input[type="checkbox"]:checked {
+  background: url(../images/icon/icon-check.png) center no-repeat;
+  background-size: cover;
+}
+.form-register .form-reglink {
+  margin-top: 1.48148148rem;
+}
+.form-login input[class*='icon-'],
+.form-register input[class*='icon-'] {
+  background-repeat: no-repeat;
+  background-position: 0.72592593rem center;
+}
+.icon-username,
+.icon-password {
+  background-size: 0.57777778rem 0.85925926rem;
+}
+.icon-username {
+  background-image: url(../images/icon/icon-username.png);
+}
+.icon-password {
+  background-image: url(../images/icon/icon-password.png);
+}
+.icon-email {
+  background-image: url(../images/icon/icon-email.png);
+  background-size: 0.78518519rem 0.85925926rem;
+}
+.icon-password2 {
+  background-image: url(../images/icon/icon-pwd2.png);
+  background-size: 0.71111111rem 0.74074074rem;
+}
+.form-main {
+  padding-right: 0.44444444rem;
+  background-color: #fff;
+}
+.form-main .icon1 {
+  background: url(../img/hos2.png) no-repeat 0.2962963rem 0.66666667rem;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.form-main .icon2 {
+  background: url(../img/hos.png) no-repeat 0.2962963rem 0.66666667rem;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.form-main .icon3 {
+  background: url(../img/body.png) no-repeat 0.2962963rem 0.66666667rem;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.form-main .icon4 {
+  background: url(../img/how.png) no-repeat 0.2962963rem 0.66666667rem;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.form-main .icon5 {
+  background: url(../img/sex.png) no-repeat 0.2962963rem 0.66666667rem;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.form-main .icon6 {
+  background: url(../img/cleaning4.png) no-repeat 0.2962963rem 0.66666667rem;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.form-main .icon7 {
+  background: url(../img/cleaning4.png) no-repeat 0.2962963rem 0.66666667rem;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.form-main .icon8 {
+  background: url(../img/type.png) no-repeat 0.2962963rem 0.66666667rem;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.form-main .icon9 {
+  background: url(../img/cleaning4.png) no-repeat 0.2962963rem 0.66666667rem;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.form-main .icon10 {
+  background: url(../img/cleaning2.png) no-repeat 0.2962963rem 0.66666667rem;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.form-main .icon11 {
+  background: url(../img/add.png) no-repeat 0.2962963rem 0.66666667rem;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.form-main .icon12 {
+  background: url(../img/tel2.png) no-repeat 0.2962963rem 0.66666667rem;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.form-main .icon13 {
+  background: url(../img/tel.png) no-repeat 0.2962963rem 0.66666667rem;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.form-main .form-icon-hos {
+  padding-left: 1.27407407rem;
+}
+.form-main .form-control {
+  overflow: hidden;
+  padding-left: 0.88888889rem;
+}
+.form-main .select {
+  float: right;
+}
+.form-main .text {
+  margin-left: 0.08888889rem;
+  padding-left: 1.28888889rem;
+  padding-bottom: 0.44444444rem;
+  background: url(../img/cleaning-remark.png) no-repeat 0.14814815rem 1.0962963rem;
+  background-size: 0.71111111rem 0.71111111rem;
+}
+.form-main .text .remark {
+  width: 13.62962963rem;
+  height: 3.2rem;
+  border: 0.04444444rem solid #e6e6e8;
+  font-size: 0.53333333rem;
+  border-radius: 0.44444444rem;
+  padding: 0.44444444rem 0.23703704rem;
+  margin-top: 0.74074074rem;
+}
+.form-main .text .remark::-webkit-input-placeholder {
+  color: #ccc;
+}
+.form-main .form-group {
+  font-size: 0;
+  text-align: right;
+}
+.form-main .form-group img {
+  width: 2.22222222rem;
+  height: 2.22222222rem;
+}
+.form-main .form-group > label {
+  position: relative;
+  display: inline-block;
+  height: 1.18518519rem;
+  line-height: 1.18518519rem;
+  font-size: 0.53333333rem;
+  margin-left: 0.28148148rem;
+  margin-top: 0.56296296rem;
+  padding-left: 0;
+  border-radius: 8px;
+  border: 1px solid #a1d66a;
+}
+.form-main .form-group span {
+  display: block;
+  color: #a1d66a;
+  padding-left: 0.41481481rem;
+  padding-right: 0.41481481rem;
+  transition: all .3s;
+  border-radius: 8px;
+  font-size: 0.53333333rem;
+}
+.form-main .form-group .icheck {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.form-main .form-group .icheck:checked + span {
+  background-color: #a1d66a;
+  color: #fff;
+}
+.form-main {
+  padding-left: 0.44444444rem;
+  padding-right: 0.44444444rem;
+  background-color: #fff;
+}
+.form-main .form-icon-hos {
+  padding-left: 1.27407407rem;
+}
+.form-main .form-control {
+  height: 1.95555556rem;
+  line-height: 1.95555556rem;
+}
+.form-main .form-control input {
+  line-height: 1.95555556rem;
+  overflow: hidden;
+}
+.form-main .form-group {
+  font-size: 0;
+  text-align: right;
+}
+.form-main .form-group img {
+  width: 2.22222222rem;
+  height: 2.22222222rem;
+}
+.form-main .form-group > label {
+  position: relative;
+  display: inline-block;
+  height: 1.18518519rem;
+  line-height: 1.18518519rem;
+  font-size: 0.53333333rem;
+  margin-left: 0.28148148rem;
+  margin-top: 0.56296296rem;
+  border-radius: 8px;
+  border: 1px solid #a1d66a;
+}
+.form-main .form-group span {
+  display: block;
+  color: #a1d66a;
+  padding-left: 0.41481481rem;
+  padding-right: 0.41481481rem;
+  transition: all .3s;
+  border-radius: 8px;
+}
+.form-main .form-group .icheck {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.form-main .form-group .icheck:checked + span {
+  background-color: #a1d66a;
+  color: #fff;
+}

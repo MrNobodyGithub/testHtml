@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/dropload.css" />
+    <link href="../css/stylesheet.css" rel="stylesheet" />
+    <script src="../../js/hotcss.js"></script>
+
+</head>
+
+<body style="background: #fff;">
+    <header class="common-header common-header-pink">
+        <h1>月嫂</h1>
+        <a class="icon-back mui-action-back"></a>
+        <a href="" class="city">青岛</a>
+    </header>
+
+    <footer class="footer-ad">
+        <img src="../../images/month/month-4.png" alt="">
+    </footer>
+
+    <section class="mui-content layout clean white nanny">
+
+        <!--swiper-->
+        <div class="swiper">
+
+        </div>
+
+        <!--menu-->
+        <div class="filter" style="position: relative;z-index: 9;">
+            <nav>
+                <a class="active" data-key="0">综合排序</a>
+                <a class="traget" data-key="3">按价格</a>
+                <a class="traget" data-key="1">按销量</a>
+                <a class="traget" data-key="4">按好评率</a>
+            </nav>
+            <span></span>
+        </div>
+        <div class="content">
+            <div class="product"></div>
+            <div class="product"></div>
+            <div class="product"></div>
+            <div class="product"></div>
+        </div>
+
+    </section>
+
+    <script type="text/html" id="list">
+        <% var res = datas.goods_list %>
+            <%for(var i = 0;i<res.length;i++){%>
+                <div class="product-item mark mark3" data-goods-id="<%= res[i].goods_id %>">
+                    <img src="<%= res[i].goods_image_url%>" alt="">
+                    <div class="product-info ">
+                        <h2 class="icon-type2">
+                            <a>
+                                <%=res[i].goods_name%>
+                            </a>
+                        </h2>
+                        <div class="raty">
+                            <%for(var j=0;j<res[i].evaluation_good_star;j++){%>
+                                <span class="icon-raty"></span>
+                                <%}%>
+                        </div>
+                        <div class="label">
+                            <span><%=res[i].goods_jingle%></span>
+                        </div>
+                        <div class="control mui-clearfix">
+                            <span style="margin-bottom: -50px;"><%=res[i].goods_price%>元/小时</span>
+                        </div>
+                    </div>
+                </div>
+                <%}%>
+    </script>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/dropload.min.js"></script>
+    <script src="../../js/mui.min.js"></script>
+    <script type="text/javascript" src="../../js/template.js"></script>
+    <script type="text/javascript" src="../js/config.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../../js/nanny/nanny-list.js"></script>
+
+</body>
+
+</html>

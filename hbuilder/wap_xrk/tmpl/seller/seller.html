@@ -1,0 +1,483 @@
+<!doctype html>
+<html>
+<!--
+		author: suiyi  date: 2017-06-23 11:21:29  version: 1.0
+	-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <title>服务商中心 触屏版</title>
+    <link rel="stylesheet" type="text/css" href="../../css/mui.css">
+    <!--<link rel="stylesheet" type="text/css" href="../../css/dropload.css" />-->
+    <link rel="stylesheet" type="text/css" href="../../css/stylesheet.css">
+    <style>
+        select {
+            width: 3.2rem;
+            direction: rtl;
+            font-size: .45rem;
+            float: right;
+            height: 2.19259259rem;
+            line-height: 2.19259259rem;
+            font-size: 0.53333333rem;
+            color: #181818;
+        }
+        .page{
+        	/*overflow: none!important;*/
+        }
+        .robOrder {}
+        
+        .tab-three {
+            display: flex;
+            height: 1.79259259rem;
+            line-height: 1.79259259rem;
+            background: #fff;
+            border-bottom: 1px solid #E6E6E8;
+        }
+        
+        .tab-three a {
+            display: block;
+            text-align: center;
+            font-size: 0.53333333rem;
+            flex: 1;
+        }
+        
+        .active {
+            border-bottom: 2px solid #f9cd56;
+        }
+        
+        .suborder {
+            width: 100%;
+        }
+        
+        .ucenter-header {
+            background: url(../../images/ucenter/banner3.jpg) no-repeat;
+            background-size: 100%;
+        }
+        
+        .ucenter-nav {
+            background: #33bec3;
+        }
+        /*重写stylesheet的样式*/
+        
+        .ucenter-menu menu a:nth-child(7) {
+            background-image: url(../../images/adddianyuan.png);
+            background-size: 0.82962963rem 0.74074074rem;
+        }
+        
+        .ucenter-menu menu a:nth-child(9) {
+            background-image: url(../../images/ucenter/menu6.png);
+            background-size: 0.82962963rem 0.74074074rem;
+        }
+        /*抢单新增列表区域的样式*/
+        
+        .grab-time,
+        .grab-address {
+            color: #656565 !important;
+            font-size: 0.53333333rem !important;
+        }
+        
+        .grab-time span,
+        .grab-address span {
+            color: #656565 !important;
+            font-size: 0.53333333rem !important;
+        }
+        /*固定顶部区域*/
+        
+        .ucenter-header {
+            width: 100%;
+            position: fixed;
+            z-index: 3333;
+        }
+        
+        .ucenter-nav {
+            position: fixed;
+            z-index: 3333;
+            top: 4.1962963rem;
+            width: 100%;
+        }
+        
+        .ucenter .tab-header {
+            position: fixed;
+            z-index: 3333;
+            top: 6rem;
+            width: 100%;
+        }
+        .ucenter .tab-content.show {
+            position: absolute;
+            z-index: 333;
+            width: 100%;
+            top: 7.8rem;
+        }
+        .tab-content.show.robOrder {
+            padding-bottom: 3rem;
+        }
+        /*修改banner区域的字体*/
+        .ucenter-nav span,
+        .ucenter-nav small {
+            display: block;
+            font-size: 0.41481481rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loading">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+    <!--ucenter-->
+    
+    
+        
+    <section class="mui-content ucenter page-member page-show page" style="background: yellow;">
+    	<!--header-->
+    <header class="ucenter-header" style="position: fixed;top: 0rem;style="background: yellow;"">
+        <!--icons-->
+        <a href="javascript:void(0);" class="ucenter-config"></a>
+        <a class="ucenter-ident" style="margin-top: 0.7rem;display: none;">已认证</a>
+
+        <a class="ucenter-box">
+            <img src="../../images/ucenter/photo.png" alt="">
+            <div class="ucenter-info">
+                <h2>请登录</h2>
+                <!--
+                            <span>
+                                会员等级
+                                <small>
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                </small>
+                            </span>    
+                        -->
+            </div>
+        </a>
+
+    </header>
+        <div class="service active">
+            <!--nav-->
+            <nav class="ucenter-nav aaaaa" style="position: fixed;top: 4.30rem;">
+                <a style="display: none;">
+                    <span style="background:none !important;"></span>
+                    <small>服务分</small>
+                </a>
+                <a class="raty star">
+                    <span></span>
+                    <small>好评率</small>
+                </a>
+                <a>
+                    <span></span>
+                    <small>接单率</small>
+                </a>
+            </nav>
+
+            <div class="tab-header" style="position: fixed;top: 6rem;">
+                <a href="javascript:void(0);" class="active">管理</a>
+                <a href="javascript:void(0);">抢单</a>
+            </div>
+
+            <div class="tab-content show">
+
+                <!--ucenter-menu-->
+                <div class="ucenter-menu" style="padding-bottom: 2.2rem;">
+
+                    <menu>
+                        <a id="a1" class="my-account">
+                            <span>我的账户</span>
+                        </a>
+                        <a id="a2">
+                            <span>订单管理</span>
+                        </a>
+
+                        <a id="a3">
+                            <span>发布服务</span>
+                        </a>
+                        <a id="a4">
+                            <span>新服务类目申请</span>
+                        </a>
+                        <a style="display: none;">
+                            <span>历史商机</span>
+                        </a>
+                        <a id="a5" style="display: none;">
+                            <span>推荐有奖</span>
+                        </a>
+                        <a id="a8">
+                            <span>添加店员</span>
+                        </a>
+                        <a style="display: none;">
+                            <span>退款售后</span>
+                        </a>
+                        <a id="a6" class="no-checkin">
+                            <span>帮助与反馈</span>
+                        </a>
+                        <a id="a8" class="message">
+                            <span>消息</span>
+                        </a>
+                        <a id="a7" class="config">
+                            <span>设置</span>
+                        </a>
+                    </menu>
+                </div>
+
+                <!--button-->
+                <!--<div class="ucenter-button">
+	                        <a href="javascript:void(0);" class="gray">模式</a> 
+	                        <a href="javascript:void(0);" class="yellow">上班</a>
+	                    </div>-->
+
+            </div>
+
+            <div class="tab-content show robOrder" style="display: none;overflow: auto;!important">
+                <div class="robOrder-list"></div>
+                <!--<div class="tab-three" >
+			                    
+			                </div>-->
+                <!-- <div class="robOrder3">
+			             	<div class="suborder suborder4">
+	                		
+		                	</div>
+		                	<div class="suborder suborder6" style="display: none;">
+		                		
+		                	</div>
+			            </div> -->
+            </div>
+        </div>
+        <footer class="footer-bar flex">
+        <nav>
+            <a>
+                <span>首页</span>
+            </a>
+            <a class="house">
+		            	<span>房产</span>
+		            </a>
+            <a style="z-index: 999;">
+               <center><li><img src="../../images/common/add.png" style="width:0.8rem;"></li></center>
+						<span style="margin-top: 0.35185185rem;">下单</span>
+            </a>
+            <a class="reputation">
+						<span>口碑</span>
+					</a>
+            
+            <a class="active">
+                <span>我的</span>
+            </a>
+        </nav>
+    </footer>
+    </section>
+
+    <!--dom 抢单列表-->
+    <script type="text/html" id="order-item">
+
+        <%
+                for( var i = 0; i < datas.needs_list.length; i++ ) {
+            %>
+            <div class="order-item">
+                <header>
+                    <span class="number">订单号: <%= datas.needs_list[i].order_sn %></span> &emsp;
+                    <span class="time">订单时间:<%= datas.needs_list[i].s_add_time  %></span>
+                </header>
+
+                <div class="info">
+
+                    <div class="info-detail" data-id="<%= datas.needs_list[i].order_id %>" data-storeId='<%= datas.needs_list[i].store_id %>'>
+                        <h3>
+                            <%= datas.needs_list[i].needs_title %>
+                        </h3>
+                        <dl>
+                            <dt>描述：<%= datas.needs_list[i].needs_description %></dt>
+                            <% var res = datas.needs_list[i];%>
+                                <%for(var j = 0;j < res.paotui.length;j++){
+									if( res.gc_id == res.paotui[j]  ){%>
+                                    <dt class="grab-time">下单时间：<span><%= datas.needs_list[i].keywords[0] %></span></dt>
+                                    <dt class="grab-address">取件地址：<span><%= datas.needs_list[i].keywords[1] %></span></dt>
+                                    <%	}} %>
+                                        <%for(var q = 0;q < res.baojie.length;q++){
+									if( res.gc_id == res.baojie[q]  ){%>
+                                            <dt class="grab-time">服务时间：<span><%= datas.needs_list[i].keywords[0] %></span></dt>
+                                            <dt class="grab-address">服务地址：<span><%= datas.needs_list[i].keywords[1] %></span></dt>
+                                            <%	}} %>
+                                                <%for(var w = 0;w < res.banjia.length;w++){
+									if( res.gc_id == res.banjia[w]  ){%>
+                                                    <dt class="grab-time">服务时间：<span><%= datas.needs_list[i].keywords[0] %></span></dt>
+                                                    <dt class="grab-address">服务地址：<span><%= datas.needs_list[i].keywords[1] %></span></dt>
+                                                    <%	}} %>
+                                                        <%for(var e = 0;e < res.hugong.length;e++){
+									if( res.gc_id == res.hugong[e]  ){%>
+                                                            <dt class="grab-time">医院名称：<span><%= datas.needs_list[i].keywords[0] %></span></dt>
+                                                            <dt class="grab-address">服务时间：<span><%= datas.needs_list[i].keywords[1] %></span></dt>
+                                                            <%	}} %>
+                                                                <%for(var r = 0;r < res.biganzi.length;r++){
+									if( res.gc_id == res.biganzi[r]  ){%>
+                                                                    <dt class="grab-time">服务大类：<span><%= datas.needs_list[i].keywords[0] %></span></dt>
+                                                                    <dt class="grab-address">交付时间：<span><%= datas.needs_list[i].keywords[1] %></span></dt>
+                                                                    <%	}} %>
+
+                                                                        <dd>总计：<span>￥<%= datas.needs_list[i].order_amount_all %></span></dd>
+                        </dl>
+                    </div>
+
+                    <div class="robOrder1" needId="<%= datas.needs_list[i].needs_id %>">
+                        抢单
+                    </div>
+                </div>
+            </div>
+            <%
+                }
+            %>
+
+    </script>
+
+    <!--dom 选单列表-->
+    <!--<script type="text/html" id="order-item2">
+
+            <%
+                for( var i = 0; i < datas.needs_list.length; i++ ) {
+            %>
+                <div class="order-item" data-id="list[i].order_id">
+                	<header>
+                        <span class="number">订单号: <%= datas.needs_list[i].order_sn %></span>
+                        &emsp;
+                        <span class="time">订单时间:<%= datas.needs_list[i].s_add_time  %></span>
+                    </header>
+                	
+                    <div class="info">
+                        
+                        <div class="info-detail">
+                           <h3><%= datas.needs_list[i].needs_title %></h3>
+                           <dl>
+	                           <dt>描述：<%= datas.needs_list[i].needs_description %></dt>
+	                           <dd>总计：<span>￥<%= datas.needs_list[i].order_amount %></span></dd>
+                           </dl>
+                        </div>
+                        <div class="robOrder1" needId = "<%= datas.needs_list[i].needs_id %>">
+                        	已抢单
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                </div>
+            <%
+                }
+            %>
+
+        </script>-->
+
+    <!--个人资料-->
+    <section class="page page-info page-hide">
+        <!--ucenter-->
+        <header class="common-header">
+
+            <h1>店铺信息</h1>
+            <a href="javascript:void(0);" class="icon-back"></a>
+            <a href="javascript:void(0);" class="icon-link">保存</a>
+
+        </header>
+
+        <!--body-->
+        <section class="mui-content person form">
+
+            <div class="person-form">
+
+                <div class="form-control form-upload form-icon-arrow">
+                    <label>店铺头像</label>
+                    <div class="form-group">
+                        <div class="upload-img">
+                            <input type="file" class="file-person" id="" value="" />
+                            <img src="../../images/ucenter/photo.png" alt="" class="person-img">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <label>店铺名称</label>
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="请输入店铺名称">
+                    </div>
+                </div>
+                <div class="form-control">
+                    <label>店铺描述</label>
+                    <div class="form-group">
+                        <input type="text" name="describe" placeholder="请输入店铺描述">
+                    </div>
+                </div>
+
+                <!-- <div class="form-control form-icon-arrow user_lv">
+						<label>用户等级</label>
+						<div class="form-group">
+							<span data-article-id="45" class="member_lv" style="font-size: 0.5rem;color: orange;"></span>
+						</div>
+					</div> -->
+
+                <!-- 王玉洁隐藏 后台字段已删  先隐藏 -->
+                <!-- <div class="form-control form-icon-arrow">
+                    <label>性别</label>
+                    <div class="form-group">
+                        <select name="sex" id="sex">
+								<option class="secret" value="0">保密</option>
+								<option class="male" value="1">男</option>
+								<option class="famale" value="2">女</option>
+							</select>
+                    </div>
+                </div> -->
+
+                <!-- <div class="form-control form-icon-arrow">
+						<label>生日</label>
+						<div class="form-group">
+							<input type="text" name="birth" placeholder="选择" readonly>
+						</div>
+					</div> -->
+
+                <!--<div class="form-control form-icon-arrow" id="nation-item">
+                    <label>民族</label>
+                    <div class="form-group">
+                        <select name="national" id="national"></select>
+                    </div>
+                </div>-->
+
+                <!-- <div class="form-control form-icon-arrow">
+						<label>婚姻状况</label>
+						<div class="form-group">
+							<select name="marriage" id="marriage">
+								<option class="unmarried" value="0">未婚</option>
+								<option class="married" value="1">已婚</option>
+								<option class="secret2" value="2">保密</option>
+							</select>
+						</div>
+					</div> -->
+            </div>
+
+            <div class="person-form">
+                <div class="form-control">
+                    <label>手机号</label>
+                    <div class="form-group">
+                        <input type="tel" name="tel" readonly value="">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </section>
+
+    <!--实名认证-->
+
+    <script src="../../js/hotcss.js"></script>
+    <script src="../../js/config.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/mui.min.js"></script>
+    <script src="../../js/template.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/seller/seller.js"></script>
+</body>
+
+</html>

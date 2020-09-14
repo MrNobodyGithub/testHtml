@@ -1,0 +1,234 @@
+.nannyDetail .circle-details-commentlist {
+  padding-bottom: 2.1037037rem;
+}
+.nannyDetail .circle-details-commentlist ul li {
+  height: 3.22962963rem;
+  width: 100%;
+  padding-left: 0.44444444rem;
+  padding-top: 0.32592593rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.nannyDetail .circle-details-commentlist ul li img {
+  width: 4.08888889rem;
+  height: 4.08888889rem;
+  margin-right: 0.47407407rem;
+}
+.nannyDetail .circle-details-commentlist ul li .circlecommentlist-right {
+  width: 80%;
+}
+.nannyDetail .circle-details-commentlist ul li .circlecommentlist-right b {
+  font-style: normal;
+  font-size: 0.54814815rem;
+}
+.nannyDetail .product-info {
+  position: relative;
+}
+.nannyDetail .product-info .raty i {
+  display: inline-block;
+  height: 0.44444444rem;
+  font-size: 0.41481481rem;
+  font-style: normal;
+  position: relative;
+  left: -0.51851852rem;
+  color: #555555;
+  margin-left: 0.56296296rem;
+}
+.nannyDetail .album-pink {
+  background-color: rgba(232, 146, 184, 0.6);
+  position: absolute;
+  right: -1.77777778rem;
+  bottom: 1.54074074rem;
+  padding-right: 1.18518519rem;
+}
+.nannyDetail .filter nav a {
+  color: #333;
+}
+.nannyDetail .filter nav a.active,
+.nannyDetail .filter nav a:active {
+  color: #f8cade;
+}
+.nannyDetail .product-item .label em {
+  color: #f8cade;
+}
+.nannyDetail .product-item .tag {
+  margin-top: 0.59259259rem;
+}
+.nannyDetail .product-item .tag span {
+  color: #f8cade;
+  border-color: #f8cade;
+}
+.nannyDetail .product-item .description {
+  display: block;
+  margin-right: 0.74074074rem;
+  margin-top: 0.44444444rem;
+  font-size: 0.47407407rem;
+  color: #747474;
+  padding-right: 0.88888889rem;
+}
+.nannyDetail .product-item .description .detail-ping {
+  background: url(../img/Nanny/detail-ping.png) center right no-repeat;
+  background-size: 0.4rem 0.4rem;
+}
+.nannyDetail .product-item .description .detail-gao {
+  background: url(../img/Nanny/detail-ping.png) center right no-repeat;
+  background-size: 0.4rem 0.4rem;
+}
+.nannyDetail .product-item .description small {
+  display: inline-block;
+  padding-right: 0.74074074rem;
+  color: #F4425D;
+}
+.nannyDetail .product-item .description span {
+  margin-left: 0.37037037rem;
+}
+.nannyDetail .product-item .share {
+  font-size: 0.59259259rem;
+  color: #929292;
+  position: absolute;
+  top: 1.62962963rem;
+  right: 1.92592593rem;
+}
+.nannyDetail .product-item .control a {
+  border: none;
+  color: #6D6D72;
+  margin-top: 0.74074074rem;
+}
+.nannyDetail .product-item .control span {
+  margin-top: 0.74074074rem;
+}
+.nannyDetail .grab-state button {
+  color: #f8cade;
+  border-color: #f8cade;
+  background-color: #fff;
+}
+.nannyDetail .grab-remarks {
+  color: #f8cade;
+}
+.nannyDetail .detail-worktime .active,
+.nannyDetail .detail-price .active {
+  color: #f8cade;
+  border: 1px solid #f8cade !important;
+}
+.nannyDetail .detail-worktime .price-content dd,
+.nannyDetail .detail-price .price-content dd {
+  position: relative;
+}
+.nannyDetail .detail-worktime .price-content dd strong,
+.nannyDetail .detail-price .price-content dd strong {
+  font-size: 0.47407407rem;
+  color: red;
+}
+.nannyDetail .detail-worktime .price-content dd:after,
+.nannyDetail .detail-price .price-content dd:after {
+  content: attr(name);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -1.18518519rem;
+  color: #939393;
+}
+.nannyDetail .detail-worktime .price-content .top,
+.nannyDetail .detail-price .price-content .top {
+  margin-top: 1.48148148rem;
+}
+.nannyDetail .detail-worktime .price-content .day,
+.nannyDetail .detail-price .price-content .day {
+  padding-top: 1.00740741rem;
+}
+.nannyDetail .detail-worktime .price-content .day input,
+.nannyDetail .detail-price .price-content .day input {
+  border-width: 0.02962963rem;
+  border-color: #333333;
+  border-style: solid;
+  border-radius: 0.14814815rem;
+  background-color: #ffffff;
+  width: 3.17037037rem;
+  height: 1.22962963rem;
+  text-align: center;
+  font-size: 0.44444444rem;
+}
+.nannyDetail .detail-worktime .price-content .day dd,
+.nannyDetail .detail-price .price-content .day dd {
+  border-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nannyDetail .detail-worktime .price-content .day dd span,
+.nannyDetail .detail-price .price-content .day dd span {
+  margin-left: 0.2962963rem;
+}
+.nannyDetail .worktime-check {
+  padding: 0.88888889rem 1.18518519rem;
+}
+.nannyDetail .worktime-check li {
+  background: url(../img/Nanny/danxuan.png) no-repeat left center;
+  background-size: 0.65185185rem 0.65185185rem;
+  padding-left: 1.06666667rem;
+  width: 50%;
+  height: 0.88888889rem;
+  line-height: 0.88888889rem;
+  font-size: 0.59259259rem;
+  margin-bottom: 0.25185185rem;
+}
+.nannyDetail .worktime-check li:nth-child(odd) {
+  float: left;
+}
+.nannyDetail .worktime-check li:nth-child(even) {
+  float: right;
+}
+.nannyDetail .title span {
+  background-color: #f8cade;
+}
+.nannyDetail .money span {
+  color: #F4425D;
+}
+.nannyDetail .detail-comment .comment-content span {
+  color: #F4425D;
+}
+.nannyDetail .detail-comment .comment-content .server-hour {
+  display: block;
+  background: url(../img/Nanny/date.png) no-repeat left;
+  background-size: 0.71111111rem 0.72592593rem;
+  padding-left: 0.74074074rem;
+}
+.nannyDetail .product-item {
+  border-top: none;
+  border-bottom: 0.01481481rem solid #e2e3e7;
+}
+.nannyDetail .mouth-white {
+  background: white;
+  height: 100%;
+}
+.nannyDetail .detail-server .server-content .big-img {
+  padding: 0;
+  margin: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column ;
+          flex-direction: column ;
+  height: 8.88888889rem;
+}
+.nannyDetail .detail-server .server-content .big-img dt {
+  width: 100%;
+  height: 152;
+}
+.nannyDetail .detail-server .server-content .big-img img {
+  margin-left: -0.44444444rem;
+}
+.footer-menu-pink .link {
+  background-color: #f8cade;
+}
+.all {
+  position: relative;
+}
+.all .right {
+  font-size: 0.51851852rem;
+  margin-top: 0;
+  margin-bottom: 0.14814815rem;
+  color: #8f8f94;
+  position: absolute;
+  right: 0.44444444rem;
+  bottom: 0.14814815rem;
+}

@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+	<!--
+	作者：wm
+	时间：2017-07-20
+	描述：
+-->
+
+	<head>
+		<meta charset="UTF-8">
+		<title>添加店员</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../../css/mui.min.css" />
+		<link rel="stylesheet" href="../../css/stylesheet.css" />
+		<style type="text/css">
+			.input {
+				height: 1.3rem !important;
+				font-size: .5rem !important;
+				border: 0 !important;
+				margin: 15px 15px;
+				padding: 0 !important;
+				line-height: 1.3rem !important;
+			}
+			.address ul li:nth-of-type(1) {
+				background: url(../../images/adddianyuantel.png) no-repeat 0.2962963rem center;
+				background-size: 0.6rem 0.7rem;
+				padding-left: 1.3rem;
+			}
+			.address ul li:nth-of-type(2) {
+				background: url(../../images/adddianyuanpwd.png) no-repeat 0.2962963rem center;
+				background-size: 0.6rem 0.7rem;
+				padding-left: 1.3rem;
+			}
+			.btn-footer {
+				height: 1.98518519rem;
+				line-height: 1.98518519rem;
+				width: 80%;
+				margin: 3rem 10% 0 10%;
+				text-align: center;
+				background-color: #E95309;
+				font-size: 0.59259259rem;
+				color: #FFFFFF;
+			}
+			.mui-icon-eye:before {
+				font-size: 32px;
+			}
+			
+			.mui-icon.mui-icon-eye {
+				margin-top: 0.38rem;
+				margin-right: 1rem;
+			}
+			.mui-icon.mui-icon-eye.mui-active {
+				color: #E95309 !important;
+			}
+			#yzm{position: absolute;right: 0.6rem;top: 0.6rem;background: none;font-size: 0.5rem;color: orangered;border: none;}
+		    .common-header{
+		    	position:absolute;
+		    }
+		</style>
+	</head>
+
+	<body class="bg2">
+		<section class="page page-form active">
+			<header class="common-header">
+				<a class="icon-back mui-action-back"></a>
+				<h1>添加店员</h1>
+			</header>
+
+			<div class="mui-content address clean white">
+				<ul class=" mui-clearfix">
+					<li style="position: relative;">
+						<input id="tel_number" name="username" class="input" type="text" placeholder="手机号" outline class="addman" />
+					</li>
+					<li style="position: relative;">
+						<input type="text" class="input" name="yzm" id="confirm" placeholder="请输入验证码登录">
+						<button id="yzm">获取验证码</button>
+					</li>
+				</ul>
+			</div>
+
+			<footer id="submit_btn" class="btn-footer">确定添加</footer>
+		</section>
+
+		<script type="text/javascript" src="../../js/hotcss.js"></script>
+		<script src="../../js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/template.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../../js/member/addClerk.js"></script>
+
+	</body>
+
+</html>

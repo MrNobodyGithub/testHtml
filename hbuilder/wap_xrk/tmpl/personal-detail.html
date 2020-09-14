@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>个人详情页</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.css" rel="stylesheet" />
+    <link href="../css/stylesheet.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!--ucenter-->
+    <header class="common-header">
+
+			<h1>个人资料</h1>
+			<a class="icon-back mui-action-back"></a>
+
+		</header>
+		
+        <!--body-->
+        <section class="mui-content more">
+            
+        </section>
+        <script type="text/html" id="personal-detail">
+			<% if(code == 200){ %>
+			<div class="form">
+				<div class="form-control">
+	                <label>姓名：</label>
+	                <div class="form-group">
+	                    <input type="text" value="<%= datas.member_info.member_truename ? datas.member_info.member_truename : '保密'  %>"  readonly="readonly">
+	                </div>
+	            </div>
+	
+	            <div class="form-control" style="display: none;">
+	                <label>年龄：</label>
+	                <div class="form-group">
+	                    <input type="text" value="<%= datas.member_info.member_age ? datas.member_info.member_age : '0' %>岁" readonly="readonly">
+	                </div>
+	            </div>
+	
+	            <div class="form-control">
+	                <label>民族</label>
+	                <div class="form-group">
+	                    <input type="text" value="<%= datas.member_info.member_nation ? datas.member_info.member_nation : '汉族' %>" readonly="readonly">
+	                </div>
+	            </div>
+	            
+	            <div class="form-control">
+	                <label>身份证号：</label>
+	                <div class="form-group">
+                    	<input type="text" value="<%= datas.member_info.member_idcard ? datas.member_info.member_idcard : '保密' %>" readonly="readonly" />
+	                </div>
+	            </div>
+	            
+	            <div class="form-control" style="display: none;">
+	                <label>婚姻状况：</label>
+	                <div class="form-group">
+	                	<% if(datas.member_info.member_marriage !== ""){ %>
+	                    <input type="text" value="已婚" readonly="readonly">
+	                    <% }else{ %>
+	                    	<input type="text" value="未婚" readonly="readonly">
+	                    <% } %>
+	                </div>
+	            </div>
+	            
+	            <!--<div class="form-control">
+	                <label>属相：</label>
+	                <div class="form-group">
+	                    <input type="text" value="<%= datas.member_info.member_zodiac %>" readonly="readonly">
+	                </div>
+	            </div>-->
+
+                <!--<div class="form-control">
+	                <label>星座：</label>
+	                <div class="form-group">
+	                    <input type="text" value="<%= datas.member_info.member_constellation %>" readonly="readonly">
+	                </div>
+	            </div>-->
+
+                <!--<div class="form-control">
+	                <label>最高学历：</label>
+	                <div class="form-group">
+	                    <input type="text" value="<%= datas.member_info.member_education %>" readonly="readonly">
+	                </div>
+	            </div>-->
+
+            </div>
+
+
+            <div class="form form-top">
+                <div class="form-control">
+                    <label class="h1">服务信息</label>
+                </div>
+
+                <div class="form-control">
+                    <label>服务户数：</label>
+                    <div class="form-group">
+                        <input type="text" value="<%= datas.goods_complete ? datas.goods_complete : '0' %>户" readonly="readonly">
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <label>工作年限：</label>
+                    <div class="form-group">
+                        <input type="text" value="<%= datas.member_info.member_workyears ? datas.member_info.member_workyears : '0'%>年" readonly="readonly">
+                    </div>
+                </div>
+
+                <!--<div class="form-control">
+	                <label>可服务城市：</label>
+	                <div class="form-group">
+	                    <input type="text" value="青岛" readonly="readonly">
+	                </div>
+	            </div>-->
+			</div>	
+        
+        <% } %>
+		</script>      
+		
+		<script src="../js/hotcss.js"></script>
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/template.js"></script>
+		<script src="../js/config.js"></script>
+		<script src="../js/common.js"></script>
+	</body>
+    <script>
+        mui.init();
+        mui.plusReady(function() {
+            var webview = plus.webview.currentWebview();
+            //console.log(webview.goods_id);
+            $.getJSON(ApiUrl + "/index.php?act=service_goods&op=goods_detail", {
+                goods_id: webview.goods_id,
+                globalLoading: true
+            }, function(res) {
+                //console.log(JSON.stringify(res));
+                /*
+                 * @description 如果获取到身份证号对后6位进行加密处理
+                 * @author zhaobing
+                 * @version 2017年7月19日12:03:37
+                 */
+                if (res.datas.member_info != null && res.datas.member_info.member_idcard != null && res.datas.member_info.member_idcard != '') {
+                    var idcard = res.datas.member_info.member_idcard;
+                    res.datas.member_info.member_idcard = _.starIdcard(idcard);
+                }
+				
+				if (res.datas.member_info != null && res.datas.member_info.member_truename != null && res.datas.member_info.member_truename != '') {
+                    var truename = res.datas.member_info.member_truename;
+                    res.datas.member_info.member_truename = _.starUsername(truename);
+                }
+                
+                var html = template.render('personal-detail', res);
+                $('.more').html(html);
+
+
+
+            });
+
+
+
+        })
+    </script>
+</html>

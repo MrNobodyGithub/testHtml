@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function clickBtnA() {
+				//				var ele = document.createElement("p");
+				//				var node = document.createTextNode("this new node text");
+				//				ele.appendChild(node)
+				//				var element = document.getElementById("div1");
+				//				element.appendChild(ele); 
+
+				var newitem = document.createElement("div");
+				var itemNode = document.createElement("p");
+				itemNode.innerHTML = "asdf";
+				//document.createTextNode("node test ");
+				newitem.appendChild(itemNode);
+				// 0 insertBefore
+				var div = document.getElementById("div1");
+				div.insertBefore(itemNode, div.childNodes[0]);
+
+			}
+
+			function myFunction() {
+				var newItem = document.createElement("LI")
+				var textnode = document.createTextNode("Water")
+				newItem.appendChild(textnode)
+
+				var list = document.getElementById("myList")
+				list.insertBefore(newItem, list.childNodes[2]);
+			}
+
+			function clickBtnB() {
+				var ele = document.getElementsByTagName("p")[0];
+				ele.remove();
+				//				var element = document.getElementById("p2") 
+				//				element.remove()
+			}
+
+			function clickBtnC() {
+				document.getElementById("p1").innerHTML = "可以更改 文本";
+				var parentNode = document.getElementById("p1").parentNode;
+				var childNode = document.getElementById("p1").childNodes;
+				var atts = document.getElementById("p1").attributes;
+				alert(atts);
+
+			}
+
+			function clcikBtnD() {
+
+				var p = document.getElementsByTagName('p')[0];
+				p.setAttribute('title', 'one to five');
+
+				//				var ele = document.getElementsByTagName("p")[0];
+
+				//				var ti = document.createAttribute('title'); //创建独立的属性节点
+				//
+				//				ti.nodeValue = 'one to five'; //设置属性节点值
+				//
+				//				var p = document.getElementsByTagName('p')[0];
+				//
+				//				p.setAttributeNode(ti) //追加的设置属性节点
+
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="div1">
+			<p id="p1">this is p1</p>
+			<p id="p2">this is p2</p>
+		</div>
+
+		<hr />
+		<button type="button" onclick="clickBtnA()">btn add</button>
+		<button type="button" onclick="clickBtnB()">btn del</button>
+		<button type="button" onclick="clickBtnC()">btn c</button>
+		<br />
+
+		<button type="button" onclick="clickBtnD()">btn createAttribute</button>
+
+		<ul id="myList">
+			<li>Coffee</li>
+			<li>Tea</li>
+		</ul>
+
+		<p id="demo">请点击按钮向列表插入一个项目。</p>
+
+		<button onclick="myFunction()">试一下</button>
+
+	</body>
+
+</html>

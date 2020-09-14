@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<!--
+	作者：yrp
+	时间：2017-06-23
+	描述：
+-->
+	<head>
+		<meta charset="UTF-8">
+		<title>商家入驻第三步</title>
+		
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/wap/wap.css" rel="stylesheet"  />
+		
+		
+	</head>
+<style>
+	body{
+		max-width: none !important;
+	}
+	.page {
+			display: none;
+			min-height: 100%;
+		}
+	.active {
+		display: block;
+	}
+
+</style>
+	<body class="bg1">
+		<section class="page page-money active">
+			<header class="common-header merchantsthirdh">
+				<a class="icon-back mui-action-back"></a>
+				<h1>商家入驻</h1>
+			</header>
+			<section class="mui-content merchantsthird-section">
+				<div class="merchantsthird-title">
+					<dl>
+						<dt>1</dt>
+						<dd>基础信息</dd>
+					</dl>
+					<dl>
+						<dt>2</dt>
+						<dd>附件信息</dd>
+					</dl>
+					<dl>
+						<dt>3</dt>
+						<dd>收款信息</dd>
+					</dl>
+					<span class="wire"></span>
+				</div>
+				<div class="merchantsthird-form">
+					<div class="form-group">
+						<label>开户名</label>
+	                    <div class="form-control">
+	                        <input type="text" placeholder="开户名" name="bankAccountname" class="bankAccountname"/>
+	                    </div>
+					</div>
+				</div>
+				<div class="merchantsthird-form">
+					<div class="form-group">
+	                    <label>银行卡号</label>
+	                    <div class="form-control">
+	                        <input type="text" placeholder="银行卡号" name="bankAccountnumber"  class="bankAccountnumber"/>
+	                    </div>
+	                </div>
+	                <div class="form-group">
+	                    <label>开户行</label>
+	                    <div class="form-control">
+	                        <input type="text" placeholder="示例：中国建设银行" name="bankName" class="bankName" id="bankname" readonly/>
+	                    </div>
+	                </div>
+	                <div class="form-group">
+	                    <label>支行</label>
+	                    <div class="form-control">
+	                        <input type="text" placeholder="示例：青岛海尔路支行" name="bankAddress" class="bankAddress"/>
+	                    </div>
+	                </div>
+	                <div class="form-group">
+	                    <label>支行行号</label>
+	                    <div class="form-control">
+	                        <input type="text" placeholder="请填写支行行号" name="bankCode" class="bankCode"/>
+	                    </div>
+	                </div>
+	                <div class="form-group">
+	                    <label>所在城市</label>
+	                    <div class="form-control">
+	                        <input type="text" placeholder="请选择银行所在城市" name="bankcity" class="bankcity" readonly />
+	                    </div>
+	                </div>
+				</div>
+				<h3>*请核对银行信息无误，以免影响结算</h3>
+			</section>	
+			
+			<footer class="merchantsthird-footer">
+				<button>下一步</button>
+			</footer>
+		</section>
+		<!--选择城市-->
+		<section class="page page-city">
+	
+			<header class="common-header">
+				<h1>选择开通城市</h1>
+				<a class="icon-back"></a>
+			</header>
+			<section class="mui-content regionchose-section">
+				
+				<div class="regionchose-leftlist"></div>
+				<script type="text/html" id="regison">
+					<% if(code == 200){ %>
+						<% for (var i=0;i<datas.area_list.length;i++ ){ %>
+							<a area_id = "<%= datas.area_list[i].area_id %>">
+								<%= datas.area_list[i].area_name %>
+							</a>
+						<% } %>
+					<% } %>
+				</script>
+				<div class="regionchose-rightlist"></div>
+				<script type="text/html" id="regison2">
+					<% if(code == 200){ %>
+						<% for (var x=0;x<datas.area_list.length;x++ ){ %>
+							<dl>
+								<dt>
+									<%= datas.area_list[x].area_name %>
+								</dt>
+								<dd>
+									<ol>
+										<% for (var y=0;y<datas.area_list[x].city_list.length;y++ ){ %>
+											<li city_id = "<%= datas.area_list[x].city_list[y].area_id %>">
+												<%= datas.area_list[x].city_list[y].area_name %>
+											</li>
+											<% } %>
+									</ol>
+								</dd>
+							</dl>
+							<% } %>
+						<% } %>
+				</script>
+			</section>
+			<footer class="merchantsthird-footer">
+				<button>确定</button>
+			</footer>
+	
+		</section>
+		<!--选择银行-->
+
+		<section class="page page-service">
+			<header class="common-header merchantsfirst-categoryh">
+	
+				<a class="icon-back"></a>
+				<h1>选择银行</h1>
+				<a class="icon-link">保存</a>
+			</header>
+			<section class="mui-content merchantsfirst-category-section">
+	
+			</section>
+	
+			<script type="text/html" id="comkind">
+				<% if(code == 200){ %>
+					<div class="merchantsfirst-form-category">
+						<% for(var i = 0; i < datas.bank_list.length; i++){ %>
+							<div class="form-check" data-id="<%= datas.bank_list[i].bank_code %>">
+								<span><%= datas.bank_list[i].bank_name %></span>
+								<input type="radio" name = "checkradio"  data-com="<%= datas.bank_list[i].bank_code %>" />
+							</div>
+							<% } %>
+					</div>
+					<% } %>
+			</script>
+		</section>
+		
+		<script src="../../js/hotcss.js"></script>
+		<script src="../../js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/template.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../../js/member/merchantsthird2.js"></script>
+	</body>
+
+</html>

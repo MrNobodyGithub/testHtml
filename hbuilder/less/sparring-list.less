@@ -1,0 +1,145 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+
+@sparringList   :      sparring-list;
+@sparringColor  :      #f5a93b;
+@anotherColor  :       #f4415e;
+
+//陪练
+.@{sparringList} {
+    .filter {
+
+        nav {
+            a {
+                color: @title-main;
+
+                &.active ,
+                &:active {
+                    color: @sparringColor;
+                }
+            }
+        }
+
+    }
+
+    .product-item {
+
+        .label {
+            em {
+                .color( @sparringColor );
+            }
+        }
+
+        .tag {
+            span {
+                color: @sparringColor;
+                border-color: @sparringColor;
+            }
+        }
+
+        .control {
+            a {
+                color: @sparringColor;
+                border-color: @sparringColor;
+                .fs(30,2);
+            }
+        }
+    }
+
+    .grab-state {
+        button {
+            color: @sparringColor;
+            border-color: @sparringColor;
+            .bc( #fff );
+        }
+    }
+
+    .grab-remarks {
+        color: @sparringColor;
+    }
+
+    .detail-worktime ,
+    .detail-price {
+        .active{
+            color: @sparringColor;
+            border:1px solid @sparringColor !important;
+        }  
+    }
+
+    .title {
+        span {
+            background-color: @sparringColor;
+        }
+    }
+
+    .detail-comment {
+        .comment-content {
+            span {
+                color: @sparringColor;
+            }
+        }
+    }
+}
+
+
+//陪练
+.@{sparringList}{
+    .filter1{
+        nav{
+            .df;
+            align-items: center;
+            justify-content: space-around;
+            li{
+                flex: 1;
+                text-align: center;
+                border-top: 1px solid #e6e6e6;
+            }
+            a{
+                display: inline-block;
+                .height(126,2);
+                .lh(126,2);
+                .fs(37,2);
+                color: @title-main;
+            }
+            .active1{
+                border-bottom: 1px solid @sparringColor;
+//              background: red;
+                color: @sparringColor;
+            }
+        }
+    }
+    .product-item{
+        .product-info{
+            h2.icon-type1 {
+                background-image: none;
+                .pl(0);
+            }
+            .raty{
+                i{
+                    .dib;
+                    .height(30,2);
+                    .fs(28,2);
+                    font-style: normal;
+                    position: relative;
+                    top: -3px;
+                    color: @sparringColor;
+                    .ml(38,2);
+                }
+            }
+            .control{
+                span{
+                    .fs(26,2);
+                    
+                    i{
+                        font-style: normal;
+                        .fs(30,2);
+                    }
+                }
+            }
+        }
+        
+    } 
+} 

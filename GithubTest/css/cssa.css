@@ -1,0 +1,44 @@
+<style type="text/css">#menu li {
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 20px;
+	float: left;
+	text-decoration: none;
+	list-style: none; //去掉li前面的圆点  
+	display: inline; //让li横向排列  
+	border: 1px solid #FFFFFF;
+	background-color: #30DDEB;
+}
+
+#testa li{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 15px;
+	font-size: 20px;
+	float: left;
+	display: inline;
+	text-decoration: none;
+	list-style: none;
+	display: inline;
+	/*border: 1px solid white;*/
+	/*background-color: black;*/
+	color: white;
+	align-content: center;
+	text-align: center;
+
+}
+#testa li:hover{
+	/*background-color: chartreuse;*/
+	color: orange;
+}
+#header_search {
+	float: left;
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+
+}
+ 
+ 
+ 
+
+</style>

@@ -1,0 +1,395 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>站内信 触屏版</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/msg.css" rel="stylesheet" />
+	</head>
+
+	<body class="white">
+		<!--ucenter-->
+		<header class="mui-bar mui-bar-nav">
+
+			<a class="mui-action-back mui-icon icon-back"></a>
+			<h1 class="mui-title">站内信</h1>
+			<button class="readall" style="float: right; height: 30px;width: 80px;display: inline-block;top:15%;text-align: center;border-radius: 30px; ">一键已读</button>
+		</header>
+
+		<div id="pullrefresh" class="mui-content content">
+			<ul class="mui-table-view" id="inside_list">
+			</ul>
+		</div>
+
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/config.js"></script>
+		<script src="../../js/common.js"></script>
+		<script src="../../js/seller/evaluate-seller.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+//			本页刷新
+			window.addEventListener('refresh', function(e) { //执行刷新
+				location.reload();
+			});
+			
+			var curpage = 1; //页码数
+			var $key = _.userInfo.getKey();
+//					var $key = '7b10a7c4a649774e922ebce10f49a404';
+			var identity = getQueryString('identity');
+//					var identity = 1;
+			mui.init({
+				swipeBack: true,
+				beforeback: function() {　　　　 //获得父页面的webview
+					var list = plus.webview.currentWebview().opener();　　　　 //触发父页面的自定义事件(refresh),从而进行刷新
+					mui.fire(list, 'refresh');
+					//返回true,继续页面关闭逻辑
+					return true;
+				},
+				pullRefresh: {
+					container: '#pullrefresh',
+					down: {
+						style: 'circle',
+						color: '#2BD009', //可选，默认“#2BD009” 下拉刷新控件颜色
+						height: 50, //可选,默认50.触发下拉刷新拖动距离,
+						auto: false, //可选,默认false.首次加载自动上拉刷新一次
+						callback: pulldownRefresh
+					},
+					up: {
+						height: 50, //可选.默认50.触发上拉加载拖动距离
+						auto: false, //可选,默认false.自动上拉加载一次
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			});
+//			console.log(data_content());
+			mui.plusReady(function(){
+				pulldownRefresh();
+			})
+			//下拉刷新
+			function pulldownRefresh() {
+				curpage = 1;
+	          	mui.plusReady(function() {
+	          		data_content(1, 0);
+	          	})
+			}
+			//上拉更多
+//			console.log(curpage);
+
+			function pullupRefresh() {
+				curpage++; // 每次请求，页码加1
+				console.log("currpage==" + curpage);
+
+
+		       	mui.plusReady(function() {
+		       		data_content(curpage, 1);
+		       	})
+//		       console.log(data_content(curpage, 1))
+			}
+
+			if(identity == '1') {
+				$('header h1').text('买家消息');
+			} else if(identity == '2') {
+				$('header h1').text('卖家消息');
+			}
+			
+
+			function data_content(curpage, pullDirect) {
+				pullDirect = pullDirect || 0; //默认下拉
+				var param = {
+					curpage: curpage || 1,
+					key: $key,
+					page: 10
+				};
+				console.log(JSON.stringify(param));
+				$.ajax({
+					url: ApiUrl + '/index.php?act=member_msglist&op=msg_inside&identity=' + identity,
+					type: 'get',
+					data: param,
+					async: false, // 异步 || 同步
+					dataType: 'json',
+					//              timeout: 10000,
+					success: function(data) {
+						console.log(JSON.stringify(data));
+						var pullRefresh = mui('#pullrefresh').pullRefresh();
+//						console.log(pullRefresh);
+						if(curpage == 1) {
+//							console.log('page==1');
+                        	$('#inside_list').html('');
+                        	
+//                      	console.log('====='+JSON.stringify(data.datas.inside_list));
+							$.each(data.datas.inside_list, function(key, value) {
+								var result = value.sm_content.split("，");
+								if(result[1] == undefined) {
+									content = '';
+								} else {
+									content = result[1];
+								}
+
+								if(value.message_open == 0) {
+									read = '[未读消息]';
+								} else {
+									read = '';
+								}
+
+								var str = '<li class="mui-table-view-cell">' +
+									'<div class="mui-slider-right mui-disabled">' +
+									'<a class="mui-btn mui-btn-yellow" onclick="delmsg(' + value.sm_id + ')">删除</a>' +
+									'</div>' +
+									'<div class="mui-slider-handle" data-smt-code = "' + value.smt_code + '">' +
+									'<div class="mui-table" onclick="readmsg(' + value.sm_id + ')"><div class="mui-table-cell mui-col-xs-10" sytle="font-size:16px;word-wrap:break-word;"><i style="font-style: normal;color:red;">' +
+									read + '</i>' + result[0] +
+									'<h5 style="padding-top: 5px;">' +
+									content +
+									'</h5><p class="mui-h6 mui-ellipsis">' +
+									value.sm_addtime +
+									'</p></div></div></div></li>';
+								console.log(str);
+								//                              console.log(value.sm_id);
+								//                              console.log(value.smt_code);
+								$('#inside_list').append(str);
+							})
+							if(pullRefresh) {
+								pullRefresh.refresh(true); //恢复滚动
+								pullRefresh.scrollTo(0, 0, 100); //滚动置顶 
+							}
+						} else {
+							$.each(data.datas.inside_list, function(key, value) {
+								console.log('page==2');
+								var result = value.sm_content.split("，");
+								if(result[1] == undefined) {
+									content = '';
+								} else {
+									content = result[1];
+								}
+
+								if(value.message_open == 0) {
+									read = '<span style="width: 5px; height: 5px; float:left; background: #ff0000; border-radius: 5px;"></span>';
+								} else {
+									read = '';
+								}
+								var str = '<li class="mui-table-view-cell">' +
+									'<div class="mui-slider-right mui-disabled">' +
+									'<a class="mui-btn mui-btn-yellow" onclick="delmsg(' + value.sm_id + ')">删除</a>' +
+									'</div>' +
+									'<div class="mui-slider-handle" data-smt-code = "' + value.smt_code + '">' +
+									'<div class="mui-table" onclick="readmsg(' + value.sm_id + ')"><div class="mui-table-cell mui-col-xs-10"><span class="mui-ellipsis" sytle="font-size:16px;">' +
+									result[0] +
+									'</span><h5 style="padding-top: 5px;">' +
+									content +
+									'</h5><p class="mui-h6 mui-ellipsis">' +
+									value.sm_addtime +
+									'</p></div></div></div></li>';
+
+								$('#inside_list').append(str);
+							})
+						}
+
+						var hasmore = data.hasmore || false;
+
+						console.log(hasmore);
+						if(pullRefresh) {
+							if(curpage == 1) {
+								if(hasmore) {
+									pullRefresh.enablePullupToRefresh();
+								} else {
+									pullRefresh.disablePullupToRefresh();
+								}
+							}
+							if(pullDirect == 1) {
+								pullRefresh.endPullupToRefresh(!hasmore);
+							} else {
+								pullRefresh.endPulldown(true);
+							}
+						}
+					},
+					error: function(xhr, type, errorThrown) {
+						var pullRefresh = mui('#pullrefresh').pullRefresh();
+						console.log(pullRefresh);
+						if(pullRefresh) {
+							if(pullDirect == 1) {
+								pullRefresh.endPullupToRefresh(true);
+							} else {
+								pullRefresh.endPulldownToRefresh(true);
+							}
+						}
+						mui.toast('网络异常,请稍候再试');
+					}
+				});
+			}
+			console.log(identity)
+
+			//	删除消息
+			function delmsg(id) {
+				var btnArray = ['确认', '返回'];
+				mui.confirm('确认删除该条记录？', '', btnArray, function(e) {
+					if(e.index == 0) {
+						$.ajax({
+							url: ApiUrl + '/index.php?act=member_msglist&op=inside_del',
+							data: {
+								'key': $key,
+								'sm_id': id,
+								'identity': identity
+							},
+							async: true, // 异步 || 同步
+							dataType: 'json',
+							type: 'post',
+							//							timeout: 10000,
+							success: function(data) {
+								if(data.code == 200) {
+									if(data.datas.status == 1) {
+										mui.toast('删除成功！');
+										$('#inside_list').html('');
+										pulldownRefresh();
+										console.log(identity)
+
+									} else {
+										mui.toast(data.datas.error);
+									}
+								}
+							},
+							error: function(xhr, type, errorThrown) {
+								// 请求失败
+							}
+						});
+					}
+				});
+				return false
+			}
+
+			function readmsg(id) {
+				console.log('read:' + id);
+				$.ajax({
+					url: ApiUrl + '/index.php?act=member_msglist&op=inside_update',
+					data: {
+						'key': $key,
+						'sm_id': id,
+						'identity': identity
+					},
+					async: true, // 异步 || 同步
+					dataType: 'json',
+					type: 'post',
+					timeout: 10000,
+					success: function(data) {
+						if(data.code != 200) {
+							mui.toast(data.datas.error);
+						}
+					},
+					error: function(xhr, type, errorThrown) {
+						// 请求失败
+					}
+				});
+				pulldownRefresh()
+			}
+
+			//		一键已读
+			function readallmsg() {
+
+				//									console.log('read:' + id);
+				$.ajax({
+					url: ApiUrl + '/index.php?act=member_msglist&op=read_all',
+					data: {
+						'key': $key,
+						'identity': identity
+					},
+					async: true, // 异步 || 同步
+					dataType: 'json',
+					type: 'POST',
+					timeout: 10000,
+					success: function(data) {
+						//						var data=JSON.parse(data)
+						console.log(JSON.stringify(data))
+						console.log(data.code)
+						if(data.code != 200) {
+							mui.toast(data.datas.error);
+
+						}
+						console.log("进入")
+					},
+					error: function(xhr, type, errorThrown) {
+						// 请求失败
+						mui.toast(xhr)
+					}
+				});
+			}
+
+			//一键已读按键
+			$('.readall').on('tap', function() {
+				var btnArray = ['确认', '返回'];
+				mui.confirm('消息全部已读？', '', btnArray, function(e) {
+					if(e.index == 0) {
+						readallmsg()
+						setTimeout(function() {
+							pulldownRefresh()
+						}, 500)
+
+					} else {
+						return false
+					}
+				})
+
+			})
+
+			//添加站内信页面跳转
+			$('#inside_list').on('tap', '.mui-slider-handle', function() {
+				console.log("identity======" + identity);
+				console.log($(this).attr('data-smt-code'));
+				if(identity == '1') {
+					//买家
+					var msgArr = _.member_msg_tpl;
+					for(var i in msgArr) {
+						if($(this).attr('data-smt-code') == i) {
+							if(msgArr[i].type == 'order') {
+								_.openWindow({
+									url: '../member/service-order-all.html',
+									id: _.pageName.member_order_list,
+									reOpen: true
+								});
+
+							} else if(msgArr[i].type == 'vouchar') {
+								_.openWindow({
+									url: '../member/coupon.html',
+									id: 'coupon',
+									reOpen: true
+								})
+							}
+						}
+					}
+				} else if(identity == '2') {
+					//卖家
+					var store_msg_tpl = _.store_msg_tpl;
+					console.log(JSON.stringify(store_msg_tpl));
+					for(var i in store_msg_tpl) {
+						if($(this).attr('data-smt-code') == i) {
+							if(store_msg_tpl[i].type == 'order') {
+								_.openWindow({
+									url: '../seller/seller-order-all.html',
+									id: _.pageName.menm_order_list,
+									reOpen: true
+
+								});
+							} else if(store_msg_tpl[i].type == 'vouchar') {
+								_.openWindow({
+									url: '../member/coupon.html',
+									id: 'coupon',
+									reOpen: true
+								})
+							}
+						}
+					}
+
+				}
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!-- 	
+				<hr /> 标签在页面中创建水平线
+				<p> 是 块级元素
+				<abbr></abbr>  abbreviated 缩写
+				<bdo>如果您的浏览器支持 bi-directional override (bdo)，下一行会从右向左输出 (rtl)</bdo>
+				<del></del> <ins></ins>
+				style 中 p h1 系统选择器 . 类选择器 # 选择器
+			-->
+<html>
+
+	<head>
+		<title>title test</title>
+		<bdo dir="rtl">1234567</bdo>
+		<meta content="aqua" ; charset="utf-8" />
+		<!--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">-->
+			<h1 align="center">html</h1>
+		<h6>--------------分割线-----------------</h6>
+		 
+		<script type="text/javascript">
+			function helloWorld() {
+				document.getElementById("d1");
+				//				document.getElementsByTagName("div");
+				var list = document.getElementsByClassName("btn")
+				//				alert(list[0].type)
+				var json = {
+					"test": "testa",
+					"test1": {
+						"a1": "a2"
+					}
+				}
+				//				alert(json.test);
+				String.prototype.$trim = function() {
+					return "prototype"
+				}
+				var a = "test".$trim("a")
+
+				var objc = new testObjc()
+				//			alert(objc.param)
+				//			alert(objc.meth())
+
+				//			 JS 提示 闭包对象
+				var person = {};
+				(function(p) {
+					p.setName = function(name) {
+							this.name = name;
+						},
+						p.getName = function() {
+							return this.name;
+						}
+				})(person);
+
+				//			person.setName("name nemo");
+				//			alert(person.getName())
+
+				(function(p) {
+					p.friend = {
+						setName: function(name) {
+							this.name = name;
+						},
+						getName: function() {
+							return this.name;
+						}
+					}
+
+				})(person);
+				person.friend.setName("friend name");
+				alert(person.friend.getName());
+
+				//				print("hello script 执行 逻辑操作")
+			}
+
+			function testObjc() {
+				this.param = 1;
+				this.meth = function() {
+					return 44;
+				}
+			}
+		</script>
+		<style type="text/css">
+			.classA {
+				font: "微软雅黑";
+			}
+		</style>
+		<abbr style="align-content: center;background-color: coral;" title="world wild web">WWW</abbr>
+
+	</head>
+<!--background-position: 50% 20%    10px 10px  center-->
+	<body background="img/img1.jpeg" style="background-repeat: no-repeat; background-position: 20px -500px;">
+		<div id="d2" class="page">
+			<h3> <a href="http://www.w3school.com.cn/html/html_quick.asp"> w3c_quick</a></h3>
+			<p> 整理 当前 个人 已用 标签</p>
+			<h4> 1 主标签</h4>
+			<p> html head body meta </p>
+			<h4>2 子标签</h4>
+			<p> p h[1-6] a img br hr !-- font table table_tr table_td table_caption table_frame ul ol li dl dt dd div span
+			</p>
+			<h4>3 属性</h4>
+			<h6 style="align-self: center;color: red;background-color: orange;"> 过期属性 align bgcolor color(非 style 中 color)</h6>
+			<p> class id style title href border bordercolor width height style font-size font-familby style_color target a_name z_href image_src
+			</p>
+			<h4><strong>4 文本格式化</strong></h4>
+			<p style="font-size: small;">
+				<i>	标签 b:bold strong:strong big:big small:small em:emphasized i:italic 斜体 sub:subscript 下角标 sup:superscript 上角标</i>
+			</p>
+			<h4><em>5 预格式文本</em></h4>
+			<p><small>标签 pre  <sub>可以保留格式 空格 和 换行</sub></small></p>
+			<pre>这是
+			预格式文本。
+			它保留了      空格
+			和换行</pre>
+
+			<h4>  6 html <a href="http://127.0.0.1:8020/testWeb/html/html_a.html" style="text-decoration: underline;">布局</a></h4>
+			<h4> 7 html <a href="http://127.0.0.1:8020/testWeb/html/html_b.html" style="text-decoration: overline;"> 响应式设计</a> </h4>
+			<h4> 8 html <a href="http://127.0.0.1:8020/testWeb/html/html_c.html" style="text-decoration: none;"> 框架 </a> </h4>
+			<h4> 9 html <a href="http://127.0.0.1:8020/testWeb/html/html_d.html" style="text-decoration: none;"> 背景 </a> </h4>
+			<h4> 10 html <a href="http://127.0.0.1:8020/testWeb/html/html_e.html" style="text-decoration: none;"> 脚本 </a> </h4>
+			<h4> 11 html <a href="http://127.0.0.1:8020/testWeb/html/html_f.html" style="text-decoration: none;"> 头部 </a> </h4>
+			<h4> 12 html <a href="http://127.0.0.1:8020/testWeb/html/html_g.html" style="text-decoration: none;"> 实体 </a> </h4>
+			<h4> 13 html  <a href="http://127.0.0.1:8020/testWeb/html/html_h.html" style="text-decoration: none;"> URL - Uniform Resource Locator </a> </h4>
+			<h4> 14 html  <a href="http://127.0.0.1:8020/testWeb/html/html_i.html" style="text-decoration: none;"> XHTML </a> </h4>
+			<h4> 15 html  <a href="http://127.0.0.1:8020/testWeb/html/html_j.html" style="text-decoration: none;"> form </a> </h4>
+			<h4> 16 html  <a href="http://127.0.0.1:8020/testWeb/html/html_k.html" style="text-decoration: none;"> DOM </a> </h4>
+
+			
+
+			<hr />
+
+			<dl style="background: cyan;">
+				<dt style="background: orange;">t</dt>
+				<dd>da</dd>
+				<dd>db</dd>
+				<dt>t2</dt>
+				<dd>dc</dd>
+				<dd>dd</dd>
+			</dl>
+
+			<table id="table1" cellpadding="4" cellspacing="4" bgcolor="yellow" width="100" height="40" border="2" bordercolor="green">
+				<!--<th>header?</th>-->
+				<caption>caption</caption>
+				<tr>
+					<td>r1d1</td>
+					<td>r1d2</td>
+				</tr>
+				<tr>
+					<td>&nbsp;??&nbsp;?</td>
+					<td>r2d2</td>
+				</tr>
+			</table>
+			<table id="tab2" frame="vsides" style="background: mediumaquamarine;color: orange;">
+				<caption> cap1</caption>
+				<colgroup>
+					<col style="background: red;" />
+					<col style="background: yellow;" />
+
+				</colgroup>
+				<tr align="center">
+					<th>name</th>
+					<td>nemo</td>
+				</tr>
+				<tr align="center">
+					<th rowspan="2"> tel</th>
+					<td>123</td>
+				</tr>
+				<tr>
+					<td>456</td>
+				</tr>
+			</table>
+
+			<hr />
+			<h6><a href="http://baidu.com" target="_self" style="text-decoration: none;"> this is a link</a></h6>
+			<img src="img/img1.jpeg" width="100" height="100" />
+			<br />
+			<h6>在开始标签中添加斜杠，比如 (br /)，是关闭空元素的正确方法，HTML、XHTML 和 XML 都接受这种方式。</h6>
+			<h6>  HTML 指的是 Hyper Text Markup Language </h6>
+
+		</div>
+		<p>------------------分割线-------------------</p>
+		<div id="d1" class="classA"></div>
+		<div class="classA">
+			hello world
+		</div>
+
+	</body>
+	<div class="classB">
+		classB
+	</div>
+	<div id="page">
+		<div class="logo_ul" id="navigation">
+			<li>
+				<a href=""></a>
+			</li>
+			<li>
+				<a href=""></a>
+			</li>
+		</div>
+	</div>
+	<input type="button" class="btn" name="" id="" value="click " onclick="helloWorld()" />
+
+</html>

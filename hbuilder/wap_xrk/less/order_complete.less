@@ -1,0 +1,60 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+
+.order_complete{
+    flex: 1;
+    background: url(../images/order/orderComplete_03.png) no-repeat center px2rem(170) #fff;
+    background-size: px2rem(580);
+    .content{
+        padding-top: px2rem(740);
+        text-align: center;
+        h2{
+            line-height: px2rem(228);
+            text-align: center;
+            font-size: px2rem(50);
+            color: #333;
+        }
+        ol{
+            padding-left: px2rem(200);
+            li{
+                line-height: px2rem(80);
+                text-align: left;
+                font-size: px2rem(40);
+                color: #333;
+            }
+            .price{
+                span{
+                    color: red;
+                }
+            }
+            .pay{
+                span{
+                    color: orange;
+                }
+            }
+        }
+        button{
+            display: block;
+            width: px2rem(397);
+            height: px2rem(98);
+            margin: 0 auto;
+            font-size: px2rem(32);
+            border: none;
+            margin-top: px2rem(23);
+            border-radius: px2rem(20);
+            &.back{
+                color: #4f4501;
+                background: #fbce00;
+                margin-top: px2rem(100);
+            }
+            &.detail{
+                color: #fff;
+                background: #919191;
+            }
+        }
+        
+    }
+}

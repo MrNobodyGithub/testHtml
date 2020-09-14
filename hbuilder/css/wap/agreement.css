@@ -1,0 +1,23 @@
+.agreement {
+  font-size: 0.71111111rem;
+  color: #9c9b9b;
+  margin: 1.18518519rem 0.88888889rem 0 0.88888889rem;
+}
+.agreement p {
+  text-indent: 0.59259259rem;
+  font-size: 0.62222222rem;
+  line-height: 0.71111111rem;
+  color: #333333;
+}
+.agreement a {
+  display: block;
+  text-align: center;
+  font-size: 0.62222222rem;
+  border-radius: 0.14814815rem;
+  background-color: #ef91b2;
+  width: 5.3037037rem;
+  height: 1.4962963rem;
+  line-height: 1.4962963rem;
+  color: white;
+  margin: 4rem auto;
+}

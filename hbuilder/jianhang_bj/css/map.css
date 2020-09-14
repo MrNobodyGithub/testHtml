@@ -1,0 +1,98 @@
+
+body{
+	display: flex;
+	flex-direction: column;
+	background: #fff;height: 100%;overflow: hidden;
+}
+.common-header~.mui-content {
+    padding-top: 1.95555556rem;
+}
+.common-header.common-header-yellow {
+    background-color: #f5a93b;
+    height:2.8rem;
+}
+.runmaph {
+    background: #f9cd56;
+    color: #fff;
+}
+.common-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+    padding: 0 0.44444444rem;
+    border-bottom: 0.02962963rem solid #e6e6e8;
+}
+.common-header h1 {
+    position: absolute;
+    top: 0;
+    left: 1.97037037rem;
+    right: 1.97037037rem;
+    line-height: 1.95555556rem;
+    text-align: center;
+    z-index: 2;
+    font-size: 1.0rem;
+	padding-top: 0.5rem;
+}
+.common-header[class*=common-header-] .icon-back {
+    background: url(../images/cleaning-back-w.png) center no-repeat;
+    background-size:1.5rem;
+}
+.common-header .icon-back, .common-header .icon-back-white {
+    float: left;
+    width: 1.97037037rem;
+    height: 100%;
+}
+.common-header a {
+    position: relative;
+    z-index: 11;
+}
+.mui-content{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 3rem;
+}
+#l-map{
+	flex: 1;
+}
+.mui-bar-footer a{
+	display: block;
+	width: 100%;background: orange; border: 0;padding: 0; font-size: 1rem;line-height: 3rem;color: #fff;text-align: center;
+}
+.mui-bar-footer{position: fixed;width: 100%;height: 3rem;bottom: 0;left: 0;}
+
+.common-header .city{
+	font-size: 0.8rem;
+	padding-top: 0.5rem;
+	background-size: 0.8rem;
+}
+.mui-search{
+	margin-top: 0.85rem;
+	height:2.5rem;
+}
+.map-list{
+	height:16rem;
+	overflow: auto;
+}
+input[type=search]{
+	height:2.5rem;
+}
+.mapsection{
+	overflow: hidden;
+}
+/* 自定义搜索框样式，mui-search会导致魅族键盘闪现 */
+.own-search{
+	margin-top: 0.85rem;
+	height:2.5rem;
+}
+.own-search input{
+	padding-left: 2.2em;
+	text-align: left;
+	background: #eee url(../images/index-search.png) no-repeat left;
+	background-size: 1.24444444rem 1.24444444rem;
+	background-position-x: 0.44444444rem;
+}
+.auto-item{
+	padding: 0.8rem;
+}

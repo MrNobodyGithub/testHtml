@@ -1,0 +1,116 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+//跑腿  商品详情
+
+.run-store{
+    flex: 1;
+    background: #fff;
+    .tagname{
+        .df;
+        justify-content: space-around;
+        padding: px2rem(80) px2rem(48);
+        li{
+            padding: px2rem(23) px2rem(40); 
+            border: 1px solid #919191;
+            .fs( 32,2 );
+            &.active{
+                color: #fff;
+                background: #f9cc55;
+                border: 0;
+            }
+        }
+    }
+    .msg-list{
+        .pl(40,2);
+        li{
+            background-repeat: no-repeat;
+            background-size: px2rem(48) px2rem(48);
+            background-position-x: left;
+        }
+        .edit{
+            .pl(70,2);
+            .pr(40,2);
+            background-image: url(../images/cleaning-remark.png);
+            background-position-y: px2rem(20);
+            border-bottom: 2px solid #e6e6e8;
+            textarea{
+                .width;
+                .height(213,2);
+                border: 1px solid #E4E4E4;
+                border-radius: px2rem(20);
+                .fs(35,2);
+            }
+        }
+        .list{
+            .df;
+            justify-content: space-between;
+            // .height(128,2);
+            min-height: px2rem(128);
+            border-bottom: 1px solid #E4E4E4;
+            .pr(40,2);
+            .pl(86,2);
+            
+            background-position-y: center;
+            span{
+//              width: 5em;
+                .fs(40,2);
+                .lh(128,2);
+            }
+            input{
+                flex: 1;
+                text-align: right;
+                .width(200,2);
+                .fs(40,2);
+                border: 0;
+//              color: #E4E4E4;
+                &::-webkit-input-placeholder{
+                    color: #E4E4E4;
+                }
+            }
+            &.money{
+                background-image: url(../images/cleaning/Cleaning2.png);
+                
+            }
+            &.address{
+                background-image: url(../images/cleaning-address.png);
+                .select{
+                    input{
+                        
+                        .form-default;
+                        .square(35,2);
+                        border-radius: 50%;
+//                      .mt(46,2);
+                        .mr(20,2);
+                        vertical-align:middle; 
+                        background: url(../images/run/complate-no.png) no-repeat center center;
+                        background-size: px2rem(35) px2rem(35);
+                        &:checked{
+                            background: url(../images/run/complate.png) no-repeat center center;
+                            background-size: px2rem(35) px2rem(35);
+                        }
+                    }
+                    span{
+                        .mr(25,2);
+                        .mt(46,2);
+                        .fs(38,2);
+                        vertical-align: middle;
+                    }
+                }
+            }
+            &.current{
+                a{
+                    color: #464646;
+                    .pt(47,2);
+                    .pr(40,2);
+                    background: url(../images/cleaning/jiantou.png) no-repeat right center;
+                    background-size: px2rem(20) px2rem(34);
+                    vertical-align: middle;
+                    .fs(36,2);
+                }
+            }
+        }
+    }
+}

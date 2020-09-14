@@ -1,0 +1,123 @@
+@import 'config.less';
+@import 'api/api-webkit.less';
+@import 'api/api-common.less';
+@import 'api/api-size.less';
+
+@import 'mixins/mixins.less';
+
+    .grabsingleh {
+                background: #f5a93b;
+                color: #fff;
+                .fs(45,2);
+                .grab-back{
+                  .fs(80,2);
+                  .mt(20,2);
+                  color:#fff;
+                }
+    }
+    .grabsection{
+        .grabsinglebanner img {
+            .width;
+        }
+        .grab-state{
+            .mt(15,2);
+            .mb(15,2);
+            .ml(23,2);
+            .mr(23,2);
+            background: #fff;
+            .height(416,2);
+            box-sizing: border-box;
+            text-align: center;
+            overflow: hidden;
+            h3{
+                .mt(70,2);
+                .fs(55,2);
+                .mb(27,2);
+            }
+            span{
+                
+                .fs(45,2);
+            }
+            button{
+                .mt(52,2);
+                .width(260,2);
+                .height(91,2);
+                .fs(45,2);
+            }
+            
+        }
+        .grab-list{
+            .width;
+            ul{
+                .padding;
+                .margin;
+                background: #fff;
+                .pl(12,2);
+                .pr(30,2);
+                li{
+                    .height(383,2);
+                    border-bottom: 1px solid #F2F2F2;
+                    .width;
+                    list-style: none; 
+                    .pt(18,2);
+                    dl{
+                        display: flex;
+                        dt{
+                            .mr(32,2);
+                            img{
+                                .width(276,2);
+                                .height(276,2);
+                            }
+                        }
+                        dd{
+                            h4{
+                                .fs(38,2);
+                                .mt(10,2);
+                                .mb(17,2);
+                            }
+                            p:nth-of-type(2){
+                                .mt(30,2);
+                                .fs(30,2);
+                                span{
+                                    color:#f5a93b;
+                                }
+                            }
+                            p:nth-of-type(3){
+                                .mt(22,2);
+                                .mb(42,2);
+                                button{
+                                    .width(138,2);
+                                    .height(50,2);
+                                    .mr(5,2);
+                                    .fs(26,2);
+                                }
+                            }
+                            p:nth-of-type(4){
+                                .fs(36,2);
+                                span{
+                                    .mr(305,2)
+                                }
+                                button{
+                                    .height(76,2);
+                                    .width(216,2);
+                                    border-radius: 60px;
+                                    .fs(36,2);
+                                    .mt(-30,2)
+                                }
+                            }
+                        }
+                    }
+                }
+            }  
+        }
+        .grab-remarks{
+            .height(348,2);
+            .width;
+            background: #fff;
+            .pt(74,2);
+            .pl(32,2);
+            .fs(36,2);
+            color:#f5a93b;
+        }
+    
+    }

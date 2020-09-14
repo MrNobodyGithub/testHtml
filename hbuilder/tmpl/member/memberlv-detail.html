@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>会员等级详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/stylesheet.css" />
+	</head>
+
+	<body>
+		<!--ucenter-->
+		<header class="common-header header-color">	
+
+			<a class="icon-back mui-action-back"></a>
+			<h1>会员等级详情</h1>
+		</header>
+
+		<section class="todayHeadlines-all mui-content" style="overflow-x: hidden;">
+			<div class="todayHeadlines-all-content mui-clearfix">
+				<div class="todayHeadlines-detail"></div>
+			</div>
+		</section>
+		<script type="text/html" id="member_lv_detail">
+			<%if(code==200){
+				if(datas != null || datas != ''){
+			%>
+				<div class="news-title mui-clearfix">
+					<h2 style="text-align: center;line-height: 2.5rem;"><%= datas.article_title %></h2>
+				</div>
+				
+				<div class="news-article">
+					<%=# datas.article_content %>
+					<p style="text-indent: 2em;"></p>
+				</div>
+
+			<% }} %>
+		</script>
+		
+		
+		
+		<script type="text/javascript" src="../../js/hotcss.js" ></script>
+		<script type="text/javascript" src="../../js/jquery.min.js" ></script>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/config.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/template.js" ></script>
+		<script type="text/javascript" src="../../js/tmpl/news-detail.js"></script>
+	</body>
+	<script>
+		mui.plusReady(function(){
+			var self = plus.webview.currentWebview();
+			var articleid = self.articleid;
+			$.ajax({
+				type:"get",
+				url:ApiUrl + "/index.php?act=zx_setting&op=aboutus&article_id=45",
+				async:true,
+				dataType: "json",
+				success: function(res){
+					var html = template.render('member_lv_detail', res);
+					$('.todayHeadlines-all .todayHeadlines-detail').html(html);
+				}
+			});
+		})
+	</script>
+</html>
